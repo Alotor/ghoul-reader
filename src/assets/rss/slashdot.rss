@@ -1,0 +1,1553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='http://slashdot.feedsportal.com/xsl/eng/rss.xsl'?>
+<rss xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0"
+version="2.0">
+  <channel>
+    <title>Slashdot</title>
+    <link>http://slashdot.org/</link>
+    <description>News for nerds, stuff that matters</description>
+    <language>en-us</language>
+    <copyright>Copyright 1997-2014, Dice. All Rights Reserved.
+    Slashdot is a Dice Holdings, Inc. service</copyright>
+    <pubDate>Thu, 04 Dec 2014 20:08:29 GMT</pubDate>
+    <lastBuildDate>Thu, 04 Dec 2014 20:08:29 GMT</lastBuildDate>
+    <ttl>2</ttl>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <sy:updateBase>1970-01-01T00:00:00Z</sy:updateBase>
+    <dc:creator>help@slashdot.org</dc:creator>
+    <dc:subject>Technology</dc:subject>
+    <dc:publisher>Dice</dc:publisher>
+    <dc:date>2014-12-04T20:08:29Z</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 1997-2014, Dice. All Rights Reserved.
+    Slashdot is a Dice Holdings, Inc. service</dc:rights>
+    <image>
+      <title>Slashdot</title>
+      <url>http://a.fsdn.com/sd/topics/topicslashdot.gif</url>
+      <link>http://slashdot.org/</link>
+    </image>
+    <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom"
+    rel="self" type="application/rss+xml"
+    href="http://rss.slashdot.org/Slashdot/slashdot" />
+    <feedburner:info uri="slashdot/slashdot" />
+    <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom"
+    rel="hub" href="http://pubsubhubbub.appspot.com/" />
+    <item>
+      <title>Apple Accused of Deleting Songs From iPods Without
+      Users' Knowledge</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/rvSv4PbU_FI/story01.htm</link>
+      <description>SternisheFan writes with this excerpt from a
+      story at AppleInsider that says "During in-court proceedings
+      of Apple's iPod/iTunes antitrust lawsuit on Wednesday,
+      plaintiffs' lawyers claimed Apple surreptitiously deleted
+      songs not purchased through the iTunes Music Store from
+      users' iPods. Attorney Patrick Coughlin, representing a class
+      of individuals and businesses, said Apple intentionally wiped
+      songs downloaded from competing services when users performed
+      a sync with their iTunes library, reports The Wall Street
+      Journal. As explained by the publication, users attempting to
+      sync an iPod with an iTunes library containing music from a
+      rival service, such as RealNetworks, would see an ambiguous
+      error message without prompting them to perform a factory
+      reset. After restoring the device, users would find all
+      non-iTunes music had disappeared. ... It is unclear if iTunes
+      or iPod encountered a legitimate problem, though Coughlin
+      seems to be intimating Apple manufactured the error message
+      as part of a supposed gambit to stop customers from using
+      their iPod to play back music from stores other than iTunes.
+      For its part, Apple said the system was a safety measure
+      installed to protect users."&lt;p&gt;&lt;div
+      class="share_submission" style="position:relative;"&gt; &lt;a
+      class="slashpop"
+      href="http://twitter.com/home?status=Apple+Accused+of+Deleting+Songs+From+iPods+Without+Users'+Knowledge%3A+http%3A%2F%2Fapple.slashdot.org%2Fstory%2F14%2F12%2F04%2F207247%2F%3Futm_source%3Dtwitter%26utm_medium%3Dtwitter"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fapple.slashdot.org%2Fstory%2F14%2F12%2F04%2F207247%2Fapple-accused-of-deleting-songs-from-ipods-without-users-knowledge%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://apple.slashdot.org/story/14/12/04/207247/apple-accused-of-deleting-songs-from-ipods-without-users-knowledge?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://apple.slashdot.org/story/14/12/04/207247/apple-accused-of-deleting-songs-from-ipods-without-users-knowledge?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6295321&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/41211df8/sc/15/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612416193/u/0/f/647410/c/35028/s/41211df8/sc/15/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612416193/u/0/f/647410/c/35028/s/41211df8/sc/15/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612416193/u/0/f/647410/c/35028/s/41211df8/sc/15/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612416193/u/0/f/647410/c/35028/s/41211df8/sc/15/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612416193/u/0/f/647410/c/35028/s/41211df8/sc/15/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612416193/u/0/f/647410/c/35028/s/41211df8/sc/15/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612416193/u/0/f/647410/c/35028/s/41211df8/sc/15/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612416193/u/0/f/647410/c/35028/s/41211df8/sc/15/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612416193/u/0/f/647410/c/35028/s/41211df8/sc/15/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/rvSv4PbU_FI"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 20:07:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/41211df8/sc/15/l/0Lapple0Bslashdot0Borg0Cstory0C140C120C0A40C20A72470Capple0Eaccused0Eof0Edeleting0Esongs0Efrom0Eipods0Ewithout0Eusers0Eknowledge0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>handheld</dc:subject>
+      <dc:date>2014-12-04T20:07:00Z</dc:date>
+      <slash:department>not-cricket</slash:department>
+      <slash:section>apple</slash:section>
+      <slash:hit_parade>0,0,0,0,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/41211df8/sc/15/l/0Lapple0Bslashdot0Borg0Cstory0C140C120C0A40C20A72470Capple0Eaccused0Eof0Edeleting0Esongs0Efrom0Eipods0Ewithout0Eusers0Eknowledge0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Consumer-Grade SSDs Survive Two Petabytes of
+      Writes</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/qY8V8BE9xl8/story01.htm</link>
+      <description>crookedvulture writes The SSD Endurance
+      Experiment previously covered on Slashdot has reached another
+      big milestone: two freaking petabytes of writes. That's an
+      astounding total for consumer-grade drives rated to survive
+      no more than a few hundred terabytes. Only two of the initial
+      six subjects made it to 2PB. The Kingston HyperX 3K, Intel
+      335 Series, and Samsung 840 Series expired on the road to
+      1PB, while the Corsair Neutron GTX faltered at 1.2PB. The
+      Samsung 840 Pro continues despite logging thousands of
+      reallocated sectors. It has remained completely error-free
+      throughout the experiment, unlike a second HyperX, which has
+      suffered a couple of uncorrectable errors. The second HyperX
+      is mostly intact otherwise, though its built-in compression
+      tech has reduced the 2PB of host writes to just 1.4PB of
+      flash writes. Even accounting for compression, the flash in
+      the second HyperX has proven to be far more robust than in
+      the first. That difference highlights the impact normal
+      manufacturing variances can have on flash wear. It also
+      illustrates why the experiment's sample size is too small to
+      draw definitive conclusions about the durability of specific
+      models. However, the fact that all the drives far exceeded
+      their endurance specifications bodes well for the endurance
+      of consumer-grade SSDs in general.&lt;p&gt;&lt;div
+      class="share_submission" style="position:relative;"&gt; &lt;a
+      class="slashpop"
+      href="http://twitter.com/home?status=Consumer-Grade+SSDs+Survive+Two+Petabytes+of+Writes%3A+http%3A%2F%2Fbit.ly%2F15R4GiW"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fhardware.slashdot.org%2Fstory%2F14%2F12%2F04%2F1745218%2Fconsumer-grade-ssds-survive-two-petabytes-of-writes%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://hardware.slashdot.org/story/14/12/04/1745218/consumer-grade-ssds-survive-two-petabytes-of-writes?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://hardware.slashdot.org/story/14/12/04/1745218/consumer-grade-ssds-survive-two-petabytes-of-writes?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6294097&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/4120b1e0/sc/36/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612450450/u/0/f/647410/c/35028/s/4120b1e0/sc/36/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612450450/u/0/f/647410/c/35028/s/4120b1e0/sc/36/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612450450/u/0/f/647410/c/35028/s/4120b1e0/sc/36/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612450450/u/0/f/647410/c/35028/s/4120b1e0/sc/36/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612450450/u/0/f/647410/c/35028/s/4120b1e0/sc/36/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612450450/u/0/f/647410/c/35028/s/4120b1e0/sc/36/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612450450/u/0/f/647410/c/35028/s/4120b1e0/sc/36/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612450450/u/0/f/647410/c/35028/s/4120b1e0/sc/36/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612450450/u/0/f/647410/c/35028/s/4120b1e0/sc/36/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/qY8V8BE9xl8"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 19:23:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/4120b1e0/sc/36/l/0Lhardware0Bslashdot0Borg0Cstory0C140C120C0A40C17452180Cconsumer0Egrade0Essds0Esurvive0Etwo0Epetabytes0Eof0Ewrites0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>storage</dc:subject>
+      <dc:date>2014-12-04T19:23:00Z</dc:date>
+      <slash:comments>2</slash:comments>
+      <slash:department>some-of-them-at-least</slash:department>
+      <slash:section>hardware</slash:section>
+      <slash:hit_parade>2,2,1,1,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/4120b1e0/sc/36/l/0Lhardware0Bslashdot0Borg0Cstory0C140C120C0A40C17452180Cconsumer0Egrade0Essds0Esurvive0Etwo0Epetabytes0Eof0Ewrites0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>How the NSA Is Spying On Everyone: More
+      Revelations</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/Lf2EnfQiy6k/story01.htm</link>
+      <description>The Intercept has published today a story
+      detailing documents that "reveal how the NSA plans to
+      secretly introduce new flaws into communication systems so
+      that they can be tapped into&amp;mdash;a controversial tactic
+      that security experts say could be exposing the general
+      population to criminal hackers." The documents also describe
+      a years-long effort, aimed at hostile and friendly regimes,
+      from the point of view of the U.S. government, to break the
+      security of various countries' communications networks.
+      "Codenamed AURORAGOLD, the covert operation has monitored the
+      content of messages sent and received by more than 1,200
+      email accounts associated with major cellphone network
+      operators, intercepting confidential company planning papers
+      that help the NSA hack into phone networks."&lt;p&gt;&lt;div
+      class="share_submission" style="position:relative;"&gt; &lt;a
+      class="slashpop"
+      href="http://twitter.com/home?status=How+the+NSA+Is+Spying+On+Everyone%3A+More+Revelations%3A+http%3A%2F%2Fbit.ly%2F12BcTGK"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fyro.slashdot.org%2Fstory%2F14%2F12%2F04%2F1823255%2Fhow-the-nsa-is-spying-on-everyone-more-revelations%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://yro.slashdot.org/story/14/12/04/1823255/how-the-nsa-is-spying-on-everyone-more-revelations?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://yro.slashdot.org/story/14/12/04/1823255/how-the-nsa-is-spying-on-everyone-more-revelations?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6294355&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/4120768d/sc/21/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612414897/u/0/f/647410/c/35028/s/4120768d/sc/21/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612414897/u/0/f/647410/c/35028/s/4120768d/sc/21/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612414897/u/0/f/647410/c/35028/s/4120768d/sc/21/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612414897/u/0/f/647410/c/35028/s/4120768d/sc/21/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612414897/u/0/f/647410/c/35028/s/4120768d/sc/21/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612414897/u/0/f/647410/c/35028/s/4120768d/sc/21/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612414897/u/0/f/647410/c/35028/s/4120768d/sc/21/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612414897/u/0/f/647410/c/35028/s/4120768d/sc/21/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612414897/u/0/f/647410/c/35028/s/4120768d/sc/21/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/Lf2EnfQiy6k"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 18:41:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/4120768d/sc/21/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C18232550Chow0Ethe0Ensa0Eis0Espying0Eon0Eeveryone0Emore0Erevelations0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>communications</dc:subject>
+      <dc:date>2014-12-04T18:41:00Z</dc:date>
+      <slash:comments>8</slash:comments>
+      <slash:department>your-own-good</slash:department>
+      <slash:section>yro</slash:section>
+      <slash:hit_parade>8,8,2,1,1,1,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/4120768d/sc/21/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C18232550Chow0Ethe0Ensa0Eis0Espying0Eon0Eeveryone0Emore0Erevelations0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Using OwnCloud To Integrate Dropbox, Google Drive, and
+      More In Gnome</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/JojehbKom2M/story01.htm</link>
+      <description>Jason Hibbets writes Jiri Folta was looking for
+      an easy way to have all of his online storage services, such
+      as Google Drive and Dropbox, integrated with his Linux
+      desktop without using any nasty hacks. He shares this
+      solution in this short tutorial, and shows you how to
+      integrate ownCloud with the Gnome desktop and then add your
+      favorite cloud providers to use all of your cloud accounts in
+      one place just as easily as if they were local
+      drives.&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=Using+OwnCloud+To+Integrate+Dropbox%2C+Google+Drive%2C+and+More+In+Gnome%3A+http%3A%2F%2Fbit.ly%2F1FQCIPg"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftech.slashdot.org%2Fstory%2F14%2F12%2F04%2F185252%2Fusing-owncloud-to-integrate-dropbox-google-drive-and-more-in-gnome%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://tech.slashdot.org/story/14/12/04/185252/using-owncloud-to-integrate-dropbox-google-drive-and-more-in-gnome?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://tech.slashdot.org/story/14/12/04/185252/using-owncloud-to-integrate-dropbox-google-drive-and-more-in-gnome?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6294213&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/4120768f/sc/4/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612414896/u/0/f/647410/c/35028/s/4120768f/sc/4/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612414896/u/0/f/647410/c/35028/s/4120768f/sc/4/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612414896/u/0/f/647410/c/35028/s/4120768f/sc/4/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612414896/u/0/f/647410/c/35028/s/4120768f/sc/4/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612414896/u/0/f/647410/c/35028/s/4120768f/sc/4/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612414896/u/0/f/647410/c/35028/s/4120768f/sc/4/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612414896/u/0/f/647410/c/35028/s/4120768f/sc/4/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612414896/u/0/f/647410/c/35028/s/4120768f/sc/4/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612414896/u/0/f/647410/c/35028/s/4120768f/sc/4/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/JojehbKom2M"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 18:23:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/4120768f/sc/4/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C1852520Cusing0Eowncloud0Eto0Eintegrate0Edropbox0Egoogle0Edrive0Eand0Emore0Ein0Egnome0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>cloud</dc:subject>
+      <dc:date>2014-12-04T18:23:00Z</dc:date>
+      <slash:comments>4</slash:comments>
+      <slash:department>
+      all-in-one-and-one-for-all</slash:department>
+      <slash:section>technology</slash:section>
+      <slash:hit_parade>4,4,4,3,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/4120768f/sc/4/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C1852520Cusing0Eowncloud0Eto0Eintegrate0Edropbox0Egoogle0Edrive0Eand0Emore0Ein0Egnome0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>A Backhanded Defense of Las Vegas' Taxi
+      Regulation</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/_kf8PPGe93E/story01.htm</link>
+      <description>At Medium.com, Blake Ross takes a
+      tongue-in-cheek look at the consumer protections that exist
+      courtesy of the the Nevada Taxicab Authority, which (putting
+      it mildly) seem to be rather more friendly to the existing
+      taxi businesses in Las Vegas than they are to any disgruntled
+      riders. By contrast with Uber (just booted from Las Vegas),
+      Ross points out that the Taxicab Authority relies on
+      antiquated complaint forms, random police checks, overlooked
+      airport signs, and expensive tracking devices. Nonethess,
+      says Ross, "I stand with Nevada and say&amp;mdash;leave this
+      to the pros."&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=A+Backhanded+Defense+of+Las+Vegas'+Taxi+Regulation+%3A+http%3A%2F%2Fbit.ly%2F1zVDk3U"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftech.slashdot.org%2Fstory%2F14%2F12%2F04%2F1724211%2Fa-backhanded-defense-of-las-vegas-taxi-regulation%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://tech.slashdot.org/story/14/12/04/1724211/a-backhanded-defense-of-las-vegas-taxi-regulation?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://tech.slashdot.org/story/14/12/04/1724211/a-backhanded-defense-of-las-vegas-taxi-regulation?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6293969&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/41203b7f/sc/10/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612447899/u/0/f/647410/c/35028/s/41203b7f/sc/10/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612447899/u/0/f/647410/c/35028/s/41203b7f/sc/10/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612447899/u/0/f/647410/c/35028/s/41203b7f/sc/10/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612447899/u/0/f/647410/c/35028/s/41203b7f/sc/10/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612447899/u/0/f/647410/c/35028/s/41203b7f/sc/10/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612447899/u/0/f/647410/c/35028/s/41203b7f/sc/10/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612447899/u/0/f/647410/c/35028/s/41203b7f/sc/10/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612447899/u/0/f/647410/c/35028/s/41203b7f/sc/10/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612447899/u/0/f/647410/c/35028/s/41203b7f/sc/10/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/_kf8PPGe93E"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 18:00:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/41203b7f/sc/10/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C17242110Ca0Ebackhanded0Edefense0Eof0Elas0Evegas0Etaxi0Eregulation0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>transportation</dc:subject>
+      <dc:date>2014-12-04T18:00:00Z</dc:date>
+      <slash:department>
+      professional-clowns-rather-than-amateur-clowns</slash:department>
+      <slash:section>technology</slash:section>
+      <slash:hit_parade>0,0,0,0,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/41203b7f/sc/10/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C17242110Ca0Ebackhanded0Edefense0Eof0Elas0Evegas0Etaxi0Eregulation0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>'Moneyball' Approach Reduces Crime In New York
+      City</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/zlDmKky5rsQ/story01.htm</link>
+      <description>HughPickens.com writes The NYT reports that NY
+      County District Attorney Cyrus Vance Jr.'s most significant
+      initiative has been to transform, through the use of data,
+      the way district attorneys fight crime. "The question I had
+      when I came in was, Do we sit on our hands waiting for crime
+      to tick up, or can we do something to drive crime lower?"
+      says Vance. "I wanted to develop what I call
+      intelligence-driven prosecution." When Vance became DA in
+      2009, it was glaringly evident that assistant D.A.s fielding
+      the 105,000-plus cases a year in Manhattan seldom had enough
+      information to make nuanced decisions about bail, charges,
+      pleas or sentences. They were narrowly focused on the facts
+      of cases in front of them, not on the people committing the
+      crimes. They couldn't quickly sort minor delinquents from
+      irredeemably bad apples. They didn't know what havoc
+      defendants might be wreaking in other
+      boroughs.&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status='Moneyball'+Approach+Reduces+Crime+In+New+York+City%3A+http%3A%2F%2Fbit.ly%2F1vQWg4E"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fyro.slashdot.org%2Fstory%2F14%2F12%2F04%2F1619220%2Fmoneyball-approach-reduces-crime-in-new-york-city%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://yro.slashdot.org/story/14/12/04/1619220/moneyball-approach-reduces-crime-in-new-york-city?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://yro.slashdot.org/story/14/12/04/1619220/moneyball-approach-reduces-crime-in-new-york-city?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6293615&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411fb36b/sc/8/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388874/u/0/f/647410/c/35028/s/411fb36b/sc/8/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388874/u/0/f/647410/c/35028/s/411fb36b/sc/8/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388874/u/0/f/647410/c/35028/s/411fb36b/sc/8/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388874/u/0/f/647410/c/35028/s/411fb36b/sc/8/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388874/u/0/f/647410/c/35028/s/411fb36b/sc/8/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388874/u/0/f/647410/c/35028/s/411fb36b/sc/8/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388874/u/0/f/647410/c/35028/s/411fb36b/sc/8/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388874/u/0/f/647410/c/35028/s/411fb36b/sc/8/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612388874/u/0/f/647410/c/35028/s/411fb36b/sc/8/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/zlDmKky5rsQ"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 17:17:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411fb36b/sc/8/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C1619220A0Cmoneyball0Eapproach0Ereduces0Ecrime0Ein0Enew0Eyork0Ecity0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>stats</dc:subject>
+      <dc:date>2014-12-04T17:17:00Z</dc:date>
+      <slash:department>precrime-works-citizens</slash:department>
+      <slash:section>yro</slash:section>
+      <slash:hit_parade>0,0,0,0,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411fb36b/sc/8/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C1619220A0Cmoneyball0Eapproach0Ereduces0Ecrime0Ein0Enew0Eyork0Ecity0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Negative Online Reviews Are Not Defamation (At Least
+      In Canada)</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/hz5Q_tinbxg/story01.htm</link>
+      <description>An anonymous reader writes A client who was
+      dissatisfied with the service of an immigration company in
+      Canada took her grievances online, upon which she was sued
+      for defamation and libel by the owner of the company. A
+      Canadian superior court has tossed out the lawsuit with the
+      note: "One may be dissatisfied with the quality or efficiency
+      of services but expressing one's dissatisfaction is not
+      equivalent to defamation." The court noted: "This demand is
+      grossly exaggerated. It flirts with frivolity and abuse
+      within the meaning given to these words in Article 54.1
+      C.C.P."&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=Negative+Online+Reviews+Are+Not+Defamation+(At+Least+In+Canada)%3A+http%3A%2F%2Fbit.ly%2F1zVn5UF"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fyro.slashdot.org%2Fstory%2F14%2F12%2F04%2F1620252%2Fnegative-online-reviews-are-not-defamation-at-least-in-canada%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://yro.slashdot.org/story/14/12/04/1620252/negative-online-reviews-are-not-defamation-at-least-in-canada?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://yro.slashdot.org/story/14/12/04/1620252/negative-online-reviews-are-not-defamation-at-least-in-canada?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6293623&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411faf16/sc/8/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388284/u/0/f/647410/c/35028/s/411faf16/sc/8/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388284/u/0/f/647410/c/35028/s/411faf16/sc/8/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388284/u/0/f/647410/c/35028/s/411faf16/sc/8/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388284/u/0/f/647410/c/35028/s/411faf16/sc/8/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388284/u/0/f/647410/c/35028/s/411faf16/sc/8/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388284/u/0/f/647410/c/35028/s/411faf16/sc/8/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388284/u/0/f/647410/c/35028/s/411faf16/sc/8/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388284/u/0/f/647410/c/35028/s/411faf16/sc/8/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612388284/u/0/f/647410/c/35028/s/411faf16/sc/8/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/hz5Q_tinbxg"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 16:52:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411faf16/sc/8/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C1620A2520Cnegative0Eonline0Ereviews0Eare0Enot0Edefamation0Eat0Eleast0Ein0Ecanada0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>canada</dc:subject>
+      <dc:date>2014-12-04T16:52:00Z</dc:date>
+      <slash:comments>4</slash:comments>
+      <slash:department>in-canada-at-least</slash:department>
+      <slash:section>yro</slash:section>
+      <slash:hit_parade>4,4,2,2,1,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411faf16/sc/8/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C1620A2520Cnegative0Eonline0Ereviews0Eare0Enot0Edefamation0Eat0Eleast0Ein0Ecanada0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Woz Downplays the Significance of Apple's Startup
+      Garage</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/5Vw_S7r1eV0/story01.htm</link>
+      <description>mrspoonsi (2955715) writes "When thinking about
+      the early days of Apple, most people who know even a little
+      bit about the company probably picture Steve Jobs and
+      cofounder Steve Wozniak busily brainstorming in a small
+      garage in Silicon Valley. That's how the story goes
+      &amp;mdash; in fact, the garage where they famously started
+      the company was even deemed a historical site last year.
+      Wozniak, however, doesn't really see that location as a
+      crucial part of Apple's history. "The garage is a bit of a
+      myth," he told Bloomberg Businessweek's Brandon Lisy when
+      asked whether the garage was important to Apple's story. "We
+      did no designs there, no breadboarding, no prototyping, no
+      planning of products. We did no manufacturing there." The
+      garage served as a familiar location for him and Jobs in the
+      early days, Wozniak said, but that's about it. "The garage
+      didn't service much purpose, except it was something for us
+      to feel was our home," he said. "We had no money. You have to
+      work out of your home when you have no
+      money.""&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=Woz+Downplays+the+Significance+of+Apple's+Startup+Garage%3A+http%3A%2F%2Fbit.ly%2F1vlRVlg"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fapple.slashdot.org%2Fstory%2F14%2F12%2F04%2F1614225%2Fwoz-downplays-the-significance-of-apples-startup-garage%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://apple.slashdot.org/story/14/12/04/1614225/woz-downplays-the-significance-of-apples-startup-garage?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://apple.slashdot.org/story/14/12/04/1614225/woz-downplays-the-significance-of-apples-startup-garage?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6293593&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411faad5/sc/30/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612387731/u/0/f/647410/c/35028/s/411faad5/sc/30/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612387731/u/0/f/647410/c/35028/s/411faad5/sc/30/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612387731/u/0/f/647410/c/35028/s/411faad5/sc/30/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612387731/u/0/f/647410/c/35028/s/411faad5/sc/30/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612387731/u/0/f/647410/c/35028/s/411faad5/sc/30/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612387731/u/0/f/647410/c/35028/s/411faad5/sc/30/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612387731/u/0/f/647410/c/35028/s/411faad5/sc/30/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612387731/u/0/f/647410/c/35028/s/411faad5/sc/30/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612387731/u/0/f/647410/c/35028/s/411faad5/sc/30/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/5Vw_S7r1eV0"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 16:36:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411faad5/sc/30/l/0Lapple0Bslashdot0Borg0Cstory0C140C120C0A40C16142250Cwoz0Edownplays0Ethe0Esignificance0Eof0Eapples0Estartup0Egarage0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>apple</dc:subject>
+      <dc:date>2014-12-04T16:36:00Z</dc:date>
+      <slash:comments>2</slash:comments>
+      <slash:department>
+      having-a-home-seems-pretty-significant</slash:department>
+      <slash:section>apple</slash:section>
+      <slash:hit_parade>2,2,0,0,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411faad5/sc/30/l/0Lapple0Bslashdot0Borg0Cstory0C140C120C0A40C16142250Cwoz0Edownplays0Ethe0Esignificance0Eof0Eapples0Estartup0Egarage0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Windows 10 Adds Battery Saver Feature</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/TCobHxtq-C4/story01.htm</link>
+      <description>jones_supa writes In past builds of Windows 10
+      Technical Preview there has been an interesting feature
+      called Battery Saver, but for the time being it has been just
+      a mockup. In a leaked build 9888, the code is now in place.
+      Battery Saver, as the name implies, will help your mobile
+      device make the most out of your battery. This feature works
+      by limiting the background activity on your device when the
+      mode is activated. You can turn the feature on any time but
+      there is also a setting to have it automatically turn on when
+      the battery capacity goes below a user-defined percentage.
+      Considering that this build was not supposed to make its way
+      out of Redmond and that the company is not releasing any new
+      builds this year, this may be the best look we get until the
+      Consumer Preview arrives.&lt;p&gt;&lt;div
+      class="share_submission" style="position:relative;"&gt; &lt;a
+      class="slashpop"
+      href="http://twitter.com/home?status=Windows+10+Adds+Battery+Saver+Feature%3A+http%3A%2F%2Fbit.ly%2F15QHu4z"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftech.slashdot.org%2Fstory%2F14%2F12%2F04%2F1546250%2Fwindows-10-adds-battery-saver-feature%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://tech.slashdot.org/story/14/12/04/1546250/windows-10-adds-battery-saver-feature?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://tech.slashdot.org/story/14/12/04/1546250/windows-10-adds-battery-saver-feature?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6293407&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411fa689/sc/4/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612387200/u/0/f/647410/c/35028/s/411fa689/sc/4/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612387200/u/0/f/647410/c/35028/s/411fa689/sc/4/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612387200/u/0/f/647410/c/35028/s/411fa689/sc/4/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612387200/u/0/f/647410/c/35028/s/411fa689/sc/4/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612387200/u/0/f/647410/c/35028/s/411fa689/sc/4/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612387200/u/0/f/647410/c/35028/s/411fa689/sc/4/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612387200/u/0/f/647410/c/35028/s/411fa689/sc/4/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612387200/u/0/f/647410/c/35028/s/411fa689/sc/4/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612387200/u/0/f/647410/c/35028/s/411fa689/sc/4/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/TCobHxtq-C4"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 15:54:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411fa689/sc/4/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C1546250A0Cwindows0E10A0Eadds0Ebattery0Esaver0Efeature0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>windows</dc:subject>
+      <dc:date>2014-12-04T15:54:00Z</dc:date>
+      <slash:comments>22</slash:comments>
+      <slash:department>perpetual-frontier</slash:department>
+      <slash:section>technology</slash:section>
+      <slash:hit_parade>22,22,13,12,1,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411fa689/sc/4/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C1546250A0Cwindows0E10A0Eadds0Ebattery0Esaver0Efeature0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>The Cost of the "S" In HTTPS</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/HeV22TIBmJs/story01.htm</link>
+      <description>An anonymous reader writes Researchers from CMU,
+      Telefonica, and Politecnico di Torino have presented a paper
+      at ACM CoNEXT that quantifies the cost of the "S" in HTTPS.
+      The study shows that today major players are embracing
+      end-to-end encryption, so that about 50% of web traffic is
+      carried by HTTPS. This is a nice testament to the feasibility
+      of having a fully encrypted web. The paper pinpoints also the
+      cost of encryption, that manifests itself through increases
+      in the page loading time that go above 50%, and possible
+      increase in battery usage. However, the major loss due to the
+      "S" is the inability to offer any in-network value added
+      services, that are offered by middle-boxes, such as caching,
+      proxying, firewalling, parental control, etc. Are we ready to
+      accept it? (Presentation can be downloaded from
+      here.)&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=The+Cost+of+the+%22S%22+In+HTTPS%3A+http%3A%2F%2Fbit.ly%2F1FQ5OOM"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fyro.slashdot.org%2Fstory%2F14%2F12%2F04%2F1513255%2Fthe-cost-of-the-s-in-https%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://yro.slashdot.org/story/14/12/04/1513255/the-cost-of-the-s-in-https?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://yro.slashdot.org/story/14/12/04/1513255/the-cost-of-the-s-in-https?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6293209&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411ec704/sc/4/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612399342/u/0/f/647410/c/35028/s/411ec704/sc/4/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612399342/u/0/f/647410/c/35028/s/411ec704/sc/4/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612399342/u/0/f/647410/c/35028/s/411ec704/sc/4/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612399342/u/0/f/647410/c/35028/s/411ec704/sc/4/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612399342/u/0/f/647410/c/35028/s/411ec704/sc/4/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612399342/u/0/f/647410/c/35028/s/411ec704/sc/4/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612399342/u/0/f/647410/c/35028/s/411ec704/sc/4/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612399342/u/0/f/647410/c/35028/s/411ec704/sc/4/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612399342/u/0/f/647410/c/35028/s/411ec704/sc/4/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/HeV22TIBmJs"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 15:13:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411ec704/sc/4/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C15132550Cthe0Ecost0Eof0Ethe0Es0Ein0Ehttps0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>encryption</dc:subject>
+      <dc:date>2014-12-04T15:13:00Z</dc:date>
+      <slash:comments>1</slash:comments>
+      <slash:department>not-insignificant</slash:department>
+      <slash:section>yro</slash:section>
+      <slash:hit_parade>1,1,1,1,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411ec704/sc/4/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C15132550Cthe0Ecost0Eof0Ethe0Es0Ein0Ehttps0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>UK Completes 250km of Undersea Broadband
+      Rollouts</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/uakXU_eh75c/story01.htm</link>
+      <description>DW100 writes The UK has completed a highly
+      challenging rollout of broadband to remote islands in
+      Scotland, covering 250km of seabed. The work has taken many
+      months but will mean some 150,000 residents in the islands
+      will be able to get broadband of up to 80Mbps. A cable laying
+      ship, the Rene Descartes, carried out the work, with the
+      longest cable stretching 50 miles between
+      islands.&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=UK+Completes+250km+of+Undersea+Broadband+Rollouts%3A+http%3A%2F%2Fbit.ly%2F1rUKeba"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftech.slashdot.org%2Fstory%2F14%2F12%2F04%2F1351211%2Fuk-completes-250km-of-undersea-broadband-rollouts%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://tech.slashdot.org/story/14/12/04/1351211/uk-completes-250km-of-undersea-broadband-rollouts?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://tech.slashdot.org/story/14/12/04/1351211/uk-completes-250km-of-undersea-broadband-rollouts?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6292803&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411f0527/sc/10/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612384041/u/0/f/647410/c/35028/s/411f0527/sc/10/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612384041/u/0/f/647410/c/35028/s/411f0527/sc/10/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612384041/u/0/f/647410/c/35028/s/411f0527/sc/10/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612384041/u/0/f/647410/c/35028/s/411f0527/sc/10/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612384041/u/0/f/647410/c/35028/s/411f0527/sc/10/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612384041/u/0/f/647410/c/35028/s/411f0527/sc/10/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612384041/u/0/f/647410/c/35028/s/411f0527/sc/10/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612384041/u/0/f/647410/c/35028/s/411f0527/sc/10/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612384041/u/0/f/647410/c/35028/s/411f0527/sc/10/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/uakXU_eh75c"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 14:58:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411f0527/sc/10/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C13512110Cuk0Ecompletes0E250Akm0Eof0Eundersea0Ebroadband0Erollouts0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>internet</dc:subject>
+      <dc:date>2014-12-04T14:58:00Z</dc:date>
+      <slash:department>
+      part-of-the-anti-independence-conspiracy</slash:department>
+      <slash:section>technology</slash:section>
+      <slash:hit_parade>0,0,0,0,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411f0527/sc/10/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C13512110Cuk0Ecompletes0E250Akm0Eof0Eundersea0Ebroadband0Erollouts0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Technical Hitches Delay Orion Capsule's First
+      Launch</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/yO3-3sTW6NI/story01.htm</link>
+      <description>According to NBC news, "A series of delays held
+      up the maiden launch of NASA's Orion capsule on Thursday,
+      adding some extra suspense to the first test of a spacecraft
+      that's designed to take humans farther than they've ever gone
+      &amp;mdash; including to Mars." The much-anticipated launch,
+      which had been scheduled for launch 7:05 a.m. Florida time,
+      is to boost into orbit &amp;mdash; empty &amp;mdash; an
+      instance of the Orion crew capsule intended to be part of a
+      manned mission to Mars. As of shortly after 9 a.m. eastern
+      time, troubleshooting has been in progress on the Alliance
+      Delta 4 launch vehicle's hydrogen fill and drain valves in
+      attempt to make the launch within today's launch window,
+      which extends to 9:44 a.m. Besides the technical problem with
+      those valves, the launch was delayed by wind, as well as by a
+      boat that strayed into a restricted area. (Shades of the
+      stray-boat delay in October for Orbital Science's ISS
+      delivery launch.) Friday and Saturday have been designated as
+      backup dates. Update: 12/04 15:03 GMT by T : The launch has
+      been scrubbed.&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=Technical+Hitches+Delay+Orion+Capsule's+First+Launch%3A+http%3A%2F%2Fbit.ly%2F1Alc7II"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fscience.slashdot.org%2Fstory%2F14%2F12%2F04%2F1418253%2Ftechnical-hitches-delay-orion-capsules-first-launch%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://science.slashdot.org/story/14/12/04/1418253/technical-hitches-delay-orion-capsules-first-launch?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://science.slashdot.org/story/14/12/04/1418253/technical-hitches-delay-orion-capsules-first-launch?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6292927&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411e5494/sc/21/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612440571/u/0/f/647410/c/35028/s/411e5494/sc/21/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612440571/u/0/f/647410/c/35028/s/411e5494/sc/21/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612440571/u/0/f/647410/c/35028/s/411e5494/sc/21/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612440571/u/0/f/647410/c/35028/s/411e5494/sc/21/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612440571/u/0/f/647410/c/35028/s/411e5494/sc/21/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612440571/u/0/f/647410/c/35028/s/411e5494/sc/21/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612440571/u/0/f/647410/c/35028/s/411e5494/sc/21/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612440571/u/0/f/647410/c/35028/s/411e5494/sc/21/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612440571/u/0/f/647410/c/35028/s/411e5494/sc/21/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/yO3-3sTW6NI"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 14:29:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411e5494/sc/21/l/0Lscience0Bslashdot0Borg0Cstory0C140C120C0A40C14182530Ctechnical0Ehitches0Edelay0Eorion0Ecapsules0Efirst0Elaunch0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>nasa</dc:subject>
+      <dc:date>2014-12-04T14:29:00Z</dc:date>
+      <slash:comments>18</slash:comments>
+      <slash:department>
+      despite-not-being-run-by-the-usps</slash:department>
+      <slash:section>science</slash:section>
+      <slash:hit_parade>18,18,15,12,1,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411e5494/sc/21/l/0Lscience0Bslashdot0Borg0Cstory0C140C120C0A40C14182530Ctechnical0Ehitches0Edelay0Eorion0Ecapsules0Efirst0Elaunch0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Chinese CEO Says "Free" Is the Right Price For Mobile
+      Software</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/iXIhm9pU7eQ/story01.htm</link>
+      <description>hackingbear writes Sheng Fu, CEO of Cheetah
+      Mobile, a public Chinese mobile software company you probably
+      haven't heard of, but whose products are among the top
+      downloaded products in Android markets around the world, said
+      that the intense competition of the Chinese market leads to
+      products that can compete globally. Many recent university
+      graduates are working in tech, all with their startups
+      looking to find their place in the market, he said. Chinese
+      companies saw the impact that piracy played in the PC
+      software era, and China's mobile companies grew up knowing
+      they would need to make money without getting consumers to
+      open their wallets. "Chinese companies are so good at making
+      free but high-quality products," he said. Sounds like we have
+      a good race to the bottom.&lt;p&gt;&lt;div
+      class="share_submission" style="position:relative;"&gt; &lt;a
+      class="slashpop"
+      href="http://twitter.com/home?status=Chinese+CEO+Says+%22Free%22+Is+the+Right+Price+For+Mobile+Software%3A+http%3A%2F%2Fbit.ly%2F1yj17ZN"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fmobile.slashdot.org%2Fstory%2F14%2F12%2F04%2F1324231%2Fchinese-ceo-says-free-is-the-right-price-for-mobile-software%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://mobile.slashdot.org/story/14/12/04/1324231/chinese-ceo-says-free-is-the-right-price-for-mobile-software?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://mobile.slashdot.org/story/14/12/04/1324231/chinese-ceo-says-free-is-the-right-price-for-mobile-software?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6292643&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411e9172/sc/1/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612381638/u/0/f/647410/c/35028/s/411e9172/sc/1/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612381638/u/0/f/647410/c/35028/s/411e9172/sc/1/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612381638/u/0/f/647410/c/35028/s/411e9172/sc/1/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612381638/u/0/f/647410/c/35028/s/411e9172/sc/1/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612381638/u/0/f/647410/c/35028/s/411e9172/sc/1/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612381638/u/0/f/647410/c/35028/s/411e9172/sc/1/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612381638/u/0/f/647410/c/35028/s/411e9172/sc/1/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612381638/u/0/f/647410/c/35028/s/411e9172/sc/1/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612381638/u/0/f/647410/c/35028/s/411e9172/sc/1/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/iXIhm9pU7eQ"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 13:48:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411e9172/sc/1/l/0Lmobile0Bslashdot0Borg0Cstory0C140C120C0A40C13242310Cchinese0Eceo0Esays0Efree0Eis0Ethe0Eright0Eprice0Efor0Emobile0Esoftware0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>timothy</dc:creator>
+      <dc:subject>business</dc:subject>
+      <dc:date>2014-12-04T13:48:00Z</dc:date>
+      <slash:comments>6</slash:comments>
+      <slash:department>sounds-like-a-plan</slash:department>
+      <slash:section>mobile</slash:section>
+      <slash:hit_parade>6,6,4,4,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411e9172/sc/1/l/0Lmobile0Bslashdot0Borg0Cstory0C140C120C0A40C13242310Cchinese0Eceo0Esays0Efree0Eis0Ethe0Eright0Eprice0Efor0Emobile0Esoftware0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Google Confirms That It's Designing Kid-Friendly
+      Versions of Its Services</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/smUb-Vlg1mg/story01.htm</link>
+      <description>An anonymous reader writes USA Today reports
+      that rumors about Google working on specific services
+      catering to young kids are true. From the article: "With
+      Google processing 40,000 search queries a second &amp;mdash;
+      or 1.2 trillion a year &amp;mdash; it's a safe bet that many
+      of those doing the Googling are kids. Little surprise then
+      that beginning next year the tech giant plans to create
+      specific versions of its most popular products for those 12
+      and younger. The most likely candidates are those that are
+      already popular with a broad age group, such as search,
+      YouTube and Chrome. 'The big motivator inside the company is
+      everyone is having kids, so there's a push to change our
+      products to be fun and safe for children,' Pavni Diwanji, the
+      vice president of engineering charged with leading the new
+      initiative, told USA TODAY. 'We expect this to be
+      controversial, but the simple truth is kids already have the
+      technology in schools and at home,' says the mother of two
+      daughters, ages 8 and 13. 'So the better approach is to
+      simply see to it that the tech is used in a better
+      way.'"&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=Google+Confirms+That+It's+Designing+Kid-Friendly+Versions+of+Its+Services%3A+http%3A%2F%2Fbit.ly%2F1vPVxkh"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftech.slashdot.org%2Fstory%2F14%2F12%2F04%2F0129206%2Fgoogle-confirms-that-its-designing-kid-friendly-versions-of-its-services%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://tech.slashdot.org/story/14/12/04/0129206/google-confirms-that-its-designing-kid-friendly-versions-of-its-services?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://tech.slashdot.org/story/14/12/04/0129206/google-confirms-that-its-designing-kid-friendly-versions-of-its-services?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6286851&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411dfa83/sc/4/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612379742/u/0/f/647410/c/35028/s/411dfa83/sc/4/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612379742/u/0/f/647410/c/35028/s/411dfa83/sc/4/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612379742/u/0/f/647410/c/35028/s/411dfa83/sc/4/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612379742/u/0/f/647410/c/35028/s/411dfa83/sc/4/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612379742/u/0/f/647410/c/35028/s/411dfa83/sc/4/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612379742/u/0/f/647410/c/35028/s/411dfa83/sc/4/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612379742/u/0/f/647410/c/35028/s/411dfa83/sc/4/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612379742/u/0/f/647410/c/35028/s/411dfa83/sc/4/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612379742/u/0/f/647410/c/35028/s/411dfa83/sc/4/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/smUb-Vlg1mg"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 13:07:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411dfa83/sc/4/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C0A12920A60Cgoogle0Econfirms0Ethat0Eits0Edesigning0Ekid0Efriendly0Eversions0Eof0Eits0Eservices0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>samzenpus</dc:creator>
+      <dc:subject>google</dc:subject>
+      <dc:date>2014-12-04T13:07:00Z</dc:date>
+      <slash:comments>1</slash:comments>
+      <slash:department>
+      won't-somebody-please-think-of-the-children?</slash:department>
+      <slash:section>technology</slash:section>
+      <slash:hit_parade>1,1,0,0,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411dfa83/sc/4/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A40C0A12920A60Cgoogle0Econfirms0Ethat0Eits0Edesigning0Ekid0Efriendly0Eversions0Eof0Eits0Eservices0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>How High-Tech Temporary Tattoos Will Hack Your
+      Skin</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/unLkLZhmH4M/story01.htm</link>
+      <description>Molly McHugh writes with this story about
+      sensors that can be attached to temporary tattoos to monitor
+      various medical information. "The Center for Wearable Sensors
+      at the University of California San Diego has been
+      experimenting with attaching sensors to temporary tattoos in
+      order to extract data from the body. The tattoos are worn
+      exactly as a regular temporary tattoo would be worn. The
+      sensors simply sit atop the skin without penetrating it and
+      interact with Bluetooth or other wireless devices with a
+      signal in order to send the data....A biofuel battery applied
+      as a temporary tattoo converts sweat into energy, and a
+      startup within the center has developed a strip that extracts
+      data from sweat to explain how your body is reacting to
+      certain types of exercise. Amay Bandodkar, a fourth year PhD
+      student at UCSD, explains that the sensors are programmed to
+      react to the amount of lactate the body
+      produces."&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=How+High-Tech+Temporary+Tattoos+Will+Hack+Your+Skin%3A+http%3A%2F%2Fbit.ly%2F1BggGrh"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fscience.slashdot.org%2Fstory%2F14%2F12%2F04%2F0142209%2Fhow-high-tech-temporary-tattoos-will-hack-your-skin%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://science.slashdot.org/story/14/12/04/0142209/how-high-tech-temporary-tattoos-will-hack-your-skin?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://science.slashdot.org/story/14/12/04/0142209/how-high-tech-temporary-tattoos-will-hack-your-skin?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6286937&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411ca458/sc/23/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612432429/u/0/f/647410/c/35028/s/411ca458/sc/23/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612432429/u/0/f/647410/c/35028/s/411ca458/sc/23/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612432429/u/0/f/647410/c/35028/s/411ca458/sc/23/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612432429/u/0/f/647410/c/35028/s/411ca458/sc/23/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612432429/u/0/f/647410/c/35028/s/411ca458/sc/23/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612432429/u/0/f/647410/c/35028/s/411ca458/sc/23/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612432429/u/0/f/647410/c/35028/s/411ca458/sc/23/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612432429/u/0/f/647410/c/35028/s/411ca458/sc/23/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612432429/u/0/f/647410/c/35028/s/411ca458/sc/23/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/unLkLZhmH4M"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 10:33:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411ca458/sc/23/l/0Lscience0Bslashdot0Borg0Cstory0C140C120C0A40C0A14220A90Chow0Ehigh0Etech0Etemporary0Etattoos0Ewill0Ehack0Eyour0Eskin0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>samzenpus</dc:creator>
+      <dc:subject>medicine</dc:subject>
+      <dc:date>2014-12-04T10:33:00Z</dc:date>
+      <slash:comments>6</slash:comments>
+      <slash:department>wear-and-test</slash:department>
+      <slash:section>science</slash:section>
+      <slash:hit_parade>6,6,4,3,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411ca458/sc/23/l/0Lscience0Bslashdot0Borg0Cstory0C140C120C0A40C0A14220A90Chow0Ehigh0Etech0Etemporary0Etattoos0Ewill0Ehack0Eyour0Eskin0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>UK MP Says ISPs Must Take Responsibility For Movie
+      Leaks, Sony Eyes North Korea</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/z13bk34k5gc/story01.htm</link>
+      <description>An anonymous reader writes that the recent IP
+      advisor to Prime Minister David Cameron has laid some of the
+      blame for the recent Sony hack at the feet of ISPs.
+      Meanwhile, it's reported that Sony is close to officially
+      blaming North Korea. As the fallout from the Sony hack
+      continues, who is to blame for the leak of movies including
+      Fury, which has been downloaded a million times? According to
+      the UK Prime Minister's former IP advisor, as 'facilitators'
+      web-hosts and ISPs must step up and take some blame. Mike
+      Weatherley MP, the recent IP advisor to Prime Minister David
+      Cameron, has published several piracy reports including one
+      earlier in the year examining the advertising revenue on
+      pirate sites. He believes that companies with no direct
+      connection to the hack or subsequent leaks should shoulder
+      some blame. 'Piracy is a huge international problem. The
+      recent cyber-attack on Sony and subsequent release of films
+      to illegal websites is just one high-profile example of how
+      criminals exploit others' Intellectual Property,' Weatherley
+      writes in an email to TF. 'Unfortunately, the theft of these
+      films &amp;ndash; and their subsequent downloads &amp;ndash;
+      has been facilitated by web-hosting companies and,
+      ultimately, ISPs who do have to step-up and take some
+      responsibility.' Weatherley doesn't provide detail on
+      precisely why web-hosts and ISPs should take responsibility
+      for the work of malicious hackers (possibly state-sponsored)
+      and all subsequent fall out from attacks. The theory is that
+      'something' should be done, but precisely what remains
+      elusive."&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=UK+MP+Says+ISPs+Must+Take+Responsibility+For+Movie+Leaks%2C+Sony+Eyes+North+Korea%3A+http%3A%2F%2Fbit.ly%2F11XEjWp"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fyro.slashdot.org%2Fstory%2F14%2F12%2F04%2F0117247%2Fuk-mp-says-isps-must-take-responsibility-for-movie-leaks-sony-eyes-north-korea%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://yro.slashdot.org/story/14/12/04/0117247/uk-mp-says-isps-must-take-responsibility-for-movie-leaks-sony-eyes-north-korea?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://yro.slashdot.org/story/14/12/04/0117247/uk-mp-says-isps-must-take-responsibility-for-movie-leaks-sony-eyes-north-korea?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6286753&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411b636e/sc/1/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612382897/u/0/f/647410/c/35028/s/411b636e/sc/1/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612382897/u/0/f/647410/c/35028/s/411b636e/sc/1/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612382897/u/0/f/647410/c/35028/s/411b636e/sc/1/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612382897/u/0/f/647410/c/35028/s/411b636e/sc/1/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612382897/u/0/f/647410/c/35028/s/411b636e/sc/1/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612382897/u/0/f/647410/c/35028/s/411b636e/sc/1/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612382897/u/0/f/647410/c/35028/s/411b636e/sc/1/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612382897/u/0/f/647410/c/35028/s/411b636e/sc/1/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612382897/u/0/f/647410/c/35028/s/411b636e/sc/1/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/z13bk34k5gc"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 07:57:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411b636e/sc/1/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C0A1172470Cuk0Emp0Esays0Eisps0Emust0Etake0Eresponsibility0Efor0Emovie0Eleaks0Esony0Eeyes0Enorth0Ekorea0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>samzenpus</dc:creator>
+      <dc:subject>sony</dc:subject>
+      <dc:date>2014-12-04T07:57:00Z</dc:date>
+      <slash:comments>1</slash:comments>
+      <slash:department>who's-to-blame</slash:department>
+      <slash:section>yro</slash:section>
+      <slash:hit_parade>1,1,0,0,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411b636e/sc/1/l/0Lyro0Bslashdot0Borg0Cstory0C140C120C0A40C0A1172470Cuk0Emp0Esays0Eisps0Emust0Etake0Eresponsibility0Efor0Emovie0Eleaks0Esony0Eeyes0Enorth0Ekorea0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Why Pluto Still Matters</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/-u6lSs4ZS8E/story01.htm</link>
+      <description>StartsWithABang writes Nearly a century ago,
+      Pluto was discovered, and for 48 years it remained the only
+      known object whose orbit takes it beyond the gravitational
+      pull of Neptune. In a single generation, we've now discovered
+      more than 1,000 additional objects in the Kuiper Belt, but
+      does that make Pluto any less special? Here's a strong
+      argument for why Pluto might matter now more than
+      ever.&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=Why+Pluto+Still+Matters%3A+http%3A%2F%2Fbit.ly%2F15PSA9U"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fscience.slashdot.org%2Fstory%2F14%2F12%2F04%2F0154256%2Fwhy-pluto-still-matters%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://science.slashdot.org/story/14/12/04/0154256/why-pluto-still-matters?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://science.slashdot.org/story/14/12/04/0154256/why-pluto-still-matters?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6287021&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411a9528/sc/38/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388875/u/0/f/647410/c/35028/s/411a9528/sc/38/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388875/u/0/f/647410/c/35028/s/411a9528/sc/38/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388875/u/0/f/647410/c/35028/s/411a9528/sc/38/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388875/u/0/f/647410/c/35028/s/411a9528/sc/38/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388875/u/0/f/647410/c/35028/s/411a9528/sc/38/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388875/u/0/f/647410/c/35028/s/411a9528/sc/38/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612388875/u/0/f/647410/c/35028/s/411a9528/sc/38/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612388875/u/0/f/647410/c/35028/s/411a9528/sc/38/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612388875/u/0/f/647410/c/35028/s/411a9528/sc/38/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/-u6lSs4ZS8E"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 06:20:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411a9528/sc/38/l/0Lscience0Bslashdot0Borg0Cstory0C140C120C0A40C0A1542560Cwhy0Epluto0Estill0Ematters0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>samzenpus</dc:creator>
+      <dc:subject>space</dc:subject>
+      <dc:date>2014-12-04T06:20:00Z</dc:date>
+      <slash:comments>6</slash:comments>
+      <slash:department>
+      where-the-mi-go-and-the-terran-federation-play</slash:department>
+      <slash:section>science</slash:section>
+      <slash:hit_parade>6,6,3,3,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411a9528/sc/38/l/0Lscience0Bslashdot0Borg0Cstory0C140C120C0A40C0A1542560Cwhy0Epluto0Estill0Ematters0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Programmer Father Asks: What Gets Little Girls
+      Interested In Science?</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/5tPhc8QeecE/story01.htm</link>
+      <description>nbauman writes Programmer David Auerbach is
+      dismayed that, at a critical developmental age, his
+      4-year-old daughter wants to be a princess, not a scientist
+      or engineer, he writes in Slate. The larger society keeps
+      forcing sexist stereotypes on her, in every book and toy
+      store. From the article: "Getting more women into science and
+      technology fields: Where&amp;rsquo;s the silver bullet? While
+      I might get more hits by revealing the One Simple Trick to
+      increase female participation in the sciences, the truth is
+      there isn&amp;rsquo;t some key inflection point where young
+      women&amp;rsquo;s involvement drops off. Instead, there is a
+      series of small- to medium-sized discouraging factors that
+      set in from a young age, ranging from unhelpful social
+      conditioning to a lack of role models to unconscious bias to
+      very conscious bias. Any and all of these can figure into
+      why, for example, women tend to underrate their technical
+      abilities relative to men. I know plenty of successful women
+      in the sciences, but let&amp;rsquo;s not fool ourselves and
+      say the playing field in the academic sciences or the tech
+      world is even. My wife attributes her pursuit of programming
+      to being a loner and pretty much ignoring wider society while
+      growing up: 'Being left alone with a computer (with NO
+      INTERNET TO TELL ME WHAT I COULDN&amp;rsquo;T DO) was the
+      deciding factor,' she tells me."&lt;p&gt;&lt;div
+      class="share_submission" style="position:relative;"&gt; &lt;a
+      class="slashpop"
+      href="http://twitter.com/home?status=Programmer+Father+Asks%3A+What+Gets+Little+Girls+Interested+In+Science%3F%3A+http%3A%2F%2Fbit.ly%2F1FOCM1S"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fdevelopers.slashdot.org%2Fstory%2F14%2F12%2F04%2F0149236%2Fprogrammer-father-asks-what-gets-little-girls-interested-in-science%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://developers.slashdot.org/story/14/12/04/0149236/programmer-father-asks-what-gets-little-girls-interested-in-science?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://developers.slashdot.org/story/14/12/04/0149236/programmer-father-asks-what-gets-little-girls-interested-in-science?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6286969&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411a986f/sc/38/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612363166/u/0/f/647410/c/35028/s/411a986f/sc/38/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612363166/u/0/f/647410/c/35028/s/411a986f/sc/38/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612363166/u/0/f/647410/c/35028/s/411a986f/sc/38/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612363166/u/0/f/647410/c/35028/s/411a986f/sc/38/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612363166/u/0/f/647410/c/35028/s/411a986f/sc/38/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612363166/u/0/f/647410/c/35028/s/411a986f/sc/38/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612363166/u/0/f/647410/c/35028/s/411a986f/sc/38/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612363166/u/0/f/647410/c/35028/s/411a986f/sc/38/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612363166/u/0/f/647410/c/35028/s/411a986f/sc/38/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/5tPhc8QeecE"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 05:33:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411a986f/sc/38/l/0Ldevelopers0Bslashdot0Borg0Cstory0C140C120C0A40C0A1492360Cprogrammer0Efather0Easks0Ewhat0Egets0Elittle0Egirls0Einterested0Ein0Escience0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>samzenpus</dc:creator>
+      <dc:subject>programming</dc:subject>
+      <dc:date>2014-12-04T05:33:00Z</dc:date>
+      <slash:comments>7</slash:comments>
+      <slash:department>what's-a-father-to-do?</slash:department>
+      <slash:section>developers</slash:section>
+      <slash:hit_parade>7,7,2,1,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411a986f/sc/38/l/0Ldevelopers0Bslashdot0Borg0Cstory0C140C120C0A40C0A1492360Cprogrammer0Efather0Easks0Ewhat0Egets0Elittle0Egirls0Einterested0Ein0Escience0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Google Hopes To One Day Replace Gmail With
+      Inbox</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/hqWon35Y6ew/story01.htm</link>
+      <description>An anonymous reader writes Three Inbox by Gmail
+      engineers today answered questions as part of a Reddit AMA
+      session. Most of the answers were tidbits we've heard of
+      before, but one stood out to us: Google plans to eventually
+      replace Gmail with Inbox. In response to the question "Do you
+      think Inbox will replace Gmail on the long road?," lead
+      designer Jason Cornwell gave the following answer: "In the
+      short term, no. In the very long term, we hope so. Inbox is
+      something new &amp;mdash; that's why we're launching it as a
+      separate product. We care deeply about Gmail and Gmail users,
+      but in the long run as we add more features to Inbox and
+      respond to user feedback we hope that everyone will want to
+      use Inbox instead of Gmail. Ultimately, our users will
+      decide." The followup question asks how Google believed one
+      email product possibly target both casual (Gmail) and power
+      (Inbox) users, to which Cornwell replied: "They are not aimed
+      at fundamentally different audiences. Both Gmail and Inbox
+      are designed to scale from low volume to high volume
+      users."&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=Google+Hopes+To+One+Day+Replace+Gmail+With+Inbox%3A+http%3A%2F%2Fbit.ly%2F1yh2YTQ"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Ftech.slashdot.org%2Fstory%2F14%2F12%2F03%2F2237247%2Fgoogle-hopes-to-one-day-replace-gmail-with-inbox%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://tech.slashdot.org/story/14/12/03/2237247/google-hopes-to-one-day-replace-gmail-with-inbox?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://tech.slashdot.org/story/14/12/03/2237247/google-hopes-to-one-day-replace-gmail-with-inbox?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6286333&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/4119fe0c/sc/4/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612384405/u/0/f/647410/c/35028/s/4119fe0c/sc/4/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612384405/u/0/f/647410/c/35028/s/4119fe0c/sc/4/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612384405/u/0/f/647410/c/35028/s/4119fe0c/sc/4/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612384405/u/0/f/647410/c/35028/s/4119fe0c/sc/4/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612384405/u/0/f/647410/c/35028/s/4119fe0c/sc/4/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612384405/u/0/f/647410/c/35028/s/4119fe0c/sc/4/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612384405/u/0/f/647410/c/35028/s/4119fe0c/sc/4/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612384405/u/0/f/647410/c/35028/s/4119fe0c/sc/4/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612384405/u/0/f/647410/c/35028/s/4119fe0c/sc/4/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/hqWon35Y6ew"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 03:06:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/4119fe0c/sc/4/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A30C22372470Cgoogle0Ehopes0Eto0Eone0Eday0Ereplace0Egmail0Ewith0Einbox0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>samzenpus</dc:creator>
+      <dc:subject>google</dc:subject>
+      <dc:date>2014-12-04T03:06:00Z</dc:date>
+      <slash:comments>2</slash:comments>
+      <slash:department>one-fine-day</slash:department>
+      <slash:section>technology</slash:section>
+      <slash:hit_parade>2,1,1,1,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/4119fe0c/sc/4/l/0Ltech0Bslashdot0Borg0Cstory0C140C120C0A30C22372470Cgoogle0Ehopes0Eto0Eone0Eday0Ereplace0Egmail0Ewith0Einbox0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+    <item>
+      <title>Kiva Systems Co-Founder: Drone Delivery Could Be As
+      Low As 20 Cents Per Package</title>
+      <link>
+      http://rss.slashdot.org/~r/Slashdot/slashdot/~3/MWgOmYnmdyM/story01.htm</link>
+      <description>Hallie Siegel writes A year ago, Amazon
+      announced its plans for Prime Air &amp;mdash; a drone
+      delivery service. Recently Amazon has been posting job ads,
+      saying they are looking for drone pilots. Whatever the
+      regulatory issues, is drone delivery financially feasible?
+      ETH Zurich professor Raffaello D'Andrea thinks it is
+      economically feasible to deliver small packages by drone.
+      D'Andrea is responsible for the Flying Machine Arena ("a
+      space where flying robots live and learn") and is co-founder
+      of Kiva Systems, the company acquired by Amazon for $775
+      million in cash that innovated the robotic fulfillment system
+      that Amazon is now implementing in many of its warehouse
+      facilities.&lt;p&gt;&lt;div class="share_submission"
+      style="position:relative;"&gt; &lt;a class="slashpop"
+      href="http://twitter.com/home?status=Kiva+Systems+Co-Founder%3A+Drone+Delivery+Could+Be+As+Low+As+20+Cents+Per+Package%3A+http%3A%2F%2Fbit.ly%2F1vOzclW"&gt;&lt;img
+      src="http://a.fsdn.com/sd/twitter_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="slashpop"
+      href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fnews.slashdot.org%2Fstory%2F14%2F12%2F03%2F2233223%2Fkiva-systems-co-founder-drone-delivery-could-be-as-low-as-20-cents-per-package%3Futm_source%3Dslashdot%26utm_medium%3Dfacebook"&gt;&lt;img
+      src="http://a.fsdn.com/sd/facebook_icon_large.png"&gt;&lt;/a&gt;
+      &lt;a class="nobg"
+      href="http://plus.google.com/share?url=http://news.slashdot.org/story/14/12/03/2233223/kiva-systems-co-founder-drone-delivery-could-be-as-low-as-20-cents-per-package?utm_source=slashdot&amp;amp;utm_medium=googleplus"
+      onclick="javascript:window.open(this.href,'',
+      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return
+      false;"&gt;&lt;img
+      src="http://www.gstatic.com/images/icons/gplus-16.png"
+      alt="Share on Google+"/&gt;&lt;/a&gt;
+      &lt;/div&gt;&lt;/p&gt;&lt;p&gt;&lt;a
+      href="http://news.slashdot.org/story/14/12/03/2233223/kiva-systems-co-founder-drone-delivery-could-be-as-low-as-20-cents-per-package?utm_source=rss1.0moreanon&amp;amp;utm_medium=feed"&gt;Read
+      more of this story&lt;/a&gt; at Slashdot.&lt;/p&gt;&lt;iframe
+      src="http://slashdot.org/slashdot-it.pl?op=discuss&amp;amp;id=6286321&amp;amp;smallembed=1"
+      style="height: 300px; width: 100%; border:
+      none;"&gt;&lt;/iframe&gt;&lt;img width='1' height='1'
+      src='http://slashdot.feedsportal.com/c/35028/f/647410/s/411935b3/sc/1/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612373461/u/0/f/647410/c/35028/s/411935b3/sc/1/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612373461/u/0/f/647410/c/35028/s/411935b3/sc/1/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612373461/u/0/f/647410/c/35028/s/411935b3/sc/1/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612373461/u/0/f/647410/c/35028/s/411935b3/sc/1/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612373461/u/0/f/647410/c/35028/s/411935b3/sc/1/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612373461/u/0/f/647410/c/35028/s/411935b3/sc/1/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612373461/u/0/f/647410/c/35028/s/411935b3/sc/1/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612373461/u/0/f/647410/c/35028/s/411935b3/sc/1/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612373461/u/0/f/647410/c/35028/s/411935b3/sc/1/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/Slashdot/slashdot/~4/MWgOmYnmdyM"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 01:15:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411935b3/sc/1/l/0Lnews0Bslashdot0Borg0Cstory0C140C120C0A30C22332230Ckiva0Esystems0Eco0Efounder0Edrone0Edelivery0Ecould0Ebe0Eas0Elow0Eas0E20A0Ecents0Eper0Epackage0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</guid>
+      <dc:creator>samzenpus</dc:creator>
+      <dc:subject>money</dc:subject>
+      <dc:date>2014-12-04T01:15:00Z</dc:date>
+      <slash:comments>3</slash:comments>
+      <slash:department>air-delivery</slash:department>
+      <slash:section>news</slash:section>
+      <slash:hit_parade>3,2,0,0,0,0,0</slash:hit_parade>
+      <feedburner:origLink>
+      http://slashdot.feedsportal.com/c/35028/f/647410/s/411935b3/sc/1/l/0Lnews0Bslashdot0Borg0Cstory0C140C120C0A30C22332230Ckiva0Esystems0Eco0Efounder0Edrone0Edelivery0Ecould0Ebe0Eas0Elow0Eas0E20A0Ecents0Eper0Epackage0Dutm0Isource0Frss10B0Amainlinkanon0Gutm0Imedium0Ffeed/story01.htm</feedburner:origLink>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,1958 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2spanishfull.xsl"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.weblogssl.com/~d/styles/itemcontent.css"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0"
+version="2.0">
+  <channel>
+    <title>Vidaextra</title>
+    <link>http://www.vidaextra.com</link>
+    <description>Blog sobre consolas y videojuegos: Playstation 3,
+    Nintendo Wii, XBox 360, PC, PSP, Nintendo DS</description>
+    <language>en</language>
+    <pubDate>Thu, 04 Dec 2014 18:31:39 GMT</pubDate>
+    <lastBuildDate>Thu, 04 Dec 2014 18:31:39 GMT</lastBuildDate>
+    <ttl>2</ttl>
+    <feedburner:info uri="vidaextra" />
+    <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom"
+    rel="hub" href="http://pubsubhubbub.appspot.com/" />
+    <image>
+      <link>http://www.feedburner.com</link>
+      <url>
+      http://img.weblogssl.com/g/recursos/planet/vidaextra.jpg</url>
+      <title>This Feed Powered by FeedBurner.com</title>
+    </image>
+    <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom"
+    rel="self" type="application/rss+xml"
+    href="http://www.vidaextra.com/atom.xml" />
+    <feedburner:feedFlare href="http://add.my.yahoo.com/content?lg=es&amp;url=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://eur.i1.yimg.com/eur.yimg.com/i/es/my/addto1.gif">
+    Subscribe with My Yahoo!</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.feedness.com/alta/http://www.vidaextra.com/atom.xml"
+    src="http://www.feedness.com/ayuda/wp-content/square_b_sh_feed.gif">
+    Subscribe with Feedness</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://www.newsgator.com/images/ngsub1.gif">Subscribe with
+    NewsGator</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.bloglines.com/sub/http://www.vidaextra.com/atom.xml"
+    src="http://www.bloglines.com/images/sub_modern11.gif">
+    Subscribe with Bloglines</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://www.netvibes.com/img/add2netvibes.gif">Subscribe
+    with Netvibes</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://fusion.google.com/add?feedurl=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://buttons.googlesyndication.com/fusion/add.gif">
+    Subscribe with Google</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.pageflakes.com/subscribe.aspx?url=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://www.pageflakes.com/ImageFile.ashx?instanceId=Static_4&amp;fileName=ATP_blu_91x17.gif">
+    Subscribe with Pageflakes</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.plusmo.com/add?url=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://plusmo.com/res/graphics/fbplusmo.gif">Subscribe
+    with Plusmo</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.thefreedictionary.com/_/hp/AddRSS.aspx?http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://img.tfd.com/hp/addToTheFreeDictionary.gif">
+    Subscribe with The Free Dictionary</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.bitty.com/manual/?contenttype=rssfeed&amp;contentvalue=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://www.bitty.com/img/bittychicklet_91x17.gif">
+    Subscribe with Bitty Browser</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.live.com/?add=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://tkfiles.storage.msn.com/x1piYkpqHC_35nIp1gLE68-wvzLZO8iXl_JMledmJQXP-XTBOLfmQv4zhj4MhcWEJh_GtoBIiAl1Mjh-ndp9k47If7hTaFno0mxW9_i3p_5qQw">
+    Subscribe with Live.com</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://mix.excite.eu/add?feedurl=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://image.excite.co.uk/mix/addtomix.gif">Subscribe with
+    Excite MIX</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.webwag.com/wwgthis.php?url=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://www.webwag.com/images/wwgthis.gif">Subscribe with
+    Webwag</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.podcastready.com/oneclick_bookmark.php?url=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://www.podcastready.com/images/podcastready_button.gif">
+    Subscribe with Podcast Ready</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.wikio.com/subscribe?url=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://www.wikio.com/shared/img/add2wikio.gif">Subscribe
+    with Wikio</feedburner:feedFlare>
+    <feedburner:feedFlare href="http://www.dailyrotation.com/index.php?feed=http%3A%2F%2Fwww.vidaextra.com%2Fatom.xml"
+    src="http://www.dailyrotation.com/rss-dr2.gif">Subscribe with
+    Daily Rotation</feedburner:feedFlare>
+    <feedburner:browserFriendly>Esta es la fuente o feed para
+    suscripción de Vidaextra. Vale para cualquier formato (RSS,
+    Atom, lo que sea). Aunque salga esta página "rara" en vez del
+    código habitual, es lo mismo. De
+    verdad.</feedburner:browserFriendly>
+    <item>
+      <title>Los usuarios de PC también podrán disfrutar de Dead or
+      Alive 5: Last Round</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/xVAgkTSy7AU/los-usuarios-de-pc-tambien-podran-disfrutar-de-dead-or-alive-5-last-round</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/f7oNLTWQiQk"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;‘Dead or Alive 5: Last
+      Round’&lt;/strong&gt; ya tiene su fecha de lanzamiento fijada
+      para el 20 de febrero de 2015 para Xbox One y PS4. La buena
+      noticia es que también se lanzará una versión para PC ese
+      mismo día de lanzamiento, no hay necesidad de
+      esperar.&lt;/p&gt; &lt;p&gt;Además de confirmar esta nueva
+      versión, &lt;strong&gt;Tecmo Koei&lt;/strong&gt; ha lanzado
+      un nuevo tráiler en el que podemos ver a las luchadoras de
+      &lt;strong&gt;‘Dead or Alive 5’&lt;/strong&gt; con nuevos
+      trajes de lo más sugerentes. También se les ha escapado algún
+      que otro luchador, pero no interferirán en el
+      juego.&lt;/p&gt; &lt;p&gt;Recordad que &lt;strong&gt;‘Dead or
+      Alive 5: Last Round’&lt;/strong&gt; llegará el
+      &lt;strong&gt;20 de febrero&lt;/strong&gt; a Xbox One, PS4,
+      Xbox 360, PS3 y PC. De esta forma se ha convertido en la
+      primera entrega de la saga en llegar a los ordenadores,
+      seguro que la comunidad lo acoge con muchas ganas.&lt;/p&gt;
+      &lt;p&gt;En VidaExtra | &lt;a
+      href="http://www.vidaextra.com/accion/dead-or-alive-5-last-round-ya-tiene-fijada-su-fecha-de-llegada-y-sus-incentivos-para-las-reservas"&gt;Dead
+      or Alive 5: Last Round ya tiene fijada su fecha de llegada y
+      sus incentivos para las reservas&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt; - &lt;br/&gt; La noticia &lt;a
+      href="http://www.vidaextra.com/accion/los-usuarios-de-pc-tambien-podran-disfrutar-de-dead-or-alive-5-last-round?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Los usuarios de PC también podrán disfrutar de
+      Dead or Alive 5: Last Round &lt;/em&gt; &lt;/a&gt; fue
+      publicada originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/41206089/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612391056/u/49/f/502901/c/32660/s/41206089/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612391056/u/49/f/502901/c/32660/s/41206089/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612391056/u/49/f/502901/c/32660/s/41206089/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612391056/u/49/f/502901/c/32660/s/41206089/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612391056/u/49/f/502901/c/32660/s/41206089/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612391056/u/49/f/502901/c/32660/s/41206089/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612391056/u/49/f/502901/c/32660/s/41206089/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612391056/u/49/f/502901/c/32660/s/41206089/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612391056/u/49/f/502901/c/32660/s/41206089/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/xVAgkTSy7AU"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 17:31:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/accion/los-usuarios-de-pc-tambien-podran-disfrutar-de-dead-or-alive-5-last-round</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/accion/los-usuarios-de-pc-tambien-podran-disfrutar-de-dead-or-alive-5-last-round</feedburner:origLink>
+    </item>
+    <item>
+      <title>Limbo revivirá su aventura en Xbox One a partir de
+      este mismo viernes</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/TbbTMFuLUSg/limbo-revivira-su-aventura-en-xbox-one-a-partir-de-este-mismo-viernes</link>
+      <description>&lt;p&gt;&lt;img alt="Limbo revivirá su aventura
+      en Xbox One a partir de este mismo viernes"
+      src="http://img.vidaextra.com/2014/12/650_1000_limbo-one.jpg"
+      class="centro_sinmarco" /&gt; Mientras los usuarios que
+      compraron &lt;strong&gt;Xbox One&lt;/strong&gt; en sus
+      primeros días ya &lt;a
+      href="http://www.vidaextra.com/aventura-plataformas/limbo-llegara-a-xbox-one-y-sera-gratis-para-los-que-compraron-la-consola-en-sus-primeros-dias"&gt;llevan
+      tiempo disfrutando&lt;/a&gt; de
+      &lt;strong&gt;‘Limbo’&lt;/strong&gt; totalmente gratis,
+      nosotros hemos tenido que esperar. Aunque la espera no ha
+      sido tan larga como creíamos.&lt;/p&gt; &lt;p&gt;Si aún
+      seguís interesados en conseguir esta gran aventura en
+      &lt;strong&gt;Xbox One&lt;/strong&gt; sólo tendréis que
+      esperar un día más. &lt;strong&gt;‘Limbo’&lt;/strong&gt;
+      estará mañana mismo disponible en la tienda digital de Xbox
+      One por &lt;strong&gt;9,99 euros&lt;/strong&gt; y lucirá
+      mejor que nunca con sus &lt;strong&gt;1080p&lt;/strong&gt; y
+      &lt;strong&gt;60fps&lt;/strong&gt;.&lt;/p&gt; &lt;p&gt;No se
+      me ocurre mejor oportunidad que esta de disfrutar de esta
+      gran aventura en la nueva generación. Además de mantenernos
+      entretenidos mientras esperamos a saber algo más
+      de&lt;strong&gt; ‘Inside’&lt;/strong&gt;, &lt;a
+      href="http://www.vidaextra.com/videos/los-creadores-de-limbo-vuelven-con-una-nueva-aventura-llamada-inside-e3-2014"&gt;lo
+      próximo de Playdead&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;En
+      VidaExtra | &lt;a
+      href="http://www.vidaextra.com/aventura-plataformas/limbo-llegara-a-xbox-one-y-sera-gratis-para-los-que-compraron-la-consola-en-sus-primeros-dias"&gt;Limbo
+      llegará a Xbox One y será gratis para los que compraron la
+      consola en sus primeros días&lt;/a&gt;&lt;/p&gt; &lt;p&gt; -
+      &lt;br/&gt; La noticia &lt;a
+      href="http://www.vidaextra.com/aventura-plataformas/limbo-revivira-su-aventura-en-xbox-one-a-partir-de-este-mismo-viernes?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Limbo revivirá su aventura en Xbox One a partir de
+      este mismo viernes &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/411fc7bd/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612412496/u/49/f/502901/c/32660/s/411fc7bd/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612412496/u/49/f/502901/c/32660/s/411fc7bd/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612412496/u/49/f/502901/c/32660/s/411fc7bd/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612412496/u/49/f/502901/c/32660/s/411fc7bd/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612412496/u/49/f/502901/c/32660/s/411fc7bd/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612412496/u/49/f/502901/c/32660/s/411fc7bd/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612412496/u/49/f/502901/c/32660/s/411fc7bd/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612412496/u/49/f/502901/c/32660/s/411fc7bd/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612412496/u/49/f/502901/c/32660/s/411fc7bd/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/TbbTMFuLUSg"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 16:31:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/aventura-plataformas/limbo-revivira-su-aventura-en-xbox-one-a-partir-de-este-mismo-viernes</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/aventura-plataformas/limbo-revivira-su-aventura-en-xbox-one-a-partir-de-este-mismo-viernes</feedburner:origLink>
+    </item>
+    <item>
+      <title>Blood Bowl II se presenta más brutal que nunca en su
+      nuevo tráiler</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/MGLmjHdL7S4/blood-bowl-ii-se-presenta-mas-brutal-que-nunca-en-su-nuevo-trailer</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/PXTmlWflYJA"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;BadLand Games&lt;/strong&gt; parece
+      orgullosa de anunciar que &lt;strong&gt;‘Blood Bowl
+      II’&lt;/strong&gt; ha llegado a su fase final de desarrollo.
+      Un desarrollo que debería terminar a &lt;strong&gt;principios
+      de 2015&lt;/strong&gt; con su lanzamiento para PC y
+      posteriormente con su llegada Xbox One y PS4.&lt;/p&gt;
+      &lt;p&gt;Posiblemente estemos hablando de la entrega más
+      ambiciosa de la saga, ya que &lt;strong&gt;Home
+      Interactive&lt;/strong&gt; y &lt;strong&gt;Cyanide
+      Studios&lt;/strong&gt; han trabajado con un motor diseñado
+      especialmente para él. Esto no sólo les ha permitido
+      implementar más mejoras, sino que también han tenido la
+      oportunidad de trabajar con más libertad creativa.&lt;/p&gt;
+      &lt;p&gt;Pero tranquilos, esto no quiere decir que
+      &lt;strong&gt;‘Blood Bowl II’&lt;/strong&gt; se haya vuelto
+      mucho más calmado que su anterior entrega. Su tráiler
+      demuestra todo lo contrario, seguiremos en la misma línea de
+      salvajismo o incluso más.&lt;/p&gt; &lt;p&gt;En VidaExtra |
+      &lt;a
+      href="http://www.vidaextra.com/deportes/blood-bowl-ii-realiza-el-sangriento-saque-inicial"&gt;Blood
+      Bowl II realiza el sangriento saque
+      inicial&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La
+      noticia &lt;a
+      href="http://www.vidaextra.com/deportes/blood-bowl-ii-se-presenta-mas-brutal-que-nunca-en-su-nuevo-trailer?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Blood Bowl II se presenta más brutal que nunca en
+      su nuevo tráiler &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/411f8507/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612405206/u/49/f/502901/c/32660/s/411f8507/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612405206/u/49/f/502901/c/32660/s/411f8507/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612405206/u/49/f/502901/c/32660/s/411f8507/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612405206/u/49/f/502901/c/32660/s/411f8507/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612405206/u/49/f/502901/c/32660/s/411f8507/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612405206/u/49/f/502901/c/32660/s/411f8507/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612405206/u/49/f/502901/c/32660/s/411f8507/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612405206/u/49/f/502901/c/32660/s/411f8507/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612405206/u/49/f/502901/c/32660/s/411f8507/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/MGLmjHdL7S4"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 15:01:54 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/deportes/blood-bowl-ii-se-presenta-mas-brutal-que-nunca-en-su-nuevo-trailer</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/deportes/blood-bowl-ii-se-presenta-mas-brutal-que-nunca-en-su-nuevo-trailer</feedburner:origLink>
+    </item>
+    <item>
+      <title>La New Nintendo 3DS esconde un pequeño secreto tras el
+      tema de Mario</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/W1i6R2Bp9Lk/la-new-nintendo-3ds-esconde-un-pequeno-secreto-tras-el-tema-de-mario</link>
+      <description>&lt;p&gt;&lt;img alt="La New Nintendo 3DS
+      esconde un pequeño secreto tras el tema de Mario"
+      src="http://img.vidaextra.com/2014/12/650_1000_mario-easter.jpg"
+      class="centro_sinmarco" /&gt; A todos nos gusta cuando los
+      desarrolladores esconden secretos y &lt;strong&gt;huevos de
+      pascua&lt;/strong&gt; en sus productos. Diría que hasta los
+      responsables se divierten escondiendo ese tipo de cosas y
+      esperando sentado a ver cuándo lo descubrirá el público,
+      incluso a &lt;strong&gt;Nintendo&lt;/strong&gt; le
+      gusta.&lt;/p&gt; &lt;p&gt;Tal es así que la &lt;strong&gt;New
+      Nintendo 3DS&lt;/strong&gt; esconde un pequeño minijuego
+      cuando se combina con el tema de Mario. Para desbloquearlo
+      tendremos quedar unas pulsaciones en la barra de selección de
+      tema y, aparentemente, al pulsar sobre la aplicación de
+      Google entraremos en un juego al más puro estilo
+      &lt;strong&gt;‘Arkanoid’&lt;/strong&gt;.&lt;/p&gt;
+      &lt;p&gt;Su descubridor,
+      &lt;strong&gt;345triangle&lt;/strong&gt;, ha subido a
+      Instagram todo el &lt;a
+      href="http://instagram.com/p/wLWZo6Rb26/?utm_source=partner&amp;utm_medium=embed&amp;utm_campaign=video"&gt;proceso
+      para desbloquearlo&lt;/a&gt; y nos enseña cómo destruir el
+      logo de &lt;strong&gt;Google&lt;/strong&gt;.&lt;/p&gt;
+      &lt;p&gt;Vía | &lt;a
+      href="http://www.polygon.com/2014/12/4/7331839/new-nintendo-3ds-easter-egg-mario"&gt;Polygon&lt;/a&gt;&lt;br&gt;Instagram
+      | &lt;a
+      href="http://instagram.com/p/wLWZo6Rb26/?utm_source=partner&amp;utm_medium=embed&amp;utm_campaign=video"&gt;345triangle&lt;/a&gt;&lt;br&gt;En
+      VidaExtra | &lt;a
+      href="http://www.vidaextra.com/rpg/new-nintendo-3ds-y-monster-hunter-4g-arrasan-en-sus-primeros-dias-a-la-venta-en-japon"&gt;New
+      Nintendo 3DS y Monster Hunter 4G arrasan en sus primeros días
+      a la venta en Japón&lt;/a&gt;&lt;/p&gt; &lt;p&gt; -
+      &lt;br/&gt; La noticia &lt;a
+      href="http://www.vidaextra.com/3ds/la-new-nintendo-3ds-esconde-un-pequeno-secreto-tras-el-tema-de-mario?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; La New Nintendo 3DS esconde un pequeño secreto
+      tras el tema de Mario &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/411eae86/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612406489/u/49/f/502901/c/32660/s/411eae86/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612406489/u/49/f/502901/c/32660/s/411eae86/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612406489/u/49/f/502901/c/32660/s/411eae86/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612406489/u/49/f/502901/c/32660/s/411eae86/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612406489/u/49/f/502901/c/32660/s/411eae86/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612406489/u/49/f/502901/c/32660/s/411eae86/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612406489/u/49/f/502901/c/32660/s/411eae86/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612406489/u/49/f/502901/c/32660/s/411eae86/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612406489/u/49/f/502901/c/32660/s/411eae86/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/W1i6R2Bp9Lk"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 13:32:01 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/3ds/la-new-nintendo-3ds-esconde-un-pequeno-secreto-tras-el-tema-de-mario</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/3ds/la-new-nintendo-3ds-esconde-un-pequeno-secreto-tras-el-tema-de-mario</feedburner:origLink>
+    </item>
+    <item>
+      <title>YouPorn cumple su promesa y ya tiene equipo para los
+      eSports</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/oSlc-04RJn0/youporn-cumple-su-promesa-y-ya-tiene-equipo-para-los-esports</link>
+      <description>&lt;p&gt;&lt;img alt="YouPorn cumple su promesa
+      y ya tiene equipo para los eSports"
+      src="http://img.vidaextra.com/2014/12/650_1000_youpornteam.jpg"
+      class="centro_sinmarco" /&gt; Todos eran risas y carcajadas
+      cuando la página de contenido para adultos conocida como
+      &lt;strong&gt;YouPorn&lt;/strong&gt; dijo estar interesada en
+      participar en los&lt;strong&gt; eSports&lt;/strong&gt;. Tan
+      interesada estaba la página que esta misma semana presentará
+      a su propio equipo en sociedad.&lt;/p&gt; &lt;p&gt;El equipo
+      está formado por Ragabash, LoLQoP, SolmyR, Lawliet_91 y
+      Mengue, cinco jugadores españoles que, de momento, sólo
+      jugarán torneos de &lt;a
+      href="http://www.vidaextra.com/juegos-online/dota-2-free-to-play-the-movie-y-el-campeonato-esports-del-millon-de-dolares"&gt;‘Dota
+      2’&lt;/a&gt;. Además, como he dicho antes, podréis ver el
+      debut del equipo &lt;strong&gt;YouPorn&lt;/strong&gt; este
+      mismo viernes en el torneo organizado en
+      &lt;strong&gt;Gamergy&lt;/strong&gt;.&lt;/p&gt; &lt;p&gt;Un
+      ejemplo más de la evolución de los eSports hacia el público
+      tradicional. Quizás ahora sean sólo las webs de contenido
+      para adultos, pero el día de mañana podríamos estar viendo un
+      torneos de &lt;strong&gt;‘Dota 2’&lt;/strong&gt; o
+      &lt;strong&gt;‘League of Legends’&lt;/strong&gt; en cualquier
+      cadena de televisión.&lt;/p&gt; &lt;p&gt;Vía | &lt;a
+      href="http://www.vg247.com/2014/12/03/youporn-has-an-esports-team-now/"&gt;VG247&lt;/a&gt;&lt;bR&gt;En
+      VidaExtra | &lt;a
+      href="http://www.vidaextra.com/juegos-online/mundo-esports-fichajes-en-dota-2-novedades-en-eu-lcs-youporn-y-los-esports-y-mas"&gt;Mundo
+      eSports: fichajes en 'Dota 2', novedades en EU LCS, YouPorn
+      en los eSports&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La
+      noticia &lt;a
+      href="http://www.vidaextra.com/juegos-online/youporn-cumple-su-promesa-y-ya-tiene-equipo-para-los-esports?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; YouPorn cumple su promesa y ya tiene equipo para
+      los eSports &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/411d7892/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612401752/u/49/f/502901/c/32660/s/411d7892/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612401752/u/49/f/502901/c/32660/s/411d7892/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612401752/u/49/f/502901/c/32660/s/411d7892/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612401752/u/49/f/502901/c/32660/s/411d7892/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612401752/u/49/f/502901/c/32660/s/411d7892/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612401752/u/49/f/502901/c/32660/s/411d7892/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612401752/u/49/f/502901/c/32660/s/411d7892/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612401752/u/49/f/502901/c/32660/s/411d7892/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612401752/u/49/f/502901/c/32660/s/411d7892/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/oSlc-04RJn0"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 11:31:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/juegos-online/youporn-cumple-su-promesa-y-ya-tiene-equipo-para-los-esports</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/juegos-online/youporn-cumple-su-promesa-y-ya-tiene-equipo-para-los-esports</feedburner:origLink>
+    </item>
+    <item>
+      <title>Ya no tenemos que esperar más para disfrutar de
+      Invokers Tournament en PS4 y PS Vita</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/DgxHypJl16s/ya-no-tenemos-que-esperar-mas-para-disfrutar-de-invokers-tournament-en-ps4-y-ps-vita</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/K4GfZcTyuAI"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;Atención invocadores, ya podéis descargar
+      &lt;strong&gt;‘Invokers Tournament’&lt;/strong&gt; de forma
+      gratuita desde la Store de PS Vita y PS4. El primer juego de
+      creación española que aterriza en la sobremesa de Sony,
+      además de ser el primer MOBA gratuito para ambas
+      consolas.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;‘Invokers
+      Tournament’&lt;/strong&gt; cosechó un moderado éxito durante
+      su beta abierta, con más de &lt;strong&gt;75.000
+      descargas&lt;/strong&gt; en toda Europa. Incluso organizaron
+      un pequeño torneo durante la pasada Madrid Games Week que
+      estuvo bastante entretenido. Aunque también dispondremos de
+      un &lt;strong&gt;modo offline&lt;/strong&gt; en el que subir
+      a nuestro personaje &lt;strong&gt;hasta el nivel
+      60&lt;/strong&gt; y desbloquear su máximo
+      potencial.&lt;/p&gt; &lt;p&gt;Quizás no estemos ante uno de
+      los mejores títulos de PS4, pero al ser gratuito tenemos la
+      posibilidad de darle un tiento y llevarnos una grata
+      sorpresa. Preparad a vuestros compañeros de equipo y lanzaos
+      a por la victoria desde hoy mismo en PS4 y PS Vita.&lt;/p&gt;
+      &lt;p&gt;En VidaExtra | &lt;a
+      href="http://www.vidaextra.com/juegos-online/invokers-tournament-sera-el-primer-titulo-espanol-en-llegar-a-ps4"&gt;Invokers
+      Tournament será el primer free to play español en llegar a
+      PS4&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La noticia
+      &lt;a
+      href="http://www.vidaextra.com/rpg/ya-no-tenemos-que-esperar-mas-para-disfrutar-de-invokers-tournament-en-ps4-y-ps-vita?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Ya no tenemos que esperar más para disfrutar de
+      Invokers Tournament en PS4 y PS Vita &lt;/em&gt; &lt;/a&gt;
+      fue publicada originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/411d39a5/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612434173/u/49/f/502901/c/32660/s/411d39a5/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612434173/u/49/f/502901/c/32660/s/411d39a5/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612434173/u/49/f/502901/c/32660/s/411d39a5/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612434173/u/49/f/502901/c/32660/s/411d39a5/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612434173/u/49/f/502901/c/32660/s/411d39a5/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612434173/u/49/f/502901/c/32660/s/411d39a5/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612434173/u/49/f/502901/c/32660/s/411d39a5/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612434173/u/49/f/502901/c/32660/s/411d39a5/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612434173/u/49/f/502901/c/32660/s/411d39a5/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/DgxHypJl16s"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 10:49:54 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/rpg/ya-no-tenemos-que-esperar-mas-para-disfrutar-de-invokers-tournament-en-ps4-y-ps-vita</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/rpg/ya-no-tenemos-que-esperar-mas-para-disfrutar-de-invokers-tournament-en-ps4-y-ps-vita</feedburner:origLink>
+    </item>
+    <item>
+      <title>Pokémon se mete de lleno en la realidad virtual
+      gracias a unos fans</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/qtun9nc5w78/pokemon-se-mete-de-lleno-en-la-realidad-virtual-gracias-a-unos-fans</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/ybHzx-vetNg"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;¿Cuántas veces os habéis imaginado gritando el
+      nombre de vuestro pokémon en mitad de un combate? Pues
+      &lt;strong&gt;ahora podéis hacerlo&lt;/strong&gt; con algo
+      más de sentido gracias a esta demo creada por fans que lleva
+      &lt;strong&gt;‘Pokémon’&lt;/strong&gt; a la realidad
+      virtual.&lt;/p&gt; &lt;p&gt;Una demo en la que sólo tendremos
+      la posibilidad de usar a Pikachu en combate pero que es
+      totalmente compatible con &lt;strong&gt;Oculus
+      Rift&lt;/strong&gt;. Incluso es compatible con algunos
+      periféricos, como &lt;strong&gt;Razer Hydra&lt;/strong&gt;,
+      que nos permitirán tirar nuestras propias
+      pokeballs.&lt;/p&gt; &lt;p&gt;La demo es
+      &lt;strong&gt;totalmente gratuita&lt;/strong&gt; y &lt;a
+      href="http://tipatat.itch.io/pokemon-vr"&gt;podéis
+      probarla&lt;/a&gt; si tenéis algunas de las versiones de
+      &lt;strong&gt;Oculus Rift&lt;/strong&gt; en casa. Con un poco
+      de suerte los desarrolladores la siguen ampliando y
+      consigamos tener una experiencia más completa.&lt;/p&gt;
+      &lt;p&gt;Más Información | &lt;a
+      href="http://tipatat.itch.io/pokemon-vr"&gt;Pokémon
+      VR&lt;/a&gt;&lt;br&gt;En VidaExtra | &lt;a
+      href="http://www.vidaextra.com/rpg/aqui-teneis-todas-las-megaevoluciones-de-pokemon-ro-za-en-su-version-mas-colorida"&gt;Todas
+      las megaevoluciones de Pokémon RO/ZA en su versión más
+      colorida&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La
+      noticia &lt;a
+      href="http://www.vidaextra.com/videos/pokemon-se-mete-de-lleno-en-la-realidad-virtual-gracias-a-unos-fans?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Pokémon se mete de lleno en la realidad virtual
+      gracias a unos fans &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/411c006f/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612389554/u/49/f/502901/c/32660/s/411c006f/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612389554/u/49/f/502901/c/32660/s/411c006f/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612389554/u/49/f/502901/c/32660/s/411c006f/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612389554/u/49/f/502901/c/32660/s/411c006f/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612389554/u/49/f/502901/c/32660/s/411c006f/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612389554/u/49/f/502901/c/32660/s/411c006f/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612389554/u/49/f/502901/c/32660/s/411c006f/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612389554/u/49/f/502901/c/32660/s/411c006f/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612389554/u/49/f/502901/c/32660/s/411c006f/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/qtun9nc5w78"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 08:31:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/videos/pokemon-se-mete-de-lleno-en-la-realidad-virtual-gracias-a-unos-fans</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/videos/pokemon-se-mete-de-lleno-en-la-realidad-virtual-gracias-a-unos-fans</feedburner:origLink>
+    </item>
+    <item>
+      <title>Dying Light nos seguirá poniendo a prueba con el
+      contenido de su pase de temporada</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/3v1NG01AeY0/dying-light-nos-seguira-poniendo-a-prueba-con-el-contenido-de-su-pase-de-temporada</link>
+      <description>&lt;p&gt;&lt;img alt="Dying Light nos seguirá
+      poniendo a prueba con el contenido de su pase de temporada"
+      src="http://img.vidaextra.com/2014/12/650_1000_dyinglight-seasonpass.jpg"
+      class="centro_sinmarco" /&gt; Los chicos de
+      &lt;strong&gt;Techland&lt;/strong&gt; no han tardado
+      demasiado tiempo en desvelar el contenido del pase de
+      temporada de &lt;strong&gt;‘Dying Light’&lt;/strong&gt;. El
+      cual incluirá tendrá un precio de &lt;strong&gt;19,99
+      dólares&lt;/strong&gt; e incluirá tres DLCs para ampliar
+      nuestra experiencia con objetos, trajes y misiones
+      adicionales.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;‘Cuisine&amp;#38;Cargo’&lt;/strong&gt;
+      será el primero de ellos, fechado para febrero de 2015, e
+      incluirá dos misiones adicionales. Los otros serían
+      &lt;strong&gt;‘Ultimate Survival Bundle’&lt;/strong&gt;,
+      incluye tres trajes adicionales y cuatro armas, y
+      &lt;strong&gt;‘The Bozak Horde’&lt;/strong&gt;, añadirá un
+      nuevo modo de juego para el modo cooperativo e
+      individual.&lt;/p&gt; &lt;p&gt;Todo este contenido se podrá
+      comprar de forma individual, aunque aún no se ha especfiicado
+      el precio. Mientras tanto, recordad que &lt;strong&gt;‘Dying’
+      Light’&lt;/strong&gt; tiene previsto su lanzamiento para el
+      &lt;strong&gt;30 de enero de 2015&lt;/strong&gt;.&lt;/p&gt;
+      &lt;p&gt;Vía | &lt;a
+      href="http://www.computerandvideogames.com/482116/dying-light-season-pass-offers-three-dlc-packs/"&gt;CVG&lt;/a&gt;&lt;br&gt;En
+      VidaExtra | &lt;a
+      href="http://www.vidaextra.com/fps/podemos-derrochar-estilo-a-la-hora-de-matar-zombis-en-dying-light"&gt;Podemos
+      derrochar estilo a la hora de matar zombis en Dying
+      Light&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La noticia
+      &lt;a
+      href="http://www.vidaextra.com/fps/dying-light-nos-seguira-poniendo-a-prueba-con-el-contenido-de-su-pase-de-temporada?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Dying Light nos seguirá poniendo a prueba con el
+      contenido de su pase de temporada &lt;/em&gt; &lt;/a&gt; fue
+      publicada originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/411bc50d/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369361/u/49/f/502901/c/32660/s/411bc50d/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369361/u/49/f/502901/c/32660/s/411bc50d/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369361/u/49/f/502901/c/32660/s/411bc50d/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369361/u/49/f/502901/c/32660/s/411bc50d/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369361/u/49/f/502901/c/32660/s/411bc50d/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369361/u/49/f/502901/c/32660/s/411bc50d/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369361/u/49/f/502901/c/32660/s/411bc50d/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369361/u/49/f/502901/c/32660/s/411bc50d/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612369361/u/49/f/502901/c/32660/s/411bc50d/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/3v1NG01AeY0"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Thu, 04 Dec 2014 07:50:37 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/fps/dying-light-nos-seguira-poniendo-a-prueba-con-el-contenido-de-su-pase-de-temporada</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/fps/dying-light-nos-seguira-poniendo-a-prueba-con-el-contenido-de-su-pase-de-temporada</feedburner:origLink>
+    </item>
+    <item>
+      <title>Las mejores noches de Los Santos se viven en GTA V de
+      nueva generación</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/pHPSo8Y6LUc/las-mejores-noches-de-los-santos-se-viven-en-gta-v-de-nueva-generacion</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/eG-JY9xuVjM"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Los Santos&lt;/strong&gt; siempre ha
+      sido una ciudad viva, llena de gente y donde siempre teníamos
+      algo que hacer. Se podría decir que es una de esas ciudades
+      que nunca duermen, da igual lo entrada que esté la
+      noche.&lt;/p&gt; &lt;p&gt;Claro que todo esto se ha visto
+      intensificado gracias a la mejora gráfica que ha recibido
+      &lt;a
+      href="http://www.vidaextra.com/analisis/gta-v-para-ps4-analisis"&gt;‘GTA
+      V’&lt;/a&gt; en la nueva generación y al
+      &lt;strong&gt;incremento de NPCs&lt;/strong&gt; que podemos
+      encontrar por la ciudad. Una combinación ideal para crear un
+      time lapse que muestra la noche en Los Santos con todo lujo
+      de detalles.&lt;/p&gt; &lt;p&gt;No se puede decir que
+      &lt;strong&gt;Rockstar&lt;/strong&gt; no haya hecho una buena
+      promoción de &lt;strong&gt;‘GTA V’&lt;/strong&gt;, pero entre
+      este vídeo y aquel documental sobre &lt;a
+      href="http://www.vidaextra.com/accion/los-santos-tiene-una-vida-marina-tan-espectacular-que-se-ha-creado-hasta-un-documental"&gt;la
+      vida marina de Los Santos&lt;/a&gt;, creo que se puede decir
+      que los fans se están encargando de mantenerlo
+      vivo.&lt;/p&gt; &lt;p&gt;Vía | &lt;a
+      href="http://www.vg247.com/2014/12/03/gta-5-is-something-else-at-night/"&gt;CVG&lt;/a&gt;&lt;br&gt;En
+      VidaExtra | &lt;a
+      href="http://www.vidaextra.com/accion/la-vida-en-los-santos-no-es-tan-apacible-y-tranquila-como-parecia"&gt;La
+      vida en Los Santos no es tan apacible y tranquila como
+      parecía&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La
+      noticia &lt;a
+      href="http://www.vidaextra.com/accion/las-mejores-noches-de-los-santos-se-viven-en-gta-v-de-nueva-generacion?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Las mejores noches de Los Santos se viven en GTA V
+      de nueva generación &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/41189000/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369641/u/49/f/502901/c/32660/s/41189000/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369641/u/49/f/502901/c/32660/s/41189000/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369641/u/49/f/502901/c/32660/s/41189000/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369641/u/49/f/502901/c/32660/s/41189000/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369641/u/49/f/502901/c/32660/s/41189000/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369641/u/49/f/502901/c/32660/s/41189000/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369641/u/49/f/502901/c/32660/s/41189000/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369641/u/49/f/502901/c/32660/s/41189000/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612369641/u/49/f/502901/c/32660/s/41189000/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/pHPSo8Y6LUc"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 21:31:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/accion/las-mejores-noches-de-los-santos-se-viven-en-gta-v-de-nueva-generacion</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/accion/las-mejores-noches-de-los-santos-se-viven-en-gta-v-de-nueva-generacion</feedburner:origLink>
+    </item>
+    <item>
+      <title>Naughty Dog recuerda cada uno de los 20 años que han
+      pasado junto PlayStation</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/1Sr74jHUnQE/naughty-dog-recuerda-con-cada-uno-de-los-20-anos-que-han-pasado-junto-playstation</link>
+      <description>&lt;p&gt;&lt;img alt="Naughty Dog recuerda con
+      cada uno de los 20 años que han pasado junto PlayStation"
+      src="http://img.vidaextra.com/2014/12/650_1000_naughty-aniversario-sony.jpg"
+      class="centro_sinmarco" /&gt; &lt;strong&gt;Naughty
+      Dog&lt;/strong&gt; ha querido compartir con nosotros los
+      mejores momentos que ha vivido la compañía en estos
+      &lt;strong&gt;20 años de PlayStation&lt;/strong&gt;. Unos
+      momentos que abarcan desde el lanzamiento del primer
+      &lt;strong&gt;‘Crash Bandicoot’&lt;/strong&gt; en PS1 hasta
+      la llegada de PS4 y &lt;a
+      href="http://www.vidaextra.com/analisis/the-last-of-us-analisis"&gt;‘The
+      Last of Us Remasterizado’&lt;/a&gt;.&lt;/p&gt;
+      &lt;p&gt;Muchos años de los que &lt;strong&gt;Evan
+      Wells&lt;/strong&gt;, cofundador de la compañía, destaca el
+      nacimiento de &lt;strong&gt;Crash como la mascota de
+      Sony&lt;/strong&gt; y la competencia directa de Sonic y
+      Mario. También habla sobre los buenos años que vivieron junto
+      a PS2 y el lanzamiento de la saga &lt;strong&gt;‘Jak and
+      Daxter’&lt;/strong&gt;.&lt;/p&gt; &lt;p&gt;Finalmente, como
+      no podía ser de otra forma, se ve en la obligación de hablar
+      sobre cómo decidieron abandonar los mundos de fantasía y
+      centrarse en la creación de personajes más realistas y con
+      ello la llegada de &lt;strong&gt;Nathan Drake&lt;/strong&gt;
+      y &lt;strong&gt;‘Uncharted’&lt;/strong&gt;. Tampoco podemos
+      olvidarnos de &lt;strong&gt;‘The Last of Us’&lt;/strong&gt; y
+      cómo su remasterización dice haberles &lt;strong&gt;ayudado a
+      entender PS4&lt;/strong&gt; y poder exprimir su hardware con
+      el próximo &lt;strong&gt;‘Uncharted
+      4’&lt;/strong&gt;.&lt;/p&gt; &lt;p&gt;Más Información | &lt;a
+      href="http://blog.es.playstation.com/2014/12/03/naughty-dog-rememora-sus-20-anos-de-desarrollo-para-playstation/"&gt;Playstation
+      Blog&lt;/a&gt;&lt;br&gt;En VidaExtra | &lt;a
+      href="http://www.vidaextra.com/listas/12-grandes-momentos-que-vivi-con-la-primera-playstation-y-que-nunca-olvidare"&gt;12
+      grandes momentos que viví con la primera PlayStation y que
+      nunca olvidaré&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La
+      noticia &lt;a
+      href="http://www.vidaextra.com/ps2/naughty-dog-recuerda-con-cada-uno-de-los-20-anos-que-han-pasado-junto-playstation?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Naughty Dog recuerda cada uno de los 20 años que
+      han pasado junto PlayStation &lt;/em&gt; &lt;/a&gt; fue
+      publicada originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/4117e9dd/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612352332/u/49/f/502901/c/32660/s/4117e9dd/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612352332/u/49/f/502901/c/32660/s/4117e9dd/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612352332/u/49/f/502901/c/32660/s/4117e9dd/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612352332/u/49/f/502901/c/32660/s/4117e9dd/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612352332/u/49/f/502901/c/32660/s/4117e9dd/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612352332/u/49/f/502901/c/32660/s/4117e9dd/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612352332/u/49/f/502901/c/32660/s/4117e9dd/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612352332/u/49/f/502901/c/32660/s/4117e9dd/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612352332/u/49/f/502901/c/32660/s/4117e9dd/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/1Sr74jHUnQE"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 20:42:43 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/ps2/naughty-dog-recuerda-con-cada-uno-de-los-20-anos-que-han-pasado-junto-playstation</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/ps2/naughty-dog-recuerda-con-cada-uno-de-los-20-anos-que-han-pasado-junto-playstation</feedburner:origLink>
+    </item>
+    <item>
+      <title>El fútbol y la destrucción de coches se dan la mano en
+      Rocket League</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/Qlz6lPPoKN4/el-futbol-y-la-destruccion-de-coches-se-dan-la-mano-en-rocket-league</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/NC82dWrFqCE"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;El concepto de mezclar un partido de fútbol con
+      ligeros toques de &lt;strong&gt;‘Destruction
+      Derby’&lt;/strong&gt; sonaba tentador mucho antes de ver el
+      tráiler de &lt;strong&gt;‘Rocket League’&lt;/strong&gt;. Un
+      juego que consigue combinar ambos aspectos a la
+      perfección.&lt;/p&gt; &lt;p&gt;En &lt;strong&gt;‘Rocket
+      League’&lt;/strong&gt; controlaremos uno de los pesados
+      vehículos de nuestro equipo y nuestra misión, como en
+      cualquier partido de fútbol, es encajar la pelota en la
+      portería contraria. Para ello contaremos con diferentes
+      elementos en el campo de juego que nos permitirán
+      &lt;strong&gt;saltar por los aires&lt;/strong&gt;, además del
+      impulso que nos proporciona el vehículo para empujar la
+      pelota hasta la red.&lt;/p&gt; &lt;p&gt;La idea es bastante
+      tentadora para una tarde de domingo con los colegas y nuestra
+      &lt;strong&gt;PS4 o PC&lt;/strong&gt;. Aunque no llegará a
+      ninguna de las dos plataformas hasta bien entrado
+      &lt;strong&gt;2015&lt;/strong&gt;.&lt;/p&gt; &lt;p&gt; -
+      &lt;br/&gt; La noticia &lt;a
+      href="http://www.vidaextra.com/accion/el-futbol-y-la-destruccion-de-coches-se-dan-la-mano-en-rocket-league?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; El fútbol y la destrucción de coches se dan la
+      mano en Rocket League &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/41179dbc/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369943/u/49/f/502901/c/32660/s/41179dbc/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369943/u/49/f/502901/c/32660/s/41179dbc/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369943/u/49/f/502901/c/32660/s/41179dbc/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369943/u/49/f/502901/c/32660/s/41179dbc/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369943/u/49/f/502901/c/32660/s/41179dbc/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369943/u/49/f/502901/c/32660/s/41179dbc/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612369943/u/49/f/502901/c/32660/s/41179dbc/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612369943/u/49/f/502901/c/32660/s/41179dbc/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612369943/u/49/f/502901/c/32660/s/41179dbc/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/Qlz6lPPoKN4"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 20:11:00 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/accion/el-futbol-y-la-destruccion-de-coches-se-dan-la-mano-en-rocket-league</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/accion/el-futbol-y-la-destruccion-de-coches-se-dan-la-mano-en-rocket-league</feedburner:origLink>
+    </item>
+    <item>
+      <title>Doce grandes momentos que viví con la primera
+      PlayStation y que nunca olvidaré</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/gc-eKKCPc4A/12-grandes-momentos-que-vivi-con-la-primera-playstation-y-que-nunca-olvidare</link>
+      <description>&lt;p&gt;&lt;img alt="Sony Playstation Logo"
+      src="http://img.vidaextra.com/2014/12/sony-playstation_logo.png"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;¿Dónde
+      estabas tú hace veinte años? Puede que muchos de los que
+      estáis leyendo ahora mismo estas líneas ni siquiera hubierais
+      nacido, o que con suerte estuvierais dando vuestros primeros
+      pasos, pero hace ya dos décadas (¡dos décadas!) del estreno
+      mundial de la primera PlayStation, una consola que
+      inevitablemente cambió el transcurso de esta industria para
+      siempre. El camino que llevó hasta su concepción &lt;a
+      href="http://www.vidaextra.com/industria/playstation-una-mirada-al-pasado"&gt;no
+      fue precisamente sencillo&lt;/a&gt;, pero tras cuatro
+      generaciones de consolas domésticas y dos de portátiles, esta
+      marca se mantiene como una de las más representativas del
+      mundo del ocio electrónico.&lt;/p&gt; &lt;p&gt;No es de
+      extrañar que Sony haya &lt;a
+      href="http://www.vidaextra.com/hardware/si-tuviste-la-primera-playstation-querras-esta-ps4-edicion-20-aniversario"&gt;querido
+      celebrar&lt;/a&gt; una fecha tan señalada por todo lo alto,
+      algo a lo que nosotros también nos queremos sumar, porque nos
+      gusta más una fiesta que cien domingos. Y también porque,
+      para qué negarlo, aquella venerable consola gris nos dio
+      &lt;a
+      href="http://www.vidaextra.com/musica/cinco-canciones-para-recordar-lo-grande-que-fue-la-playstation"&gt;grandes
+      momentos&lt;/a&gt; &lt;a
+      href="http://www.vidaextra.com/industria/playstation-cumple-15-anos"&gt;para
+      el recuerdo&lt;/a&gt;, perlas que quedarán para siempre
+      grabadas en la memoria de todo jugador que se acercara a ella
+      cuando dominaba el mercado. Aquí van doce de los más
+      significativos de cuantos tuve la oportunidad de disfrutar
+      durante aquella etapa gloriosa, aunque son solo una
+      representativa muestra de tantas horas de
+      dedicación.&lt;!--more--&gt;&lt;/p&gt; &lt;h2&gt;Sobrevivir
+      al interrogatorio de Ocelot&lt;/h2&gt; &lt;p&gt;&lt;img
+      alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx1.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;'Metal Gear Solid'&lt;/strong&gt;
+      revolucionó el concepto que hasta aquel momento teníamos de
+      diseño de producción en un videojuego, siendo entre otras
+      cosas capaz de romper la cuarta barrera para ofrecernos
+      secuencias tan impresionantes como la del interrogatorio de
+      Revolver Ocelot a Solid Snake. Un momento crucial en el
+      transcurso de esta aventura y en el de nuestras vidas como
+      jugadores, que nos obligó a esforzarnos machacando el botón
+      como si realmente nos fuera la vida en ello.&lt;/p&gt;
+      &lt;h2&gt;Partirle la boca a Sefirot&lt;/h2&gt;
+      &lt;p&gt;&lt;img alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx2.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Una historia
+      puede ser tan grande como el malo que le da sentido, y es por
+      ello que es difícil encontrar juegos más grandes que &lt;a
+      href="http://www.vidaextra.com/rpg/final-fantasy-vii-retroanalisis"&gt;'Final
+      Fantasy VII'&lt;/a&gt;. Fueron muchas y muy poderosas las
+      razones que nos dio para odiarlo profundamente, y por ello
+      disfruté tanto cuando por fin me pude poner ante él, cara a
+      cara, y seleccionar el Omnilátigo para ajustar cuentas de una
+      vez por todas. ¡Va por ti, Aeris!&lt;/p&gt; &lt;h2&gt;Escalar
+      Pikes Peak con mi Suzuki Escudo&lt;/h2&gt; &lt;p&gt;&lt;img
+      alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx3.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Decía el
+      rumor que &lt;strong&gt;'Gran Turismo 2'&lt;/strong&gt;
+      contaba con un monstruoso vehículo de casi mil caballos de
+      potencia y capaz de superar los 400 km/h, una auténtica
+      bestia parda que se convertía en el mayor premio al que
+      cualquier jugador lograba aspirar. No podías decir que habías
+      completado este juego hasta que por fin conseguías hacerte
+      con aquel Suzuki Escudo y afrontabas como es debido la subida
+      a Pikes Peak, el trazado para el que fue diseñado.&lt;/p&gt;
+      &lt;p class="sumario"&gt;PlayStation inevitablemente cambió
+      el transcurso de esta industria para siempre&lt;/p&gt;
+      &lt;h2&gt;Hacer frente al T-Rex&lt;/h2&gt; &lt;p&gt;&lt;img
+      alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx4.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;La sufrida
+      arqueóloga Lara Croft ha tenido que enfrentarse a todo tipo
+      de amenazas a lo largo de los años, pero ninguna quedará tan
+      fuertemente grabada en nuestras retinas como aquel
+      Tyrannosaurus Rex que aparecía imponente y letal en el primer
+      &lt;strong&gt;'Tomb Raider'&lt;/strong&gt;. El simpático
+      dinosaurio ha hecho acto de presencia en otras entregas de la
+      franquicia, pero ninguna me dejará tan pasmado como aquella
+      primera vez que le vi asomar el morro en pantalla.&lt;/p&gt;
+      &lt;h2&gt;Encontrar ese zombie... ¡Ese zombie!&lt;/h2&gt;
+      &lt;p&gt;&lt;img alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx5.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Mis amigos
+      me habían hablado mucho del miedo que daba
+      &lt;strong&gt;'Resident Evil'&lt;/strong&gt;, pero nada me
+      había preparado para el impacto que supuso el encuentro con
+      aquel primer zombie que, al ser interrumpido durante la hora
+      de la merienda, giraba lentamente la cabeza para saludar, y
+      ya de paso para decidir si éramos válidos como segundo plato.
+      Una generación entera quedó marcada por aquella mirada muerta
+      y aquel sonido espeluznante.&lt;/p&gt; &lt;h2&gt;Acumular
+      millones de puntos en el almacén&lt;/h2&gt; &lt;p&gt;&lt;img
+      alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx6.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;De niño tuve
+      un monopatín que me regalaron, pero reconozco que nunca supe
+      hacer muchas cosas con él. Mi interés por las tablas con
+      ruedas podría haber quedado ahí, pero entonces apareció &lt;a
+      href="http://www.vidaextra.com/deportes/tony-hawk-s-pro-skater-retrospectiva"&gt;'Tony
+      Hawk's Pro Skater'&lt;/a&gt; en mi vida y todo cambió. De
+      hecho, no me parece descabellado decir que una de las
+      actividades a las que más horas dediqué en la época de
+      PlayStation fue a conseguir puntos, puntos y más puntos
+      haciendo todas las piruetas imaginables en el nivel del
+      almacén.&lt;/p&gt; &lt;h2&gt;Chocar frontalmente en el centro
+      del ruedo&lt;/h2&gt; &lt;p&gt;&lt;img alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx7.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Toda la
+      existencia de la saga &lt;strong&gt;'Destruction
+      Derby'&lt;/strong&gt; se justificaba por un momento único,
+      explosivo, catártico: ese en el que, terminada la cuenta
+      atrás del speaker, todos los coches se dirigían furiosos
+      hacia el centro del círculo mortal que era Red Pike Arena
+      para provocar una colisión simultánea donde los trozos de
+      chapa, transmutados en enormes píxeles, saltaban
+      horriblemente por los aires. Adrenalina pura.&lt;/p&gt;
+      &lt;h2&gt;Repartir "perfects" con Hwoarang&lt;/h2&gt;
+      &lt;p&gt;&lt;img alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx8.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Los
+      &lt;strong&gt;'Tekken'&lt;/strong&gt; fueron grandes emblemas
+      de la primera consola de Sony, y no tengo duda de que entre
+      ellos me quedo especialmente con el tercer capítulo, donde
+      hizo su primera aparición el coreano Hwoarang. Dominar su
+      letal taekwondo, en el que todo se convertía en una tormenta
+      de patadas para el rival, podía ser garantía absoluta de los
+      "perfects" más gratificantes que se puedan
+      imaginar.&lt;/p&gt; &lt;p class="sumario"&gt;Aquella
+      venerable consola gris nos dio grandes momentos para el
+      recuerdo&lt;/p&gt; &lt;h2&gt;Entrar en la niebla de mis
+      pesadillas&lt;/h2&gt; &lt;p&gt;&lt;img alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx9.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Todos estos
+      recuerdos aquí plasmados los experimento hoy de forma
+      consciente, pero hay uno en concreto que más bien me persigue
+      en mis pesadillas: el de deambular solitario por la
+      insondable niebla de &lt;a
+      href="http://www.vidaextra.com/listas/silent-hill-cumple-quince-anos-diez-bichos-asquerosos-para-recordarlo-con-carino"&gt;'Silent
+      Hill'&lt;/a&gt;. Yo sé que hoy lo veis y os da la risa, pero
+      en aquellos tiempos éramos más impresionables, hasta tal
+      punto que he de hacer una confesión: la primera vez que me
+      puse con él, lo pasé tan mal que tuve que dejarlo al poco de
+      empezar; años después, con más valor en el cuerpo, decidí
+      volver a adentrarme en aquella niebla maldita.&lt;/p&gt;
+      &lt;h2&gt;Saltar por los aires en San Francisco&lt;/h2&gt;
+      &lt;p&gt;&lt;img alt="Sony Playstation"
+      src="http://img.vidaextra.com/2014/12/psx10.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Las
+      empinadas calles de San Francisco han sido escenario habitual
+      en el cine para presentar espectaculares persecuciones, pero
+      nada como protagonizarlas tú mismo, algo que nos ofreció por
+      primera vez el gran &lt;strong&gt;'Driver'&lt;/strong&gt;.
+      Recuerdo pasar las horas muertas subiendo y bajando las
+      avenidas que ofrecían los mejores saltos, por el simple
+      placer de ver mi coche volando hacia un futuro incierto
+      contra el duro asfalto.&lt;/p&gt; &lt;h2&gt;Marcar mi primer
+      gol desde campo propio&lt;/h2&gt; &lt;p&gt;&lt;img alt="Sony
+      Playstation" src="http://img.vidaextra.com/2014/12/psx11.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Juegos de
+      fútbol ya &lt;a
+      href="http://www.vidaextra.com/deportes/de-cuando-cinco-pixels-eran-un-balon-la-evolucion-ilustrada-de-los-juegos-de-futbol"&gt;habíamos
+      probado muchos&lt;/a&gt; antes de &lt;strong&gt;'ISS Pro
+      Evolution'&lt;/strong&gt;, pero a mí al menos este fue el
+      primero que consiguió hacerme sentir pasiones tan encendidas
+      como las que transmite el deporte rey en la vida real. Es por
+      ello que cada logro aquí era celebrado como si tu equipo
+      marcara el gol decisivo en una final de Champions League, más
+      aún si conseguías completar acciones tan espectaculares como
+      marcar un gol desde campo propio. El grito de alegría se
+      podía oír en todo el edificio.&lt;/p&gt; &lt;h2&gt;Dominar el
+      dichoso táser&lt;/h2&gt; &lt;p&gt;&lt;img alt="Sony
+      Playstation" src="http://img.vidaextra.com/2014/12/psx12.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Antes de
+      jugar al primer capítulo de &lt;strong&gt;'Syphon
+      Filter'&lt;/strong&gt; no tenía ni idea de lo que era un
+      táser, pero Gabe Logan se encargó de dejarlo claro a todos. Y
+      mira que este título tenía un atractivo surtido de armas para
+      elegir cómo afrontar los combates, pero al final siempre
+      acaba recurriendo a esta solución tan poco ortodoxa y que
+      ofrecía situaciones tan esperpénticas con los enemigos que
+      osaban ponerse en nuestro camino.&lt;/p&gt; &lt;p&gt; -
+      &lt;br/&gt; La noticia &lt;a
+      href="http://www.vidaextra.com/listas/12-grandes-momentos-que-vivi-con-la-primera-playstation-y-que-nunca-olvidare?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Doce grandes momentos que viví con la primera
+      PlayStation y que nunca olvidaré &lt;/em&gt; &lt;/a&gt; fue
+      publicada originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/gallego?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      Gallego &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/411726a3/sc/18/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612407137/u/49/f/502901/c/32660/s/411726a3/sc/18/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612407137/u/49/f/502901/c/32660/s/411726a3/sc/18/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612407137/u/49/f/502901/c/32660/s/411726a3/sc/18/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612407137/u/49/f/502901/c/32660/s/411726a3/sc/18/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612407137/u/49/f/502901/c/32660/s/411726a3/sc/18/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612407137/u/49/f/502901/c/32660/s/411726a3/sc/18/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612407137/u/49/f/502901/c/32660/s/411726a3/sc/18/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612407137/u/49/f/502901/c/32660/s/411726a3/sc/18/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612407137/u/49/f/502901/c/32660/s/411726a3/sc/18/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/gc-eKKCPc4A"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 18:15:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/listas/12-grandes-momentos-que-vivi-con-la-primera-playstation-y-que-nunca-olvidare</guid>
+      <dc:creator>Gallego</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/listas/12-grandes-momentos-que-vivi-con-la-primera-playstation-y-que-nunca-olvidare</feedburner:origLink>
+    </item>
+    <item>
+      <title>La particular visión del Salvaje Oeste de Secret
+      Ponchos aterriza en PS4</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/S056WcilGCc/la-particular-vision-del-salvaje-oeste-de-secret-ponchos-aterriza-en-ps4</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/NixjXYftIrY"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;Dentro de las verdaderas novedades de &lt;a
+      href="http://www.vidaextra.com/otros-generos/injustice-gods-among-us-y-secret-ponchos-son-lo-mas-destacable-de-playstation-plus-en-diciembre"&gt;diciembre
+      en Playstation Plus&lt;/a&gt;, &lt;b&gt;'Secret
+      Ponchos'&lt;/b&gt; se nos antoja como la propuesta más
+      interesante en PS4. Lleva tiempo en Steam Early Access y
+      ahora, por fin, aterriza su versión final a PS4 para que
+      comprobemos de primera mano su peculiar
+      multijugador.&lt;/p&gt; &lt;p&gt;Al que le gusten las
+      películas del Salvaje Oeste y disfrutó con el gran modo
+      online de &lt;a
+      href="http://www.vidaextra.com/analisis/red-dead-redemption-analisis"&gt;'Red
+      Dead Redemption'&lt;/a&gt;, seguro que no le hará ascos a los
+      duelos de &lt;b&gt;'Secret Ponchos'&lt;/b&gt;, con
+      posibilidad de disputar partidas &lt;b&gt;de uno contra uno e
+      incluso hasta cuatro contra cuatro&lt;/b&gt;. Ahí, a lo
+      loco.&lt;/p&gt; &lt;p&gt;A este hecho hay que sumarle un modo
+      cooperativo para dos jugadores que también podremos disfrutar
+      en modo local a pantalla partida y a que contaremos con
+      varias clases de forajidos a escoger. En definitiva, que
+      promete, y si tenéis PSN Plus, os ahorráis los 14,99 euros
+      que cuesta.&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La noticia
+      &lt;a
+      href="http://www.vidaextra.com/accion/la-particular-vision-del-salvaje-oeste-de-secret-ponchos-aterriza-en-ps4?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; La particular visión del Salvaje Oeste de Secret
+      Ponchos aterriza en PS4 &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/jarkendia?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      Jarkendia &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/41171031/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612366849/u/49/f/502901/c/32660/s/41171031/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612366849/u/49/f/502901/c/32660/s/41171031/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612366849/u/49/f/502901/c/32660/s/41171031/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612366849/u/49/f/502901/c/32660/s/41171031/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612366849/u/49/f/502901/c/32660/s/41171031/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612366849/u/49/f/502901/c/32660/s/41171031/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612366849/u/49/f/502901/c/32660/s/41171031/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612366849/u/49/f/502901/c/32660/s/41171031/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612366849/u/49/f/502901/c/32660/s/41171031/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/S056WcilGCc"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 18:01:51 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/accion/la-particular-vision-del-salvaje-oeste-de-secret-ponchos-aterriza-en-ps4</guid>
+      <dc:creator>Jarkendia</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/accion/la-particular-vision-del-salvaje-oeste-de-secret-ponchos-aterriza-en-ps4</feedburner:origLink>
+    </item>
+    <item>
+      <title>La beta abierta de Black Desert comenzará el 17 de
+      este mismo mes</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/jL0g2HEwKak/la-beta-abierta-de-dark-desert-comenzara-el-17-de-este-mismo-mes</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/adcFAWUidcQ"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;Hace tiempo que no hablamos de &lt;strong&gt;‘Black
+      Desert’&lt;/strong&gt;, un juego que llamó la atención de los
+      amantes de los RPG por el sofisticado sistema de creación de
+      personajes. Se podría decir que cada sección de la cara de
+      nuestro personaje es editable y moldeable a nuestro
+      gusto.&lt;/p&gt; &lt;p&gt;La buena nueva es que después de
+      tanto tiempo por fin va a empezar su beta abierta. A partir
+      del &lt;strong&gt;17 de diciembre&lt;/strong&gt;, los
+      servidores coreanos de &lt;strong&gt;‘Black
+      Desert’&lt;/strong&gt; empezarán a recibir jugadores y no hay
+      nada mejor para celebrar tan buena noticia que lanzar un
+      nuevo tráiler. Aunque se siguen centrando demasiado en la
+      personalización.&lt;/p&gt; &lt;p&gt;La mala noticia os la he
+      colado en el anterior párrafo, los servidores que abrirán
+      serán los coreanos. Seguimos sin saber si
+      &lt;strong&gt;‘Black Desert’&lt;/strong&gt; llegará a salir
+      de corea, hay &lt;a
+      href="http://www.vidaextra.com/rpg/lost-ark-es-aun-mas-impresionante-en-estos-casi-20-minutos-de-video"&gt;tantas
+      joyas&lt;/a&gt; que parecen que se van a quedar fuera de
+      nuestro alcance.&lt;/p&gt; &lt;p&gt;Vía | &lt;a
+      href="http://www.allgamesbeta.com/2014/12/black-desert-open-beta-starts-on.html"&gt;AGB&lt;/a&gt;&lt;br&gt;En
+      VidaExtra | &lt;a
+      href="http://www.vidaextra.com/pc/black-desert-sigue-asombrandonos-ahora-con-monturas-gigantes"&gt;Black
+      Desert sigue asombrándonos, ahora con monturas
+      gigantes&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La
+      noticia &lt;a
+      href="http://www.vidaextra.com/rpg/la-beta-abierta-de-dark-desert-comenzara-el-17-de-este-mismo-mes?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; La beta abierta de Black Desert comenzará el 17 de
+      este mismo mes &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/4117092e/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612365938/u/49/f/502901/c/32660/s/4117092e/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612365938/u/49/f/502901/c/32660/s/4117092e/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612365938/u/49/f/502901/c/32660/s/4117092e/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612365938/u/49/f/502901/c/32660/s/4117092e/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612365938/u/49/f/502901/c/32660/s/4117092e/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612365938/u/49/f/502901/c/32660/s/4117092e/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612365938/u/49/f/502901/c/32660/s/4117092e/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612365938/u/49/f/502901/c/32660/s/4117092e/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612365938/u/49/f/502901/c/32660/s/4117092e/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/jL0g2HEwKak"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 17:31:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/rpg/la-beta-abierta-de-dark-desert-comenzara-el-17-de-este-mismo-mes</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/rpg/la-beta-abierta-de-dark-desert-comenzara-el-17-de-este-mismo-mes</feedburner:origLink>
+    </item>
+    <item>
+      <title>Guía de lanzamientos: diciembre de 2014</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/QeDI80nexVE/guia-de-lanzamientos-diciembre-de-2014</link>
+      <description>&lt;p&gt;&lt;img alt="Guía de lanzamientos"
+      src="http://img.vidaextra.com/2014/12/031214-guia-lanzamientos-diciembre-2014.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Que
+      diciembre no sea un mes muy propenso a grandes lanzamientos
+      no quiere decir que tengamos que demorar más la &lt;b&gt;guía
+      de lanzamientos de diciembre&lt;/b&gt;. Abrumados por &lt;a
+      href="http://www.vidaextra.com/vidaextra/guia-de-lanzamientos-noviembre-de-2014"&gt;tanto
+      juegazo de noviembre&lt;/a&gt;, con algunos que no hemos
+      tenido tiempo de completar... porque se nos juntaron &lt;a
+      href="http://www.vidaextra.com/vidaextra/guia-de-lanzamientos-octubre-de-2014"&gt;con
+      los de octubre&lt;/a&gt;, otro mes también bastante bueno,
+      toca hacer el pertinente repaso por lo que nos
+      espera.&lt;/p&gt; &lt;p&gt;Como viene siendo habitual por
+      estas fechas, lo gordo lo tendremos en su primera quincena,
+      con el resto de días de lo más descafeinado. No quita, eso
+      sí, que cada semana hagamos el otro repaso, más directo, por
+      cada lanzamiento aportando vídeo de cada uno de ellos;
+      &lt;b&gt;ahora la guía mensual&lt;/b&gt;.&lt;/p&gt;
+      &lt;!--more--&gt; &lt;h2&gt;Juego de Tronos según Telltale
+      Games&lt;/h2&gt; &lt;p&gt;&lt;img alt="Game of Thrones - A
+      Telltale Games Series"
+      src="http://img.vidaextra.com/2014/12/031214-game-of-thrones.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Visto el
+      éxito con las dos temporadas de 'The Walking Dead', no es de
+      extrañar que &lt;b&gt;'Game of Thrones - A Telltale Games
+      Series'&lt;/b&gt; vaya a ser otro éxito para la compañía.
+      Sobre todo también por el tirón de la serie de &lt;a
+      href="http://www.vayatele.com/programas/ci-fifantastico/juego-de-tronos"&gt;Juego
+      de Tronos&lt;/a&gt;. Desde ayer se encuentra a la venta en
+      Steam para PC (en Mac se ha retrasado) y desde hoy hace lo
+      propio en PS4, Xbox 360 y Xbox One, con la versión para PS3
+      fijada para el próximo 10 de diciembre. En todos estos casos,
+      claro está, en formato digital y tan solo para el primer
+      episodio de una temporada que irá llegando de manera
+      escalonada en el 2015.&lt;/p&gt; &lt;p&gt;Ayer, 2 de
+      diciembre, también se puso a la venta el esperado &lt;a
+      href="http://www.vidaextra.com/analisis/the-crew-primeras-impresiones"&gt;'The
+      Crew'&lt;/a&gt; de Ivory Tower para PC, PS4, Xbox 360 y Xbox
+      One. Pronto tendréis nuestro análisis para saber qué nos ha
+      parecido.&lt;/p&gt; &lt;p&gt;Mientras que hoy tenemos mucha
+      ración en digital. Para empezar, la versión de consolas (PS3
+      y Xbox 360) de &lt;b&gt;'Chivalry: Medieval
+      Warfare'&lt;/b&gt;, la secuela de 'Lume' para Steam bajo el
+      nombre de &lt;b&gt;'Lumino City'&lt;/b&gt;, el MOBA
+      &lt;b&gt;'Invokers Tournament'&lt;/b&gt; en PS4 y PS Vita, ya
+      fuera de su beta, la edición para PS3, PS4 y Xbox 360 de
+      &lt;b&gt;'Tales from the Borderlands'&lt;/b&gt;, otra
+      aventura gráfica de Telltale Games, &lt;b&gt;'Secret
+      Ponchos'&lt;/b&gt; en PS4 como mejor incentivo de Playstation
+      Plus en dicha consola este mes de diciembre, y el
+      interesante, a priori, juego de exploración en primera
+      persona &lt;b&gt;'The Old City: Leviathan'&lt;/b&gt; en
+      Steam. Sin olvidar que hoy llega también &lt;b&gt;'Teslagrad'
+      en formato físico a PS3 y PS4&lt;/b&gt;.&lt;/p&gt;
+      &lt;p&gt;Completan la semana &lt;b&gt;'Kingdom Hearts HD 2.5
+      ReMix'&lt;/b&gt; en PS3, un lote muy esperado por los fans de
+      Sora y compañía, y esa especie de 'Breakout' para el Kinect
+      de Xbox One con &lt;b&gt;'Boom Ball'&lt;/b&gt;.&lt;/p&gt;
+      &lt;h2&gt;El coop de Lara Croft and the Temple of
+      Osiris&lt;/h2&gt; &lt;p&gt;&lt;img alt="Lara Croft and the
+      Temple of Osiris"
+      src="http://img.vidaextra.com/2014/12/031214-lara-croft-temple-osiris.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Echando un
+      vistazo rápido a la siguiente semana de diciembre encontramos
+      el también esperado &lt;b&gt;'Lara Croft and the Temple of
+      Osiris'&lt;/b&gt;, continuación del sorprendente &lt;a
+      href="http://www.vidaextra.com/analisis/lara-croft-and-the-guardian-of-light-analisis"&gt;'Lara
+      Croft and the Guardian of Light'&lt;/a&gt;. ¿Su principal
+      novedad? Aparte de continuar su historia y ver caras nuevas,
+      entre otras cosas, el hecho de que &lt;b&gt;ahora podremos
+      jugar a cuatro bandas&lt;/b&gt;, con puzles que variarán
+      dependiendo del número de jugadores que se encuentren en la
+      partida. El &lt;b&gt;9 de diciembre&lt;/b&gt; lo tendremos
+      disponible en PC, PS4 y Xbox One en formato digital... y
+      también &lt;a
+      href="http://www.vidaextra.com/aventura-plataformas/square-enix-anuncia-la-edicion-gold-de-lara-croft-and-the-temple-of-osiris-en-pc-y-ps4"&gt;en
+      físico en PC y PS4&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Ese mismo
+      día, mucho ojo con las dos expansiones de peso que vamos a
+      recibir en dos lanzamientos con mucha solera de 2014. Por un
+      lado, &lt;a
+      href="http://www.vidaextra.com/otros-generos/mas-de-120-nuevas-cartas-en-goblins-vs-gnomos-la-primera-expansion-de-hearthstone"&gt;'Goblins
+      vs. Gnomos'&lt;/a&gt; (Mac y PC), primer contenido de peso
+      del adictivo &lt;a
+      href="http://www.vidaextra.com/analisis/hearthstone-analisis"&gt;'Hearthstone'&lt;/a&gt;;
+      y por otro &lt;a
+      href="http://www.vidaextra.com/fps/drcrispy93-nos-ensena-todo-lo-que-podremos-conseguir-en-la-primera-expansion-de-destiny"&gt;La
+      profunda oscuridad&lt;/a&gt; de &lt;a
+      href="http://www.vidaextra.com/analisis/destiny-analisis"&gt;'Destiny'&lt;/a&gt;
+      (PS3, PS4, Xbox 360 y One).&lt;/p&gt; &lt;p&gt;Y a falta de
+      concretar más fechas de esa semana, los fans de la lucha
+      tienen una cita ineludible (si estuvieron ausentes en el
+      siglo pasado) con &lt;b&gt;'The King of Fighters '98 Ultimate
+      Match Final Edition'&lt;/b&gt; en Steam el próximo 12 de
+      diciembre. Uno de los mejores exponentes del
+      género.&lt;/p&gt; &lt;h2&gt;El ansiado regreso de la saga
+      Elite&lt;/h2&gt; &lt;p&gt;&lt;img alt="Elite: Dangerous"
+      src="http://img.vidaextra.com/2014/12/031214-elite-dangerous.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;No moverá a
+      tantas masas como otros representantes del mes, pero lo
+      cierto es que &lt;b&gt;'Elite 4'&lt;/b&gt;, o mejor dicho,
+      &lt;a
+      href="http://www.vidaextra.com/juegos-online/elite-dangerous"&gt;'Elite:
+      Dangerous'&lt;/a&gt;, es el lanzamiento más importante del
+      mes debido a la repercusión de la saga. ¿Que por qué lo
+      decimos? Como comentamos con su especial de hace unas
+      semanas, &lt;b&gt;de no ser por la saga 'Elite' no habrían
+      existido 'Wing Commander', 'Star Citizen' o 'No Man's
+      Sky'.&lt;/b&gt;&lt;/p&gt; &lt;p&gt;Lástima que al pertenecer
+      a un género minoritario y con una curva de dificultad tan
+      elevada echará a más de uno por el camino, pero cualquiera al
+      que le gusten un mínimo los simuladores del espacio tiene una
+      cita ineludible el &lt;b&gt;16 de diciembre&lt;/b&gt;, el día
+      en el que se pondrá oficialmente a la venta en PC.&lt;/p&gt;
+      &lt;p&gt;El resto de los lanzamientos del mes se cuentan, por
+      ahora, con los dedos de una mano: esa propuesta cooperativa
+      de &lt;b&gt;'Kalimba'&lt;/b&gt; (17 de diciembre) en Xbox One
+      mediante su tienda digital, y la adaptación a PC de &lt;a
+      href="http://www.vidaextra.com/analisis/metal-gear-solid-v-ground-zeroes-analisis"&gt;'Metal
+      Gear Solid V: Ground Zeroes'&lt;/a&gt; (día 18).
+      &lt;b&gt;¿Qué os parece el mes?&lt;/b&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt; &lt;iframe
+      src="http://www.google.com/calendar/embed?src=3tmn1kdtdq9rmtuia6vfp07oqk%40group.calendar.google.com&amp;ctz=Europe/Madrid"
+      style="border: 0" width="650" height="500" frameborder="0"
+      scrolling="no"&gt;&lt;/iframe&gt; &lt;p&gt;Calendario | &lt;a
+      href="http://www.google.com/calendar/feeds/3tmn1kdtdq9rmtuia6vfp07oqk%40group.calendar.google.com/public/basic"&gt;&lt;span
+      class="caps"&gt;XML&lt;/span&gt;, &lt;a
+      href="http://www.google.com/calendar/ical/3tmn1kdtdq9rmtuia6vfp07oqk%40group.calendar.google.com/public/basic.ics"&gt;iCal&lt;/a&gt;,
+      &lt;a
+      href="http://www.google.com/calendar/embed?src=3tmn1kdtdq9rmtuia6vfp07oqk%40group.calendar.google.com&amp;ctz=Europe/Madrid"&gt;&lt;span
+      class="caps"&gt;HTML&lt;/span&gt;&lt;/a&gt;&lt;br&gt;&lt;/p&gt;
+      &lt;p&gt; - &lt;br/&gt; La noticia &lt;a
+      href="http://www.vidaextra.com/vidaextra/guia-de-lanzamientos-diciembre-de-2014?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Guía de lanzamientos: diciembre de 2014
+      &lt;/em&gt; &lt;/a&gt; fue publicada originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/jarkendia?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      Jarkendia &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/41167b1a/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612402899/u/49/f/502901/c/32660/s/41167b1a/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612402899/u/49/f/502901/c/32660/s/41167b1a/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612402899/u/49/f/502901/c/32660/s/41167b1a/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612402899/u/49/f/502901/c/32660/s/41167b1a/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612402899/u/49/f/502901/c/32660/s/41167b1a/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612402899/u/49/f/502901/c/32660/s/41167b1a/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612402899/u/49/f/502901/c/32660/s/41167b1a/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612402899/u/49/f/502901/c/32660/s/41167b1a/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612402899/u/49/f/502901/c/32660/s/41167b1a/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/QeDI80nexVE"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 16:01:54 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/vidaextra/guia-de-lanzamientos-diciembre-de-2014</guid>
+      <dc:creator>Jarkendia</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/vidaextra/guia-de-lanzamientos-diciembre-de-2014</feedburner:origLink>
+    </item>
+    <item>
+      <title>Los kickflips y backflips de OlliOlli llegarán a Xbox
+      One, Wii U y 3DS</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/worV9MjzMzA/los-kickflips-y-blackflips-de-olliolli-llegaran-a-xbox-one-wii-u-y-3ds</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/NyspcbtUhbA"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a
+      href="http://www.vidaextra.com/analisis/olliolli-analisis"&gt;‘OlliOlli’&lt;/a&gt;
+      es uno de esos juegos indies que han sabido ganarse el cariño
+      del público gracias a su dificultad y originalidad. Un
+      &lt;strong&gt;endless runner en monopatín&lt;/strong&gt; con
+      el que tendremos que realizar diferentes trucos para
+      conseguir puntos y superar el nivel.&lt;/p&gt; &lt;p&gt;El
+      título se lanzó originalmente para PS Vita en junio de este
+      mismo año y posteriormente llegó a PC, PS3 y PS4. Por suerte,
+      los amantes de los monopatines podrán disfrutar de
+      &lt;strong&gt;‘OlliOlli’&lt;/strong&gt; en tres nuevas
+      plataformas, &lt;strong&gt;Xbox One&lt;/strong&gt;,
+      &lt;strong&gt;Wii U&lt;/strong&gt; y
+      &lt;strong&gt;3DS&lt;/strong&gt;, desde
+      &lt;strong&gt;principios de 2015&lt;/strong&gt;.&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;‘OlliOlli’&lt;/strong&gt; también
+      tiene pendiente una secuela, llamada &lt;strong&gt;‘OlliOlli
+      2: Welcome to Olliwood’&lt;/strong&gt;, que verá la luz a lo
+      largo de 2015 para PS Vita y PS4. Dicha entrega promete
+      ofrecer muchos más trucos y un editor de niveles mucho más
+      potente que la primera entrega.&lt;/p&gt; &lt;p&gt;Vía |
+      &lt;a
+      href="http://www.computerandvideogames.com/482091/olliolli-coming-to-xbox-one-wii-u-and-3ds/"&gt;CVG&lt;/a&gt;&lt;br&gt;En
+      VidaExtra | &lt;a
+      href="http://www.vidaextra.com/deportes/olliolli-el-dark-souls-con-cojinetes-esta-a-punto-de-llegar-a-pc-mac-y-linux"&gt;OlliOlli,
+      el Dark Souls con cojinetes, está a punto de llegar a PC, Mac
+      y Linux&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La
+      noticia &lt;a
+      href="http://www.vidaextra.com/deportes/los-kickflips-y-blackflips-de-olliolli-llegaran-a-xbox-one-wii-u-y-3ds?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Los kickflips y backflips de OlliOlli llegarán a
+      Xbox One, Wii U y 3DS &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/4115d61a/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612401753/u/49/f/502901/c/32660/s/4115d61a/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612401753/u/49/f/502901/c/32660/s/4115d61a/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612401753/u/49/f/502901/c/32660/s/4115d61a/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612401753/u/49/f/502901/c/32660/s/4115d61a/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612401753/u/49/f/502901/c/32660/s/4115d61a/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612401753/u/49/f/502901/c/32660/s/4115d61a/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612401753/u/49/f/502901/c/32660/s/4115d61a/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612401753/u/49/f/502901/c/32660/s/4115d61a/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612401753/u/49/f/502901/c/32660/s/4115d61a/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/worV9MjzMzA"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 15:31:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/deportes/los-kickflips-y-blackflips-de-olliolli-llegaran-a-xbox-one-wii-u-y-3ds</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/deportes/los-kickflips-y-blackflips-de-olliolli-llegaran-a-xbox-one-wii-u-y-3ds</feedburner:origLink>
+    </item>
+    <item>
+      <title>Molyneux cree que Kickstarter y Early Access pueden
+      llegar a destruir la calidad del juego</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/5v9REQ90oeM/molyneux-cree-que-kickstarter-y-early-access-pueden-llegar-a-destruir-la-calidad-del-juego</link>
+      <description>&lt;p&gt;&lt;img alt="Molyneux cree que
+      Kickstarter y Early Access pueden llegar a destruir la
+      calidad del juego"
+      src="http://img.vidaextra.com/2014/12/650_1000_molyneux-kickstarter.jpg"
+      class="centro_sinmarco" /&gt; &lt;strong&gt;Peter
+      Molyneux&lt;/strong&gt; no sólo es conocido por ser uno de
+      los más veteranos de la industria, sino que también se le
+      conoce por prometer más de lo que puede cumplir. En esta
+      ocasión ha decidido hablar sobre su experiencia en
+      &lt;strong&gt;Kickstarter&lt;/strong&gt; y
+      &lt;strong&gt;Early Access&lt;/strong&gt; de Steam y creo que
+      tenemos que darle la razón:&lt;/p&gt; &lt;blockquote&gt;Lo
+      que he aprendido es que crear un Kickstarter y Steam Early
+      Access, antes de tener definido y reproducible, es una tarea
+      con un riesgo bastante alto y puede ser muy destructivo para
+      la calidad final del juego.&lt;/blockquote&gt; &lt;p&gt;En
+      este caso se refiere a la idea de tener que prometer
+      diferentes añadidos u objetivos por las donaciones en
+      &lt;strong&gt;Kickstarter&lt;/strong&gt;. De forma que si te
+      quedas por debajo de ese objetivo tienes que eliminar esa
+      parte del juego. También habla de lo estresante de tener tan
+      poco tiempo para recaudar tanto dinero e incluso de &lt;a
+      href="http://www.vidaextra.com/industria/que-esta-pasando-con-el-acceso-anticipado-de-steam"&gt;no
+      vender lo suficiente en Early Access&lt;/a&gt;.&lt;/p&gt;
+      &lt;!--more--&gt; &lt;p&gt;Al menos el señor Molyneux terminó
+      &lt;strong&gt;‘Godus’&lt;/strong&gt;, juego que se financió
+      en &lt;strong&gt;Kickstarter&lt;/strong&gt; y tuvo acceso
+      anticipado en Steam. Pero ya sabemos que hay muchos otros
+      estudios que decidieron cancelar el proyecto, lo cual podría
+      haberse solucionado teniendo una versión jugable de éste
+      desde el principio. Tal como declara Molyneux y las nuevas
+      &lt;a
+      href="http://www.vidaextra.com/pc/valve-envia-nuevas-directrices-a-los-programadores-que-quieren-participar-en-early-access-de-steam"&gt;reglas
+      de Steam Early Acces&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Vía |
+      &lt;a
+      href="http://gamasutra.com/view/news/231403/Peter_Molyneux_learns_the_harsh_lessons_of_Kickstarter_and_Early_Access.php"&gt;Gamasutra&lt;/a&gt;&lt;br&gt;En
+      VidaExtra | &lt;a
+      href="http://www.vidaextra.com/industria/que-esta-pasando-con-el-acceso-anticipado-de-steam"&gt;¿Qué
+      está pasando con el acceso anticipado de
+      Steam?&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La noticia
+      &lt;a
+      href="http://www.vidaextra.com/industria/molyneux-cree-que-kickstarter-y-early-access-pueden-llegar-a-destruir-la-calidad-del-juego?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; Molyneux cree que Kickstarter y Early Access
+      pueden llegar a destruir la calidad del juego &lt;/em&gt;
+      &lt;/a&gt; fue publicada originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/droidenz?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      DroidenZ &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/4115b930/sc/23/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612367335/u/49/f/502901/c/32660/s/4115b930/sc/23/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612367335/u/49/f/502901/c/32660/s/4115b930/sc/23/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612367335/u/49/f/502901/c/32660/s/4115b930/sc/23/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612367335/u/49/f/502901/c/32660/s/4115b930/sc/23/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612367335/u/49/f/502901/c/32660/s/4115b930/sc/23/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612367335/u/49/f/502901/c/32660/s/4115b930/sc/23/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612367335/u/49/f/502901/c/32660/s/4115b930/sc/23/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612367335/u/49/f/502901/c/32660/s/4115b930/sc/23/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612367335/u/49/f/502901/c/32660/s/4115b930/sc/23/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/5v9REQ90oeM"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 15:01:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/industria/molyneux-cree-que-kickstarter-y-early-access-pueden-llegar-a-destruir-la-calidad-del-juego</guid>
+      <dc:creator>DroidenZ</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/industria/molyneux-cree-que-kickstarter-y-early-access-pueden-llegar-a-destruir-la-calidad-del-juego</feedburner:origLink>
+    </item>
+    <item>
+      <title>20 años de canciones en consolas Playstation
+      condensadas en un vídeo</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/zUP-AXhV7_0/20-anos-de-canciones-en-consolas-playstation-condensadas-en-un-video</link>
+      <description>&lt;p&gt;&lt;iframe width="650" height="366"
+      src="http://www.youtube.com/embed/Z1f1paSoUXs"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;Esta mañana Sony Computer Entertainment nos
+      sorprendía con &lt;a
+      href="http://www.vidaextra.com/hardware/si-tuviste-la-primera-playstation-querras-esta-ps4-edicion-20-aniversario"&gt;esa
+      edición especial de PS4 con motivo del 20 aniversario de
+      Playstation&lt;/a&gt; al cumplirse precisamente hoy 20 años
+      desde que debutó la primera Playstation en Japón. Sí, el 3 de
+      diciembre de 1994. Aunque como sabemos a España tardó algo
+      más en llegar (29 de septiembre de 1995). ¡Parece que fue
+      ayer cuando me puse a sus mandos!&lt;/p&gt; &lt;p&gt;Ya habrá
+      ocasión, que no os quepa duda, de rendirle el homenaje que se
+      merece, igual que hemos hecho con otras consolas y también en
+      diferentes años (&lt;a
+      href="http://www.vidaextra.com/industria/playstation-cumple-15-anos"&gt;aquí,
+      por ejemplo, cuando cumplió 15 años&lt;/a&gt;). Aunque antes
+      de ello, &lt;b&gt;¿por qué no tirar de nostalgia
+      musical?&lt;/b&gt; También lo hicimos en el pasado, con &lt;a
+      href="http://www.vidaextra.com/musica/cinco-canciones-para-recordar-lo-grande-que-fue-la-playstation"&gt;una
+      lista de cinco temazos musicales&lt;/a&gt;, salvo que en esta
+      ocasión lo haremos con un vídeo sacado del canal Playstation
+      Access con arreglos de &lt;a
+      href="https://www.youtube.com/user/SquidPhysics"&gt;SquidPhysics&lt;/a&gt;
+      y sobre la historia de la marca Playstation.&lt;/p&gt;
+      &lt;p&gt;Son casi &lt;b&gt;ocho minutos de vídeo con algunas
+      canciones muy míticas&lt;/b&gt; en donde, lógicamente, habrá
+      grandes ausencias, pero al menos tiene el valor añadido de
+      ser algo más personal y no tirar sólo de pegar los temas
+      originales. &lt;b&gt;A ver si sois capaces de adivinar todos
+      y lograr el trofeo&lt;/b&gt;.&lt;/p&gt; &lt;p&gt;En VidaExtra
+      | &lt;a
+      href="http://www.vidaextra.com/hardware/si-tuviste-la-primera-playstation-querras-esta-ps4-edicion-20-aniversario"&gt;Si
+      tuviste la primera Playstation, querrás esta PS4 edición 20
+      aniversario&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La
+      noticia &lt;a
+      href="http://www.vidaextra.com/musica/20-anos-de-canciones-en-consolas-playstation-condensadas-en-un-video?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;em&gt; 20 años de canciones en consolas Playstation
+      condensadas en un vídeo &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/jarkendia?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=04_Dec_2014"&gt;
+      Jarkendia &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/41153b2c/sc/27/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612399540/u/49/f/502901/c/32660/s/41153b2c/sc/27/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612399540/u/49/f/502901/c/32660/s/41153b2c/sc/27/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612399540/u/49/f/502901/c/32660/s/41153b2c/sc/27/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612399540/u/49/f/502901/c/32660/s/41153b2c/sc/27/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612399540/u/49/f/502901/c/32660/s/41153b2c/sc/27/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612399540/u/49/f/502901/c/32660/s/41153b2c/sc/27/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612399540/u/49/f/502901/c/32660/s/41153b2c/sc/27/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612399540/u/49/f/502901/c/32660/s/41153b2c/sc/27/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612399540/u/49/f/502901/c/32660/s/41153b2c/sc/27/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/zUP-AXhV7_0"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 14:31:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/musica/20-anos-de-canciones-en-consolas-playstation-condensadas-en-un-video</guid>
+      <dc:creator>Jarkendia</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/musica/20-anos-de-canciones-en-consolas-playstation-condensadas-en-un-video</feedburner:origLink>
+    </item>
+    <item>
+      <title>Final Fantasy Type-0 HD: primeras impresiones</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/FmTV9vgiwqU/final-fantasy-type-0-hd-primeras-impresiones</link>
+      <description>&lt;p&gt;&lt;img alt="Final Fantasy Type-0 HD"
+      src="http://img.vidaextra.com/2014/12/031214-final-fantasy-type-0-hd-primer.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Como ocurrió
+      en los noventa, con buena parte de los juegazos de
+      Squaresoft, el &lt;b&gt;'Final Fantasy Type-0' de
+      PSP&lt;/b&gt; se quedó sin traspasar las fronteras de Japón.
+      Debutó en el país nipón el 27 de octubre de 2011 y ahí se
+      quedó. Y en mi caso, fue el juego que me motivó a crear una
+      cuenta japonesa de PSN para poder catar su demo... aunque al
+      no entender el idioma de Hironobu Sakaguchi no comprendí muy
+      bien la renovada mecánica de sus combates y lo aparqué al
+      poco rato.&lt;/p&gt; &lt;p&gt;Los años fueron pasando y por
+      el camino se empezó a trabajar en &lt;a
+      href="https://twitter.com/proyecto_type0"&gt;una traducción
+      no oficial a nuestro idioma&lt;/a&gt;, para todo aquel que lo
+      quisiese importar, hasta que finalmente Square Enix nos dio
+      la buena nueva en junio de 2014 al anunciar, &lt;a
+      href="http://www.vidaextra.com/rpg/por-fin-final-fantasy-type-0-saldra-en-espana-para-ps4-y-xbox-one-e3-2014"&gt;para
+      sorpresa de todos&lt;/a&gt;, &lt;b&gt;'Final Fantasy Type-0
+      HD' para PS4 y Xbox One&lt;/b&gt;, puesta al día, a modo de
+      &lt;i&gt;remake&lt;/i&gt; con algunos retoques más, del
+      título de PSP. Su salida está fijada en España para el
+      &lt;b&gt;20 de marzo de 2015&lt;/b&gt;, y gracias a Koch
+      Media hemos podido probarlo a fondo, con varias horas por
+      delante, para compartir con vosotros nuestras
+      &lt;b&gt;primeras impresiones&lt;/b&gt;.&lt;/p&gt;
+      &lt;!--more--&gt; &lt;h2&gt;Un Final Fantasy mucho más adulto
+      y crudo&lt;/h2&gt; &lt;p&gt;&lt;img alt="Final Fantasy Type-0
+      HD"
+      src="http://img.vidaextra.com/2014/12/031214-final-fantasy-type-0-hd-01.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Si hay algo
+      que llama la atención desde el principio de &lt;b&gt;'Final
+      Fantasy Type-0 HD'&lt;/b&gt; es ese toque más adulto, maduro
+      y explícito a la hora de narrarnos los hechos. Aquí no hay
+      medias tintas, y desde el comienzo ya sufrimos la muerte de
+      un Chocobo en primera persona. Es más visceral y sangriento y
+      en líneas generales la historia también va por ese camino,
+      comparándose incluso con la novela &lt;b&gt;'Battle
+      Royale'&lt;/b&gt; en cuanto al desarrollo de personajes. En
+      definitiva, &lt;b&gt;no estamos ante un 'Final Fantasy' de
+      corte clásico&lt;/b&gt;, sino ante uno que nos promete nuevas
+      sensaciones y con más acción.&lt;/p&gt; &lt;p&gt;Su historia
+      nos traslada al mundo de Orience, ante una guerra entre
+      naciones que nos salpicará y de la que tendremos que formar
+      parte a la fuerza encarnando a un grupo de jóvenes
+      pertenecientes a la Clase Cero. Unos seres con dotes
+      especiales que &lt;b&gt;no se ven afectados por el obstructor
+      cristalino&lt;/b&gt;, una potente magia que bloquea, valga la
+      redundancia, la magia en un punto concreto. De ahí que las
+      ciudades asesiadas no puedan oponer resistencia para afrontar
+      las acometidas del rival.&lt;/p&gt; &lt;p&gt;Dentro de ese
+      grupo de jóvenes nosotros empezaremos con tres aspirantes de
+      capa roja que responden a los nombres de &lt;b&gt;Ace, Nine y
+      Queen&lt;/b&gt;, una buena forma de meterse en situación y
+      familiarizarse con el control y las diferencias de cada
+      clase, pese a que ningún personaje esté catalogado dentro de
+      una clase como tal, al contrario que en el resto de
+      &lt;b&gt;'Final Fantasy'&lt;/b&gt;.&lt;/p&gt; &lt;p&gt;Para
+      que os hagáis a la idea, cada uno tiene delimitado el tipo de
+      arma que puede llevar, y en base a eso se podría delimitar su
+      clase. &lt;b&gt;Ace&lt;/b&gt;, por ejemplo, &lt;b&gt;es un
+      personaje que utiliza naipes&lt;/b&gt; como arma, un poco en
+      plan Gámbito, de los X-men, salvo que Ace les puede aplicar,
+      a mayores, distintos estados para alterar al enemigo, como
+      paralizarlo. Nine, en cambio, utliza su lanza, y Queen su
+      espada larga, por lo que son dos personajes más pensados para
+      los combates a corta distancia.&lt;/p&gt; &lt;h2&gt;El
+      reparto especial de Final Fantasy Type-0 HD&lt;/h2&gt;
+      &lt;p&gt;&lt;img alt="Final Fantasy Type-0 HD"
+      src="http://img.vidaextra.com/2014/12/031214-final-fantasy-type-0-hd-02.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;El arma, a
+      su vez, confiere un ataque especial, como por ejemplo el
+      salto de Nine con la lanza, ideal para sorprender al enemigo
+      con un golpe muy poderoso. Lo bueno es que &lt;b&gt;'Final
+      Fantasy Type-0 HD'&lt;/b&gt; resulta de lo más dinámico en
+      este sentido al dejar un botón para cada ataque y al hecho de
+      poder cambiar, en caliente, entre los tres personajes que
+      tengamos activos. Porque esto es un
+      &lt;i&gt;action-RPG&lt;/i&gt;. Olvidad los turnos. Aquí nos
+      movemos con libertad y entablamos los duelos de un modo más
+      fluído que &lt;a
+      href="http://www.vidaextra.com/analisis/lightning-returns-final-fantasy-xiii-analisis"&gt;'Lightning
+      Returns: Final Fantasy XIII'&lt;/a&gt;, por nombrar una
+      entrega de la saga reciente.&lt;/p&gt; &lt;p&gt;De hecho
+      guarda ciertas similitudes. ¿Recordáis los cambios entre
+      arquetipos? Ahí teníamos tres activos y los intercambiábamos
+      con la pulsación de un botón. Aquí es parecido, salvo que los
+      tres personajes están activos en todo momento, manejando la
+      IA a los dos que no podemos controlar en ese instante,
+      pudiendo configurar el modo en que se comportan mientras no
+      los manejamos.&lt;/p&gt; &lt;p&gt;Lo sorprendente de
+      &lt;b&gt;'Final Fantasy Type-0 HD'&lt;/b&gt;, y que puede
+      abrumar al principio, es que &lt;b&gt;contaremos con 14
+      personajes&lt;/b&gt;, pertenecientes a la Clase Cero. A
+      saber: Ace, Machina, Nine, Eight, Trey, Jack, King, Queen,
+      Seven, Rem, Deuce, Cinque, Sice y Cater. Esto, sin duda, le
+      confiere mucha versatilidad al ser tan distintos entre sí,
+      por lo que podremos encontrar nuestro trío perfecto. Lo que
+      no quita, por otro lado, que tengamos que preocuparnos por
+      todos ellos ya que algunos son más eficaces contra ciertos
+      tipos de enemigos, con lo que tampoco podremos ceñirnos
+      exclusivamente a tres, sino a conocer (y mejorar) a cada uno
+      a fondo y saber cuándo usarlos bien.&lt;/p&gt;
+      &lt;p&gt;&lt;img alt="Final Fantasy Type-0 HD"
+      src="http://img.vidaextra.com/2014/12/031214-final-fantasy-type-0-hd-03.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;No es
+      solamente que me haya gustado este hecho, recordándome
+      vagamente a la saga 'Suikoden', sino que &lt;b&gt;los
+      combates son lo mejor de 'Final Fantasy Type-0 HD'&lt;/b&gt;
+      gracias a sus posibilidades. Dominarlo es algo complejo al
+      inicio al obligarnos a conocer los pros y contras de cada
+      personaje, como por ejemplo también qué efecto tiene cada
+      ataque sobre el enemigo. Aunque si no nos gusta alguna
+      habilidad estándar de, por ejemplo, defensa, como la
+      protección de Muro, siempre podemos equipar la siempre
+      efectiva Cura. O variar el tipo de elemtento de magia, como
+      Piro, Electro o Hielo.&lt;/p&gt; &lt;p&gt;Lo esencial que
+      deberemos tener bien presente es que cada botón (cuadrado,
+      equis, triángulo y círculo, en este caso, ya que probamos la
+      versión de PS4) se corresponde a un ataque, habilidad o
+      movimiento defensivo, y que después tenemos otras habilidades
+      que son indispensables en combate. Por ejemplo, el movimiento
+      de esquiva (el mismo que la habilidad defensiva, pero
+      pulsándolo rápidamente en vez de mantenerlo), gracias al cuál
+      podremos evitar casi cualquier ataque rival.&lt;/p&gt;
+      &lt;p&gt;Otro aspecto que hay que controlar bien es el tema
+      de las Marcas. O dicho de otro modo, &lt;b&gt;el fijar al
+      enemigo y saber cuándo es el momento oportuno para
+      atacarlo&lt;/b&gt;. Si la Marca es blanca, es que es
+      vulnerable; si es amarilla, le infligiremos mucho daño; y si
+      es roja, conocida como &lt;b&gt;Marca Fátum&lt;/b&gt;, es que
+      el ataque que le propinemos será letal. Vamos, que si vemos
+      durante unas milésimas de segundo una Marca Roja es que
+      mataremos al enemigo de un golpe. De ahí que no sea útil
+      atacar a lo loco, sino a esperar el momento oportuno. Eso, y
+      conocer al dedillo a cada enemigo, claro.&lt;/p&gt;
+      &lt;p&gt;También hay que tener en cuenta que en
+      &lt;b&gt;'Final Fantasy Type-0 HD'&lt;/b&gt; contaremos con
+      dos tipos de barras. Una para las magias, que viene a ser la
+      habitual barra de PM, y otra para las habilidades, como los
+      ataques estándar, y que también se consume al intercambiar
+      personajes. Ésta se rellena con el tiempo de manera gradual,
+      mientras que para la de PM, o bien recurrimos a las
+      pertinentes pociones, &lt;b&gt;o bien la rellenamos
+      recolectando pneumas de los enemigos abatidos&lt;/b&gt;.
+      Esto, que al principio parece un poco lento y tosco, al
+      obligarnos a fijar al enemigo muerto y cosechar sus pneumas,
+      se torna algo bastante útil ya que al hacerlo se generará una
+      explosión que dañará a los enemigos cercanos, por lo que
+      puede ser interesante a veces dejar algún pneuma por recoger
+      y hacerlo en un momento más propenso para ello. Aunque sin
+      dejarlo mucho rato, ya que desaparecen.&lt;/p&gt;
+      &lt;h2&gt;La lacra de su apartado técnico, originario de
+      2011&lt;/h2&gt; &lt;p&gt;&lt;img alt="Final Fantasy Type-0
+      HD"
+      src="http://img.vidaextra.com/2014/12/031214-final-fantasy-type-0-hd-04.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;A pesar de
+      la muletilla "HD" del título, esto es más un
+      &lt;i&gt;remake&lt;/i&gt; que una mera adaptación en HD.
+      Ahora bien, la versión que probamos distaba mucho de lo que
+      nos encontraremos en la versión final al ser exageradamente
+      pobre en su apartado gráfico, con escenarios muy vacíos y
+      poco detallados. Incluso &lt;b&gt;daba grima al deambular por
+      el mapa mundial&lt;/b&gt;, especialmente con las
+      &lt;b&gt;batallas estratégicas&lt;/b&gt;.&lt;/p&gt;
+      &lt;p&gt;Sí, aún no está acabado y tampoco creemos que se
+      vaya a aprovechar el potencial de PS4 o Xbox One, pero es
+      desde luego el apartado más flojo de todo el conjunto. Aunque
+      como suelo decir, si es algo que no afecta negativamente a la
+      experiencia de juego, tampoco es importante. Pero las cosas
+      como son. Hoy por hoy, es feo, muy feo, por mucho que se
+      quieran maquillar las instantáneas.&lt;/p&gt;
+      &lt;p&gt;Tampoco hay que olvidar que al ser una versión de
+      sobremesa hemos ganado un &lt;i&gt;stick&lt;/i&gt; analógico
+      del que carecía la PSP. Eso nos da mayor movilidad para la
+      cámara... aunque sigue arrastrando los defectos del original
+      al ser un poco alocada con sus movimientos. Y es que a veces
+      nos dejará vendida en los combates, teniendo que corregirla
+      constantemente. Y siguiendo un poco con las contras de
+      &lt;b&gt;'Final Fantasy Type-0 HD'&lt;/b&gt;, me sobraron
+      mucho las batallas estratégicas por el mapa mundial. Pensadas
+      para tomar territorios, guardan un poco la esencia de Risk al
+      tener que enviar más unidades que el enemigo, pero a la vez
+      con distintos tipos de unidades para contrarrestar ciertos
+      elementos. Sobre el papel suena bien, pero en la práctica es
+      algo chapucero y no pega mucho.&lt;/p&gt; &lt;p&gt;Me ha
+      gustado mucho, para no rematar con los aspectos negativos,
+      &lt;b&gt;su banda sonora, compuesta en su mayor parte por
+      Takeharu Ishimoto&lt;/b&gt;, con temas que enganchan y que
+      motivan a luchar.&lt;/p&gt; &lt;p&gt;&lt;b&gt;Haciendo
+      balance 'Final Fantasy Type-0 HD' me sorprendió
+      gratamente&lt;/b&gt;, siendo un RPG que a buen seguro
+      disfrutaré en marzo y que ahora tengo más en el punto de mira
+      que antes al disipar ciertas dudas. Aparte que &lt;b&gt;ese
+      plus de poder manejar a un eidolon siempre mola&lt;/b&gt;,
+      como por ejemplo a Odín al enfrentarse al jefe lu'Cie del
+      Tigre de Argén, Dáinsleif, al principio. Ahí uno se lo flipa,
+      y entre eso y la gran variedad de personajes tenemos
+      &lt;b&gt;un cóctel a priori más que
+      interesante&lt;/b&gt;.&lt;/p&gt; &lt;p&gt;&lt;iframe
+      width="1000" height="563"
+      src="http://www.youtube.com/embed/ijH14nKNlg8"
+      frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;strong&gt;Plataformas&lt;/strong&gt;: PS4
+      (versión analizada) y Xbox One&lt;br&gt;
+      &lt;strong&gt;Multijugador&lt;/strong&gt;: no&lt;br&gt;
+      &lt;strong&gt;Desarrollador&lt;/strong&gt;: Square
+      Enix&lt;br&gt; &lt;strong&gt;Compañía&lt;/strong&gt;: Square
+      Enix&lt;br&gt; &lt;strong&gt;Lanzamiento&lt;/strong&gt;: 20
+      de marzo de 2015&lt;br&gt;
+      &lt;strong&gt;Precio&lt;/strong&gt;: no disponible&lt;/p&gt;
+      &lt;p&gt;Sitio oficial | &lt;a
+      href="http://finalfantasytype0.com/"&gt;Final Fantasy Type-0
+      HD&lt;/a&gt;&lt;/p&gt; &lt;p&gt; - &lt;br/&gt; La noticia
+      &lt;a
+      href="http://www.vidaextra.com/analisis/final-fantasy-type-0-hd-primeras-impresiones?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=03_Dec_2014"&gt;
+      &lt;em&gt; Final Fantasy Type-0 HD: primeras impresiones
+      &lt;/em&gt; &lt;/a&gt; fue publicada originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=03_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/jarkendia?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=03_Dec_2014"&gt;
+      Jarkendia &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/41146648/sc/28/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612354067/u/49/f/502901/c/32660/s/41146648/sc/28/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612354067/u/49/f/502901/c/32660/s/41146648/sc/28/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612354067/u/49/f/502901/c/32660/s/41146648/sc/28/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612354067/u/49/f/502901/c/32660/s/41146648/sc/28/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612354067/u/49/f/502901/c/32660/s/41146648/sc/28/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612354067/u/49/f/502901/c/32660/s/41146648/sc/28/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612354067/u/49/f/502901/c/32660/s/41146648/sc/28/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612354067/u/49/f/502901/c/32660/s/41146648/sc/28/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612354067/u/49/f/502901/c/32660/s/41146648/sc/28/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/FmTV9vgiwqU"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 13:01:52 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/analisis/final-fantasy-type-0-hd-primeras-impresiones</guid>
+      <dc:creator>Jarkendia</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/analisis/final-fantasy-type-0-hd-primeras-impresiones</feedburner:origLink>
+    </item>
+    <item>
+      <title>Los mejores juegos de 2014 según los lectores de
+      VidaExtra. Encuesta</title>
+      <link>
+      http://feeds.weblogssl.com/~r/vidaextra/~3/sRLVEnhMLTI/los-mejores-juegos-de-2014-segun-los-lectores-de-vidaextra-encuesta</link>
+      <description>&lt;p&gt;&lt;img alt="Mejores juegos 2014"
+      src="http://img.vidaextra.com/2014/12/650_1000_mejores2014.jpg"
+      class="centro_sinmarco" /&gt;&lt;/p&gt; &lt;p&gt;Como cada
+      año por estas fechas, echamos a andar en
+      &lt;strong&gt;VidaExtra&lt;/strong&gt; una encuesta para que
+      vosotros podáis elegir los mejores juegos del año.&lt;/p&gt;
+      &lt;p&gt;En esta ocasión hemos hecho una selección de cinco
+      juegos por categoría (excepto en la de Mejor juego de 2014,
+      donde os proponemos diez), pero &lt;strong&gt;dejamos la
+      puerta abierta&lt;/strong&gt; para que propongáis cualquier
+      otro juego que creáis conveniente si no aparece en las
+      opciones que os damos, así todos podéis votar por aquellos
+      juegos que realmente creéis que son los mejores en su
+      género.&lt;/p&gt; &lt;p&gt;Tenéis hasta el próximo viernes
+      &lt;strong&gt;5 de diciembre a las 12:00h&lt;/strong&gt;
+      (hora peninsular española). A partir de esa hora cerraremos
+      votaciones y empezaremos a bucear en los resultados para
+      publicarlos a partir del lunes 8 de diciembre. En fin, os
+      dejamos con el formulario para que podáis emitir vuestros
+      votos:&lt;/p&gt; &lt;!--more--&gt; &lt;iframe
+      src="https://docs.google.com/forms/d/1ADxOWpKYxrKnuR_y9LOh7TUziqUJzdMxfhTAZk6wW0k/viewform?embedded=true"
+      width="650" height="3200" frameborder="0" marginheight="0"
+      marginwidth="0"&gt;Cargando...&lt;/iframe&gt;
+      &lt;p&gt;&lt;strong&gt;Aviso&lt;/strong&gt;: dado que el
+      formulario ofrece libertad total para que podáis elegir los
+      juegos que realmente creáis convenientes en cada categoría,
+      nos reservamos el derecho a invalidar aquellos votos que
+      consideremos que no cumplen con lo que buscamos en una
+      votación de este tipo: juegos propuestos que no van en sus
+      categorías, juegos de otros años, etc.&lt;/p&gt; &lt;p&gt; -
+      &lt;br/&gt; La noticia &lt;a
+      href="http://www.vidaextra.com/vidaextra/los-mejores-juegos-de-2014-segun-los-lectores-de-vidaextra-encuesta?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=03_Dec_2014"&gt;
+      &lt;em&gt; Los mejores juegos de 2014 según los lectores de
+      VidaExtra. Encuesta &lt;/em&gt; &lt;/a&gt; fue publicada
+      originalmente en &lt;a
+      href="http://www.vidaextra.com?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=03_Dec_2014"&gt;
+      &lt;strong&gt; Vidaextra &lt;/strong&gt; &lt;/a&gt; por &lt;a
+      href="http://www.vidaextra.com/autor/alex-c?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=03_Dec_2014"&gt;
+      Alex C &lt;/a&gt; . &lt;/p&gt;&lt;img width='1' height='1'
+      src='http://weblogs.feedsportal.com/c/32660/f/502901/s/4113ced9/sc/28/mf.gif'
+      border='0'/&gt;&lt;br
+      clear='all'/&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612349617/u/49/f/502901/c/32660/s/4113ced9/sc/28/rc/1/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612349617/u/49/f/502901/c/32660/s/4113ced9/sc/28/rc/1/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612349617/u/49/f/502901/c/32660/s/4113ced9/sc/28/rc/2/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612349617/u/49/f/502901/c/32660/s/4113ced9/sc/28/rc/2/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612349617/u/49/f/502901/c/32660/s/4113ced9/sc/28/rc/3/rc.htm"
+      rel="nofollow"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612349617/u/49/f/502901/c/32660/s/4113ced9/sc/28/rc/3/rc.img"
+      border="0"/&gt;&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;a
+      href="http://da.feedsportal.com/r/214612349617/u/49/f/502901/c/32660/s/4113ced9/sc/28/a2.htm"&gt;&lt;img
+      src="http://da.feedsportal.com/r/214612349617/u/49/f/502901/c/32660/s/4113ced9/sc/28/a2.img"
+      border="0"/&gt;&lt;/a&gt;&lt;img width="1" height="1"
+      src="http://pi.feedsportal.com/r/214612349617/u/49/f/502901/c/32660/s/4113ced9/sc/28/a2t.img"
+      border="0"/&gt;&lt;img
+      src="//feeds.feedburner.com/~r/vidaextra/~4/sRLVEnhMLTI"
+      height="1" width="1" alt=""/&gt;</description>
+      <pubDate>Wed, 03 Dec 2014 11:05:07 GMT</pubDate>
+      <guid isPermaLink="false">
+      http://www.vidaextra.com/vidaextra/los-mejores-juegos-de-2014-segun-los-lectores-de-vidaextra-encuesta</guid>
+      <dc:creator>Alex C</dc:creator>
+      <feedburner:origLink>
+      http://www.vidaextra.com/vidaextra/los-mejores-juegos-de-2014-segun-los-lectores-de-vidaextra-encuesta</feedburner:origLink>
+    </item>
+  </channel>
+</rss>

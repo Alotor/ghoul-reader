@@ -1,0 +1,30 @@
+section#sidebar.expanded
+  div.search-box
+    input(placeholder="Búsqueda")
+  a.menu-item.all All Items
+  a.menu-item.favorite Favorites
+  a.menu-item.shared Shared
+
+  #feeds
+    ul
+      li
+        div.folder
+          h4 Programming #[span.count (773)] #[a.plus-button Expandir]
+          ul.feed-list
+            li #[a Hackernews #[span.count (11)]]
+            li #[a Slashdot #[span.count (11)]]
+            li #[a Reddit programming #[span.count (11)]]
+      li
+        div.folder.expanded
+          h4 Games #[span.count (773)] #[a.minus-button Contraer]
+          ul.feed-list
+            li #[a Vidaextra #[span.count (11)]]
+            li #[a Reddit Games #[span.count (11)]]
+            li #[a Kotaku #[span.count (11)]]
+      li
+        div.folder.expanded
+          h4 News #[span.count (773)] #[a.minus-button Contraer]
+          ul.feed-list
+            li #[a 20 Minutos #[span.count (11)]]
+            li #[a Hackernews #[span.count (11)]]
+            li #[a Hackernews #[span.count (11)]]

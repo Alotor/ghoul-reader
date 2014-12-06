@@ -1,0 +1,16 @@
+$blueprint-grid-columns : 24;
+$blueprint-grid-width   : 30px;
+$blueprint-grid-margin  : 10px;
+$font-color             : #333;
+$iconic-font-path: '/fonts/' !default;
+
+@import "compass/reset";
+@import "compass/utilities";
+
+@font-face {
+  font-family: 'Icons';
+  src: url('#{$iconic-font-path}open-iconic.eot');
+  src: url('#{$iconic-font-path}open-iconic.eot?#iconic-sm') format('embedded-opentype'), url('#{$iconic-font-path}open-iconic.woff') format('woff'), url('#{$iconic-font-path}open-iconic.ttf') format('truetype'), url('#{$iconic-font-path}open-iconic.otf') format('opentype'), url('#{$iconic-font-path}open-iconic.svg#iconic-sm') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
