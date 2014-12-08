@@ -15,9 +15,10 @@ html
     include ./menu.jade
 
     section#feeds-panel
-      include ./feed-new-a
-      - var n = 0
-      while n < 50
-        - n++
+      .feeds-wrapper
         include ./feed-new-a
+        - var n = 0
+        while n < 50
+          - n++
+          include ./feed-new-a
   
