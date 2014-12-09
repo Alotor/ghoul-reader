@@ -1,15 +1,5 @@
 @import "base";
 
-@mixin icon($code) {
-  font-size: 0px;
-
-  &:before {
-    font-family: "Icons";
-    content: $code;
-    font-size: 20px;
-  }
-}
-
 header {
   height: 40px;
   width: 100%;
@@ -57,7 +47,7 @@ header {
       margin-left: 5px;
       color: #888;
     }
-    
+
     input {
       width: 100%;
       border: none;
@@ -68,7 +58,7 @@ header {
       font-size: 14px;
     }
   }
-  
+
   .menu-item {
     border-bottom: 1px solid #ccc;
   }
@@ -82,11 +72,11 @@ header {
       .plus-button {
         @include icon("\e0aa");
       }
-      
+
       .minus-button {
         @include icon("\e09d");
       }
-      
+
       .plus-button, .minus-button {
         float: right;
         &:before {
@@ -107,7 +97,7 @@ header {
     }
   }
 
-  
+
   &.expanded {
     display: block;
   }
@@ -122,21 +112,45 @@ header {
     font-size: 85%;
     text-align: justify;
     padding-right: 1em;
-  
-    .rss-title a {
-      font-family: "Bree Serif";
-      display: block;
-      text-decoration: none;
-      color: black;
-      font-size: 110%;
-      line-height: 1.4em;
+
+    .rss-item-header {
+      overflow: hidden;
+      text-align: left;
+
+      .rss-title {
+        font-family: "Open Sans";
+        font-weight: 600;
+        display: inline;
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 110%;
+          line-height: 1.4em;
+        }
+      }
+      .rss-description-preview {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 95%;
+        color: #888;
+      }
+    }
+
+    &.expanded {
+      .rss-description {
+        display: block;
+      }
+      .rss-description-preview {
+        display: none;
+      }
     }
     .rss-description {
       font-family: "Open Sans";
       margin-top: 1em;
       display: none;
       line-height: 1.3em;
-  
+
       &.expanded {
         display: block;
       }
@@ -165,22 +179,36 @@ header {
   }
 
   #feeds-panel {
-    margin-left: 255px;
-    margin-top: 0;
-    margin-top: 40px;
-
-
     position: absolute;
+    margin-left: 255px;
+    top: 40px;
+
     margin: 0;
     width: 100%;
     height: 100%;
     overflow-y: auto;
-    margin-top: 40px;
     z-index: -9999;
 
     .feeds-wrapper {
+      .feed-content {
+        .rss-item-header {
+          white-space: nowrap;
+        }
+        .rss-description-preview {
+          display: inline;
+        }
+
+        &.expanded {
+          .rss-description-preview {
+            display: none;
+          }
+        }
+      }
+    }
+    .feeds-wrapper {
       margin-left: 250px;
       margin-top: 0px;
+      padding-bottom: 40px;
     }
   }
 }

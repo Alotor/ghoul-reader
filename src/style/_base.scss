@@ -14,3 +14,13 @@ $iconic-font-path: '/fonts/' !default;
   font-weight: normal;
   font-style: normal;
 }
+
+@mixin icon($code) {
+  font-size: 0px;
+
+  &:before {
+    font-family: "Icons";
+    content: $code;
+    font-size: 20px;
+  }
+}
