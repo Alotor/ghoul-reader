@@ -1,0 +1,96 @@
+#sidebar {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: white;
+  width: 85%;
+  height: 100%;
+  border-right: 1px solid black;
+  overflow-y: auto;
+
+  a {
+    display: block;
+    font-family: "Open Sans";
+    padding: 0.75em;
+  }
+
+  .search-box {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+
+    @include icon("\e08f");
+
+    &:before {
+      font-size: 16px;
+      position: absolute;
+      margin-top: 11px;
+      margin-left: 5px;
+      color: #888;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      height: 25px;
+      padding: 5px;
+      background-color: #eee;
+      padding-left: 30px;
+      font-size: 14px;
+    }
+  }
+
+  .menu-item {
+    border-bottom: 1px solid #ccc;
+  }
+
+  #feeds {
+    .folder > h4 {
+      padding: 0.75em;
+      background: #f4f4f4;
+      position: relative;
+
+      .plus-button {
+        @include icon("\e0aa");
+      }
+
+      .minus-button {
+        @include icon("\e09d");
+      }
+
+      .plus-button, .minus-button {
+        float: right;
+        &:before {
+          font-size: 10px;
+        }
+        padding: 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .feed-list {
+      display: none;
+      
+    }
+    .expanded .feed-list {
+      display: block;
+    }
+  }
+
+  .menu-expanded & {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #sidebar {
+    display: block;
+    top: 40px;
+    float: left;
+    width: 250px;
+  }
+}

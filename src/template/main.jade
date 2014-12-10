@@ -1,16 +1,16 @@
 doctype html
 html
   head
-    title RSS Leader
+    title Ghoul Reader
     link(rel="stylesheet", type="text/css", href="style/main.css")
     link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700', rel='stylesheet', type='text/css')
     meta(name="viewport", content="width=device-width, initial-scale=1")
 
-  body
+  body // .menu-expanded
+    include ./menu.jade
+    
     header
       a.menu-icon Menu
-
-    include ./menu.jade
 
     section#feeds-panel
       .feeds-wrapper
