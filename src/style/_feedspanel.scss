@@ -7,12 +7,23 @@
 
   .compact-view & {
     .feed-content {
+      .rss-title {
+        font-size: 90%;
+      }
+      .rss-description-preview {
+        display: inline;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 95%;
+        color: #888;
+      }
+
       &.expanded {
         .rss-description {
           display: block;
         }
         .rss-description-preview {
-            display: none;
+          display: none;
         }
       }
     }
@@ -21,9 +32,12 @@
   .expanded-view & {
     padding-top: 5px;
     .feed-content {
-      border: 1px solid black;
+      border: 1px solid #999;
       margin: 10px;
       border-radius: 5px;
+      .rss-description-preview {
+        display: none;
+      }
       .rss-description {
         display: block;
       }
@@ -54,13 +68,6 @@
           font-size: 110%;
           line-height: 1.4em;
         }
-      }
-      .rss-description-preview {
-        display: block;
-        white-space: nowrap;
-        overflow: hidden;
-        font-size: 95%;
-        color: #888;
       }
     }
 
@@ -95,12 +102,18 @@
       width: 100%;
       top: 45px;
       div {
-        background: #ccc;
+        background: #efefef;
         margin-left: 250px;
         padding: 5px 10px;
-        color: #fafafa;
+        color: #555;
         font-weight: 700;
       }
+    }
+
+    .compact-view & {
+        .rss-description-preview {
+          display: inline;
+        }      
     }
 
     .expanded-view & {
@@ -111,9 +124,9 @@
       .feed-content {
         .rss-item-header {
           white-space: nowrap;
-        }
-        .rss-description-preview {
-          display: inline;
+          .rss-title a {
+            font-size: 130%;
+          }
         }
 
         &.expanded {

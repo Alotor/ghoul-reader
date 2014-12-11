@@ -9,13 +9,15 @@ header {
   .menu-icon {
     @include icon("\e09b");
     color: #ddd;
-    padding: 10px;
+    padding: 13px;
     text-align: center;
     background-color: grey;
+    order: 2;
   }
 
   .logo {
     height: 45px;
+    flex-grow: 1;
     img {
       height: 35px;
       padding-top: 2px;
