@@ -1,5 +1,5 @@
 header {
-  height: 40px;
+  height: 45px;
   width: 100%;
   top: 0;
   display: flex;
@@ -12,6 +12,26 @@ header {
     padding: 10px;
     text-align: center;
     background-color: grey;
+  }
+
+  .logo {
+    height: 45px;
+    img {
+      height: 35px;
+      padding-top: 2px;
+      padding-left: 5px;
+    }
+    .text {
+      display: inline-block;
+      vertical-align: middle;
+      height: 45px;
+      line-height: 20px;
+
+      .ghoul {
+        font-family: "EB Garamond";
+        font-size: 30px;
+      }
+    }
   }
 }
 
