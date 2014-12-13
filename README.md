@@ -44,3 +44,5 @@ This project is born with this need in mind and also trying to develop a Clojure
 Ghoul Reader logo by Juan de la Cruz. License under Creative Commons Attribution-NoDerivatives 4.0 International License.
 
 This project is developed under the awesome PIWEEK initiative.
+
+License under GNU AGPL license http://www.gnu.org/licenses/agpl-3.0.html
