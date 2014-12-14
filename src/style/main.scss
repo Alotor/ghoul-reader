@@ -1,7 +1,16 @@
 @import "base";
 
-body.menu-expanded {
-  overflow: hidden;
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  &.menu-expanded {
+    overflow: hidden;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -15,5 +24,11 @@ body.menu-expanded {
 @import "feedspanel";
 
 .content {
-  @include clearfix;
+  overflow-y: auto;
+  flex-grow: 2;
+  display: flex;
+
+  .menu-expanded & {
+    overflow-y: hidden;
+  }
 }

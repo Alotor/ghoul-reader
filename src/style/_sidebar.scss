@@ -1,14 +1,12 @@
 #sidebar {
   display: none;
   position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
   background: white;
-  width: 85%;
-  height: 100%;
   border-right: 1px solid black;
   overflow-y: auto;
+  min-width: 85%;
+  height: 100%;
+  top: 0px;
 
   a {
     display: block;
@@ -88,8 +86,8 @@
 @media screen and (min-width: 900px) {
   #sidebar {
     display: block;
-    top: 45px;
-    float: left;
-    width: 250px;
+    min-width: 250px;
+    position: relative;
+    height: auto;
   }
 }
