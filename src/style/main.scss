@@ -13,3 +13,7 @@ body.menu-expanded {
 @import "header";
 @import "sidebar";
 @import "feedspanel";
+
+.content {
+  @include clearfix;
+}

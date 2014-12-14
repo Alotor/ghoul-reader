@@ -1,0 +1,10 @@
+section#feeds-panel
+  .feed-title
+    div Sunlight foundation
+
+  .feeds-wrapper
+    include ./feed-new-b
+    - var n = 0
+    while n < 50
+      - n++
+      include ./feed-new-a

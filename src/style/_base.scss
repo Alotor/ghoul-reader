@@ -1,6 +1,9 @@
-$blueprint-grid-columns : 24;
-$blueprint-grid-width   : 30px;
-$blueprint-grid-margin  : 10px;
+$header-color: #ddd;
+$title-ghoul-color: black;
+$title-reader-color: black;
+$header-menu-background: grey;
+$header-menu-icon: #ddd;
+
 $font-color             : #333;
 $iconic-font-path: '../fonts/' !default;
 
@@ -22,5 +25,13 @@ $iconic-font-path: '../fonts/' !default;
     font-family: "Icons";
     content: $code;
     font-size: 20px;
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }

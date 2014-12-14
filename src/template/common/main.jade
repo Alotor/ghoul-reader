@@ -1,19 +1,5 @@
-include ./menu.jade
+include ./header.jade
 
-header
-  a.menu-icon Menu
-  div.logo
-    img(src="./images/logo.png", height="100%")
-    .text #[span.ghoul Ghoul] #[span.reader Reader]
-
-section#feeds-panel
-  .feed-title
-    div Sunlight foundation
-
-  .feeds-wrapper
-    include ./feed-new-b
-    - var n = 0
-    while n < 50
-      - n++
-      include ./feed-new-a
-  
+.content
+  include ./menu.jade
+  include ./feeds-panel.jade
