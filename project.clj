@@ -11,7 +11,15 @@
                  [om "0.8.0-beta3"]
                  [com.facebook/react "0.12.1"]]
 
-  :plugins [[lein-cljsbuild "1.0.3"]]
+  :plugins [[lein-cljsbuild "1.0.3"]
+            [lein-asciidoctor "0.1.12"]]
+
+  :asciidoctor {:sources "doc/*.ad"
+                :to-dir "dist/doc"
+                :extract-css true
+                :source-highlight true
+                :toc :left}
+
   :cljsbuild { :builds {:app {:source-paths ["src/cljs"]
                               :compiler {:output-to     "dist/js/app.js"
                                          :output-dir    "dist/js/out"

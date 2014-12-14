@@ -27,10 +27,12 @@ This project is born with this need in mind and also trying to develop a Clojure
 
 # Features & progress
 
+- [ ] Basic state rendering and actions
+- [ ] Retrieving state from IndexedDB
 - [ ] Import RSS feeds from OPML file
 - [ ] RSS news reading
 - [ ] Background RSS Updates
-- [ ] Shortkuts
+- [ ] Shortcuts
 - [ ] Local storaging with IndexDB
 - [ ] Offline capabilities
 - [ ] Responsive layout

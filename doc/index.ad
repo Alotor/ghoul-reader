@@ -1,0 +1,76 @@
+= Ghoul Reader
+
+== State definition
+
+[source, clojurescript]
+----
+{
+  :current-view :list ; or :detail
+  :feeds-view :expanded-view ; or :compact-view
+  :show-menu true
+  :groups [
+    {:name "Open Source"
+     :uid "c73f26a0-83c8-11e4-b4a9-0800200c9a66"
+     :subscriptions [
+       {:title "Slashdot"
+        :uid "f90eebc0-83c8-11e4-b4a9-0800200c9a66"
+        :site-url "http://slashdot.org/"
+        :feed-url "http://rss.slashdot.org/Slashdot/slashdot"
+        :favicon "http://slashdot.org/favicon.ico"
+        :pending 20}
+       {:title "Taiga"
+        :uid "07aed140-83c9-11e4-b4a9-0800200c9a66"
+        :site-url "https://blog.taiga.io/"
+        :feed-url "https://blog.taiga.io/feeds/rss.xml"
+        :favicon "https://blog.taiga.io/theme/images/favicon.png"
+        :pending 10}
+    ]}
+    {:name "Clojure"
+     :uid "2f83cef0-83c9-11e4-b4a9-0800200c9a66"
+     :subscriptions [
+      {:title "Cognitect Blog"
+       :uid "32fe28a0-83c9-11e4-b4a9-0800200c9a66"
+       :feed-url "http://blog.cognitect.com/blog?format=rss"
+       :site-url "http://blog.cognitect.com/"
+       :favicon "http://blog.cognitect.com/favicon.ico"
+       :pending 20
+       }
+    ]}
+  ]
+  
+  :feeds [
+    {:title "Taiga Abies veitchii Release (v1.4.0)"
+     :link "https://blog.taiga.io/taiga-abies-veitchii-release-v140.html"
+     :description "..."
+     :creator "Taiga Team"
+     :pubDate "Wed, 10 Dec 2014 13:00:00 +0100"
+     :subscription "07aed140-83c9-11e4-b4a9-0800200c9a66"
+     :read true}
+  ]
+
+  :saved-feeds [..] ; Same format as the :feeds elements
+  :sharing-feeds [..]
+}
+----
+
+Subscriptions are separated from feeds because the users will usualy display the whole list of feeds and we want to display them in a sorted way. Also it's more efficient to filter these feeds than to aggregate them and afterward sorting.
+
+Groups and subscriptions are stored with UID's so there is no problem with renaming a subscription.
+
+The feed only references a subscription so there are not additional processing when changing the subscription from one group to another.
+
+== Local Storaging
+
+The feeds subscriptions and information will be stored in a "Local Storage"
+
+== Indexed DB
+
+All the feeds data will be stored inside a IndexedDB this way we can query for the elements depending on the filters.
+
+== Service Workers
+
+== Web Workers
+
+== Processing XML files on the client-side
+
+== Background synchronization
