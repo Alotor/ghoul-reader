@@ -1,13 +1,14 @@
 (ns ghoul.components.sidebar
   (:require [om.core :as om]
-            [om.dom :as dom]))
+            [om.dom :as dom]
+            [ghoul.state :as state]))
 
 (defn feed-subscription [data owner]
   (reify
     om/IRender
     (render [this]
       (dom/li nil
-              (dom/a nil
+              (dom/a #js {:onClick (fn [e] (state/select-feed (:uid data)))}
                      (dom/span nil (:title data))
                      (dom/span nil (str "(" (:pending data) ")")))))))
 

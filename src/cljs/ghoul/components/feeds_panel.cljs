@@ -3,16 +3,21 @@
             [om.dom :as dom]))
 
 (defn feed-description [data owner]
-  (reify
-    om/IDidMount
-    (did-mount [this] (-> owner
-                          .getDOMNode
-                          .createShadowRoot
-                          .-innerHTML
-                          (set! data)))
-    om/IRender
-    (render [this]
-      (dom/div #js {:className "rss-description" }))))
+  (let [set-description-dom!
+        (fn []
+          (-> owner
+              .getDOMNode
+              .createShadowRoot
+              .-innerHTML
+              (set! data)))]
+    (reify
+      om/IDidMount
+      (did-mount [this] (set-description-dom!))
+      om/IDidUpdate
+      (did-update [this next-props next-state] (set-description-dom!))
+      om/IRender
+      (render [this]
+        (dom/div #js {:className "rss-description" })))))
 
 (defn feed-content [data owner]
   (reify
