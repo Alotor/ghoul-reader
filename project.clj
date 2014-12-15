@@ -20,12 +20,23 @@
                 :source-highlight true
                 :toc :left}
 
-  :cljsbuild { :builds {:app {:source-paths ["src/cljs"]
-                              :compiler {:output-to     "dist/js/app.js"
-                                         :output-dir    "dist/js/out"
-                                         :source-map    "dist/js/out.js.map"
-                                         :preamble      ["react/react.min.js"]
-                                         :externs       ["react/externs/react.js"]
-                                         :optimizations :none
-                                         :pretty-print  true}}}}
-)
+  :cljsbuild {:builds
+              {:worker
+               {:source-paths ["src/cljs-worker"]
+                :compiler {:output-to     "dist/js/worker.js"
+                           :source-map    "dist/js/worker.js.map"
+                           :output-dir    "dist/js/out-worker"
+                           :optimizations :simple
+                           :pretty-print  true}}
+
+               :app
+               {:source-paths ["src/cljs"]
+                :compiler {:output-to     "dist/js/app.js"
+                           :source-map    "dist/js/app.js.map"
+                           :output-dir    "dist/js/out"
+                           :preamble      ["react/react.min.js"]
+                           :externs       ["react/externs/react.js"]
+                           :optimizations :simple
+                           :pretty-print  true}}
+               }}
+  )

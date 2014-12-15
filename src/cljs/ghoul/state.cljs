@@ -106,7 +106,8 @@
                                     :favicon "http://blog.cognitect.com/favicon.ico"
                                     :pending 20
                                     }]}]
-         :feeds (retrieve-all-feeds)}))
+         :feeds (retrieve-all-feeds)
+         }))
 
 
 (defn ^:export get-group-data [uid]
