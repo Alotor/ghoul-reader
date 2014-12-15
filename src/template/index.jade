@@ -1,9 +1,15 @@
 doctype html
 html
-  include common/head.jade
+  head
+    title Ghoul Reader
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="icon", href="images/favicon.png", type="image/x-icon")
+    link(rel="stylesheet", type="text/css", href="style/main.css")
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=EB+Garamond', rel='stylesheet', type='text/css')
+
   body.expanded-view
-    include common/main.jade
-    //#app-root
+    #app-root
     script(src="http://fb.me/react-0.11.2.js")
     script(src="js/out/goog/base.js", type="text/javascript")
     script(type="text/javascript", src="js/app.js")

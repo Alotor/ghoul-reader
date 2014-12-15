@@ -5,12 +5,18 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-
   &.menu-expanded {
     overflow: hidden;
   }
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#app-root, .app-container {
+  height: 100%;
 }
 
 @media screen and (min-width: 900px) {
@@ -27,6 +33,7 @@ body {
   overflow-y: auto;
   flex-grow: 2;
   display: flex;
+  height: 100%;
 
   .menu-expanded & {
     overflow-y: hidden;

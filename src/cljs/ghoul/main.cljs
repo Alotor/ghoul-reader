@@ -1,14 +1,22 @@
 (ns ghoul.main
-  (:require [om.core :as om :include-macros true]
-            [om.dom :as dom :include-macros true]))
+  (:require [om.core :as om]
+            [om.dom :as dom]
+            [ghoul.state :as state]
+            [ghoul.components.header :as header]
+            [ghoul.components.sidebar :as sidebar]
+            [ghoul.components.feeds-panel :as feeds-panel]))
 
-(defn widget [data owner]
+(defn app-root [data owner]
   (reify
     om/IRender
     (render [this]
-      (dom/h1 nil (:text data)))))
+      (dom/div #js {:className "app-container"}
+               (om/build header/root data)
+               (dom/div #js {:className "content"}
+                        (om/build sidebar/root data)
+                        (om/build feeds-panel/root data))))))
 
-(om/root widget {:text "Hello world!"}
+(om/root app-root state/global
   {:target (. js/document (getElementById "app-root"))})
 
-(.log js/console "OK")
+(.log js/console "Ghoul Reader loaded")
