@@ -13,7 +13,7 @@
       (dom/div #js {:className "app-container"}
                (om/build header/root data)
                (dom/div #js {:className "content"}
-                        (om/build sidebar/root data)
+                        (om/build sidebar/root (:groups data))
                         (om/build feeds-panel/root data))))))
 
 (om/root app-root state/global
