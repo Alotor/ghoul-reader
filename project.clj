@@ -8,7 +8,8 @@
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2411"]
-                 [om "0.8.0-beta3"]]
+                 [om "0.8.0-beta3"]
+                 [cuerdas "0.1.0-SNAPSHOT"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]
             [lein-asciidoctor "0.1.12"]]

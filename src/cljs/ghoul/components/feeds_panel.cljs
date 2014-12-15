@@ -1,6 +1,8 @@
 (ns ghoul.components.feeds-panel
   (:require [om.core :as om]
-            [om.dom :as dom]))
+            [om.dom :as dom]
+            [ghoul.state :as state]
+            [ghoul.utils :as utils]))
 
 (defn feed-description [data owner]
   (let [set-description-dom!
@@ -9,7 +11,9 @@
               .getDOMNode
               .createShadowRoot
               .-innerHTML
-              (set! data)))]
+              (set! (-> data
+                        utils/restore-tags
+                        utils/remove-unallowed-tags))))]
     (reify
       om/IDidMount
       (did-mount [this] (set-description-dom!))
@@ -30,14 +34,17 @@
                                            (:title data)))
                             (dom/h5 #js {:className "rss-description-preview"} (:description data)))
                    (om/build feed-description (:description data))))))
+
 (defn root [data owner]
   (reify
     om/IRender
     (render [this]
       (dom/section #js {:id "feeds-panel"}
                    (dom/div #js {:className "feed-title"}
-                            (dom/div #js {:className "feed-title-text"} "Sunlight foundation")
-                            (dom/a #js {:className "compact-button"} "Compact View")
-                            (dom/a #js {:className "expand-button"} "Expanded View"))
+                            (dom/div #js {:className "feed-title-text"} (str (state/get-title (:selected data)) " - " (:selected data)))
+                            (dom/a #js {:className "compact-button"
+                                        :onClick (fn [e] (state/toggle-compact-view))} "Compact View")
+                            (dom/a #js {:className "expand-button"
+                                        :onClick (fn [e] (state/toggle-expanded-view))} "Expanded View"))
                    (apply dom/div #js {:className "feeds-wrapper"}
                           (om/build-all feed-content (:feeds data)))))))

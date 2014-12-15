@@ -1,6 +1,9 @@
 (ns ghoul.state)
 
 ;(defn ^:export hello-world[] (js/alert "HOLA")) ; invoke through ghoul.state.hello_world() in JS
+(declare feed-store-temp)
+(defn ^:export retrieve-all-feeds []
+  (flatten (map second feed-store-temp)))
 
 (def feed-store-temp
   {"07aed140-83c9-11e4-b4a9-0800200c9a66" ; Taiga feeds
@@ -103,7 +106,7 @@
                                     :favicon "http://blog.cognitect.com/favicon.ico"
                                     :pending 20
                                     }]}]
-         :feeds []}))
+         :feeds (retrieve-all-feeds)}))
 
 
 (defn ^:export get-group-data [uid]
@@ -118,6 +121,12 @@
       (filter #(= (:uid %) uid))
       first))
 
+(defn get-title [uid]
+  (let [group-data (get-group-data uid)]
+    (if (nil? group-data)
+      (:title (get-feed-data uid))
+      (:name group-data))))
+
 (defn ^:export get-group-subscriptions [uid]
   (let [group-data (get-group-data uid)]
     (map :uid (:subscriptions group-data))))
@@ -127,9 +136,17 @@
         subscriptions-list (if (nil? group) [uid] (get-group-subscriptions uid))]
     (flatten (map #(if ((set subscriptions-list) (first %)) (second %) '()) feed-store-temp)) ))
 
+
 (defn ^:export select-feed[uid]
-  (swap! global assoc
-         :feeds [])
   (swap! global assoc
          :selected uid
          :feeds (retrieve-feeds uid)))
+
+(defn toggle-compact-view []
+  (swap! global assoc :feeds-view :compact-view))
+
+(defn toggle-expanded-view []
+  (swap! global assoc :feeds-view :expanded-view))
+
+(defn toggle-menu []
+  (swap! global assoc :show-menu (not (:show-menu @global))))
