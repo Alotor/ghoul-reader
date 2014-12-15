@@ -1,8 +1,8 @@
 #sidebar {
   display: none;
   position: fixed;
-  background: white;
-  border-right: 1px solid black;
+  background: $ghoul-main-light;
+  border-right: 3px solid $ghoul-main;
   overflow-y: auto;
   min-width: 85%;
   height: 100%;
@@ -18,7 +18,7 @@
   .search-box {
     width: 100%;
     overflow: hidden;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $ghoul-main;
 
     @include icon("\e08f");
 
@@ -32,11 +32,12 @@
 
     input {
       width: 100%;
-      border: none;
+      border: 1px inset;
       height: 25px;
       padding: 5px;
       padding-left: 30px;
       font-size: 14px;
+      background-color: #fdfdfd;
     }
   }
 
@@ -47,8 +48,10 @@
   #feeds {
     .folder > h4 {
       padding: 0.75em;
-      background: #f4f4f4;
+      background: $ghoul-main;
       position: relative;
+      border-top: 1px solid $ghoul-main-border;
+      border-bottom: 1px solid $ghoul-main-border;
 
       .plus-button {
         @include icon("\e0aa");
@@ -88,8 +91,9 @@
 @media screen and (min-width: 900px) {
   #sidebar {
     display: block;
-    min-width: 250px;
+    min-width: 220px;
     position: relative;
     height: auto;
+    font-size: 13px;
   }
 }

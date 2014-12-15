@@ -1,14 +1,15 @@
 header {
   min-height: 45px;
   display: flex;
-  background-color: #ddd;
+  background-color: #fff;
+  border-bottom: 3px solid $ghoul-main;
 
   .menu-icon {
     @include icon("\e09b");
-    color: #ddd;
+    color: #fff;
     padding: 13px;
     text-align: center;
-    background-color: grey;
+    background-color: $ghoul-main;
     order: 2;
   }
 
@@ -16,19 +17,24 @@ header {
     height: 45px;
     flex-grow: 1;
     img {
-      height: 35px;
-      padding-top: 2px;
+      height: 50px;
+      padding-top: 5px;
       padding-left: 5px;
+      margin-right: 5px;
+      position: relative;
+      z-index: 1;
     }
     .text {
       display: inline-block;
       vertical-align: middle;
       height: 45px;
-      line-height: 20px;
+      position: relative;
+      top: -25px;
 
       .ghoul {
         font-family: "EB Garamond";
-        font-size: 30px;
+        font-size: 35px;
+        margin-right: 2px;
       }
     }
   }

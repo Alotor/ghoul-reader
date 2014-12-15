@@ -14,7 +14,7 @@
         font-size: 90%;
       }
       .rss-description-preview {
-        display: inline;
+        display: block;
         white-space: nowrap;
         overflow: hidden;
         font-size: 95%;
@@ -101,7 +101,7 @@
     .feed-title {
       display: flex;
       padding: 5px 10px;
-      background: #efefef;
+      background: $ghoul-main;
       color: #555;
 
       div {
@@ -124,7 +124,7 @@
     }
 
     .compact-view & {
-        .rss-description-preview {
+        .feed-content .rss-description-preview {
           display: inline;
         }
     }
