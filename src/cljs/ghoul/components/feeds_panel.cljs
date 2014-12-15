@@ -2,6 +2,18 @@
   (:require [om.core :as om]
             [om.dom :as dom]))
 
+(defn feed-description [data owner]
+  (reify
+    om/IDidMount
+    (did-mount [this] (-> owner
+                          .getDOMNode
+                          .createShadowRoot
+                          .-innerHTML
+                          (set! data)))
+    om/IRender
+    (render [this]
+      (dom/div #js {:className "rss-description" }))))
+
 (defn feed-content [data owner]
   (reify
     om/IRender
@@ -12,7 +24,7 @@
                                     (dom/a #js {:className "rss-link" :href (:link data)}
                                            (:title data)))
                             (dom/h5 #js {:className "rss-description-preview"} (:description data)))
-                   (dom/div #js {:className "rss-description" :dangerouslySetInnerHTML #js {:__html (:description data)}})))))
+                   (om/build feed-description (:description data))))))
 (defn root [data owner]
   (reify
     om/IRender

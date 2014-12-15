@@ -55,7 +55,7 @@
     padding: 0.5em;
     font-size: 85%;
     text-align: justify;
-    padding-right: 1em;
+    padding: 2em;
 
     .rss-item-header {
       overflow: hidden;
@@ -82,6 +82,12 @@
 
       &.expanded {
         display: block;
+      }
+
+      &::shadow {
+        * {
+          max-width: 100%;
+        }
       }
     }
   }
