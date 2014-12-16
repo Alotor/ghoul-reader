@@ -8,13 +8,13 @@
 (defn feed-description [data owner]
   (let [set-description-dom!
         (fn []
-          (-> owner
-              .getDOMNode
-              .createShadowRoot
-              .-innerHTML
-              (set! (-> data
-                        utils/restore-tags
-                        utils/remove-unallowed-tags))))]
+          (let [shadow-root (-> owner .getDOMNode .-shadowRoot)
+                description (-> data
+                                utils/restore-tags
+                                utils/remove-unallowed-tags)]
+            (if (nil? shadow-root)
+              (-> owner .getDOMNode .createShadowRoot .-innerHTML (set! description))
+              (-> shadow-root .-innerHTML (set! description)))))]
     (reify
       om/IDidMount
       (did-mount [this] (set-description-dom!))
