@@ -73,8 +73,8 @@
         a {
           text-decoration: none;
           color: black;
-          font-size: 110%;
-          line-height: 1.4em;
+          font-size: 1.2rem;
+          line-height: 1.4rem;
         }
       }
     }
@@ -103,27 +103,23 @@
     .feed-title {
       display: flex;
       padding: 5px 10px;
-      background: $ghoul-color-normal;
-      color: white;
+      color: $ghoul-color-normal;
       font-family: "Open Sans";
-
-      div {
-        line-height: 28px;
-      }
+      border-bottom: 1px solid #aaa;
 
       a {
         font-size: 12px;
         margin-right: 10px;
         line-height: 28px;
-        color: white;
         text-decoration: underline;
         cursor: pointer;
       }
 
       .feed-title-text {
+        line-height: 28px;
         font-weight: 600;
         flex-grow: 1;
-        font-size: 14px;
+        font-size: 1.2rem;
       }
     }
 
@@ -135,6 +131,23 @@
 
     .expanded-view & {
       padding-top: 0px;
+      .feeds-wrapper .feed-content {
+        padding: 2rem;
+        max-width: 940px;
+        margin: 1rem auto;
+        box-shadow: none;
+        border-radius: 0px;
+        border: none;
+        border-bottom: 1px solid $ghoul-color-dark;
+
+        .rss-item-header {
+          overflow: visible;
+          display: block;
+          .rss-title a {
+            font-size: 1.6rem;
+          }
+        }
+      }
     }
 
     .feeds-wrapper {
@@ -142,8 +155,8 @@
         .rss-item-header {
           white-space: nowrap;
           .rss-title a {
-            font-size: 130%;
             margin-right: 5px;
+            color: #1C283A;
           }
         }
 
