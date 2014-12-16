@@ -2,14 +2,14 @@ header {
   min-height: 45px;
   display: flex;
   background-color: #fff;
-  border-bottom: 3px solid $ghoul-main;
+  border-bottom: 4px solid $ghoul-color-dark;
 
   .menu-icon {
     @include icon("\e09b");
     color: #fff;
     padding: 13px;
     text-align: center;
-    background-color: $ghoul-main;
+    background-color: $ghoul-color-dark;
     order: 2;
   }
 
@@ -38,10 +38,20 @@ header {
       }
     }
   }
+  .search-box {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 900px) {
-  header .menu-icon {
-    display: none;
+  header {
+    .menu-icon {
+      display: none;
+    }
+    .search-box {
+      display: block;
+      width: 300px;
+      margin: 3px;
+    }
   }
 }

@@ -1,8 +1,34 @@
+.search-box {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid $ghoul-main;
+
+  @include icon("\e08f");
+
+  &:before {
+    font-size: 16px;
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 5px;
+    color: #888;
+  }
+
+  input {
+    width: 100%;
+    border: 1px inset;
+    height: 25px;
+    padding: 5px;
+    padding-left: 30px;
+    font-size: 14px;
+    background-color: #fdfdfd;
+  }
+}
+
 #sidebar {
   display: none;
   position: fixed;
-  background: $ghoul-main-light;
-  border-right: 3px solid $ghoul-main;
+  background: $ghoul-color-normal;
+  border-right: 1px solid $ghoul-color-dark;
   overflow-y: auto;
   min-width: 85%;
   height: 100%;
@@ -13,45 +39,21 @@
     font-family: "Open Sans";
     padding: 0.75em;
     cursor: pointer;
+    color: #fff;
+    border-bottom: 1px solid $ghoul-color-light;
   }
 
-  .search-box {
-    width: 100%;
-    overflow: hidden;
-    border-bottom: 1px solid $ghoul-main;
-
-    @include icon("\e08f");
-
-    &:before {
-      font-size: 16px;
-      position: absolute;
-      margin-top: 11px;
-      margin-left: 5px;
-      color: #888;
-    }
-
-    input {
-      width: 100%;
-      border: 1px inset;
-      height: 25px;
-      padding: 5px;
-      padding-left: 30px;
-      font-size: 14px;
-      background-color: #fdfdfd;
-    }
-  }
 
   .menu-item {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $ghoul-color-light;
   }
 
   #feeds {
     .folder > h4 {
       padding: 0.75em;
-      background: $ghoul-main;
+      background: $ghoul-color-dark;
+      color: white;
       position: relative;
-      border-top: 1px solid $ghoul-main-border;
-      border-bottom: 1px solid $ghoul-main-border;
 
       .plus-button {
         @include icon("\e0aa");
@@ -70,6 +72,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        border-bottom: none;
       }
     }
 
@@ -95,5 +98,9 @@
     position: relative;
     height: auto;
     font-size: 13px;
+
+    .search-box {
+      display: none;
+    }
   }
 }

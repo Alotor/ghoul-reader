@@ -6,7 +6,6 @@
   .feed-title {
     display: none;
     min-height: 25px;
-    box-shadow: 0px 1px 4px $ghoul-main;
   }
 
   .compact-view & {
@@ -36,9 +35,11 @@
   .expanded-view & {
     padding-top: 5px;
     .feed-content {
-      border: 1px solid #999;
+      border: 1px solid $ghoul-color-light;
       margin: 10px;
+      margin-bottom: 0px;
       border-radius: 5px;
+      box-shadow: 0px 2px 5px #aaa;
       .rss-description-preview {
         display: none;
       }
@@ -102,8 +103,9 @@
     .feed-title {
       display: flex;
       padding: 5px 10px;
-      background: $ghoul-main-light;
-      color: #555;
+      background: $ghoul-color-normal;
+      color: white;
+      font-family: "Open Sans";
 
       div {
         line-height: 28px;
@@ -113,14 +115,15 @@
         font-size: 12px;
         margin-right: 10px;
         line-height: 28px;
-        color: #555;
-        text-decoration: none;
+        color: white;
+        text-decoration: underline;
         cursor: pointer;
       }
 
       .feed-title-text {
-        font-weight: 700;
+        font-weight: 600;
         flex-grow: 1;
+        font-size: 14px;
       }
     }
 
