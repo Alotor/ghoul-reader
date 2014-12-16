@@ -432,12 +432,13 @@ header .search-box {
   /* line 144, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content .rss-item-header .rss-title a {
     font-size: 130%;
+    margin-right: 5px;
   }
-  /* line 150, ../../src/style/_feedspanel.scss */
+  /* line 151, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content.expanded .rss-description-preview {
     display: none;
   }
-  /* line 156, ../../src/style/_feedspanel.scss */
+  /* line 157, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper {
     margin-top: 0px;
     overflow-y: auto;
