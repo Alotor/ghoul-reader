@@ -6,6 +6,7 @@
   .feed-title {
     display: none;
     min-height: 25px;
+    box-shadow: 0px 1px 4px $ghoul-main;
   }
 
   .compact-view & {
@@ -101,7 +102,7 @@
     .feed-title {
       display: flex;
       padding: 5px 10px;
-      background: $ghoul-main;
+      background: $ghoul-main-light;
       color: #555;
 
       div {
