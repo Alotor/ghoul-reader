@@ -370,8 +370,8 @@ header .search-box {
 #feeds-panel .feed-content .rss-item-header .rss-title a {
   text-decoration: none;
   color: black;
-  font-size: 110%;
-  line-height: 1.4em;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }
 /* line 82, ../../src/style/_feedspanel.scss */
 #feeds-panel .feed-content .rss-description {
@@ -394,51 +394,66 @@ header .search-box {
   #feeds-panel .feed-title {
     display: flex;
     padding: 5px 10px;
-    background: #3b5950;
-    color: white;
+    color: #3b5950;
     font-family: "Open Sans";
+    border-bottom: 1px solid #aaa;
   }
   /* line 110, ../../src/style/_feedspanel.scss */
-  #feeds-panel .feed-title div {
-    line-height: 28px;
-  }
-  /* line 114, ../../src/style/_feedspanel.scss */
   #feeds-panel .feed-title a {
     font-size: 12px;
     margin-right: 10px;
     line-height: 28px;
-    color: white;
     text-decoration: underline;
     cursor: pointer;
   }
-  /* line 123, ../../src/style/_feedspanel.scss */
+  /* line 118, ../../src/style/_feedspanel.scss */
   #feeds-panel .feed-title .feed-title-text {
+    line-height: 28px;
     font-weight: 600;
     flex-grow: 1;
-    font-size: 14px;
+    font-size: 1.2rem;
   }
-  /* line 131, ../../src/style/_feedspanel.scss */
+  /* line 127, ../../src/style/_feedspanel.scss */
   .compact-view #feeds-panel .feed-content .rss-description-preview {
     display: inline;
   }
-  /* line 136, ../../src/style/_feedspanel.scss */
+  /* line 132, ../../src/style/_feedspanel.scss */
   .expanded-view #feeds-panel {
     padding-top: 0px;
   }
-  /* line 142, ../../src/style/_feedspanel.scss */
+  /* line 134, ../../src/style/_feedspanel.scss */
+  .expanded-view #feeds-panel .feeds-wrapper .feed-content {
+    padding: 2rem;
+    max-width: 940px;
+    margin: 1rem auto;
+    box-shadow: none;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid #1c283a;
+  }
+  /* line 143, ../../src/style/_feedspanel.scss */
+  .expanded-view #feeds-panel .feeds-wrapper .feed-content .rss-item-header {
+    overflow: visible;
+    display: block;
+  }
+  /* line 146, ../../src/style/_feedspanel.scss */
+  .expanded-view #feeds-panel .feeds-wrapper .feed-content .rss-item-header .rss-title a {
+    font-size: 1.6rem;
+  }
+  /* line 155, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content .rss-item-header {
     white-space: nowrap;
   }
-  /* line 144, ../../src/style/_feedspanel.scss */
+  /* line 157, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content .rss-item-header .rss-title a {
-    font-size: 130%;
     margin-right: 5px;
+    color: #1C283A;
   }
-  /* line 151, ../../src/style/_feedspanel.scss */
+  /* line 164, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content.expanded .rss-description-preview {
     display: none;
   }
-  /* line 157, ../../src/style/_feedspanel.scss */
+  /* line 170, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper {
     margin-top: 0px;
     overflow-y: auto;

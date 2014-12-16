@@ -23105,80 +23105,81 @@ ghoul.components.common.search_box = function search_box(b, c) {
 ghoul.components.feeds_panel = {};
 ghoul.components.feeds_panel.feed_description = function feed_description(b, c) {
   var d = function() {
-    return c.getDOMNode().createShadowRoot().innerHTML = ghoul.utils.remove_unallowed_tags.call(null, ghoul.utils.restore_tags.call(null, b));
+    var d = c.getDOMNode().shadowRoot, f = ghoul.utils.remove_unallowed_tags.call(null, ghoul.utils.restore_tags.call(null, b));
+    return null == d ? c.getDOMNode().createShadowRoot().innerHTML = f : d.innerHTML = f;
   };
-  "undefined" === typeof ghoul.components.feeds_panel.t8063 && (ghoul.components.feeds_panel.t8063 = function(b, c, d, h, k) {
+  "undefined" === typeof ghoul.components.feeds_panel.t8172 && (ghoul.components.feeds_panel.t8172 = function(b, c, d, h, k) {
     this.set_description_dom_BANG_ = b;
     this.owner = c;
     this.data = d;
     this.feed_description = h;
-    this.meta8064 = k;
+    this.meta8173 = k;
     this.cljs$lang$protocol_mask$partition1$ = 0;
     this.cljs$lang$protocol_mask$partition0$ = 393216;
-  }, ghoul.components.feeds_panel.t8063.prototype.om$core$IRender$ = !0, ghoul.components.feeds_panel.t8063.prototype.om$core$IRender$render$arity$1 = function(b) {
+  }, ghoul.components.feeds_panel.t8172.prototype.om$core$IRender$ = !0, ghoul.components.feeds_panel.t8172.prototype.om$core$IRender$render$arity$1 = function(b) {
     return function(b) {
       return om.dom.div.call(null, {className:"rss-description"});
     };
-  }(d), ghoul.components.feeds_panel.t8063.prototype.om$core$IDidUpdate$ = !0, ghoul.components.feeds_panel.t8063.prototype.om$core$IDidUpdate$did_update$arity$3 = function(b) {
+  }(d), ghoul.components.feeds_panel.t8172.prototype.om$core$IDidUpdate$ = !0, ghoul.components.feeds_panel.t8172.prototype.om$core$IDidUpdate$did_update$arity$3 = function(b) {
     return function(b, c, d) {
       return this.set_description_dom_BANG_.call(null);
     };
-  }(d), ghoul.components.feeds_panel.t8063.prototype.om$core$IDidMount$ = !0, ghoul.components.feeds_panel.t8063.prototype.om$core$IDidMount$did_mount$arity$1 = function(b) {
+  }(d), ghoul.components.feeds_panel.t8172.prototype.om$core$IDidMount$ = !0, ghoul.components.feeds_panel.t8172.prototype.om$core$IDidMount$did_mount$arity$1 = function(b) {
     return function(b) {
       return this.set_description_dom_BANG_.call(null);
     };
-  }(d), ghoul.components.feeds_panel.t8063.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+  }(d), ghoul.components.feeds_panel.t8172.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
     return function(b) {
-      return this.meta8064;
+      return this.meta8173;
     };
-  }(d), ghoul.components.feeds_panel.t8063.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b) {
+  }(d), ghoul.components.feeds_panel.t8172.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b) {
     return function(b, c) {
-      return new ghoul.components.feeds_panel.t8063(this.set_description_dom_BANG_, this.owner, this.data, this.feed_description, c);
+      return new ghoul.components.feeds_panel.t8172(this.set_description_dom_BANG_, this.owner, this.data, this.feed_description, c);
     };
-  }(d), ghoul.components.feeds_panel.t8063.cljs$lang$type = !0, ghoul.components.feeds_panel.t8063.cljs$lang$ctorStr = "ghoul.components.feeds-panel/t8063", ghoul.components.feeds_panel.t8063.cljs$lang$ctorPrWriter = function(b) {
+  }(d), ghoul.components.feeds_panel.t8172.cljs$lang$type = !0, ghoul.components.feeds_panel.t8172.cljs$lang$ctorStr = "ghoul.components.feeds-panel/t8172", ghoul.components.feeds_panel.t8172.cljs$lang$ctorPrWriter = function(b) {
     return function(b, c, d) {
-      return cljs.core._write.call(null, c, "ghoul.components.feeds-panel/t8063");
+      return cljs.core._write.call(null, c, "ghoul.components.feeds-panel/t8172");
     };
-  }(d), ghoul.components.feeds_panel.__GT_t8063 = function(b) {
+  }(d), ghoul.components.feeds_panel.__GT_t8172 = function(b) {
     return function(b, c, d, e, l) {
-      return new ghoul.components.feeds_panel.t8063(b, c, d, e, l);
+      return new ghoul.components.feeds_panel.t8172(b, c, d, e, l);
     };
   }(d));
-  return new ghoul.components.feeds_panel.t8063(d, c, b, feed_description, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), 56, new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), 25, new cljs.core.Keyword(null, "column", "column", 2078222095), 5, new cljs.core.Keyword(null, "line", "line", 212345235), 18, new cljs.core.Keyword(null, "file", "file", -1269645878), "/home/alotor/Projects/GhoulReader/ghoul-reader/src/cljs/ghoul/components/feeds_panel.cljs"], 
+  return new ghoul.components.feeds_panel.t8172(d, c, b, feed_description, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), 56, new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), 25, new cljs.core.Keyword(null, "column", "column", 2078222095), 5, new cljs.core.Keyword(null, "line", "line", 212345235), 18, new cljs.core.Keyword(null, "file", "file", -1269645878), "/home/alotor/Projects/GhoulReader/ghoul-reader/src/cljs/ghoul/components/feeds_panel.cljs"], 
   null));
 };
 ghoul.components.feeds_panel.feed_content = function feed_content(b, c) {
-  "undefined" === typeof ghoul.components.feeds_panel.t8069 && (ghoul.components.feeds_panel.t8069 = function(b, c, f, g) {
+  "undefined" === typeof ghoul.components.feeds_panel.t8178 && (ghoul.components.feeds_panel.t8178 = function(b, c, f, g) {
     this.owner = b;
     this.data = c;
     this.feed_content = f;
-    this.meta8070 = g;
+    this.meta8179 = g;
     this.cljs$lang$protocol_mask$partition1$ = 0;
     this.cljs$lang$protocol_mask$partition0$ = 393216;
-  }, ghoul.components.feeds_panel.t8069.prototype.om$core$IRender$ = !0, ghoul.components.feeds_panel.t8069.prototype.om$core$IRender$render$arity$1 = function(b) {
+  }, ghoul.components.feeds_panel.t8178.prototype.om$core$IRender$ = !0, ghoul.components.feeds_panel.t8178.prototype.om$core$IRender$render$arity$1 = function(b) {
     return om.dom.article.call(null, {className:"feed-content"}, om.dom.div.call(null, {className:"rss-item-header"}, om.dom.h4.call(null, {className:"rss-title"}, om.dom.a.call(null, {href:(new cljs.core.Keyword(null, "link", "link", -1769163468)).cljs$core$IFn$_invoke$arity$1(this.data), className:"rss-link"}, (new cljs.core.Keyword(null, "title", "title", 636505583)).cljs$core$IFn$_invoke$arity$1(this.data))), om.dom.h5.call(null, {className:"rss-description-preview"}, cuerdas.core.strip_tags.call(null, 
     ghoul.utils.restore_tags.call(null, (new cljs.core.Keyword(null, "description", "description", -1428560544)).cljs$core$IFn$_invoke$arity$1(this.data))))), om.core.build.call(null, ghoul.components.feeds_panel.feed_description, (new cljs.core.Keyword(null, "description", "description", -1428560544)).cljs$core$IFn$_invoke$arity$1(this.data)));
-  }, ghoul.components.feeds_panel.t8069.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-    return this.meta8070;
-  }, ghoul.components.feeds_panel.t8069.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-    return new ghoul.components.feeds_panel.t8069(this.owner, this.data, this.feed_content, c);
-  }, ghoul.components.feeds_panel.t8069.cljs$lang$type = !0, ghoul.components.feeds_panel.t8069.cljs$lang$ctorStr = "ghoul.components.feeds-panel/t8069", ghoul.components.feeds_panel.t8069.cljs$lang$ctorPrWriter = function(b, c, f) {
-    return cljs.core._write.call(null, c, "ghoul.components.feeds-panel/t8069");
-  }, ghoul.components.feeds_panel.__GT_t8069 = function(b, c, f, g) {
-    return new ghoul.components.feeds_panel.t8069(b, c, f, g);
+  }, ghoul.components.feeds_panel.t8178.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta8179;
+  }, ghoul.components.feeds_panel.t8178.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+    return new ghoul.components.feeds_panel.t8178(this.owner, this.data, this.feed_content, c);
+  }, ghoul.components.feeds_panel.t8178.cljs$lang$type = !0, ghoul.components.feeds_panel.t8178.cljs$lang$ctorStr = "ghoul.components.feeds-panel/t8178", ghoul.components.feeds_panel.t8178.cljs$lang$ctorPrWriter = function(b, c, f) {
+    return cljs.core._write.call(null, c, "ghoul.components.feeds-panel/t8178");
+  }, ghoul.components.feeds_panel.__GT_t8178 = function(b, c, f, g) {
+    return new ghoul.components.feeds_panel.t8178(b, c, f, g);
   });
-  return new ghoul.components.feeds_panel.t8069(c, b, feed_content, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), 70, new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), 37, new cljs.core.Keyword(null, "column", "column", 2078222095), 3, new cljs.core.Keyword(null, "line", "line", 212345235), 28, new cljs.core.Keyword(null, "file", "file", -1269645878), "/home/alotor/Projects/GhoulReader/ghoul-reader/src/cljs/ghoul/components/feeds_panel.cljs"], 
+  return new ghoul.components.feeds_panel.t8178(c, b, feed_content, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), 70, new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), 37, new cljs.core.Keyword(null, "column", "column", 2078222095), 3, new cljs.core.Keyword(null, "line", "line", 212345235), 28, new cljs.core.Keyword(null, "file", "file", -1269645878), "/home/alotor/Projects/GhoulReader/ghoul-reader/src/cljs/ghoul/components/feeds_panel.cljs"], 
   null));
 };
 ghoul.components.feeds_panel.root = function root$$0(b, c) {
-  "undefined" === typeof ghoul.components.feeds_panel.t8075 && (ghoul.components.feeds_panel.t8075 = function(b, c, f, g) {
+  "undefined" === typeof ghoul.components.feeds_panel.t8184 && (ghoul.components.feeds_panel.t8184 = function(b, c, f, g) {
     this.owner = b;
     this.data = c;
     this.root = f;
-    this.meta8076 = g;
+    this.meta8185 = g;
     this.cljs$lang$protocol_mask$partition1$ = 0;
     this.cljs$lang$protocol_mask$partition0$ = 393216;
-  }, ghoul.components.feeds_panel.t8075.prototype.om$core$IRender$ = !0, ghoul.components.feeds_panel.t8075.prototype.om$core$IRender$render$arity$1 = function(b) {
+  }, ghoul.components.feeds_panel.t8184.prototype.om$core$IRender$ = !0, ghoul.components.feeds_panel.t8184.prototype.om$core$IRender$render$arity$1 = function(b) {
     return om.dom.section.call(null, {id:"feeds-panel"}, om.dom.div.call(null, {className:"feed-title"}, om.dom.div.call(null, {className:"feed-title-text"}, [cljs.core.str(ghoul.state.get_title.call(null, (new cljs.core.Keyword(null, "selected", "selected", 574897764)).cljs$core$IFn$_invoke$arity$1(this.data))), cljs.core.str(" - "), cljs.core.str((new cljs.core.Keyword(null, "selected", "selected", 574897764)).cljs$core$IFn$_invoke$arity$1(this.data))].join("")), om.dom.a.call(null, {onClick:function(b) {
       return function(b) {
         return ghoul.state.toggle_compact_view.call(null);
@@ -23188,16 +23189,16 @@ ghoul.components.feeds_panel.root = function root$$0(b, c) {
         return ghoul.state.toggle_expanded_view.call(null);
       };
     }(this), className:"expand-button"}, "Expanded View")), cljs.core.apply.call(null, om.dom.div, {className:"feeds-wrapper"}, om.core.build_all.call(null, ghoul.components.feeds_panel.feed_content, (new cljs.core.Keyword(null, "feeds", "feeds", 855496306)).cljs$core$IFn$_invoke$arity$1(this.data))));
-  }, ghoul.components.feeds_panel.t8075.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
-    return this.meta8076;
-  }, ghoul.components.feeds_panel.t8075.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
-    return new ghoul.components.feeds_panel.t8075(this.owner, this.data, this.root, c);
-  }, ghoul.components.feeds_panel.t8075.cljs$lang$type = !0, ghoul.components.feeds_panel.t8075.cljs$lang$ctorStr = "ghoul.components.feeds-panel/t8075", ghoul.components.feeds_panel.t8075.cljs$lang$ctorPrWriter = function(b, c, f) {
-    return cljs.core._write.call(null, c, "ghoul.components.feeds-panel/t8075");
-  }, ghoul.components.feeds_panel.__GT_t8075 = function(b, c, f, g) {
-    return new ghoul.components.feeds_panel.t8075(b, c, f, g);
+  }, ghoul.components.feeds_panel.t8184.prototype.cljs$core$IMeta$_meta$arity$1 = function(b) {
+    return this.meta8185;
+  }, ghoul.components.feeds_panel.t8184.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(b, c) {
+    return new ghoul.components.feeds_panel.t8184(this.owner, this.data, this.root, c);
+  }, ghoul.components.feeds_panel.t8184.cljs$lang$type = !0, ghoul.components.feeds_panel.t8184.cljs$lang$ctorStr = "ghoul.components.feeds-panel/t8184", ghoul.components.feeds_panel.t8184.cljs$lang$ctorPrWriter = function(b, c, f) {
+    return cljs.core._write.call(null, c, "ghoul.components.feeds-panel/t8184");
+  }, ghoul.components.feeds_panel.__GT_t8184 = function(b, c, f, g) {
+    return new ghoul.components.feeds_panel.t8184(b, c, f, g);
   });
-  return new ghoul.components.feeds_panel.t8075(c, b, root$$0, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), 72, new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), 51, new cljs.core.Keyword(null, "column", "column", 2078222095), 3, new cljs.core.Keyword(null, "line", "line", 212345235), 40, new cljs.core.Keyword(null, "file", "file", -1269645878), "/home/alotor/Projects/GhoulReader/ghoul-reader/src/cljs/ghoul/components/feeds_panel.cljs"], 
+  return new ghoul.components.feeds_panel.t8184(c, b, root$$0, new cljs.core.PersistentArrayMap(null, 5, [new cljs.core.Keyword(null, "end-column", "end-column", 1425389514), 72, new cljs.core.Keyword(null, "end-line", "end-line", 1837326455), 51, new cljs.core.Keyword(null, "column", "column", 2078222095), 3, new cljs.core.Keyword(null, "line", "line", 212345235), 40, new cljs.core.Keyword(null, "file", "file", -1269645878), "/home/alotor/Projects/GhoulReader/ghoul-reader/src/cljs/ghoul/components/feeds_panel.cljs"], 
   null));
 };
 ghoul.components.sidebar = {};
