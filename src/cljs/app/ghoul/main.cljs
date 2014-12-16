@@ -25,5 +25,9 @@
 
 (.log js/console "Ghoul Reader loaded")
 
-(def feed-worker (js/Worker. "js/worker.js"))
-(set! (.-onmessage feed-worker) (fn [event] (.log js/console ">> CALLBACK" event)))
+(defn launch-worker! []
+  (let [update-feed-worker (js/Worker. "js/worker.js")
+        cb-worker (fn [event] (.log js/console (str ">> CALLBACK" (-> event .-data (js->clj :keywordize-keys true)))))]
+    (set! (.-onmessage update-feed-worker) cb-worker)))
+
+;(launch-worker!)

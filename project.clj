@@ -9,7 +9,8 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2411"]
                  [om "0.8.0-beta3"]
-                 [cuerdas "0.1.0-SNAPSHOT"]]
+                 [cuerdas "0.1.0-SNAPSHOT"]
+                 [org.clojure/core.async "0.1.346.0-17112a-alpha"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]
             [lein-asciidoctor "0.1.12"]]
@@ -22,18 +23,19 @@
 
   :cljsbuild {:builds
               {:worker
-               {:source-paths ["src/cljs-worker"]
+               {:source-paths ["src/cljs/worker" "src/cljs/common" "src/assets/js"]
                 :compiler {:output-to     "dist/js/worker.js"
                            :source-map    "dist/js/worker.js.map"
-                           :output-dir    "dist/js/out-worker"
+                           :output-dir    "dist/js/out/worker"
+                           :preamble      ["xmldom.js"]
                            :optimizations :simple
                            :pretty-print  true}}
 
                :app
-               {:source-paths ["src/cljs"]
+               {:source-paths ["src/cljs/app" "src/cljs/common"]
                 :compiler {:output-to     "dist/js/app.js"
                            :source-map    "dist/js/app.js.map"
-                           :output-dir    "dist/js/out"
+                           :output-dir    "dist/js/out/app"
                            :preamble      ["react/react.min.js"]
                            :externs       ["react/externs/react.js"]
                            :optimizations :simple
