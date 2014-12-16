@@ -1,6 +1,7 @@
 (ns ghoul.components.feeds-panel
   (:require [om.core :as om]
             [om.dom :as dom]
+            [cuerdas.core :as str]
             [ghoul.state :as state]
             [ghoul.utils :as utils]))
 
@@ -32,7 +33,7 @@
                             (dom/h4 #js {:className "rss-title"}
                                     (dom/a #js {:className "rss-link" :href (:link data)}
                                            (:title data)))
-                            (dom/h5 #js {:className "rss-description-preview"} (:description data)))
+                            (dom/h5 #js {:className "rss-description-preview"} (-> data :description utils/restore-tags str/strip-tags)))
                    (om/build feed-description (:description data))))))
 
 (defn root [data owner]

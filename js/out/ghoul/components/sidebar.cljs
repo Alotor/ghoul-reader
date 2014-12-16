@@ -1,6 +1,7 @@
 (ns ghoul.components.sidebar
   (:require [om.core :as om]
             [om.dom :as dom]
+            [ghoul.components.common :as common]
             [ghoul.state :as state]))
 
 (defn feed-subscription [data owner]
@@ -40,8 +41,7 @@
     om/IRender
     (render [this]
       (dom/section #js {:id "sidebar"}
-                   (dom/div #js {:className "search-box"}
-                            (dom/input {:placeholder "Search"}))
+                   (om/build common/search-box data)
                    (dom/a #js {:className "menu-item all"} "All Items")
                    (dom/a #js {:className "menu-item favorite"} "Favorites")
                    (dom/a #js {:className "menu-item shared"} "Shared")
