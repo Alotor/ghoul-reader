@@ -2,7 +2,8 @@
   (:require [goog.events :as events]
             [goog.dom :as gdom]
             [cljs.core.async :refer [chan put!]]
-            [ghoul.parse-rss :as rss])
+            [ghoul.parse-rss :as rss]
+            [cuerdas.core :as str])
   (:import [goog.net XhrIo EventType]
            [goog.events EventType])
   (:refer-clojure :exclude [get]))
@@ -51,5 +52,10 @@
 (defn delete [url]
   (send {:method :delete, :url url, :response->data identity}))
 
+
+(def cors-service "https://cors-anywhere.herokuapp.com/")
 (defn get-rss [url]
-  (send {:method :get, :url url, :response->data rss/parse-document}))
+  (let [url (-> url
+                (str/replace-first #"https://" cors-service)
+                (str/replace-first #"http://" cors-service))]
+    (send {:method :get, :url url, :response->data rss/parse-document})))

@@ -10,7 +10,8 @@
     (render [this]
       (dom/div #js {:className "icon-buttons"}
                (dom/a #js {:className "menu-icon add-group"} "Add Group")
-               (dom/a #js {:className "menu-icon add-feed"} "Add Feed")
+               (dom/a #js {:className "menu-icon add-feed"
+                           :onClick state/toggle-feed-popup} "Add Feed")
                (dom/a #js {:className "menu-icon import-feeds"} "Import")
                (dom/a #js {:className "menu-icon export-feeds"} "Export")
                (dom/a #js {:className "menu-icon refresh"} "Refresh")))))

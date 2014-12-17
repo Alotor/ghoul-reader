@@ -40,3 +40,26 @@ body {
     overflow-y: hidden;
   }
 }
+
+#empty-subscription-panel {
+  margin-top: 50px;
+  margin-left: 20px;
+  font-size: 150%;
+  color: $ghoul-color-normal;
+  line-height: 30px;
+
+  p {
+    padding: 10px;
+  }
+  .emphasis {
+    font-weight: bold;
+    color: $ghoul-color-dark;
+  }
+  a {
+    padding-left: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    color: $ghoul-color-dark;
+  }
+}

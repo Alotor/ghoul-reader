@@ -18,8 +18,9 @@
     om/IRender
     (render [this]
       (let [class-view (name (:feeds-view data))
-            class-menu (if (:show-menu data) "menu-expanded")]
-        (dom/div nil
+            class-menu (if (:show-menu data) "menu-expanded")
+            class-popup (if (:popup data) (str (name (:popup data)) "-popup-visible") "")]
+        (dom/div #js {:className class-popup}
                  (om/build feed-popup/root data)
                  (dom/div #js {:className (str/join " " (list "app-container" class-view class-menu))}
                           (om/build header/root data)

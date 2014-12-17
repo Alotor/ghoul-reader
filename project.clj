@@ -41,7 +41,7 @@
                 :compiler {:output-to     "dist/js/app.js"
                            :source-map    "dist/js/app.js.map"
                            :output-dir    "dist/js/out/app"
-                           :preamble      ["react/react.min.js"]
+                           :preamble      ["react/react.min.js" "xmldom.js"]
                            :externs       ["react/externs/react.js"]
                            :optimizations :whitespace
                            :pretty-print  true

@@ -39,15 +39,25 @@
   (reify
     om/IRender
     (render [this]
-      (dom/section #js {:id "feeds-panel"}
-                   (dom/div #js {:className "feed-title"}
-                            (dom/div #js {:className "feed-title-text"}
-                                     (if (:selected data)
-                                       (str (state/get-title (:selected data)) " - " (:selected data))
-                                       "All items"))
-                            (dom/a #js {:className "compact-button"
-                                        :onClick (fn [e] (state/toggle-compact-view))} "Compact View")
-                            (dom/a #js {:className "expand-button"
-                                        :onClick (fn [e] (state/toggle-expanded-view))} "Expanded View"))
-                   (apply dom/div #js {:className "feeds-wrapper"}
-                          (om/build-all feed-content (:feeds data)))))))
+      (if (and (nil? (:selected data)) (empty? (:groups data)))
+        (dom/section #js {:id "empty-subscription-panel"}
+                     (dom/p nil
+                            (dom/span nil "Welcome to ")
+                            (dom/span #js {:className "emphasis"} "GHOUL reader")
+                            (dom/span nil "."))
+                     (dom/p nil "Ghoul is an offline-optimized RSS reading platform with easiness in mind and using the great new technologies in HTML5 specs.")
+                     (dom/p nil
+                            (dom/span nil "You can add a new RSS Subscription")
+                            (dom/a #js {:onClick state/toggle-feed-popup} "HERE")))
+        (dom/section #js {:id "feeds-panel"}
+                     (dom/div #js {:className "feed-title"}
+                              (dom/div #js {:className "feed-title-text"}
+                                       (if (:selected data)
+                                         (str (state/get-title (:selected data)) " - " (:selected data))
+                                         "All items"))
+                              (dom/a #js {:className "compact-button"
+                                          :onClick (fn [e] (state/toggle-compact-view))} "Compact View")
+                              (dom/a #js {:className "expand-button"
+                                          :onClick (fn [e] (state/toggle-expanded-view))} "Expanded View"))
+                     (apply dom/div #js {:className "feeds-wrapper"}
+                            (om/build-all feed-content (:feeds data))))))))

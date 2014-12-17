@@ -15,6 +15,11 @@
     width: 100%;
     z-index: 3;
   }
+  .second-wrapper {
+    background: #eee;
+    padding-bottom: 20px;
+    margin-top: 24px;
+  }
   .gray {
     position: absolute;
     width: 100%;
@@ -28,26 +33,30 @@
     width: 300px;
     margin: auto;
     padding: 50px;
-    background: white;
     margin-top: 100px;
+    padding-top: 90px;
     position: relative;
 
     h2 {
       position: absolute;
-      top: 0px;
+      top: 23px;
       left: 0px;
-      border-bottom: 1px solid black;
-      padding-left: 11px;
+      border-bottom: 1px solid #3B5950;
+      padding-left: 0px;
       padding-top: 10px;
       width: 350px;
       text-align: left;
       padding-bottom: 3px;
+
+      color: #3B5950;
+      font-family: "Open Sans";
+      font-weight: 600;
     }
     input {
       position: absolute;
-      left: 10px;
-      top: 41px;
-      width: 375px;
+      left: -1px;
+      top: 65px;
+      width: 389px;
     }
     .button-holder {
       display: flex;
@@ -65,8 +74,16 @@
         text-decoration: none;
         color: black;
 
+        border: 1px outset #888;
+        color: white;
+        font-weight: bold;
+        background: #888;
+
+        cursor: pointer;
+
         &:first-child {
           margin-right: 5px;
+          background: #3B5950;
         }
       }
     }
