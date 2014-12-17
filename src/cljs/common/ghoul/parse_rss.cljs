@@ -16,7 +16,7 @@
       (add-tag node "description")
       (add-tag node "creator" "dc:creator")
       (add-tag node "pubDate")
-      (add-tag node "guid")))
+      (add-tag node "uid" "guid")))
 
 (defn parse-document [response]
   (try

@@ -31,8 +31,7 @@
       (dom/article #js {:className "feed-content"}
                    (dom/div #js {:className "rss-item-header"}
                             (dom/h4 #js {:className "rss-title"}
-                                    (dom/a #js {:className "rss-link" :href (:link data)}
-                                           (:title data)))
+                                    (dom/a #js {:className "rss-link" :href (:link data)} (:title data)))
                             (dom/h5 #js {:className "rss-description-preview"} (-> data :description utils/restore-tags str/strip-tags)))
                    (om/build feed-description (:description data))))))
 
@@ -42,7 +41,10 @@
     (render [this]
       (dom/section #js {:id "feeds-panel"}
                    (dom/div #js {:className "feed-title"}
-                            (dom/div #js {:className "feed-title-text"} (str (state/get-title (:selected data)) " - " (:selected data)))
+                            (dom/div #js {:className "feed-title-text"}
+                                     (if (:selected data)
+                                       (str (state/get-title (:selected data)) " - " (:selected data))
+                                       "All items"))
                             (dom/a #js {:className "compact-button"
                                         :onClick (fn [e] (state/toggle-compact-view))} "Compact View")
                             (dom/a #js {:className "expand-button"

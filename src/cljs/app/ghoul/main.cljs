@@ -1,8 +1,12 @@
 (ns ghoul.main
+  (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [om.core :as om]
             [om.dom :as dom]
             [cuerdas.core :as str]
+            [cljs-uuid-utils :as uuid]
+            [cljs.core.async :as async :refer [<!]]
             [ghoul.state :as state]
+            [ghoul.feeds-storage :as storage]
             [ghoul.components.header :as header]
             [ghoul.components.sidebar :as sidebar]
             [ghoul.components.feeds-panel :as feeds-panel]
@@ -25,9 +29,23 @@
 
 (.log js/console "Ghoul Reader loaded")
 
-(defn launch-worker! []
-  (let [update-feed-worker (js/Worker. "js/worker.js")
-        cb-worker (fn [event] (.log js/console (str ">> CALLBACK" (-> event .-data (js->clj :keywordize-keys true)))))]
-    (set! (.-onmessage update-feed-worker) cb-worker)))
+(def update-feed-worker (js/Worker. "js/worker.js"))
 
-;(launch-worker!)
+(defn ^:export read-feed [uid url]
+  (let [cb-worker (fn [event] (.log js/console (str ">> Result" (-> event .-data (js->clj :keywordize-keys true)))))]
+    (set! (.-onmessage update-feed-worker) cb-worker)
+    (.postMessage update-feed-worker #js {:action "update" :uid uid :url url})))
+
+;(go
+;  (let [_ (<! (storage/init-database))
+;        _ (<! (storage/add-feed {;:uid (uuid/uuid-string (uuid/make-random-uuid))
+;                                 :uid "529c62d7-5ace-4568-bef9-20de75338616"
+;                                 :title (str "Test " (js/Date.))
+;                                 :description (str ">>> XXXX" (js/Date.))}))
+;        result (<! (storage/retrieve-all-feeds))]
+;    (.log js/console (str result))))
+
+
+(go (let [_ (<! (storage/init-database))
+          result (<! (storage/retrieve-all-feeds))]
+      (swap! state/global assoc :feeds result)))
