@@ -3,7 +3,8 @@
   (:require [cljs.core.async :as async :refer [<!]]
             [cljs-uuid-utils :as uuid]
             [ghoul.http :as http]
-            [ghoul.feeds-storage :as storage]))
+            [ghoul.feeds-storage :as storage]
+            [hodgepodge.core :as hp]))
 
 ;(defn ^:export hello-world[] (js/alert "HOLA")) ; invoke through ghoul.state.hello_world() in JS
 (declare feed-store-temp)
@@ -105,6 +106,7 @@
                           (assoc :expanded true)
                           (assoc :uid (uuid/uuid-string (uuid/make-random-uuid)))
                           (assoc :subscriptions []))]
+    (swap! global assoc :general-group-uid (:uid general-group))
     (swap! global update-in [:groups] #(conj % general-group))))
 
 (defn add-rss-subscription [feed-url]
@@ -129,3 +131,20 @@
             ;<!)
         (swap! global update-in [:feeds] #(conj % feed)))
       (swap! global update-in [:groups group-idx :subscriptions] #(conj % subscription)))))
+
+(defn ^:export store-state [state]
+  (assoc! hp/local-storage :state (dissoc state :feeds)))
+
+(defn ^:export restore-state [state-atom]
+  (->> (:state hp/local-storage) (reset! state-atom)))
+
+(defn start-watch []
+  (let [old-state (:state hp/local-storage)]
+    (if (not (nil? old-state))
+      (restore-state global))
+    (add-watch global
+               nil
+               (fn [context key ref old-value new-value]
+                 (store-state @global)))))
+
+(start-watch)
