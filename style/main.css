@@ -487,17 +487,66 @@ header .search-box {
   display: none;
   line-height: 1.3em;
 }
-/* line 88, ../../src/style/_feedspanel.scss */
+/* line 52, ../../../../../.gem/ruby/2.1.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+#feeds-panel .feed-content .rss-description div, #feeds-panel .feed-content .rss-description span, #feeds-panel .feed-content .rss-description applet, #feeds-panel .feed-content .rss-description object, #feeds-panel .feed-content .rss-description iframe,
+#feeds-panel .feed-content .rss-description h1, #feeds-panel .feed-content .rss-description h2, #feeds-panel .feed-content .rss-description h3, #feeds-panel .feed-content .rss-description h4, #feeds-panel .feed-content .rss-description h5, #feeds-panel .feed-content .rss-description h6, #feeds-panel .feed-content .rss-description p, #feeds-panel .feed-content .rss-description blockquote, #feeds-panel .feed-content .rss-description pre,
+#feeds-panel .feed-content .rss-description a, #feeds-panel .feed-content .rss-description abbr, #feeds-panel .feed-content .rss-description acronym, #feeds-panel .feed-content .rss-description address, #feeds-panel .feed-content .rss-description big, #feeds-panel .feed-content .rss-description cite, #feeds-panel .feed-content .rss-description code,
+#feeds-panel .feed-content .rss-description del, #feeds-panel .feed-content .rss-description dfn, #feeds-panel .feed-content .rss-description em, #feeds-panel .feed-content .rss-description img, #feeds-panel .feed-content .rss-description ins, #feeds-panel .feed-content .rss-description kbd, #feeds-panel .feed-content .rss-description q, #feeds-panel .feed-content .rss-description s, #feeds-panel .feed-content .rss-description samp,
+#feeds-panel .feed-content .rss-description small, #feeds-panel .feed-content .rss-description strike, #feeds-panel .feed-content .rss-description strong, #feeds-panel .feed-content .rss-description sub, #feeds-panel .feed-content .rss-description sup, #feeds-panel .feed-content .rss-description tt, #feeds-panel .feed-content .rss-description var,
+#feeds-panel .feed-content .rss-description b, #feeds-panel .feed-content .rss-description u, #feeds-panel .feed-content .rss-description i, #feeds-panel .feed-content .rss-description center,
+#feeds-panel .feed-content .rss-description dl, #feeds-panel .feed-content .rss-description dt, #feeds-panel .feed-content .rss-description dd, #feeds-panel .feed-content .rss-description ol, #feeds-panel .feed-content .rss-description ul, #feeds-panel .feed-content .rss-description li,
+#feeds-panel .feed-content .rss-description fieldset, #feeds-panel .feed-content .rss-description form, #feeds-panel .feed-content .rss-description label, #feeds-panel .feed-content .rss-description legend,
+#feeds-panel .feed-content .rss-description table, #feeds-panel .feed-content .rss-description caption, #feeds-panel .feed-content .rss-description tbody, #feeds-panel .feed-content .rss-description tfoot, #feeds-panel .feed-content .rss-description thead, #feeds-panel .feed-content .rss-description tr, #feeds-panel .feed-content .rss-description th, #feeds-panel .feed-content .rss-description td,
+#feeds-panel .feed-content .rss-description article, #feeds-panel .feed-content .rss-description aside, #feeds-panel .feed-content .rss-description canvas, #feeds-panel .feed-content .rss-description details, #feeds-panel .feed-content .rss-description embed,
+#feeds-panel .feed-content .rss-description figure, #feeds-panel .feed-content .rss-description figcaption, #feeds-panel .feed-content .rss-description footer, #feeds-panel .feed-content .rss-description header, #feeds-panel .feed-content .rss-description hgroup,
+#feeds-panel .feed-content .rss-description menu, #feeds-panel .feed-content .rss-description nav, #feeds-panel .feed-content .rss-description output, #feeds-panel .feed-content .rss-description ruby, #feeds-panel .feed-content .rss-description section, #feeds-panel .feed-content .rss-description summary,
+#feeds-panel .feed-content .rss-description time, #feeds-panel .feed-content .rss-description mark, #feeds-panel .feed-content .rss-description audio, #feeds-panel .feed-content .rss-description video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* line 55, ../../../../../.gem/ruby/2.1.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+#feeds-panel .feed-content .rss-description table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* line 57, ../../../../../.gem/ruby/2.1.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+#feeds-panel .feed-content .rss-description caption, #feeds-panel .feed-content .rss-description th, #feeds-panel .feed-content .rss-description td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+/* line 59, ../../../../../.gem/ruby/2.1.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+#feeds-panel .feed-content .rss-description q, #feeds-panel .feed-content .rss-description blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../.gem/ruby/2.1.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+#feeds-panel .feed-content .rss-description q:before, #feeds-panel .feed-content .rss-description q:after, #feeds-panel .feed-content .rss-description blockquote:before, #feeds-panel .feed-content .rss-description blockquote:after {
+  content: "";
+  content: none;
+}
+/* line 61, ../../../../../.gem/ruby/2.1.0/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+#feeds-panel .feed-content .rss-description a img {
+  border: none;
+}
+/* line 90, ../../src/style/_feedspanel.scss */
 #feeds-panel .feed-content .rss-description.expanded {
   display: block;
 }
-/* line 93, ../../src/style/_feedspanel.scss */
+/* line 94, ../../src/style/_feedspanel.scss */
+#feeds-panel .feed-content .rss-description * {
+  max-width: 100%;
+}
+/* line 99, ../../src/style/_feedspanel.scss */
 #feeds-panel .feed-content .rss-description::shadow * {
   max-width: 100%;
 }
 
 @media screen and (min-width: 900px) {
-  /* line 103, ../../src/style/_feedspanel.scss */
+  /* line 109, ../../src/style/_feedspanel.scss */
   #feeds-panel .feed-title {
     display: -webkit-box;
     display: -webkit-flex;
@@ -509,7 +558,7 @@ header .search-box {
     font-family: "Open Sans";
     border-bottom: 1px solid #aaa;
   }
-  /* line 110, ../../src/style/_feedspanel.scss */
+  /* line 116, ../../src/style/_feedspanel.scss */
   #feeds-panel .feed-title a {
     font-size: 12px;
     margin-right: 10px;
@@ -517,7 +566,7 @@ header .search-box {
     text-decoration: underline;
     cursor: pointer;
   }
-  /* line 118, ../../src/style/_feedspanel.scss */
+  /* line 124, ../../src/style/_feedspanel.scss */
   #feeds-panel .feed-title .feed-title-text {
     line-height: 28px;
     font-weight: 600;
@@ -528,15 +577,15 @@ header .search-box {
     flex-grow: 1;
     font-size: 1.2rem;
   }
-  /* line 127, ../../src/style/_feedspanel.scss */
+  /* line 133, ../../src/style/_feedspanel.scss */
   .compact-view #feeds-panel .feed-content .rss-description-preview {
     display: inline;
   }
-  /* line 132, ../../src/style/_feedspanel.scss */
+  /* line 138, ../../src/style/_feedspanel.scss */
   .expanded-view #feeds-panel {
     padding-top: 0px;
   }
-  /* line 134, ../../src/style/_feedspanel.scss */
+  /* line 140, ../../src/style/_feedspanel.scss */
   .expanded-view #feeds-panel .feeds-wrapper .feed-content {
     padding: 2rem;
     max-width: 940px;
@@ -546,29 +595,29 @@ header .search-box {
     border: none;
     border-bottom: 1px solid #1c283a;
   }
-  /* line 143, ../../src/style/_feedspanel.scss */
+  /* line 149, ../../src/style/_feedspanel.scss */
   .expanded-view #feeds-panel .feeds-wrapper .feed-content .rss-item-header {
     overflow: visible;
     display: block;
   }
-  /* line 146, ../../src/style/_feedspanel.scss */
+  /* line 152, ../../src/style/_feedspanel.scss */
   .expanded-view #feeds-panel .feeds-wrapper .feed-content .rss-item-header .rss-title a {
     font-size: 1.6rem;
   }
-  /* line 155, ../../src/style/_feedspanel.scss */
+  /* line 161, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content .rss-item-header {
     white-space: nowrap;
   }
-  /* line 157, ../../src/style/_feedspanel.scss */
+  /* line 163, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content .rss-item-header .rss-title a {
     margin-right: 5px;
     color: #1C283A;
   }
-  /* line 164, ../../src/style/_feedspanel.scss */
+  /* line 170, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content.expanded .rss-description-preview {
     display: none;
   }
-  /* line 170, ../../src/style/_feedspanel.scss */
+  /* line 176, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper {
     margin-top: 0px;
     overflow-y: auto;
