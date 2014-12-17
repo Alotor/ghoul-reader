@@ -33,6 +33,7 @@
   min-width: 85%;
   height: 100%;
   top: 0px;
+  z-index: 2;
 
   a {
     display: block;
@@ -43,6 +44,33 @@
     border-bottom: 1px solid $ghoul-color-light;
   }
 
+  .icon-buttons {
+    display: flex;
+    flex-direction: row;
+
+    .menu-icon {
+      color: $ghoul-color-lighter;
+      padding: 1.4rem;
+      margin: 2px auto;
+      border: 1px solid $ghoul-color-normal;
+    }
+
+    .add-group {
+        @include icon("\e06b");
+    }
+    .add-feed {
+        @include icon("\e0b8");
+    }
+    .import-feeds {
+        @include icon("\e03d");
+    }
+    .export-feeds {
+        @include icon("\e03c");
+    }
+    .refresh {
+        @include icon("\e0b3");
+    }
+  }
 
   .menu-item {
     border-bottom: 1px solid $ghoul-color-light;
@@ -98,7 +126,13 @@
     position: relative;
     height: auto;
     font-size: 13px;
+    z-index: 0;
 
+    .icon-buttons {
+      .menu-icon {
+        padding: 10px;
+      }
+    }
     .search-box {
       display: none;
     }

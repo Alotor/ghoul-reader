@@ -4,6 +4,17 @@
             [ghoul.components.common :as common]
             [ghoul.state :as state]))
 
+(defn feed-util-buttons [data owner]
+  (reify
+    om/IRender
+    (render [this]
+      (dom/div #js {:className "icon-buttons"}
+               (dom/a #js {:className "menu-icon add-group"} "Add Group")
+               (dom/a #js {:className "menu-icon add-feed"} "Add Feed")
+               (dom/a #js {:className "menu-icon import-feeds"} "Import")
+               (dom/a #js {:className "menu-icon export-feeds"} "Export")
+               (dom/a #js {:className "menu-icon refresh"} "Refresh")))))
+
 (defn feed-subscription [data owner]
   (reify
     om/IRender
@@ -41,6 +52,7 @@
     om/IRender
     (render [this]
       (dom/section #js {:id "sidebar"}
+                   (om/build feed-util-buttons data)
                    (om/build common/search-box data)
                    (dom/a #js {:className "menu-item all"} "All Items")
                    (dom/a #js {:className "menu-item favorite"} "Favorites")

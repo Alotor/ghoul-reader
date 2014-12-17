@@ -1,7 +1,10 @@
 #app-root
-  .app-container
-    include ./header.jade
-
-    .content
-      include ./menu.jade
-      include ./feeds-panel.jade
+  div
+    include ./feed-popup.jade
+    
+    .app-container
+      include ./header.jade
+  
+      .content
+        include ./menu.jade
+        include ./feeds-panel.jade

@@ -17,7 +17,6 @@
                         http/get-rss <!
                         :data :items)]
       (doseq [feed feed-data]
-        (.log js/console (str "Saving " (:uid feed)))
         (-> feed
             (assoc :feeduid feed-uid)
             (storage/add-feed)

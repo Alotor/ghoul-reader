@@ -15,7 +15,7 @@ body {
   flex-direction: column;
 }
 
-#app-root, .app-container {
+#app-root, .app-container, #app-root > div {
   height: 100%;
 }
 
@@ -28,6 +28,7 @@ body {
 @import "header";
 @import "sidebar";
 @import "feedspanel";
+@import "popup";
 
 .content {
   overflow-y: auto;

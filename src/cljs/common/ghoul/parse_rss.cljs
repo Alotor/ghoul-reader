@@ -1,10 +1,20 @@
-(ns ghoul.parse-rss)
+(ns ghoul.parse-rss
+  (:require [cljs-time.format :as format]
+            [cljs-time.coerce :as coerce]
+            [cuerdas.core :as str]))
+
+; Wed, 10 Dec 2014 13:00:00 +0100
+(defn parse-date [string-date]
+  (coerce/to-long
+   (try (format/parse (format/formatters :rfc822) (str/replace-first string-date #"GMT" "+0000"))
+        (catch js/Object e (.log js/console string-date e)))))
 
 (defn add-tag
-  ([map node tag] (add-tag map node tag tag))
-  ([map node target-keyword tag]
+  ([map node tag] (add-tag map node tag tag identity))
+  ([map node target-keyword tag] (add-tag map node target-keyword tag identity))
+  ([map node target-keyword tag transformer]
    (try
-     (assoc map (keyword target-keyword) (-> node (.getElements tag) (aget 0) .getText))
+     (assoc map (keyword target-keyword) (-> node (.getElements tag) (aget 0) .getText transformer))
      (catch js/Object e
        (do (.log js/console (str e) node)
            (assoc map (keyword tag) nil))))))
@@ -15,7 +25,7 @@
       (add-tag node "link")
       (add-tag node "description")
       (add-tag node "creator" "dc:creator")
-      (add-tag node "pubDate")
+      (add-tag node "pubDate" "pubDate" parse-date)
       (add-tag node "uid" "guid")))
 
 (defn parse-document [response]

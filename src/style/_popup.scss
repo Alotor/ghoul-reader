@@ -1,0 +1,74 @@
+#feed-popup {
+  .feed-popup-visible & {
+    display: block !important;
+  }
+
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  .popup-wrapper {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+  .gray {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: grey;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+  }
+  .popup {
+    width: 300px;
+    margin: auto;
+    padding: 50px;
+    background: white;
+    margin-top: 100px;
+    position: relative;
+
+    h2 {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-bottom: 1px solid black;
+      padding-left: 11px;
+      padding-top: 10px;
+      width: 350px;
+      text-align: left;
+      padding-bottom: 3px;
+    }
+    input {
+      position: absolute;
+      left: 10px;
+      top: 41px;
+      width: 375px;
+    }
+    .button-holder {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding-right: 11px;
+      padding-bottom: 4px;
+
+      a {
+        padding: 5px;
+        border: 1px solid black;
+        width: 80px;
+        display: block;
+        text-decoration: none;
+        color: black;
+
+        &:first-child {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

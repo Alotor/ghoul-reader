@@ -13,7 +13,7 @@
    :post "POST"
    :delete "DELETE"})
 
-(def headers #js {})
+(def headers #js {"Cache-Control" "no-cache"})
 
 (defn send [{:keys [method url data response->data]}]
   (let [c (chan)

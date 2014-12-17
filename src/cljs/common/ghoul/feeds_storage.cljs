@@ -3,7 +3,7 @@
 
 (def database (atom {}))
 (def database-name "ghoul-reader")
-(def database-version 8)
+(def database-version 10)
 (def feeds-storage-name "feeds")
 
 (defn cb-error [e] (.log js/console "error " e))
@@ -17,7 +17,8 @@
                          (.deleteObjectStore db feeds-storage-name))
                        (let [feeds-object-store (.createObjectStore db feeds-storage-name #js {:keyPath #js ["uid" "feeduid"]})]
                          (.createIndex feeds-object-store "uid" "uid" #js {:unique false})
-                         (.createIndex feeds-object-store "feeduid" "feeduid" #js {:unique false}))))
+                         (.createIndex feeds-object-store "feeduid" "feeduid" #js {:unique false})
+                         (.createIndex feeds-object-store "pubDate" "pubDate" #js {:unique false}))))
         cb-success (fn [e]
                      (swap! database assoc :db (-> e .-target .-result))
                      (put! ret-chan {:result "ok"}))]
@@ -42,7 +43,8 @@
         temp-list (atom [])
         trans (.transaction (:db @database) #js [feeds-storage-name] "readwrite")
         store (.objectStore trans feeds-storage-name)
-        cursor (.openCursor store)
+        date-index (.index store "pubDate")
+        cursor (.openCursor date-index nil "prev")
         cb-success (fn [e] (let [res (-> e .-target .-result)]
                              (if (not (nil? res))
                                (do

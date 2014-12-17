@@ -9,6 +9,7 @@
             [ghoul.feeds-storage :as storage]
             [ghoul.components.header :as header]
             [ghoul.components.sidebar :as sidebar]
+            [ghoul.components.feed-popup :as feed-popup]
             [ghoul.components.feeds-panel :as feeds-panel]
             [ghoul.components.home-panel :as home-panel]))
 
@@ -18,11 +19,13 @@
     (render [this]
       (let [class-view (name (:feeds-view data))
             class-menu (if (:show-menu data) "menu-expanded")]
-        (dom/div #js {:className (str/join " " (list "app-container" class-view class-menu))}
-                 (om/build header/root data)
-                 (dom/div #js {:className "content"}
-                          (om/build sidebar/root (:groups data))
-                          (om/build feeds-panel/root data)))))))
+        (dom/div nil
+                 (om/build feed-popup/root data)
+                 (dom/div #js {:className (str/join " " (list "app-container" class-view class-menu))}
+                          (om/build header/root data)
+                          (dom/div #js {:className "content"}
+                                   (om/build sidebar/root (:groups data))
+                                   (om/build feeds-panel/root data))))))))
 
 (om/root app-root state/global
   {:target (. js/document (getElementById "app-root"))})
@@ -49,3 +52,7 @@
 (go (let [_ (<! (storage/init-database))
           result (<! (storage/retrieve-all-feeds))]
       (swap! state/global assoc :feeds result)))
+
+;read-feed("07aed140-83c9-11e4-b4a9-0800200c9a66" "https://blog.taiga.io/feeds/rss.xml")
+;read-feed("f90eebc0-83c8-11e4-b4a9-0800200c9a66" "http://rss.slashdot.org/Slashdot/slashdot")
+;read-feed("32fe28a0-83c9-11e4-b4a9-0800200c9a66" "http://blog.cognitect.com/blog?format=rss")

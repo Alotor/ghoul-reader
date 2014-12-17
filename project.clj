@@ -11,7 +11,9 @@
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [om "0.8.0-beta3"]
                  [cuerdas "0.1.0-SNAPSHOT"]
-                 [org.clojars.franks42/cljs-uuid-utils "0.1.3"]]
+                 [org.clojars.franks42/cljs-uuid-utils "0.1.3"]
+                 [com.andrewmcveigh/cljs-time "0.2.4"]
+                 [hodgepodge "0.1.0"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]
             [lein-asciidoctor "0.1.12"]]
