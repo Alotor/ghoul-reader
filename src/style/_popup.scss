@@ -59,7 +59,7 @@
       width: 389px;
     }
     .button-holder {
-      display: flex;
+      @include flexbox;
       position: absolute;
       bottom: 0;
       right: 0;

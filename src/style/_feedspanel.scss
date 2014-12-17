@@ -1,6 +1,6 @@
 #feeds-panel {
-  display: flex;
-  flex-direction: column;
+  @include flexbox;
+  @include flex-direction(column);
   width: 100%;
 
   .feed-title {
@@ -101,7 +101,7 @@
 @media screen and (min-width: 900px) {
   #feeds-panel {
     .feed-title {
-      display: flex;
+      @include flexbox;
       padding: 5px 10px;
       color: $ghoul-color-normal;
       font-family: "Open Sans";
@@ -118,7 +118,7 @@
       .feed-title-text {
         line-height: 28px;
         font-weight: 600;
-        flex-grow: 1;
+        @include flex-grow(1);
         font-size: 1.2rem;
       }
     }

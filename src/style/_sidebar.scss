@@ -1,7 +1,7 @@
 .search-box {
   width: 100%;
   overflow: hidden;
-  border-bottom: 1px solid $ghoul-main;
+  border-bottom: 1px solid #B2F785;
 
   @include icon("\e08f");
 
@@ -45,8 +45,8 @@
   }
 
   .icon-buttons {
-    display: flex;
-    flex-direction: row;
+    @include flexbox;
+    @include flex-direction(row);
 
     .menu-icon {
       color: $ghoul-color-lighter;
@@ -106,8 +106,8 @@
 
     .feed-list {
       display: none;
-      
     }
+
     .expanded .feed-list {
       display: block;
     }
@@ -133,6 +133,7 @@
         padding: 10px;
       }
     }
+
     .search-box {
       display: none;
     }
