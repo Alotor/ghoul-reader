@@ -27,15 +27,15 @@ This project is born with this need in mind and also trying to develop a Clojure
 
 # Features & progress
 
-- [ ] Basic state rendering and actions
-- [ ] Retrieving state from IndexedDB
+- [X] Basic state rendering and actions
+- [X] Retrieving state from IndexedDB
 - [ ] Import RSS feeds from OPML file
-- [ ] RSS news reading
-- [ ] Background RSS Updates
+- [X] RSS news reading
+- [X] Background RSS Updates
 - [ ] Shortcuts
-- [ ] Local storaging with IndexDB
+- [X] Local storaging with IndexedDB
 - [ ] Offline capabilities
-- [ ] Responsive layout
+- [X] Responsive layout
 - [ ] Mobile version (Cordova)
 - [ ] Remote synchronization
 - [ ] Sharing with other users
