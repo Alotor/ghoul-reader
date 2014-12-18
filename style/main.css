@@ -239,7 +239,11 @@ header .search-box {
   color: #fff;
   border-bottom: 1px solid #506760;
 }
-/* line 47, ../../src/style/_sidebar.scss */
+/* line 46, ../../src/style/_sidebar.scss */
+#sidebar a.selected {
+  font-weight: bold;
+}
+/* line 51, ../../src/style/_sidebar.scss */
 #sidebar .icon-buttons {
   display: -webkit-box;
   display: -webkit-flex;
@@ -253,14 +257,14 @@ header .search-box {
   -ms-flex-direction: row;
   flex-direction: row;
 }
-/* line 51, ../../src/style/_sidebar.scss */
+/* line 55, ../../src/style/_sidebar.scss */
 #sidebar .icon-buttons .menu-icon {
   color: #8c9b96;
   padding: 1.4rem;
   margin: 2px auto;
   border: 1px solid #3b5950;
 }
-/* line 58, ../../src/style/_sidebar.scss */
+/* line 62, ../../src/style/_sidebar.scss */
 #sidebar .icon-buttons .add-group {
   font-size: 0px;
 }
@@ -270,7 +274,7 @@ header .search-box {
   content: "\e06b";
   font-size: 20px;
 }
-/* line 61, ../../src/style/_sidebar.scss */
+/* line 65, ../../src/style/_sidebar.scss */
 #sidebar .icon-buttons .add-feed {
   font-size: 0px;
 }
@@ -280,7 +284,7 @@ header .search-box {
   content: "\e0b8";
   font-size: 20px;
 }
-/* line 64, ../../src/style/_sidebar.scss */
+/* line 68, ../../src/style/_sidebar.scss */
 #sidebar .icon-buttons .import-feeds {
   font-size: 0px;
 }
@@ -290,7 +294,7 @@ header .search-box {
   content: "\e03d";
   font-size: 20px;
 }
-/* line 67, ../../src/style/_sidebar.scss */
+/* line 71, ../../src/style/_sidebar.scss */
 #sidebar .icon-buttons .export-feeds {
   font-size: 0px;
 }
@@ -300,7 +304,7 @@ header .search-box {
   content: "\e03c";
   font-size: 20px;
 }
-/* line 70, ../../src/style/_sidebar.scss */
+/* line 74, ../../src/style/_sidebar.scss */
 #sidebar .icon-buttons .refresh {
   font-size: 0px;
 }
@@ -310,66 +314,87 @@ header .search-box {
   content: "\e0b3";
   font-size: 20px;
 }
-/* line 75, ../../src/style/_sidebar.scss */
+/* line 79, ../../src/style/_sidebar.scss */
 #sidebar .menu-item {
   border-bottom: 1px solid #506760;
 }
-/* line 80, ../../src/style/_sidebar.scss */
-#sidebar #feeds .folder > h4 {
-  padding: 0.75em;
+/* line 81, ../../src/style/_sidebar.scss */
+#sidebar .menu-item.selected {
+  font-weight: bold;
+}
+/* line 87, ../../src/style/_sidebar.scss */
+#sidebar #feeds .group-title {
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #506760;
   background: #1c283a;
   color: white;
   position: relative;
 }
-/* line 86, ../../src/style/_sidebar.scss */
-#sidebar #feeds .folder > h4 .plus-button {
+/* line 96, ../../src/style/_sidebar.scss */
+#sidebar #feeds .group-title.selected {
+  font-weight: bold;
+}
+/* line 99, ../../src/style/_sidebar.scss */
+#sidebar #feeds .group-title .group-select {
+  border-bottom: none;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+/* line 106, ../../src/style/_sidebar.scss */
+#sidebar #feeds .group-title .plus-button {
   font-size: 0px;
 }
 /* line 24, ../../src/style/_base.scss */
-#sidebar #feeds .folder > h4 .plus-button:before {
+#sidebar #feeds .group-title .plus-button:before {
   font-family: "Icons";
   content: "\e0aa";
   font-size: 20px;
 }
-/* line 90, ../../src/style/_sidebar.scss */
-#sidebar #feeds .folder > h4 .minus-button {
+/* line 110, ../../src/style/_sidebar.scss */
+#sidebar #feeds .group-title .minus-button {
   font-size: 0px;
 }
 /* line 24, ../../src/style/_base.scss */
-#sidebar #feeds .folder > h4 .minus-button:before {
+#sidebar #feeds .group-title .minus-button:before {
   font-family: "Icons";
   content: "\e09d";
   font-size: 20px;
 }
-/* line 94, ../../src/style/_sidebar.scss */
-#sidebar #feeds .folder > h4 .plus-button, #sidebar #feeds .folder > h4 .minus-button {
-  float: right;
-  padding: 15px;
-  position: absolute;
-  top: 0;
-  right: 0;
+/* line 114, ../../src/style/_sidebar.scss */
+#sidebar #feeds .group-title .plus-button, #sidebar #feeds .group-title .minus-button {
+  padding: 25px;
   border-bottom: none;
 }
-/* line 96, ../../src/style/_sidebar.scss */
-#sidebar #feeds .folder > h4 .plus-button:before, #sidebar #feeds .folder > h4 .minus-button:before {
+/* line 115, ../../src/style/_sidebar.scss */
+#sidebar #feeds .group-title .plus-button:before, #sidebar #feeds .group-title .minus-button:before {
   font-size: 10px;
 }
-/* line 107, ../../src/style/_sidebar.scss */
+/* line 123, ../../src/style/_sidebar.scss */
 #sidebar #feeds .feed-list {
   display: none;
 }
-/* line 111, ../../src/style/_sidebar.scss */
+/* line 127, ../../src/style/_sidebar.scss */
 #sidebar #feeds .expanded .feed-list {
   display: block;
 }
-/* line 116, ../../src/style/_sidebar.scss */
+/* line 132, ../../src/style/_sidebar.scss */
 .menu-expanded #sidebar {
   display: block;
-  z-index: 9999;
+  z-index: 2;
 }
 
 @media screen and (min-width: 900px) {
-  /* line 123, ../../src/style/_sidebar.scss */
+  /* line 139, ../../src/style/_sidebar.scss */
   #sidebar {
     display: block;
     min-width: 220px;
@@ -378,13 +403,25 @@ header .search-box {
     font-size: 13px;
     z-index: 0;
   }
-  /* line 132, ../../src/style/_sidebar.scss */
+  /* line 148, ../../src/style/_sidebar.scss */
   #sidebar .icon-buttons .menu-icon {
     padding: 10px;
   }
-  /* line 137, ../../src/style/_sidebar.scss */
+  /* line 153, ../../src/style/_sidebar.scss */
   #sidebar .search-box {
     display: none;
+  }
+  /* line 156, ../../src/style/_sidebar.scss */
+  .menu-expanded #sidebar {
+    z-index: 0;
+  }
+  /* line 161, ../../src/style/_sidebar.scss */
+  #sidebar #feeds .group-title .group-select {
+    padding-top: 13px;
+  }
+  /* line 164, ../../src/style/_sidebar.scss */
+  #sidebar #feeds .group-title .plus-button, #sidebar #feeds .group-title .minus-button {
+    padding: 15px;
   }
 }
 /* line 1, ../../src/style/_feedspanel.scss */
@@ -603,21 +640,23 @@ header .search-box {
   /* line 152, ../../src/style/_feedspanel.scss */
   .expanded-view #feeds-panel .feeds-wrapper .feed-content .rss-item-header .rss-title a {
     font-size: 1.6rem;
+    white-space: normal;
+    line-height: 30px;
   }
-  /* line 161, ../../src/style/_feedspanel.scss */
+  /* line 163, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content .rss-item-header {
     white-space: nowrap;
   }
-  /* line 163, ../../src/style/_feedspanel.scss */
+  /* line 165, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content .rss-item-header .rss-title a {
     margin-right: 5px;
     color: #1C283A;
   }
-  /* line 170, ../../src/style/_feedspanel.scss */
+  /* line 172, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper .feed-content.expanded .rss-description-preview {
     display: none;
   }
-  /* line 176, ../../src/style/_feedspanel.scss */
+  /* line 178, ../../src/style/_feedspanel.scss */
   #feeds-panel .feeds-wrapper {
     margin-top: 0px;
     overflow-y: auto;

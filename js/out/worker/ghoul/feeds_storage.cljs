@@ -38,7 +38,7 @@
     (-> trans .-onerror (set! cb-error))
     ret-chan))
 
-(defn retrieve-all-feeds []
+(defn retrieve-all-feeds [&{:keys [feeduid-list]}]
   (let [ret-chan (chan)
         temp-list (atom [])
         trans (.transaction (:db @database) #js [feeds-storage-name] "readwrite")
@@ -48,10 +48,17 @@
         cb-success (fn [e] (let [res (-> e .-target .-result)]
                              (if (not (nil? res))
                                (do
-                                 (swap! temp-list conj (-> res .-value (js->clj :keywordize-keys true)))
+                                 (if (nil? feeduid-list)
+                                   (swap! temp-list conj (-> res .-value (js->clj :keywordize-keys true)))
+                                   (let [feeduid (-> res .-value (aget "feeduid"))]
+                                     (if (some #(= feeduid %) feeduid-list)
+                                       (swap! temp-list conj (-> res .-value (js->clj :keywordize-keys true))))))
                                  (.continue res))
-                               (do
-                                 (put! ret-chan @temp-list)))))]
+                               (put! ret-chan @temp-list))))]
     (-> cursor .-onsuccess (set! cb-success))
     (-> cursor .-onerror (set! cb-error))
     ret-chan))
+
+(defn retrieve-feeds-uids [uid-list]
+  (retrieve-all-feeds :feeduid-list uid-list))
+

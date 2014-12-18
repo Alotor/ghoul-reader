@@ -3,7 +3,8 @@
   (:require [cljs.core.async :as async :refer [<!]]
             [cljs-uuid-utils :as uuid]
             [ghoul.http :as http]
-            [ghoul.feeds-storage :as storage]))
+            [ghoul.feeds-storage :as storage]
+            [hodgepodge.core :as hp]))
 
 ;(defn ^:export hello-world[] (js/alert "HOLA")) ; invoke through ghoul.state.hello_world() in JS
 (declare feed-store-temp)
@@ -74,17 +75,39 @@
     (map :uid (:subscriptions group-data))))
 
 (defn retrieve-feeds [uid]
-  (let [group (get-group-data uid)
-        subscriptions-list (if (nil? group) [uid] (get-group-subscriptions uid))]
-    ;(flatten (map #(if ((set subscriptions-list) (first %)) (second %) '()) feed-store-temp))
-    []
-    ))
+  (go
+    (swap! global assoc :feeds [])
+    (let [group (get-group-data uid)
+          subscriptions-list (if (nil? group) [uid] (get-group-subscriptions uid))
+          selected-feeds (<! (storage/retrieve-feeds-uids subscriptions-list))]
+      (swap! global assoc :feeds selected-feeds))))
 
+(defn ^:export select-feed [uid]
+  (swap! global assoc :selected uid)
+  (retrieve-feeds uid))
 
-(defn ^:export select-feed[uid]
-  (swap! global assoc
-         :selected uid
-         :feeds (retrieve-feeds uid)))
+(defn load-all-items []
+  (go (let [_ (<! (storage/init-database))
+            result (<! (storage/retrieve-all-feeds))]
+        (swap! global assoc :feeds result))))
+
+(defn select-all-items []
+  (swap! global assoc :selected :all-items)
+  (load-all-items))
+
+(defn load-favorites-items []
+  (swap! global assoc :feeds []))
+
+(defn select-favorites-items []
+  (swap! global assoc :selected :favorite-items)
+  (load-favorites-items))
+
+(defn load-shared-items []
+  (swap! global assoc :feeds []))
+
+(defn select-shared-items []
+  (swap! global assoc :selected :shared-items)
+  (load-shared-items))
 
 (defn toggle-compact-view []
   (swap! global assoc :feeds-view :compact-view))
@@ -105,6 +128,7 @@
                           (assoc :expanded true)
                           (assoc :uid (uuid/uuid-string (uuid/make-random-uuid)))
                           (assoc :subscriptions []))]
+    (swap! global assoc :general-group-uid (:uid general-group))
     (swap! global update-in [:groups] #(conj % general-group))))
 
 (defn add-rss-subscription [feed-url]
@@ -123,9 +147,38 @@
                            (assoc :favicon "/images/favicon.png")
                            (assoc :pending 0))]
       (doseq [feed (:items feed-data)]
-        ;(-> feed
-            ;(assoc :feeduid (:uid subscription))
-            ;(storage/add-feed)
-            ;<!)
+        (-> feed
+            (assoc :feeduid (:uid subscription))
+            (storage/add-feed)
+            <!)
         (swap! global update-in [:feeds] #(conj % feed)))
       (swap! global update-in [:groups group-idx :subscriptions] #(conj % subscription)))))
+
+(defn ^:export store-state [state]
+  (assoc! hp/local-storage :state (dissoc state :feeds)))
+
+(defn ^:export restore-state [state-atom]
+  (->> (:state hp/local-storage) (reset! state-atom)))
+
+(defn load-selected-feeds [item]
+  (.log js/console "Loading" item)
+  (cond
+   (= item :all-items) (load-all-items)
+   (= item :shared-items) (load-shared-items)
+   (= item :favorite-items) (load-favorites-items)
+   :else (retrieve-feeds item)))
+
+(defn selected? [item]
+  (= item (:selected @global)))
+
+(defn initialize-state []
+  (let [old-state (:state hp/local-storage)]
+    (if (not (nil? old-state))
+      (do
+        (restore-state global)
+        (load-selected-feeds (:selected @global))))
+    (add-watch global
+               nil
+               (fn [context key ref old-value new-value]
+                 (store-state @global)))))
+

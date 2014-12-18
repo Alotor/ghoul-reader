@@ -18,35 +18,40 @@
 
 (defn feed-subscription [data owner]
   (reify
-    om/IRender
-    (render [this]
+    om/IRenderState
+    (render-state [this state]
       (dom/li nil
-              (dom/a #js {:onClick (fn [e] (state/select-feed (:uid data)))}
+              (dom/a #js {:className (if (state/selected? (:uid data)) "selected" "")
+                          :onClick (fn [e] (state/select-feed (:uid data)))}
                      (dom/span nil (:title data))
                      (dom/span nil (str "(" (:pending data) ")")))))))
 
 (defn feed-group [data owner]
   (reify
-    om/IRender
-    (render [this]
+    om/IRenderState
+    (render-state [this state]
       (let [group-class (if (:expanded data) "folder expanded" "folder")]
         (dom/li nil
                 (dom/div #js {:className group-class}
-                         (dom/h4 nil
-                                 (dom/span nil (:name data))
-                                 (dom/span #js {:className "count"} (str "(" (:count data) ")"))
-                                 (if (:expanded data)
-                                   (dom/a #js {:className "minus-button"} "Contraer")
-                                   (dom/a #js {:className "plus-button"} "Expandir")))
+                         (dom/div #js {:className (str "group-title " (if (state/selected? (:uid data)) "selected" ""))}
+                                  (dom/a #js {:className "group-select"
+                                              :onClick (fn [e] (state/select-feed (:uid data)))}
+                                         (dom/span nil (:name data))
+                                         (dom/span #js {:className "count"} (str "(" (:count data) ")")))
+                                  (if (:expanded data)
+                                    (dom/a #js {:className "minus-button"
+                                                :onClick #(om/update! data [:expanded] false)} "Contraer")
+                                    (dom/a #js {:className "plus-button"
+                                                :onClick #(om/update! data [:expanded] true)} "Expandir")))
                          (apply dom/ul #js {:className "feed-list"}
-                                (om/build-all feed-subscription (:subscriptions data)))))))))
+                                (om/build-all feed-subscription (:subscriptions data) {:state state}))))))))
 (defn feeds-list [data owner]
   (reify
-    om/IRender
-    (render [this]
+    om/IRenderState
+    (render-state [this state]
       (dom/div #js {:id "feeds"}
                (apply dom/ul nil
-                       (om/build-all feed-group data))))))
+                       (om/build-all feed-group data {:state state}))))))
 
 (defn root [data owner]
   (reify
@@ -55,7 +60,10 @@
       (dom/section #js {:id "sidebar"}
                    (om/build feed-util-buttons data)
                    (om/build common/search-box data)
-                   (dom/a #js {:className "menu-item all"} "All Items")
-                   (dom/a #js {:className "menu-item favorite"} "Favorites")
-                   (dom/a #js {:className "menu-item shared"} "Shared")
-                   (om/build feeds-list data)))))
+                   (dom/a #js {:className (str "menu-item all " (if (state/selected? :all-items) "selected" ""))
+                               :onClick #(state/select-all-items)} "All Items")
+                   (dom/a #js {:className (str "menu-item favorite " (if (state/selected? :favorite-items) "selected" ""))
+                               :onClick #(state/select-favorites-items)} "Favorites")
+                   (dom/a #js {:className (str "menu-item shared " (if (state/selected? :shared-items) "selected" ""))
+                               :onClick #(state/select-shared-items)} "Shared")
+                   (om/build feeds-list (:groups data) {:state {:selected-uid (:selected data)}})))))

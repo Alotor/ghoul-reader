@@ -60,28 +60,65 @@ trans.onerror = ghoul.feeds_storage.cb_error;
 
 return ret_chan;
 });
-ghoul.feeds_storage.retrieve_all_feeds = (function retrieve_all_feeds(){
+/**
+* @param {...*} var_args
+*/
+ghoul.feeds_storage.retrieve_all_feeds = (function() { 
+var retrieve_all_feeds__delegate = function (p__24770){
+var map__24772 = p__24770;
+var map__24772__$1 = ((cljs.core.seq_QMARK_.call(null,map__24772))?cljs.core.apply.call(null,cljs.core.hash_map,map__24772):map__24772);
+var feeduid_list = cljs.core.get.call(null,map__24772__$1,new cljs.core.Keyword(null,"feeduid-list","feeduid-list",1640476731));
 var ret_chan = cljs.core.async.chan.call(null);
 var temp_list = cljs.core.atom.call(null,cljs.core.PersistentVector.EMPTY);
 var trans = new cljs.core.Keyword(null,"db","db",993250759).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,ghoul.feeds_storage.database)).transaction([ghoul.feeds_storage.feeds_storage_name],"readwrite");
 var store = trans.objectStore(ghoul.feeds_storage.feeds_storage_name);
 var date_index = store.index("pubDate");
 var cursor = date_index.openCursor(null,"prev");
-var cb_success = ((function (ret_chan,temp_list,trans,store,date_index,cursor){
+var cb_success = ((function (ret_chan,temp_list,trans,store,date_index,cursor,map__24772,map__24772__$1,feeduid_list){
 return (function (e){
 var res = e.target.result;
 if(!((res == null))){
+if((feeduid_list == null)){
 cljs.core.swap_BANG_.call(null,temp_list,cljs.core.conj,cljs.core.js__GT_clj.call(null,res.value,new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true));
+} else {
+var feeduid_24773 = (res.value["feeduid"]);
+if(cljs.core.truth_(cljs.core.some.call(null,((function (feeduid_24773,res,ret_chan,temp_list,trans,store,date_index,cursor,map__24772,map__24772__$1,feeduid_list){
+return (function (p1__24769_SHARP_){
+return cljs.core._EQ_.call(null,feeduid_24773,p1__24769_SHARP_);
+});})(feeduid_24773,res,ret_chan,temp_list,trans,store,date_index,cursor,map__24772,map__24772__$1,feeduid_list))
+,feeduid_list))){
+cljs.core.swap_BANG_.call(null,temp_list,cljs.core.conj,cljs.core.js__GT_clj.call(null,res.value,new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true));
+} else {
+}
+}
 
 return res.continue();
 } else {
 return cljs.core.async.put_BANG_.call(null,ret_chan,cljs.core.deref.call(null,temp_list));
 }
-});})(ret_chan,temp_list,trans,store,date_index,cursor))
+});})(ret_chan,temp_list,trans,store,date_index,cursor,map__24772,map__24772__$1,feeduid_list))
 ;
 cursor.onsuccess = cb_success;
 
 cursor.onerror = ghoul.feeds_storage.cb_error;
 
 return ret_chan;
+};
+var retrieve_all_feeds = function (var_args){
+var p__24770 = null;
+if (arguments.length > 0) {
+  p__24770 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 0),0);
+} 
+return retrieve_all_feeds__delegate.call(this,p__24770);};
+retrieve_all_feeds.cljs$lang$maxFixedArity = 0;
+retrieve_all_feeds.cljs$lang$applyTo = (function (arglist__24774){
+var p__24770 = cljs.core.seq(arglist__24774);
+return retrieve_all_feeds__delegate(p__24770);
+});
+retrieve_all_feeds.cljs$core$IFn$_invoke$arity$variadic = retrieve_all_feeds__delegate;
+return retrieve_all_feeds;
+})()
+;
+ghoul.feeds_storage.retrieve_feeds_uids = (function retrieve_feeds_uids(uid_list){
+return ghoul.feeds_storage.retrieve_all_feeds.call(null,new cljs.core.Keyword(null,"feeduid-list","feeduid-list",1640476731),uid_list);
 });

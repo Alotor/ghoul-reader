@@ -52,9 +52,14 @@
         (dom/section #js {:id "feeds-panel"}
                      (dom/div #js {:className "feed-title"}
                               (dom/div #js {:className "feed-title-text"}
-                                       (if (:selected data)
-                                         (str (state/get-title (:selected data)) " - " (:selected data))
-                                         "All items"))
+                                       (cond
+                                        (and (:selected data)
+                                             (not (keyword? (:selected data))))
+                                        (state/get-title (:selected data))
+                                        (= (:selected data) :all-items) "All items"
+                                        (= (:selected data) :shared-items) "Shared items"
+                                        (= (:selected data) :favorite-items) "Favorite items"
+                                        :else "All items"))
                               (dom/a #js {:className "compact-button"
                                           :onClick (fn [e] (state/toggle-compact-view))} "Compact View")
                               (dom/a #js {:className "expand-button"
