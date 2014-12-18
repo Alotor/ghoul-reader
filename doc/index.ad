@@ -1,5 +1,8 @@
 = Ghoul Reader
 
+== Style palette
+http://www.colourlovers.com/palette/3589222/Weeping
+
 == State definition
 
 [source, clojurescript]

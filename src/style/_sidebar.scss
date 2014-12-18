@@ -120,6 +120,35 @@
       }
     }
 
+    .count {
+      margin-left: 8px;
+      font-family: "Open Sans";
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #8C9B96;
+      color: #1C283A;
+    }
+
+    .group-select > .count {
+        border: 1px solid white;
+        background: none;
+        color: white;
+
+        padding: 0px 7px;
+        margin-left: 15px;
+    }
+
+    .subscription {
+      position: relative;
+      .count {
+        position: absolute;
+        right: 10px;
+        margin-top: 1px;
+        font-weight: normal;
+      }
+    }
+
     .feed-list {
       display: none;
     }
@@ -157,12 +186,17 @@
       z-index: 0;
     }
 
-    #feeds .group-title {
-      .group-select {
-        padding-top: 13px;
+    #feeds {
+      .count {
+        font-size: 10px;
       }
-      .plus-button, .minus-button {
-        padding: 15px;
+      .group-title {
+        .group-select {
+          padding-top: 13px;
+        }
+        .plus-button, .minus-button {
+          padding: 15px;
+        }
       }
     }
   }
