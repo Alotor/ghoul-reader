@@ -50,15 +50,15 @@
                                (do
                                  (if (nil? feeduid-list)
                                    (swap! temp-list conj (-> res .-value (js->clj :keywordize-keys true)))
-                                   (if (contains? feeduid-list (-> res .-value (aget "feeduid")))
-                                     (swap! temp-list conj (-> res .-value (js->clj :keywordize-keys true)))))
+                                   (let [feeduid (-> res .-value (aget "feeduid"))]
+                                     (if (some #(= feeduid %) feeduid-list)
+                                       (swap! temp-list conj (-> res .-value (js->clj :keywordize-keys true))))))
                                  (.continue res))
-                               (do
-                                 (put! ret-chan @temp-list)))))]
+                               (put! ret-chan @temp-list))))]
     (-> cursor .-onsuccess (set! cb-success))
     (-> cursor .-onerror (set! cb-error))
     ret-chan))
 
 (defn retrieve-feeds-uids [uid-list]
-  (retrieve-all-feeds :uid-list uid-list))
+  (retrieve-all-feeds :feeduid-list uid-list))
 

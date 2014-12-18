@@ -42,6 +42,10 @@
     cursor: pointer;
     color: #fff;
     border-bottom: 1px solid $ghoul-color-light;
+
+    &.selected {
+      font-weight: bold;
+    }
   }
 
   .icon-buttons {
@@ -74,6 +78,9 @@
 
   .menu-item {
     border-bottom: 1px solid $ghoul-color-light;
+    &.selected {
+      font-weight: bold;
+    }
   }
 
   #feeds {
@@ -86,6 +93,9 @@
       color: white;
       position: relative;
 
+      &.selected {
+        font-weight: bold;
+      }
       .group-select {
         border-bottom: none;
         @include flex-grow(1);
