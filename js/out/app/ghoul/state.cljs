@@ -6,8 +6,9 @@
             [ghoul.feeds-storage :as storage]
             [hodgepodge.core :as hp]))
 
-;(defn ^:export hello-world[] (js/alert "HOLA")) ; invoke through ghoul.state.hello_world() in JS
 (declare feed-store-temp)
+(declare update-uid-count)
+
 (defn ^:export retrieve-all-feeds []
   (flatten (map second feed-store-temp)))
 
@@ -20,41 +21,20 @@
          :selected nil
          :groups []
          :general-group-uid nil
-         ;:groups [{:name "Open Source"
-         ;          :count 10
-         ;          :expanded true
-         ;          :uid "c73f26a0-83c8-11e4-b4a9-0800200c9a66"
-         ;          :subscriptions [{:title "Slashdot"
-         ;                           :uid "f90eebc0-83c8-11e4-b4a9-0800200c9a66"
-         ;                           :site-url "http://slashdot.org/"
-         ;                           :feed-url "http://rss.slashdot.org/Slashdot/slashdot"
-         ;                           :favicon "http://slashdot.org/favicon.ico"
-         ;                           :pending 20}
-         ;                          {:title "Taiga"
-         ;                           :uid "07aed140-83c9-11e4-b4a9-0800200c9a66"
-         ;                           :site-url "https://blog.taiga.io/"
-         ;                           :feed-url "https://blog.taiga.io/feeds/rss.xml"
-         ;                           :favicon "https://blog.taiga.io/theme/images/favicon.png"
-         ;                           :pending 10}
-         ;                          ]}
-         ;         {:name "Clojure"
-         ;          :count 10
-         ;          :expanded true
-         ;          :uid "2f83cef0-83c9-11e4-b4a9-0800200c9a66"
-         ;          :subscriptions [{:title "Cognitect Blog"
-         ;                           :uid "32fe28a0-83c9-11e4-b4a9-0800200c9a66"
-         ;                           :feed-url "http://blog.cognitect.com/blog?format=rss"
-         ;                           :site-url "http://blog.cognitect.com/"
-         ;                           :favicon "http://blog.cognitect.com/favicon.ico"
-         ;                           :pending 20
-         ;                           }]}]
-         :feeds []
-         }))
+         :feeds []}))
 
 
 (defn get-group-data [uid]
   (->> @global :groups
        (filter #(= (:uid %) uid))
+       first))
+
+(defn get-group-idx [uid]
+  (->> @global
+       :groups
+       (map-indexed vector)
+       (filter #(= (:uid (second %)) uid))
+       first
        first))
 
 (defn get-feed-data [uid]
@@ -63,6 +43,36 @@
       flatten
       (filter #(= (:uid %) uid))
       first))
+
+(defn group-contains-feed-uid [group feed-uid]
+  (->> group :subscriptions (some #(-> % :uid (= feed-uid)))))
+
+(defn get-feed-group-uid [feed-uid]
+  (->> @global
+       :groups
+       (filter #(group-contains-feed-uid % feed-uid))
+       first
+       :uid))
+
+(defn get-feed-idx-group [group feed-uid]
+  (->> group
+      :subscriptions
+      (map-indexed vector)
+      (filter #(= (:uid (second %)) feed-uid))
+      first
+      first))
+
+(defn ^:export group? [uid]
+  (->> @global
+      :groups
+      (some #(= (:uid %) uid))))
+
+(defn ^:export feed? [uid]
+  (->> @global
+       :groups
+       (map :subscriptions)
+       flatten
+       (some #(= (:uid %) uid))))
 
 (defn get-title [uid]
   (let [group-data (get-group-data uid)]
@@ -82,7 +92,7 @@
           selected-feeds (<! (storage/retrieve-feeds-uids subscriptions-list))]
       (swap! global assoc :feeds selected-feeds))))
 
-(defn ^:export select-feed [uid]
+(defn select-feed [uid]
   (swap! global assoc :selected uid)
   (retrieve-feeds uid))
 
@@ -121,10 +131,10 @@
 (defn toggle-feed-popup []
   (swap! global assoc :popup (if (nil? (:popup @global)) :feed nil)))
 
-(defn ^:export add-general-group []
+(defn add-general-group []
   (let [general-group (-> {}
                           (assoc :name "General")
-                          (assoc :count 0)
+                          (assoc :pending 0)
                           (assoc :expanded true)
                           (assoc :uid (uuid/uuid-string (uuid/make-random-uuid)))
                           (assoc :subscriptions []))]
@@ -135,29 +145,31 @@
   (go
     (if (empty? (:groups @global))
       (add-general-group))
-    (let [group-idx 0
+    (let [group-idx (-> @global :general-group-uid get-group-idx)
           feed-data (-> feed-url
                         http/get-rss <!
                         :data)
+          feed-num (-> feed-data :items count)
           subscription (-> {}
                            (assoc :title (:title feed-data))
                            (assoc :uid (uuid/uuid-string (uuid/make-random-uuid)))
                            (assoc :site-url (:link feed-data))
                            (assoc :feed-url feed-url)
                            (assoc :favicon "/images/favicon.png")
-                           (assoc :pending 0))]
+                           (assoc :pending feed-num))]
       (doseq [feed (:items feed-data)]
         (-> feed
             (assoc :feeduid (:uid subscription))
             (storage/add-feed)
             <!)
         (swap! global update-in [:feeds] #(conj % feed)))
-      (swap! global update-in [:groups group-idx :subscriptions] #(conj % subscription)))))
+      (swap! global update-in [:groups group-idx :subscriptions] #(conj % subscription))
+      (update-uid-count (:general-group-uid @global) #(+ feed-num %)))))
 
-(defn ^:export store-state [state]
+(defn store-state [state]
   (assoc! hp/local-storage :state (dissoc state :feeds)))
 
-(defn ^:export restore-state [state-atom]
+(defn restore-state [state-atom]
   (->> (:state hp/local-storage) (reset! state-atom)))
 
 (defn load-selected-feeds [item]
@@ -181,4 +193,33 @@
                nil
                (fn [context key ref old-value new-value]
                  (store-state @global)))))
+
+(defn get-update-path [uid]
+  (if (group? uid)
+    (-> []
+        (conj :groups)
+        (conj (get-group-idx uid)))
+    (let [group-uid (get-feed-group-uid uid)
+          group (get-group-data group-uid)
+          group-idx (get-group-idx group-uid)
+          feed-idx (get-feed-idx-group group uid)]
+      (-> []
+          (conj :groups)
+          (conj group-idx)
+          (conj :subscriptions)
+          (conj feed-idx)))))
+
+(defn set-uid-count [uid new-count]
+  (let [path (-> uid get-update-path (conj :pending))
+        _ (.log js/console (str path))]
+    (swap! global assoc-in path new-count)))
+
+(defn update-uid-count [uid update-fn]
+  (let [path (-> uid get-update-path (conj :pending))
+        _ (.log js/console (str path))]
+    (swap! global update-in path update-fn)))
+
+(defn ^:export inc-uid-count [uid]
+  (update-uid-count uid #(+ 20 %)))
+
 

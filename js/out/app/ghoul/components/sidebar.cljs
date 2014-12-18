@@ -20,11 +20,11 @@
   (reify
     om/IRenderState
     (render-state [this state]
-      (dom/li nil
+      (dom/li #js {:className "subscription"}
               (dom/a #js {:className (if (state/selected? (:uid data)) "selected" "")
                           :onClick (fn [e] (state/select-feed (:uid data)))}
                      (dom/span nil (:title data))
-                     (dom/span nil (str "(" (:pending data) ")")))))))
+                     (dom/span #js {:className "count"} (str (:pending data))))))))
 
 (defn feed-group [data owner]
   (reify
@@ -37,7 +37,7 @@
                                   (dom/a #js {:className "group-select"
                                               :onClick (fn [e] (state/select-feed (:uid data)))}
                                          (dom/span nil (:name data))
-                                         (dom/span #js {:className "count"} (str "(" (:count data) ")")))
+                                         (dom/span #js {:className "count"} (str (:pending data))))
                                   (if (:expanded data)
                                     (dom/a #js {:className "minus-button"
                                                 :onClick #(om/update! data [:expanded] false)} "Contraer")

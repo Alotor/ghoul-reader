@@ -55,7 +55,9 @@
                                        (cond
                                         (and (:selected data)
                                              (not (keyword? (:selected data))))
-                                        (state/get-title (:selected data))
+                                        (str (state/get-title (:selected data))
+                                             ;" - " (:selected data)
+                                             )
                                         (= (:selected data) :all-items) "All items"
                                         (= (:selected data) :shared-items) "Shared items"
                                         (= (:selected data) :favorite-items) "Favorite items"
