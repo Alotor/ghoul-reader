@@ -77,11 +77,21 @@
   }
 
   #feeds {
-    .folder > h4 {
-      padding: 0.75em;
+    .group-title {
+      padding: 0;
+      @include flexbox;
+      border-bottom: 1px solid #506760;
+
       background: $ghoul-color-dark;
       color: white;
       position: relative;
+
+      .group-select {
+        border-bottom: none;
+        @include flex-grow(1);
+        padding-top: 20px;
+        padding-left: 10px;
+      }
 
       .plus-button {
         @include icon("\e0aa");
@@ -92,14 +102,10 @@
       }
 
       .plus-button, .minus-button {
-        float: right;
         &:before {
           font-size: 10px;
         }
-        padding: 15px;
-        position: absolute;
-        top: 0;
-        right: 0;
+        padding: 25px;
         border-bottom: none;
       }
     }
@@ -115,7 +121,7 @@
 
   .menu-expanded & {
     display: block;
-    z-index: 9999;
+    z-index: 2;
   }
 }
 
@@ -136,6 +142,18 @@
 
     .search-box {
       display: none;
+    }
+    .menu-expanded & {
+      z-index: 0;
+    }
+
+    #feeds .group-title {
+      .group-select {
+        padding-top: 13px;
+      }
+      .plus-button, .minus-button {
+        padding: 15px;
+      }
     }
   }
 }

@@ -151,6 +151,8 @@
           display: block;
           .rss-title a {
             font-size: 1.6rem;
+            white-space: normal;
+            line-height: 30px;
           }
         }
       }

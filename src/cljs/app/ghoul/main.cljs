@@ -54,6 +54,11 @@
           result (<! (storage/retrieve-all-feeds))]
       (swap! state/global assoc :feeds result)))
 
+(defn ^:export test-retrieve []
+  (go
+    (let [result (<! (storage/retrieve-feeds-uids ["28da32e2-352b-4c54-ae87-bd4f07323ec1" "3c7a3830-921b-4335-b66c-46d068b91d45"]))]
+      (.log js/console (str result)))))
+
 ;read-feed("07aed140-83c9-11e4-b4a9-0800200c9a66" "https://blog.taiga.io/feeds/rss.xml")
 ;read-feed("f90eebc0-83c8-11e4-b4a9-0800200c9a66" "http://rss.slashdot.org/Slashdot/slashdot")
 ;read-feed("32fe28a0-83c9-11e4-b4a9-0800200c9a66" "http://blog.cognitect.com/blog?format=rss")

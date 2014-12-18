@@ -76,16 +76,13 @@
 
 (defn retrieve-feeds [uid]
   (let [group (get-group-data uid)
-        subscriptions-list (if (nil? group) [uid] (get-group-subscriptions uid))]
-    ;(flatten (map #(if ((set subscriptions-list) (first %)) (second %) '()) feed-store-temp))
-    []
-    ))
+        subscriptions-list (if (nil? group) [uid] (get-group-subscriptions uid))
+        selected-feeds (<! (storage/retrieve-feeds-uids subscriptions-list))]
+    (swap! global assoc :feeds selected-feeds)))
 
-
-(defn ^:export select-feed[uid]
-  (swap! global assoc
-         :selected uid
-         :feeds (retrieve-feeds uid)))
+(defn ^:export select-feed [uid]
+  (swap! global assoc :selected uid)
+  (retrieve-feeds uid))
 
 (defn toggle-compact-view []
   (swap! global assoc :feeds-view :compact-view))
@@ -125,10 +122,10 @@
                            (assoc :favicon "/images/favicon.png")
                            (assoc :pending 0))]
       (doseq [feed (:items feed-data)]
-        ;(-> feed
-            ;(assoc :feeduid (:uid subscription))
-            ;(storage/add-feed)
-            ;<!)
+        (-> feed
+            (assoc :feeduid (:uid subscription))
+            (storage/add-feed)
+            <!)
         (swap! global update-in [:feeds] #(conj % feed)))
       (swap! global update-in [:groups group-idx :subscriptions] #(conj % subscription)))))
 

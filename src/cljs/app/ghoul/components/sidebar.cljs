@@ -32,12 +32,15 @@
       (let [group-class (if (:expanded data) "folder expanded" "folder")]
         (dom/li nil
                 (dom/div #js {:className group-class}
-                         (dom/h4 nil
-                                 (dom/span nil (:name data))
-                                 (dom/span #js {:className "count"} (str "(" (:count data) ")"))
-                                 (if (:expanded data)
-                                   (dom/a #js {:className "minus-button"} "Contraer")
-                                   (dom/a #js {:className "plus-button"} "Expandir")))
+                         (dom/div #js {:className "group-title"}
+                                  (dom/a #js {:className "group-select"}
+                                         (dom/span nil (:name data))
+                                         (dom/span #js {:className "count"} (str "(" (:count data) ")")))
+                                  (if (:expanded data)
+                                    (dom/a #js {:className "minus-button"
+                                                :onClick #(om/update! data [:expanded] false)} "Contraer")
+                                    (dom/a #js {:className "plus-button"
+                                                :onClick #(om/update! data [:expanded] true)} "Expandir")))
                          (apply dom/ul #js {:className "feed-list"}
                                 (om/build-all feed-subscription (:subscriptions data)))))))))
 (defn feeds-list [data owner]
