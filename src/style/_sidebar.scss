@@ -128,6 +128,7 @@
       font-size: 16px;
       background-color: #8C9B96;
       color: #1C283A;
+      top: 10px;
     }
 
     .group-select > .count {
@@ -172,6 +173,10 @@
     height: auto;
     font-size: 13px;
     z-index: 0;
+
+    a {
+      padding-right: 35px;
+    }
 
     .icon-buttons {
       .menu-icon {

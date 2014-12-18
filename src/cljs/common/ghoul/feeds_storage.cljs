@@ -62,3 +62,16 @@
 (defn retrieve-feeds-uids [uid-list]
   (retrieve-all-feeds :feeduid-list uid-list))
 
+(defn get-item [feed-uid uid]
+  (let [ret-chan (chan)
+        trans (.transaction (:db @database) #js [feeds-storage-name] "readwrite")
+        store (.objectStore trans feeds-storage-name)
+        key-range (.only js/IDBKeyRange #js [uid feed-uid])
+        cursor (.openCursor store key-range)
+        cb-success (fn [e] (let [res (-> e .-target .-result)]
+                             (if (not (nil? res))
+                               (put! ret-chan (-> res .-value (js->clj :keywordize-keys true)))
+                               (put! ret-chan :not-found))))]
+    (-> cursor .-onsuccess (set! cb-success))
+    (-> cursor .-onerror (set! cb-error))
+    ret-chan))
