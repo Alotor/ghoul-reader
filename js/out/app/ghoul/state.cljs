@@ -209,17 +209,26 @@
           (conj :subscriptions)
           (conj feed-idx)))))
 
-(defn set-uid-count [uid new-count]
-  (let [path (-> uid get-update-path (conj :pending))
-        _ (.log js/console (str path))]
+(defn ^:export set-uid-count [uid new-count]
+  (let [path (-> uid get-update-path (conj :pending))]
     (swap! global assoc-in path new-count)))
 
 (defn update-uid-count [uid update-fn]
-  (let [path (-> uid get-update-path (conj :pending))
-        _ (.log js/console (str path))]
+  (let [path (-> uid get-update-path (conj :pending))]
     (swap! global update-in path update-fn)))
 
-(defn ^:export inc-uid-count [uid]
-  (update-uid-count uid #(+ 20 %)))
+(defn list-uid-url []
+  (->> @global :groups
+      (map :subscriptions)
+      flatten
+      (map #(-> [] (conj (:uid %)) (conj (:feed-url %))))))
 
-
+(defn include-feed [feed-data]
+  (let [feed-uid (:feeduid feed-data)
+        group-uid (get-feed-group-uid feed-uid)]
+    (update-uid-count feed-uid inc)
+    (update-uid-count group-uid inc)
+    (if (or (= (:selected @global) feed-uid)
+            (= (:selected @global) group-uid)
+            (= (:selected @global) :all-items))
+      (swap! global update-in [:feeds] #(conj % feed-data)))))

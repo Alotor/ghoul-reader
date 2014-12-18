@@ -388,8 +388,9 @@ header .search-box {
   font-size: 16px;
   background-color: #8C9B96;
   color: #1C283A;
+  top: 10px;
 }
-/* line 133, ../../src/style/_sidebar.scss */
+/* line 134, ../../src/style/_sidebar.scss */
 #sidebar #feeds .group-select > .count {
   border: 1px solid white;
   background: none;
@@ -397,33 +398,33 @@ header .search-box {
   padding: 0px 7px;
   margin-left: 15px;
 }
-/* line 142, ../../src/style/_sidebar.scss */
+/* line 143, ../../src/style/_sidebar.scss */
 #sidebar #feeds .subscription {
   position: relative;
 }
-/* line 144, ../../src/style/_sidebar.scss */
+/* line 145, ../../src/style/_sidebar.scss */
 #sidebar #feeds .subscription .count {
   position: absolute;
   right: 10px;
   margin-top: 1px;
   font-weight: normal;
 }
-/* line 152, ../../src/style/_sidebar.scss */
+/* line 153, ../../src/style/_sidebar.scss */
 #sidebar #feeds .feed-list {
   display: none;
 }
-/* line 156, ../../src/style/_sidebar.scss */
+/* line 157, ../../src/style/_sidebar.scss */
 #sidebar #feeds .expanded .feed-list {
   display: block;
 }
-/* line 161, ../../src/style/_sidebar.scss */
+/* line 162, ../../src/style/_sidebar.scss */
 .menu-expanded #sidebar {
   display: block;
   z-index: 2;
 }
 
 @media screen and (min-width: 900px) {
-  /* line 168, ../../src/style/_sidebar.scss */
+  /* line 169, ../../src/style/_sidebar.scss */
   #sidebar {
     display: block;
     min-width: 220px;
@@ -433,26 +434,30 @@ header .search-box {
     z-index: 0;
   }
   /* line 177, ../../src/style/_sidebar.scss */
+  #sidebar a {
+    padding-right: 35px;
+  }
+  /* line 182, ../../src/style/_sidebar.scss */
   #sidebar .icon-buttons .menu-icon {
     padding: 10px;
   }
-  /* line 182, ../../src/style/_sidebar.scss */
+  /* line 187, ../../src/style/_sidebar.scss */
   #sidebar .search-box {
     display: none;
   }
-  /* line 185, ../../src/style/_sidebar.scss */
+  /* line 190, ../../src/style/_sidebar.scss */
   .menu-expanded #sidebar {
     z-index: 0;
   }
-  /* line 190, ../../src/style/_sidebar.scss */
+  /* line 195, ../../src/style/_sidebar.scss */
   #sidebar #feeds .count {
     font-size: 10px;
   }
-  /* line 194, ../../src/style/_sidebar.scss */
+  /* line 199, ../../src/style/_sidebar.scss */
   #sidebar #feeds .group-title .group-select {
     padding-top: 13px;
   }
-  /* line 197, ../../src/style/_sidebar.scss */
+  /* line 202, ../../src/style/_sidebar.scss */
   #sidebar #feeds .group-title .plus-button, #sidebar #feeds .group-title .minus-button {
     padding: 15px;
   }
