@@ -7,6 +7,8 @@ Ghoul Reader
 
 **D&D Monsters Manual v3.5, Ghoul description**
 
+You can try it now here: http://piweek.github.io/ghoul-reader
+
 ## Rationale
 
 Google Reader shutted down on July 1st 2013. Since then I've been unable to find another RSS reader solution that had the same feeling while still being simple enough and provide a fluid interface.
