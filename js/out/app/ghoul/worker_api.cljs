@@ -3,7 +3,7 @@
   (:require [ghoul.state :as state]
             [cljs.core.async :as async :refer [<! timeout]]))
 
-(def refresh-time-milis (* 5 60 1000))
+(def refresh-time-milis (atom (* 5 60 1000)))
 (def update-feed-worker (atom nil))
 
 (defn feed-update [event]
@@ -11,7 +11,7 @@
     (if (= (:result result) "ok")
       (state/include-feed (:data result)))))
 
-(defn ^:export read-feed [uid url]
+(defn read-feed [uid url]
   (.log js/console (str "Updating: " uid ", " url))
   (set! (.-onmessage @update-feed-worker) feed-update)
   (.postMessage @update-feed-worker #js {:action "update" :uid uid :url url}))
@@ -24,9 +24,13 @@
             url (second cur-uid-url)]
         (read-feed uid url)))))
 
-(defn start-feed-worker []
+(defn ^:export start-feed-worker []
   (reset! update-feed-worker (js/Worker. "js/worker.js"))
   (go-loop []
     (update-all-feeds)
-    (<! (timeout refresh-time-milis))
+    (<! (timeout @refresh-time-milis))
+    (.log js/console "Updating feeds")
     (recur)))
+
+(defn ^:export refresh-timer [new-timer]
+  (reset! refresh-time-milis new-timer))
