@@ -75,3 +75,9 @@
     (-> cursor .-onsuccess (set! cb-success))
     (-> cursor .-onerror (set! cb-error))
     ret-chan))
+
+(defn clear []
+  (let [ret-chan (chan)
+        trans (.transaction (:db @database) #js [feeds-storage-name] "readwrite")
+        store (.objectStore trans feeds-storage-name)]
+    (.clear store)))

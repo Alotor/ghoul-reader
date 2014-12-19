@@ -1,8 +1,4 @@
-#feed-popup {
-  .feed-popup-visible & {
-    display: block !important;
-  }
-
+.input-popup {
   display: none;
   position: absolute;
   z-index: 100;
@@ -87,5 +83,19 @@
         }
       }
     }
+
+    textarea {
+      margin-left: -100px;
+      width: 680px;
+      height: 425px;
+    }
   }
+}
+
+.feed-popup-visible #feed-popup {
+  display: block !important;
+}
+
+.state-popup-visible #state-popup {
+  display: block !important;
 }

@@ -131,6 +131,9 @@
 (defn toggle-feed-popup []
   (swap! global assoc :popup (if (nil? (:popup @global)) :feed nil)))
 
+(defn toggle-state-popup []
+  (swap! global assoc :popup (if (nil? (:popup @global)) :state nil)))
+
 (defn add-general-group []
   (let [general-group (-> {}
                           (assoc :name "General")
