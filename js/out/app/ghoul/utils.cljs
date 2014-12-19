@@ -8,7 +8,9 @@
       (str/replace "&quot;" "\"")
       (str/replace "&apos;" "'")
       (str/replace "&amp;" "&")
-      (str/replace "&#34;" "\"")))
+      (str/replace "&#34;" "\"")
+      (str/replace "&#8220;" "“")
+      (str/replace "&#8221;" "”")))
 
 (defn remove-unallowed-tags [string]
   (-> string

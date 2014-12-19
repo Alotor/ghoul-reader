@@ -4,7 +4,7 @@ goog.require('cljs.core');
 goog.require('cuerdas.core');
 goog.require('cuerdas.core');
 ghoul.utils.restore_tags = (function restore_tags(string){
-return cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,string,"&gt;",">"),"&lt;","<"),"&quot;","\""),"&apos;","'"),"&amp;","&"),"&#34;","\"");
+return cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,cuerdas.core.replace.call(null,string,"&gt;",">"),"&lt;","<"),"&quot;","\""),"&apos;","'"),"&amp;","&"),"&#34;","\""),"&#8220;","\u201C"),"&#8221;","\u201D");
 });
 ghoul.utils.remove_unallowed_tags = (function remove_unallowed_tags(string){
 return cuerdas.core.strip_tags.call(null,cuerdas.core.strip_tags.call(null,string,"script"),"link");

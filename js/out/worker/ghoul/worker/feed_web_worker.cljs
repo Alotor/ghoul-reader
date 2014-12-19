@@ -5,10 +5,8 @@
             [ghoul.feeds-storage :as storage]
             ))
 
-(def refresh-time-milis (* 5 60 1000))
-
 (defn update-feed [feed-uid feed-url]
-  (go-loop []
+  (go
     (.log js/console (str "Refreshing: " feed-url))
     (let [feed-data (-> feed-url
                         http/get-rss <!
@@ -19,9 +17,7 @@
             (do
               (let [to-store (-> feed (assoc :feeduid feed-uid))]
                 (-> to-store storage/add-feed <!)
-                (js/postMessage (clj->js {:action "update" :result "ok" :data to-store}))))))))
-    (<! (timeout refresh-time-milis))
-    (recur)))
+                (js/postMessage (clj->js {:action "update" :result "ok" :data to-store}))))))))))
 
 (defn manage-command [event]
   (let [data (-> event

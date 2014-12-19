@@ -701,7 +701,7 @@ header .search-box {
   }
 }
 /* line 1, ../../src/style/_popup.scss */
-#feed-popup {
+.input-popup {
   display: none;
   position: absolute;
   z-index: 100;
@@ -709,24 +709,20 @@ header .search-box {
   height: 100%;
   text-align: center;
 }
-/* line 2, ../../src/style/_popup.scss */
-.feed-popup-visible #feed-popup {
-  display: block !important;
-}
-/* line 13, ../../src/style/_popup.scss */
-#feed-popup .popup-wrapper {
+/* line 9, ../../src/style/_popup.scss */
+.input-popup .popup-wrapper {
   position: fixed;
   width: 100%;
   z-index: 3;
 }
-/* line 18, ../../src/style/_popup.scss */
-#feed-popup .second-wrapper {
+/* line 14, ../../src/style/_popup.scss */
+.input-popup .second-wrapper {
   background: #eee;
   padding-bottom: 20px;
   margin-top: 24px;
 }
-/* line 23, ../../src/style/_popup.scss */
-#feed-popup .gray {
+/* line 19, ../../src/style/_popup.scss */
+.input-popup .gray {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -735,8 +731,8 @@ header .search-box {
   top: 0;
   left: 0;
 }
-/* line 32, ../../src/style/_popup.scss */
-#feed-popup .popup {
+/* line 28, ../../src/style/_popup.scss */
+.input-popup .popup {
   width: 300px;
   margin: auto;
   padding: 50px;
@@ -744,8 +740,8 @@ header .search-box {
   padding-top: 90px;
   position: relative;
 }
-/* line 40, ../../src/style/_popup.scss */
-#feed-popup .popup h2 {
+/* line 36, ../../src/style/_popup.scss */
+.input-popup .popup h2 {
   position: absolute;
   top: 23px;
   left: 0px;
@@ -759,15 +755,15 @@ header .search-box {
   font-family: "Open Sans";
   font-weight: 600;
 }
-/* line 55, ../../src/style/_popup.scss */
-#feed-popup .popup input {
+/* line 51, ../../src/style/_popup.scss */
+.input-popup .popup input {
   position: absolute;
   left: -1px;
   top: 65px;
   width: 389px;
 }
-/* line 61, ../../src/style/_popup.scss */
-#feed-popup .popup .button-holder {
+/* line 57, ../../src/style/_popup.scss */
+.input-popup .popup .button-holder {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -779,8 +775,8 @@ header .search-box {
   padding-right: 11px;
   padding-bottom: 4px;
 }
-/* line 69, ../../src/style/_popup.scss */
-#feed-popup .popup .button-holder a {
+/* line 65, ../../src/style/_popup.scss */
+.input-popup .popup .button-holder a {
   padding: 5px;
   border: 1px solid black;
   width: 80px;
@@ -793,10 +789,26 @@ header .search-box {
   background: #888;
   cursor: pointer;
 }
-/* line 84, ../../src/style/_popup.scss */
-#feed-popup .popup .button-holder a:first-child {
+/* line 80, ../../src/style/_popup.scss */
+.input-popup .popup .button-holder a:first-child {
   margin-right: 5px;
   background: #3B5950;
+}
+/* line 87, ../../src/style/_popup.scss */
+.input-popup .popup textarea {
+  margin-left: -100px;
+  width: 680px;
+  height: 425px;
+}
+
+/* line 95, ../../src/style/_popup.scss */
+.feed-popup-visible #feed-popup {
+  display: block !important;
+}
+
+/* line 99, ../../src/style/_popup.scss */
+.state-popup-visible #state-popup {
+  display: block !important;
 }
 
 /* line 33, ../../src/style/main.scss */

@@ -3,8 +3,8 @@ goog.provide('cljs.core.async.impl.protocols');
 goog.require('cljs.core');
 cljs.core.async.impl.protocols.MAX_QUEUE_SIZE = (1024);
 
-cljs.core.async.impl.protocols.ReadPort = (function (){var obj14342 = {};
-return obj14342;
+cljs.core.async.impl.protocols.ReadPort = (function (){var obj14613 = {};
+return obj14613;
 })();
 
 cljs.core.async.impl.protocols.take_BANG_ = (function take_BANG_(port,fn1_handler){
@@ -34,8 +34,8 @@ throw cljs.core.missing_protocol.call(null,"ReadPort.take!",port);
 });
 
 
-cljs.core.async.impl.protocols.WritePort = (function (){var obj14344 = {};
-return obj14344;
+cljs.core.async.impl.protocols.WritePort = (function (){var obj14615 = {};
+return obj14615;
 })();
 
 cljs.core.async.impl.protocols.put_BANG_ = (function put_BANG_(port,val,fn1_handler){
@@ -65,8 +65,8 @@ throw cljs.core.missing_protocol.call(null,"WritePort.put!",port);
 });
 
 
-cljs.core.async.impl.protocols.Channel = (function (){var obj14346 = {};
-return obj14346;
+cljs.core.async.impl.protocols.Channel = (function (){var obj14617 = {};
+return obj14617;
 })();
 
 cljs.core.async.impl.protocols.close_BANG_ = (function close_BANG_(chan){
@@ -122,8 +122,8 @@ throw cljs.core.missing_protocol.call(null,"Channel.closed?",chan);
 });
 
 
-cljs.core.async.impl.protocols.Handler = (function (){var obj14348 = {};
-return obj14348;
+cljs.core.async.impl.protocols.Handler = (function (){var obj14619 = {};
+return obj14619;
 })();
 
 cljs.core.async.impl.protocols.active_QMARK_ = (function active_QMARK_(h){
@@ -179,8 +179,8 @@ throw cljs.core.missing_protocol.call(null,"Handler.commit",h);
 });
 
 
-cljs.core.async.impl.protocols.Buffer = (function (){var obj14350 = {};
-return obj14350;
+cljs.core.async.impl.protocols.Buffer = (function (){var obj14621 = {};
+return obj14621;
 })();
 
 cljs.core.async.impl.protocols.full_QMARK_ = (function full_QMARK_(b){
@@ -289,7 +289,7 @@ return add_BANG_;
 })()
 ;
 
-cljs.core.async.impl.protocols.UnblockingBuffer = (function (){var obj14352 = {};
-return obj14352;
+cljs.core.async.impl.protocols.UnblockingBuffer = (function (){var obj14623 = {};
+return obj14623;
 })();
 

@@ -14,9 +14,14 @@
   ([map node target-keyword tag] (add-tag map node target-keyword tag identity))
   ([map node target-keyword tag transformer]
    (try
-     (assoc map (keyword target-keyword) (-> node (.getElements tag) (aget 0) .getText transformer))
+     (let [tag-elements (-> node (.getElements tag))
+           to-insert (if (and (not (nil? tag-elements))
+                              (> (.-length tag-elements) 0))
+                       (-> tag-elements (aget 0) .getText transformer)
+                       (do (.log js/console (str "Not found " tag)) nil))]
+       (assoc map (keyword target-keyword) to-insert))
      (catch js/Object e
-       (do (.log js/console (str e) node)
+       (do (.log js/console (str "Error processing " target-keyword " " tag) node e)
            (assoc map (keyword tag) nil))))))
 
 (defn parse-node [node]
