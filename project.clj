@@ -1,4 +1,4 @@
-(defproject ghoul-reader "0.0.1-SNAPSHOT"
+(defproject ghoul-reader "0.1.0"
   :description "Offline RSS Reader. Clojurescript + Om"
   :url "http://piweek.github.io/ghoul-reader"
   :license {:name "GNU Affero General Public License"

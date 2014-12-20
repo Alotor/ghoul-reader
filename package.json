@@ -1,5 +1,5 @@
 {
-    "name": "RssLeader",
+    "name": "GhoulReader",
     "version": "0.1.0",
     "dependencies": {
         "gulp": "^3.5.0",
