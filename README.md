@@ -7,7 +7,7 @@ Ghoul Reader
 
 **D&D Monsters Manual v3.5, Ghoul description**
 
-You can try it now here: http://piweek.github.io/ghoul-reader
+You can try it now here: http://alotor.github.io/ghoul-reader
 
 ## Rationale
 
@@ -20,26 +20,40 @@ This project is born with this need in mind and also trying to develop a Clojure
 - Clojurescript
 - Om + React.js
 - HTML5 techlonologies
-  - Local file reading
-  - Web Workers
-  - Service workers
-  - Local Storage
-  - IndexedDB
-  - Shadow DOM
+  - Web Workers (asynchronous feed reading)
+  - Local Storage (state storage)
+  - IndexedDB (local feed items storage)
+  - Shadow DOM (description css sandboxing)
+  - Local file reading (import ompl files)
+  - Service workers (offline capabilities)
 
 # Features & progress
 
 - [X] Basic state rendering and actions
 - [X] Retrieving state from IndexedDB
-- [ ] Import RSS feeds from OPML file
 - [X] RSS news reading
 - [X] Background RSS Updates
-- [ ] Shortcuts
-- [X] Local storaging with IndexedDB
-- [ ] Offline capabilities
+- [X] State saved into Local Storage
+- [X] Feed news stored into IndexedDB
 - [X] Responsive layout
+- [ ] Change XML library to JXT
+- [ ] Improve state management
+- [ ] Improve testing
+- [ ] Improve error control
+- [ ] Check read/unread items
+- [ ] Paging the items list so there are no problems with big items lists
+- [ ] Group creation
+- [ ] Feeds drag&drop to move into groups
+- [ ] Remove feeds and groups
+- [ ] ATOM format support
+- [ ] Favicons into feed lists
+- [ ] Feed description
+- [ ] Import/Export OMPL file
+- [ ] Remote synchronization of subscriptions
+- [ ] CSS animations
+- [ ] Shortcuts
+- [ ] Offline capabilities
 - [ ] Mobile version (Cordova)
-- [ ] Remote synchronization
 - [ ] Sharing with other users
 - [ ] Send to social media
 
