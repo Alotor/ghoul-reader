@@ -1,6 +1,6 @@
 (defproject ghoul-reader "0.1.0"
   :description "Offline RSS Reader. Clojurescript + Om"
-  :url "http://piweek.github.io/ghoul-reader"
+  :url "http://alotor.github.io/ghoul-reader"
   :license {:name "GNU Affero General Public License"
             :url "http://www.gnu.org/licenses/agpl-3.0.html"}
 
@@ -27,25 +27,27 @@
   :cljsbuild {:builds
               {:worker
                {:source-paths ["src/cljs/worker" "src/cljs/common" "src/assets/js"]
-                :compiler {:output-to     "dist/js/worker.js"
-                           :source-map    "dist/js/worker.js.map"
-                           :output-dir    "dist/js/out/worker"
-                           :preamble      ["xmldom.js"]
-                           :optimizations :whitespace
-                           :pretty-print  true
-                           :language-in :ecmascript5
-                           :language-out :ecmascript5}}
+                :compiler
+                {:output-to "dist/js/worker.js"
+                 :source-map "dist/js/worker.js.map"
+                 :output-dir "dist/js/out/worker"
+                 :preamble ["vendor/xmldom.js"]
+                 :optimizations :whitespace
+                 :pretty-print  true
+                 :language-in :ecmascript5
+                 :language-out :ecmascript5}}
 
                :app
                {:source-paths ["src/cljs/app" "src/cljs/common"]
-                :compiler {:output-to     "dist/js/app.js"
-                           :source-map    "dist/js/app.js.map"
-                           :output-dir    "dist/js/out/app"
-                           :preamble      ["react/react.min.js" "xmldom.js"]
-                           :externs       ["react/externs/react.js"]
-                           :optimizations :whitespace
-                           :pretty-print  true
-                           :language-in :ecmascript5
-                           :language-out :ecmascript5}}
+                :compiler
+                {:output-to "dist/js/app.js"
+                 :source-map "dist/js/app.js.map"
+                 :output-dir "dist/js/out/app"
+                 :preamble ["react/react.min.js" "vendor/xmldom.js"]
+                 :externs ["react/externs/react.js"]
+                 :optimizations :whitespace
+                 :pretty-print  true
+                 :language-in :ecmascript5
+                 :language-out :ecmascript5}}
                }}
   )
