@@ -1,12 +1,11 @@
-(ns ghoul.components.feed-popup
+(ns ghoul.app.components.popup.feed
   (:require [om.core :as om]
             [om.dom :as dom]
-            [ghoul.state :as state]
-            [ghoul.components.common :as common]))
+            [ghoul.app.state :as state]
+            [ghoul.app.messages :refer [msg]]))
 
 (defn cb-save-popup [owner event]
   (let [url (-> owner (om/get-node "urlInput") .-value)]
-    (.log js/console (str "Adding: " url))
     (state/add-rss-subscription url)
     (-> owner (om/get-node "urlInput") .-value (set! ""))
     (state/toggle-feed-popup)))
@@ -26,11 +25,13 @@
                (dom/div #js {:className "popup-wrapper"}
                         (dom/div #js {:className "second-wrapper"}
                                  (dom/div #js {:className "popup"}
-                                          (dom/h2 nil "Introduzca la URL del RSS")
+                                          (dom/h2 nil (msg :ghoul.popup.feed.title))
                                           (dom/input #js {:ref "urlInput"})
                                           (dom/div #js {:className "button-holder"}
-                                                   (dom/a #js {:onClick (partial cb-save-popup owner)} "OK")
-                                                   (dom/a #js {:onClick (partial cb-cancel-popup owner)} "Cancel")))))
+                                                   (dom/a #js {:onClick (partial cb-save-popup owner)}
+                                                          (msg :ghoul.button.ok))
+                                                   (dom/a #js {:onClick (partial cb-cancel-popup owner)}
+                                                          (msg :ghoul.button.cancel))))))
                (dom/div #js {:className "gray"
                              :onClick state/toggle-feed-popup})))))
 

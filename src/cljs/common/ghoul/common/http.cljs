@@ -1,8 +1,8 @@
-(ns ghoul.http
+(ns ghoul.common.http
   (:require [goog.events :as events]
             [goog.dom :as gdom]
             [cljs.core.async :refer [chan put!]]
-            [ghoul.parse-rss :as rss]
+            [ghoul.parser.rss :as rss]
             [cuerdas.core :as str])
   (:import [goog.net XhrIo EventType]
            [goog.events EventType])

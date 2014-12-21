@@ -1,4 +1,4 @@
-(ns ghoul.worker.feed-web-worker
+(ns ghoul.worker.feed-updater
   (:require-macros [cljs.core.async.macros :refer [go go-loop]])
   (:require [cljs.core.async :as async :refer [<! timeout]]
             [ghoul.http :as http]

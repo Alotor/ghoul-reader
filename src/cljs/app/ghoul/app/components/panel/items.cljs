@@ -1,9 +1,10 @@
-(ns ghoul.components.feeds-panel
+(ns ghoul.app.components.panel.items
   (:require [om.core :as om]
             [om.dom :as dom]
             [cuerdas.core :as str]
-            [ghoul.state :as state]
-            [ghoul.utils :as utils]))
+            [ghoul.app.state :as state]
+            [ghoul.app.messages :refer [msg]]
+            [ghoul.common.utils :as utils]))
 
 (defn feed-description [data owner]
   (let [set-description-dom!
@@ -32,7 +33,8 @@
                    (dom/div #js {:className "rss-item-header"}
                             (dom/h4 #js {:className "rss-title"}
                                     (dom/a #js {:className "rss-link" :href (:link data)} (:title data)))
-                            (dom/h5 #js {:className "rss-description-preview"} (-> data :description utils/restore-tags str/strip-tags)))
+                            (dom/h5 #js {:className "rss-description-preview"}
+                                    (-> data :description utils/restore-tags str/strip-tags)))
                    (om/build feed-description (:description data))))))
 
 (defn root [data owner]
@@ -42,29 +44,29 @@
       (if (and (nil? (:selected data)) (empty? (:groups data)))
         (dom/section #js {:id "empty-subscription-panel"}
                      (dom/p nil
-                            (dom/span nil "Welcome to ")
-                            (dom/span #js {:className "emphasis"} "GHOUL reader")
+                            (dom/span nil (msg :ghoul.welcome.first))
+                            (dom/span #js {:className "emphasis"}
+                                      (msg :ghoul.welcome.title))
                             (dom/span nil "."))
-                     (dom/p nil "Ghoul is an offline-optimized RSS reading platform with easiness in mind and using the great new technologies in HTML5 specs.")
+                     (dom/p nil (msg :ghoul.welcome.description))
                      (dom/p nil
-                            (dom/span nil "You can add a new RSS Subscription")
-                            (dom/a #js {:onClick state/toggle-feed-popup} "HERE")))
+                            (dom/span nil (msg :ghoul.welcome.tut1))
+                            (dom/a #js {:onClick state/toggle-feed-popup}
+                                   (msg :ghoul.welcome.link))))
         (dom/section #js {:id "feeds-panel"}
                      (dom/div #js {:className "feed-title"}
                               (dom/div #js {:className "feed-title-text"}
                                        (cond
                                         (and (:selected data)
                                              (not (keyword? (:selected data))))
-                                        (str (state/get-title (:selected data))
-                                             ;" - " (:selected data)
-                                             )
-                                        (= (:selected data) :all-items) "All items"
-                                        (= (:selected data) :shared-items) "Shared items"
-                                        (= (:selected data) :favorite-items) "Favorite items"
-                                        :else "All items"))
-                              (dom/a #js {:className "compact-button"
-                                          :onClick (fn [e] (state/toggle-compact-view))} "Compact View")
-                              (dom/a #js {:className "expand-button"
-                                          :onClick (fn [e] (state/toggle-expanded-view))} "Expanded View"))
+                                        (str (state/get-title (:selected data)))
+                                        (= (:selected data) :all-items) (msg :ghoul.menu.all-items)
+                                        (= (:selected data) :shared-items) (msg :ghoul.menu.shared-items)
+                                        (= (:selected data) :favorite-items) (msg :ghoul.menu.favorite-items)
+                                        :else (msg :ghoul.menu.all-items)))
+                              (dom/a #js {:className "compact-button" :onClick (fn [e] (state/toggle-compact-view))}
+                                     (msg :ghoul.menu.compact-view))
+                              (dom/a #js {:className "expand-button" :onClick (fn [e] (state/toggle-expanded-view))}
+                                     (msg :ghoul.menu.expanded-view)))
                      (apply dom/div #js {:className "feeds-wrapper"}
                             (om/build-all feed-content (:feeds data))))))))

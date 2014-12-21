@@ -49,5 +49,16 @@
                  :pretty-print  true
                  :language-in :ecmascript5
                  :language-out :ecmascript5}}
+
+               :dev
+               {:source-paths ["src/cljs/app" "src/cljs/common"]
+                :compiler
+                {:output-to "dist/js/dev.js"
+                 :source-map "dist/js/dev.js.map"
+                 :output-dir "dist/js/out/dev"
+                 :optimizations :none
+                 :pretty-print  true
+                 :language-in :ecmascript5
+                 :language-out :ecmascript5}}
                }}
   )

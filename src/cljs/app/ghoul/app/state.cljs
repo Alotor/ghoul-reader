@@ -1,10 +1,10 @@
-(ns ghoul.state
+(ns ghoul.app.state
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [cljs.core.async :as async :refer [<!]]
             [cljs-uuid-utils :as uuid]
-            [ghoul.http :as http]
-            [ghoul.feeds-storage :as storage]
-            [hodgepodge.core :as hp]))
+            [hodgepodge.core :as hp]
+            [ghoul.common.http :as http]
+            [ghoul.repository.item :as storage]))
 
 (declare feed-store-temp)
 (declare update-uid-count)

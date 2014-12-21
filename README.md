@@ -36,10 +36,11 @@ This project is born with this need in mind and also trying to develop a Clojure
 - [X] State saved into Local Storage
 - [X] Feed news stored into IndexedDB
 - [X] Responsive layout
-- [ ] Change XML library to JXT
 - [ ] Improve state management
 - [ ] Improve testing
 - [ ] Improve error control
+- [ ] Change XML library to JXT
+- [ ] Internazionalization
 - [ ] Check read/unread items
 - [ ] Paging the items list so there are no problems with big items lists
 - [ ] Group creation

@@ -1,10 +1,10 @@
-(ns ghoul.components.state-popup
+(ns ghoul.app.components.popup.state
   (:require [om.core :as om]
             [om.dom :as dom]
-            [ghoul.state :as state]
-            [ghoul.worker-api :as worker]
-            [ghoul.feeds-storage :as storage]
-            [ghoul.components.common :as common]))
+            [ghoul.app.state :as state]
+            [ghoul.app.messages :refer [msg]]
+            [ghoul.app.worker :as worker]
+            [ghoul.repository.item :as storage]))
 
 (defn cb-save-popup [owner event]
   (let [state (-> owner (om/get-node "stateArea") .-value)
@@ -29,11 +29,13 @@
                (dom/div #js {:className "popup-wrapper"}
                         (dom/div #js {:className "second-wrapper"}
                                  (dom/div #js {:className "popup"}
-                                          (dom/h2 nil "Estado")
+                                          (dom/h2 nil (msg :ghoul.popup.state.title))
                                           (dom/textarea #js {:ref "stateArea" :rows 4})
                                           (dom/div #js {:className "button-holder"}
-                                                   (dom/a #js {:onClick (partial cb-save-popup owner)} "OK")
-                                                   (dom/a #js {:onClick (partial cb-cancel-popup owner)} "Cancel")))))
+                                                   (dom/a #js {:onClick (partial cb-save-popup owner)}
+                                                          (msg :ghoul.button.ok))
+                                                   (dom/a #js {:onClick (partial cb-cancel-popup owner)}
+                                                          (msg :ghoul.button.cancel))))))
                (dom/div #js {:className "gray"
                              :onClick state/toggle-feed-popup})))))
 

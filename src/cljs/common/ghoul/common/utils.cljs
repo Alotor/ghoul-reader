@@ -1,4 +1,4 @@
-(ns ghoul.utils
+(ns ghoul.common.utils
   (:require [cuerdas.core :as str]))
 
 (defn restore-tags [string]

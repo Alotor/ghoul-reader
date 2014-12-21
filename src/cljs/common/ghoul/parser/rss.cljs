@@ -1,4 +1,4 @@
-(ns ghoul.parse-rss
+(ns ghoul.parser.rss
   (:require [cljs-time.format :as format]
             [cljs-time.coerce :as coerce]
             [cuerdas.core :as str]))

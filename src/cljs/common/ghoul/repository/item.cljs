@@ -1,4 +1,4 @@
-(ns ghoul.feeds-storage
+(ns ghoul.repository.item
   (:require [cljs.core.async :refer [chan put!]]))
 
 (def database (atom {}))
