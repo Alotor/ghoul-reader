@@ -2,6 +2,7 @@
   (:require [om.core :as om]
             [om.dom :as dom]
             [cuerdas.core :as str]
+            [ghoul.common.utils :refer [project]]
             [ghoul.app.components.common.header :as header]
             [ghoul.app.components.common.sidebar :as sidebar]
             [ghoul.app.components.popup.state :as state-popup]
@@ -13,14 +14,19 @@
   (reify
     om/IRender
     (render [this]
-      (let [class-view (name (:feeds-view data))
+      (let [class-view (name (first (:feeds-view data)))
             class-menu (if (:show-menu data) "menu-expanded")
-            class-popup (str (name (:popup data)) "-popup-visible")]
+            class-popup (str (name (:popup data)) "-popup-visible")
+            class-app (str/join " " (list "app-container" class-view class-menu))]
         (dom/div #js {:className class-popup}
-                 (om/build feed-popup/root data)
-                 (om/build state-popup/root data)
-                 (dom/div #js {:className (str/join " " (list "app-container" class-view class-menu))}
-                          (om/build header/root data)
+                 (om/build feed-popup/root (project data :feeds))
+                 (om/build state-popup/root {})
+                 (dom/div #js {:className class-app}
+                          (om/build header/root {})
                           (dom/div #js {:className "content"}
-                                   (om/build sidebar/root data)
-                                   (om/build items-panel/root data))))))))
+                                   (om/build sidebar/root
+                                             (project data :selected :groups :feeds))
+                                   (if (empty? (:feeds data))
+                                     (om/build home-panel/root {})
+                                     (om/build items-panel/root
+                                               (project data :selected :feeds :feeds-view :items))))))))))

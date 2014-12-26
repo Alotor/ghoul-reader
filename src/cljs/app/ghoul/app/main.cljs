@@ -6,7 +6,7 @@
             [cljs-uuid-utils :as uuid]
             [cljs.core.async :as async :refer [<!]]
             [ghoul.repository.item :as storage]
-            [ghoul.app.state :as state]
+            [ghoul.app.state2 :as state]
             [ghoul.app.worker :as worker]
             [ghoul.app.messages :refer [msg]]
             [ghoul.app.components.root :as root]))
@@ -17,8 +17,8 @@
   (om/root root/app
            state/global
            {:target (. js/document (getElementById "app-root"))})
-  (worker/start-feed-worker)
-  (worker/update-all-feeds)
+  ;(worker/start-feed-worker)
+  ;(worker/update-all-feeds)
   (.log js/console (msg :ghoul.initialized)))
 
 (initialize-app)

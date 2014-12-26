@@ -2,3 +2,5 @@ node_modules
 dist
 .sass-cache
 target
+.lein-repl-history
+.nrepl-port

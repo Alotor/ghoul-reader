@@ -1,8 +1,8 @@
 (ns ghoul.worker.feed-updater
   (:require-macros [cljs.core.async.macros :refer [go go-loop]])
   (:require [cljs.core.async :as async :refer [<! timeout]]
-            [ghoul.http :as http]
-            [ghoul.feeds-storage :as storage]
+            [ghoul.common.http :as http]
+            [ghoul.repository.item :as storage]
             ))
 
 (defn update-feed [feed-uid feed-url]

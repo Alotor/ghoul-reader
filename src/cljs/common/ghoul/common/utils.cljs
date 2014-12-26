@@ -18,3 +18,6 @@
       ; blacklisting
       (str/strip-tags "script")
       (str/strip-tags "link")))
+
+(defn project [data & keys]
+  (reduce #(assoc %1 %2 (%2 data)) {} keys))

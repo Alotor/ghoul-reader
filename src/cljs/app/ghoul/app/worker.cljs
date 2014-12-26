@@ -1,7 +1,7 @@
 (ns ghoul.app.worker
   (:require-macros [cljs.core.async.macros :refer [go-loop]])
   (:require [cljs.core.async :refer [<! timeout]]
-            [ghoul.app.state :as state]))
+            [ghoul.app.state2 :as state]))
 
 (def ^:private refresh-time-milis (atom (* 5 60 1000)))
 (def ^:private update-feed-worker (atom nil))
@@ -20,8 +20,7 @@
 (defn- update-all-feeds []
   (let [list-uid-url (state/list-uid-url)]
     (doseq [cur-uid-url list-uid-url]
-      (let [uid (first cur-uid-url)
-            url (second cur-uid-url)]
+      (let [[uid url] cur-uid-url]
         (read-feed uid url)))))
 
 (defn start-feed-worker []
