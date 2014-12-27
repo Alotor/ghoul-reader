@@ -11,7 +11,7 @@
     (if (= (:result result) "ok")
       (state/include-feed (:data result)))))
 
-(defn- read-feed [uid url]
+(defn- ^:export read-feed [uid url]
   (.log js/console (str "Updating: " uid ", " url))
   (set! (.-onmessage @update-feed-worker) feed-update)
   (.postMessage @update-feed-worker #js {:action "update" :uid uid :url url}))

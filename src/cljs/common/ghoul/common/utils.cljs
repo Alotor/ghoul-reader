@@ -21,3 +21,5 @@
 
 (defn project [data & keys]
   (reduce #(assoc %1 %2 (%2 data)) {} keys))
+
+(defn mapply [f & args] (apply f (apply concat (butlast args) (last args))))
