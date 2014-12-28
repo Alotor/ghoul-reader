@@ -2,6 +2,10 @@
   @include flexbox;
   @include flex-direction(column);
   width: 100%;
+  
+  .feeds-wrapper {
+    overflow-y: auto;
+  }
 
   .feed-title {
     display: none;
