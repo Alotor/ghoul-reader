@@ -1,8 +1,10 @@
 (ns ghoul.app.components.panel.home
   (:require [om.core :as om]
             [om.dom :as dom]
-            [ghoul.app.state :as state]
             [ghoul.app.messages :refer [msg]]))
+
+(defn show-feed-popup [data]
+  (om/update! (:popup data) [0] :feed))
 
 (defn root [data owner]
   (reify
@@ -17,5 +19,5 @@
                    (dom/p nil (msg :ghoul.welcome.description))
                    (dom/p nil
                           (dom/span nil (msg :ghoul.welcome.tut1))
-                          (dom/a #js {:onClick state/toggle-feed-popup}
+                          (dom/a #js {:onClick #(show-feed-popup data)}
                                  (msg :ghoul.welcome.link)))))))

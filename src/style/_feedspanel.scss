@@ -12,6 +12,10 @@
     min-height: 25px;
   }
 
+  .item-read {
+    opacity: 0.6;
+  }
+
   .compact-view & {
     .feed-content {
       .rss-title {

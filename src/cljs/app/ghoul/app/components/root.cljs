@@ -15,17 +15,17 @@
     om/IRender
     (render [this]
       (let [class-view (name (first (:feeds-view data)))
-            class-menu (if (:show-menu data) "menu-expanded")
-            class-popup (str (name (:popup data)) "-popup-visible")
+            class-menu (if (-> data :show-menu first) "menu-expanded")
+            class-popup (-> data :popup first name (str "-popup-visible"))
             class-app (str/join " " (list "app-container" class-view class-menu))]
         (dom/div #js {:className class-popup}
-                 (om/build feed-popup/root (project data :feeds))
-                 (om/build state-popup/root {})
+                 (om/build feed-popup/root (project data :popup :feeds))
+                 (om/build state-popup/root (project data :popup))
                  (dom/div #js {:className class-app}
-                          (om/build header/root {})
+                          (om/build header/root (project data :show-menu))
                           (dom/div #js {:className "content"}
                                    (om/build sidebar/root
-                                             (project data :selected :groups :feeds))
+                                             (project data :popup :selected :groups :feeds))
                                    (if (empty? (:feeds data))
                                      (om/build home-panel/root {})
                                      (om/build items-panel/root

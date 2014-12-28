@@ -5,9 +5,20 @@
             [cljs.core.async :as async :refer [timeout]]
             [cuerdas.core :as str]
             [ghoul.common.utils :refer [project mapply]]
-            [ghoul.app.state :as state]
             [ghoul.app.messages :refer [msg]]
             [ghoul.common.utils :as utils]))
+
+(defn mark-feed-read [data]
+  (om/update! (:feed data) :read true))
+
+(defn decrement-pending-count [data]
+  (om/transact! (:feed data) :pending dec))
+
+(defn change-to-compact-view [data]
+  (om/update! (:feeds-view data) [:compact-view]))
+
+(defn change-to-expanded-view [data]
+  (om/update! (:feeds-view data) [:expanded-view]))
 
 (defn get-item-visualization-state [item]
   (let [node (-> item .getDOMNode)
@@ -62,21 +73,23 @@
     om/IWillReceiveProps
     (will-receive-props [this props]
       (let [new-state (-> owner get-item-visualization-state)]
-        ;(om/set-state! owner :bgcolor (state->color new-state)) ; Debuging facility
-        (if (and (not (-> owner om/get-state :read)) (= new-state :partial-out-item))
+        ;(om/set-state! owner :bgcolor (state->color new-state)) ; Debugging facility
+        (if (and (not (-> owner om/get-state :read))
+                 (or (= new-state :partial-out-item)
+                     (= new-state :in-item)))
           (do
             (om/set-state! owner :read true)
             (go
               (<! (timeout 1)) ; IWillUpdate doesn't refresh ok the current state, timeout to execute outside
-              (om/transact! (:feed data) :pending dec)
-              (om/update! (:feed data) :read true))))
-        ))
+              (decrement-pending-count data)
+              (mark-feed-read data))))))
 
     om/IRenderState
     (render-state [this state]
       (let [item-data (:item data)
-            feed-data (:feed data)]
-        (dom/article #js {:className "feed-content" :style #js {"background-color" (:bgcolor state)}}
+            feed-data (:feed data)
+            class-read (if (:read state) "item-read" "")]
+        (dom/article #js {:className (str/join " " ["feed-content" class-read]) :style #js {"background-color" (:bgcolor state)}}
                      (dom/div #js {:className "rss-item-header"}
                               (dom/h4 #js {:className "rss-title"}
                                       (dom/a #js {:className "rss-link" :href (:link item-data)}
@@ -86,33 +99,28 @@
                      (om/build item-description (:description item-data)))))))
 
 (defn item-list [data owner]
-  (let [new-state (fn []
-                    (let [node (.getDOMNode owner)]
-                      {:scroll-height (.-scrollHeight node)
-                       :scroll-top (.-scrollTop node)
-                       :client-height (.-clientHeight node)}))]
-    (reify
-      om/IDidMount
-      (did-mount [this]
-        (om/set-state! owner (new-state)))
-      om/IRenderState
-      (render-state [this state]
-        (let [cb-scroll (fn [e]
-                          (om/set-state! owner
-                                         (-> (new-state)
-                                             (assoc :items (:items state))
-                                             (assoc :displaying-items (:displaying-items state)))))
-              get-feed (fn [feeds uid]
-                         (first (filter #(= (:uid %) uid) feeds)))]
+  (reify
+    om/IInitState
+    (init-state [this]
+      {:displaying-items 5})
 
-          (apply dom/div #js {:className "feeds-wrapper"
-                              :onScroll cb-scroll
-                              :onResize cb-scroll}
-                 ;(dom/p #js {:style #js {"position" "fixed" "background-color" "white" "border" "1px solid black" "z-index" "1000"}}
-                 ;       (str (-> state (dissoc :items) (dissoc :displaying-items))))
-                 (om/build-all item-content (map #(-> {}
-                                                      (assoc :feed (get-feed (:feeds data) (:feeduid %)))
-                                                      (assoc :item %)) (:displaying-items state)) {:state state})))))))
+    om/IRenderState
+    (render-state [this state]
+      (let [cb-scroll (fn [e]
+                        (let [node (.getDOMNode owner)
+                              to-display (if (> (.-scrollTop node) (/ (.-scrollHeight node) 2))
+                                           (inc (:displaying-items state))
+                                           (:displaying-items state))]
+                          (om/set-state! owner :displaying-items to-display)))
+            get-feed  (fn [feeds uid] (first (filter #(= (:uid %) uid) feeds)))]
+        (apply dom/div #js {:className "feeds-wrapper"
+                            :onScroll cb-scroll
+                            :onResize cb-scroll}
+               (.log js/console (str ">> should render " (:displaying-items state)))
+               (om/build-all item-content (map #(-> {}
+                                                    (assoc :feed (get-feed (:feeds data) (:feeduid %)))
+                                                    (assoc :item %))
+                                               (take (:displaying-items state) (:items data)))))))))
 
 (defn feed-title [data owner]
   (reify
@@ -128,10 +136,10 @@
                             (= section :shared-items) (msg :ghoul.menu.shared-items)
                             (= section :favorite-items) (msg :ghoul.menu.favorite-items))))
                (dom/a #js {:className "compact-button"
-                           :onClick #(om/update! (:feeds-view data) [:compact-view])}
+                           :onClick #(change-to-compact-view data)}
                       (msg :ghoul.menu.compact-view))
                (dom/a #js {:className "expand-button"
-                           :onClick #(om/update! (:feeds-view data) [:expanded-view])}
+                           :onClick #(change-to-expanded-view data)}
                       (msg :ghoul.menu.expanded-view))))))
 
 (defn root [data owner]
@@ -140,5 +148,4 @@
     (render [this]
       (dom/section #js {:id "feeds-panel"}
                    (om/build feed-title (project data :selected :feeds-view :feeds))
-                   (om/build item-list (project data :feeds :items) {:state {:items (:items data)
-                                                                      :displaying-items (take 5 (:items data))}})))))
+                   (om/build item-list (project data :feeds :items))))))

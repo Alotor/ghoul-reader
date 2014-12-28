@@ -1,7 +1,6 @@
 (ns ghoul.app.components.common.search
   (:require [om.core :as om]
             [om.dom :as dom]
-            [ghoul.app.state :as state]
             [ghoul.app.messages :refer [msg]]))
 
 (defn search-box [data owner]

@@ -8,8 +8,8 @@
 (def global
   (atom {:current-view :list ; or :detail
          :feeds-view [:expanded-view] ; or :compact-view
-         :show-menu false
-         :popup :none
+         :show-menu [false]
+         :popup [:none]
          :selected [:all-items] ;[:group "Open Source"] [:feed "f90eebc0-83c8-11e4-b4a9-0800200c9a66"]
 
          ;; Groups

@@ -6,6 +6,9 @@
             [ghoul.app.worker :as worker]
             [ghoul.repository.item :as storage]))
 
+(defn hide-popups [data]
+  (om/update! (:popup data) [0] :none))
+
 (defn cb-save-popup [owner event]
   (let [state (-> owner (om/get-node "stateArea") .-value)
         clj-state (js->clj (.parse js/JSON state) :keywordize-keys true)]
@@ -37,5 +40,5 @@
                                                    (dom/a #js {:onClick (partial cb-cancel-popup owner)}
                                                           (msg :ghoul.button.cancel))))))
                (dom/div #js {:className "gray"
-                             :onClick state/toggle-feed-popup})))))
+                             :onClick #(hide-popups data)})))))
 

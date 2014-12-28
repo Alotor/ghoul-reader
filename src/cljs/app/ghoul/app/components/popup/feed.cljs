@@ -4,15 +4,18 @@
             [ghoul.app.state :as state]
             [ghoul.app.messages :refer [msg]]))
 
-(defn cb-save-popup [owner event]
+(defn hide-popups [data]
+  (om/update! (:popup data) [0] :none))
+
+(defn cb-save-popup [owner data]
   (let [url (-> owner (om/get-node "urlInput") .-value)]
     (state/add-rss-subscription url)
     (-> owner (om/get-node "urlInput") .-value (set! ""))
-    (state/toggle-feed-popup)))
+    (hide-popups data)))
 
-(defn cb-cancel-popup [owner event]
+(defn cb-cancel-popup [owner data]
   (-> owner (om/get-node "urlInput") .-value (set! ""))
-  (state/toggle-feed-popup))
+  (hide-popups data))
 
 (defn root [data owner]
   (reify
@@ -28,10 +31,10 @@
                                           (dom/h2 nil (msg :ghoul.popup.feed.title))
                                           (dom/input #js {:ref "urlInput"})
                                           (dom/div #js {:className "button-holder"}
-                                                   (dom/a #js {:onClick (partial cb-save-popup owner)}
+                                                   (dom/a #js {:onClick (partial cb-save-popup owner data)}
                                                           (msg :ghoul.button.ok))
-                                                   (dom/a #js {:onClick (partial cb-cancel-popup owner)}
+                                                   (dom/a #js {:onClick (partial cb-cancel-popup owner data)}
                                                           (msg :ghoul.button.cancel))))))
                (dom/div #js {:className "gray"
-                             :onClick state/toggle-feed-popup})))))
+                             :onClick #(hide-popups data)})))))
 
