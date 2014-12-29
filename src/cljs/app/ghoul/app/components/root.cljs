@@ -28,5 +28,7 @@
                                              (project data :popup :selected :groups :feeds))
                                    (if (empty? (:feeds data))
                                      (om/build home-panel/root (project data :popup))
-                                     (om/build items-panel/root
-                                               (project data :selected :feeds :feeds-view :items))))))))))
+                                     (do
+                                       (.log js/console ">> render app" (:feeds data))
+                                       (om/build items-panel/root
+                                                 (project data :selected :feeds :feeds-view :items)))))))))))
