@@ -104,6 +104,10 @@
     (init-state [this]
       {:displaying-items 5})
 
+    om/IWillReceiveProps
+    (will-receive-props [this next-props]
+      (-> owner .getDOMNode .-scrollTop (set! 0)))
+
     om/IRenderState
     (render-state [this state]
       (let [cb-scroll (fn [e]
@@ -116,7 +120,6 @@
         (apply dom/div #js {:className "feeds-wrapper"
                             :onScroll cb-scroll
                             :onResize cb-scroll}
-               (.log js/console (str ">> should render " (:displaying-items state)))
                (om/build-all item-content (map #(-> {}
                                                     (assoc :feed (get-feed (:feeds data) (:feeduid %)))
                                                     (assoc :item %))
@@ -148,4 +151,4 @@
     (render [this]
       (dom/section #js {:id "feeds-panel"}
                    (om/build feed-title (project data :selected :feeds-view :feeds))
-                   (om/build item-list (project data :feeds :items))))))
+                   (om/build item-list (project data :feeds :items) {:state {:displaying-items 5}})))))

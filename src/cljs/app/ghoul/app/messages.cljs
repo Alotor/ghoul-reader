@@ -44,6 +44,9 @@
 
    ; Home
    :ghoul.home.title "Home"
+
+   ; General
+   :ghoul.general.group "General"
    })
 
 (defn msg [code]

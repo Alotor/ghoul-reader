@@ -4,234 +4,171 @@
             [cljs-uuid-utils :as uuid]
             [hodgepodge.core :as hp]
             [ghoul.common.http :as http]
-            [ghoul.repository.item :as storage]))
+            [ghoul.repository.item :as item-repository]
+            [ghoul.app.messages :refer [msg]]))
 
-(declare feed-store-temp)
-(declare update-uid-count)
+(def current-state-version 1)
 
-(defn ^:export retrieve-all-feeds []
-  (flatten (map second feed-store-temp)))
-
-; Global state
 (def global
-  (atom {:current-view :list ; or :detail
-         :feeds-view :expanded-view ; or :compact-view
-         :show-menu false
-         :popup nil
-         :selected nil
+  (atom {;; State version. Necesary to migrate when stored into the users local-storage
+         :version current-state-version
+
+         ;; Currently only list is
+         :current-view :list ; or :detail
+
+         ;; Should show items as expanded/compacted
+         :feeds-view [:expanded-view] ; or :compact-view
+
+         ;; Only for the mobile view. Diesplay state for sidebar
+         :show-menu [false]
+
+         ;; Active popup in display
+         :popup [:none]
+
+         ;; Current selected item in the sidebar
+         :selected [:all-items]
+                   ;[:group "Open Source"]
+                   ;[:feed "f90eebc0-83c8-11e4-b4a9-0800200c9a66"]
+
+         ;; Groups
+         ;:groups [{:name "Open Source"
+         ;          :expanded true
+         ;          :subscriptions [ "f90eebc0-83c8-11e4-b4a9-0800200c9a66"
+         ;                           "07aed140-83c9-11e4-b4a9-0800200c9a66"]}
          :groups []
-         :general-group-uid nil
-         :feeds []}))
 
+         ;; Feeds
+         ;:feeds [{:title "Feed Title"
+         ;         :uid "f90eebc0-83c8-11e4-b4a9-0800200c9a66"
+         ;         :site-url "http://example.com/"
+         ;         :feed-url "http://example.com/rss"
+         ;         :favicon "http://example.com/images/favicon.ico"
+         ;         :pending 20}]
 
-(defn get-group-data [uid]
-  (->> @global :groups
-       (filter #(= (:uid %) uid))
-       first))
+         :feeds []
 
-(defn get-group-idx [uid]
-  (->> @global
-       :groups
-       (map-indexed vector)
-       (filter #(= (:uid (second %)) uid))
-       first
-       first))
+         ;; Current items in display
+         :items []}))
 
-(defn get-feed-data [uid]
-  (->> @global :groups
-      (map :subscriptions)
-      flatten
-      (filter #(= (:uid %) uid))
-      first))
-
-(defn group-contains-feed-uid [group feed-uid]
-  (->> group :subscriptions (some #(-> % :uid (= feed-uid)))))
-
-(defn get-feed-group-uid [feed-uid]
-  (->> @global
-       :groups
-       (filter #(group-contains-feed-uid % feed-uid))
-       first
-       :uid))
-
-(defn get-feed-idx-group [group feed-uid]
-  (->> group
-      :subscriptions
-      (map-indexed vector)
-      (filter #(= (:uid (second %)) feed-uid))
-      first
-      first))
-
-(defn ^:export group? [uid]
-  (->> @global
-      :groups
-      (some #(= (:uid %) uid))))
-
-(defn ^:export feed? [uid]
-  (->> @global
-       :groups
-       (map :subscriptions)
-       flatten
-       (some #(= (:uid %) uid))))
-
-(defn get-title [uid]
-  (let [group-data (get-group-data uid)]
-    (if (nil? group-data)
-      (:title (get-feed-data uid))
-      (:name group-data))))
-
-(defn get-group-subscriptions [uid]
-  (let [group-data (get-group-data uid)]
-    (map :uid (:subscriptions group-data))))
-
-(defn retrieve-feeds [uid]
-  (go
-    (swap! global assoc :feeds [])
-    (let [group (get-group-data uid)
-          subscriptions-list (if (nil? group) [uid] (get-group-subscriptions uid))
-          selected-feeds (<! (storage/retrieve-feeds-uids subscriptions-list))]
-      (swap! global assoc :feeds selected-feeds))))
-
-(defn select-feed [uid]
-  (swap! global assoc :selected uid)
-  (retrieve-feeds uid))
-
-(defn load-all-items []
-  (go (let [_ (<! (storage/init-database))
-            result (<! (storage/retrieve-all-feeds))]
-        (swap! global assoc :feeds result))))
-
-(defn select-all-items []
-  (swap! global assoc :selected :all-items)
-  (load-all-items))
-
-(defn load-favorites-items []
-  (swap! global assoc :feeds []))
-
-(defn select-favorites-items []
-  (swap! global assoc :selected :favorite-items)
-  (load-favorites-items))
-
-(defn load-shared-items []
-  (swap! global assoc :feeds []))
-
-(defn select-shared-items []
-  (swap! global assoc :selected :shared-items)
-  (load-shared-items))
-
-(defn toggle-compact-view []
-  (swap! global assoc :feeds-view :compact-view))
-
-(defn toggle-expanded-view []
-  (swap! global assoc :feeds-view :expanded-view))
-
-(defn toggle-menu []
-  (swap! global assoc :show-menu (not (:show-menu @global))))
-
-(defn toggle-feed-popup []
-  (swap! global assoc :popup (if (nil? (:popup @global)) :feed nil)))
-
-(defn toggle-state-popup []
-  (swap! global assoc :popup (if (nil? (:popup @global)) :state nil)))
-
-(defn add-general-group []
-  (let [general-group (-> {}
-                          (assoc :name "General")
-                          (assoc :pending 0)
-                          (assoc :expanded true)
-                          (assoc :uid (uuid/uuid-string (uuid/make-random-uuid)))
-                          (assoc :subscriptions []))]
-    (swap! global assoc :general-group-uid (:uid general-group))
-    (swap! global update-in [:groups] #(conj % general-group))))
-
-(defn add-rss-subscription [feed-url]
-  (go
-    (if (empty? (:groups @global))
-      (add-general-group))
-    (let [group-idx (-> @global :general-group-uid get-group-idx)
-          feed-data (-> feed-url
-                        http/get-rss <!
-                        :data)
-          feed-num (-> feed-data :items count)
-          subscription (-> {}
-                           (assoc :title (:title feed-data))
-                           (assoc :uid (uuid/uuid-string (uuid/make-random-uuid)))
-                           (assoc :site-url (:link feed-data))
-                           (assoc :feed-url feed-url)
-                           (assoc :favicon "/images/favicon.png")
-                           (assoc :pending feed-num))]
-      (doseq [feed (:items feed-data)]
-        (-> feed
-            (assoc :feeduid (:uid subscription))
-            (storage/add-feed)
-            <!)
-        (swap! global update-in [:feeds] #(conj % feed)))
-      (swap! global update-in [:groups group-idx :subscriptions] #(conj % subscription))
-      (update-uid-count (:general-group-uid @global) #(+ feed-num %)))))
+(defn list-uid-url []
+  (map #(-> [] (conj (:uid %)) (conj (:feed-url %))) (:feeds @global)))
 
 (defn store-state [state]
-  (assoc! hp/local-storage :state (dissoc state :feeds)))
+  (assoc! hp/local-storage :state (dissoc state :items)))
 
-(defn restore-state [state-atom]
-  (->> (:state hp/local-storage) (reset! state-atom)))
+(defn restore-state [old-state]
+  (reset! global old-state))
 
+(defn load-all-items []
+  (go (->> (item-repository/retrieve-all-feeds) <!
+           (swap! global assoc :items))))
+
+(defn load-shared-items []
+  (swap! global assoc :items []))
+
+(defn load-favorites-items []
+  (swap! global assoc :items []))
+
+
+(defn load-items-by-uid-list [uid-list]
+  (go (->> uid-list
+           item-repository/retrieve-feeds-uids <!
+           (swap! global assoc :items))))
+
+(defn load-items-by-group [group-id]
+  (let [feed-list (->> @global
+                       :groups
+                       (filter #(= (:name %) group-id))
+                       first
+                       :subscriptions)]
+    (load-items-by-uid-list feed-list)))
+
+(defn load-items-by-feed [feed-id]
+  (load-items-by-uid-list [feed-id]))
+
+
+;; TOOD Change to multi-method
 (defn load-selected-feeds [item]
-  (.log js/console "Loading" item)
-  (cond
-   (= item :all-items) (load-all-items)
-   (= item :shared-items) (load-shared-items)
-   (= item :favorite-items) (load-favorites-items)
-   :else (retrieve-feeds item)))
+  (let [[selected id] item]
+    (cond
+      (= selected :all-items) (load-all-items)
+      (= selected :shared-items) (load-shared-items)
+      (= selected :favorite-items) (load-favorites-items)
+      (= selected :group) (load-items-by-group id)
+      :else (load-items-by-feed id))))
 
-(defn selected? [item]
-  (= item (:selected @global)))
+(defn state-change-listener [context key ref old-value new-value]
+  (store-state @global))
 
 (defn initialize-state []
   (let [old-state (:state hp/local-storage)]
     (if (not (nil? old-state))
       (do
-        (restore-state global)
-        (load-selected-feeds (:selected @global))))
-    (add-watch global
-               nil
-               (fn [context key ref old-value new-value]
-                 (store-state @global)))))
+        (restore-state old-state)
+        (load-selected-feeds (:selected old-state))))
+    (add-watch global nil state-change-listener)))
 
-(defn get-update-path [uid]
-  (if (group? uid)
-    (-> []
-        (conj :groups)
-        (conj (get-group-idx uid)))
-    (let [group-uid (get-feed-group-uid uid)
-          group (get-group-data group-uid)
-          group-idx (get-group-idx group-uid)
-          feed-idx (get-feed-idx-group group uid)]
-      (-> []
-          (conj :groups)
-          (conj group-idx)
-          (conj :subscriptions)
-          (conj feed-idx)))))
+(defn add-general-group []
+  (swap! global
+         update-in [:groups]
+         #(conj % (-> {}
+                      (assoc :name (msg :ghoul.general.group))
+                      (assoc :expanded true)
+                      (assoc :subscriptions [])))))
 
-(defn ^:export set-uid-count [uid new-count]
-  (let [path (-> uid get-update-path (conj :pending))]
-    (swap! global assoc-in path new-count)))
+(defn add-rss-subscription [feed-url]
+  (if (empty? (:groups @global))
+    (add-general-group))
+  (go
+    (let [feed-data (-> feed-url http/get-rss <! :data)
+          feed-num (-> feed-data :items count)
+          feed-uid (uuid/uuid-string (uuid/make-random-uuid))
+          subscription (-> {}
+                           (assoc :title (:title feed-data))
+                           (assoc :uid feed-uid)
+                           (assoc :site-url (:link feed-data))
+                           (assoc :feed-url feed-url)
+                           (assoc :favicon "/images/favicon.png")
+                           (assoc :pending feed-num))]
+      ;; TODO move this to a worker call
+      (doseq [item (:items feed-data)]
+        (-> item
+            (assoc :feeduid feed-uid)
+            (item-repository/add-feed)
+            <!)
+        (swap! global update-in [:items] #(conj % item)))
+      (swap! global update-in [:feeds] #(conj % subscription))
+      (swap! global update-in [:groups 0 :subscriptions] #(conj % feed-uid)))))
 
-(defn update-uid-count [uid update-fn]
-  (let [path (-> uid get-update-path (conj :pending))]
-    (swap! global update-in path update-fn)))
 
-(defn list-uid-url []
-  (->> @global :groups
-      (map :subscriptions)
-      flatten
-      (map #(-> [] (conj (:uid %)) (conj (:feed-url %))))))
 
-(defn include-feed [feed-data]
-  (let [feed-uid (:feeduid feed-data)
-        group-uid (get-feed-group-uid feed-uid)]
-    (update-uid-count feed-uid inc)
-    (update-uid-count group-uid inc)
-    (if (or (= (:selected @global) feed-uid)
-            (= (:selected @global) group-uid)
-            (= (:selected @global) :all-items))
-      (swap! global update-in [:feeds] #(conj % feed-data)))))
+(defn get-feed-group [feed-uid]
+  (let [group-contains-feed-uid (fn [group feed-uid]
+                                  (->> group :subscriptions (some #(= % feed-uid))))]
+    (->> @global
+         :groups
+         (filter #(group-contains-feed-uid % feed-uid))
+         first)))
+
+(defn get-feed-idx [uid]
+  (->> @global
+       :feeds
+       (map-indexed vector)
+       (filter #(= (:uid (second %)) uid))
+       first
+       first))
+
+(defn increase-feed-pending [uid]
+  (let [path [:feeds (get-feed-idx uid) :pending]]
+    (swap! global update-in path inc)))
+
+(defn include-feed [item-data]
+  (let [[selected id] (:selected @global)
+        feed-uid (:feeduid item-data)
+        group-name (-> feed-uid get-feed-group :name)]
+    (increase-feed-pending feed-uid)
+    (if (or (= id feed-uid)
+            (= id group-name)
+            (= selected :all-items))
+      (swap! global update-in [:items] #(conj % item-data)))))
+

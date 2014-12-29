@@ -27,6 +27,6 @@
                                    (om/build sidebar/root
                                              (project data :popup :selected :groups :feeds))
                                    (if (empty? (:feeds data))
-                                     (om/build home-panel/root {})
+                                     (om/build home-panel/root (project data :popup))
                                      (om/build items-panel/root
                                                (project data :selected :feeds :feeds-view :items))))))))))

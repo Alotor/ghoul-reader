@@ -1,7 +1,7 @@
 (ns ghoul.app.worker
   (:require-macros [cljs.core.async.macros :refer [go-loop]])
   (:require [cljs.core.async :refer [<! timeout]]
-            [ghoul.app.state2 :as state]))
+            [ghoul.app.state :as state]))
 
 (def ^:private refresh-time-milis (atom (* 5 60 1000)))
 (def ^:private update-feed-worker (atom nil))
@@ -12,7 +12,6 @@
       (state/include-feed (:data result)))))
 
 (defn- ^:export read-feed [uid url]
-  (.log js/console (str "Updating: " uid ", " url))
   (set! (.-onmessage @update-feed-worker) feed-update)
   (.postMessage @update-feed-worker #js {:action "update" :uid uid :url url}))
 
