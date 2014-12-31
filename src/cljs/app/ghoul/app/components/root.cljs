@@ -29,6 +29,5 @@
                                    (if (empty? (:feeds data))
                                      (om/build home-panel/root (project data :popup))
                                      (do
-                                       (.log js/console ">> render app" (:feeds data))
                                        (om/build items-panel/root
                                                  (project data :selected :feeds :feeds-view :items)))))))))))

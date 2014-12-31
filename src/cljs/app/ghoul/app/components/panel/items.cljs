@@ -104,15 +104,25 @@
     (init-state [this]
       {:displaying-items 5})
 
-    om/IWillReceiveProps
-    (will-receive-props [this next-props]
-      (-> owner .getDOMNode .-scrollTop (set! 0)))
+    om/IWillUpdate
+    (will-update [this next-props next-state]
+      (if (not= (-> owner om/get-props :selected) (-> next-props :selected))
+        (do
+          (-> owner .getDOMNode .-scrollTop (set! 0))
+          (om/set-state! owner :displaying-items 5))))
+
+    om/IDidUpdate
+    (did-update [this prev-props prev-state]
+      (let [element-height (-> owner .getDOMNode .-scrollHeight)
+            parent-height (-> owner .getDOMNode .-parentNode .-clientHeight)]
+        (if (>= parent-height element-height)
+          (om/update-state! owner :displaying-items inc))))
 
     om/IRenderState
     (render-state [this state]
       (let [cb-scroll (fn [e]
                         (let [node (.getDOMNode owner)
-                              to-display (if (> (.-scrollTop node) (/ (.-scrollHeight node) 2))
+                              to-display (if (>= (+ (.-scrollTop node) (.-clientHeight node)) (* (.-scrollHeight node) 0.98))
                                            (inc (:displaying-items state))
                                            (:displaying-items state))]
                           (om/set-state! owner :displaying-items to-display)))
@@ -151,4 +161,4 @@
     (render [this]
       (dom/section #js {:id "feeds-panel"}
                    (om/build feed-title (project data :selected :feeds-view :feeds))
-                   (om/build item-list (project data :feeds :items) {:state {:displaying-items 5}})))))
+                   (om/build item-list (project data :selected :feeds :items))))))

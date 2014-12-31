@@ -57,7 +57,9 @@
   (assoc! hp/local-storage :state (dissoc state :items)))
 
 (defn restore-state [old-state]
-  (reset! global old-state))
+  ;; TODO migrate from state old version to new
+  (if (= (:version old-state) current-state-version)
+    (reset! global old-state)))
 
 (defn load-all-items []
   (go (->> (item-repository/retrieve-all-feeds) <!
