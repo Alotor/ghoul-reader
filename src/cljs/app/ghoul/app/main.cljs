@@ -18,7 +18,11 @@
            state/global
            {:target (. js/document (getElementById "app-root"))
             :tx-listen (fn [{:keys [path new-value]} data]
-                         (if (= path [:selected]) (state/load-selected-feeds new-value)))})
+                         (.log js/console (str " >>>> Change in " path))
+                         (if (= path [:selected])
+                           (state/load-selected-feeds new-value))
+                         (if (and (= (first path) :items) (= (count path) 3))
+                           (state/update-item (take 2 path))))})
   (worker/start-feed-worker)
   (worker/update-all-feeds)
   (.log js/console (msg :ghoul.initialized)))

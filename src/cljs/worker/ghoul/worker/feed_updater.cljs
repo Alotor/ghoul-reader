@@ -16,7 +16,7 @@
           (if (= result :not-found)
             (do
               (let [to-store (-> feed (assoc :feeduid feed-uid))]
-                (-> to-store storage/add-feed <!)
+                (-> to-store storage/add-item <!)
                 (js/postMessage (clj->js {:action "update" :result "ok" :data to-store}))))))))))
 
 (defn manage-command [event]
