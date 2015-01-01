@@ -44,7 +44,7 @@ request.onerror = ghoul.repository.item.cb_error;
 
 return ret_chan;
 });
-ghoul.repository.item.add_feed = (function add_feed(feed){
+ghoul.repository.item.add_item = (function add_item(feed){
 var ret_chan = cljs.core.async.chan.call(null);
 var trans = new cljs.core.Keyword(null,"db","db",993250759).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,ghoul.repository.item.database)).transaction([ghoul.repository.item.feeds_storage_name],"readwrite");
 var store = trans.objectStore(ghoul.repository.item.feeds_storage_name);
@@ -63,8 +63,8 @@ return ret_chan;
 /**
 * @param {...*} var_args
 */
-ghoul.repository.item.retrieve_all_feeds = (function() { 
-var retrieve_all_feeds__delegate = function (p__11299){
+ghoul.repository.item.retrieve_all_items = (function() { 
+var retrieve_all_items__delegate = function (p__11299){
 var map__11301 = p__11299;
 var map__11301__$1 = ((cljs.core.seq_QMARK_.call(null,map__11301))?cljs.core.apply.call(null,cljs.core.hash_map,map__11301):map__11301);
 var feeduid_list = cljs.core.get.call(null,map__11301__$1,new cljs.core.Keyword(null,"feeduid-list","feeduid-list",1640476731));
@@ -104,23 +104,23 @@ cursor.onerror = ghoul.repository.item.cb_error;
 
 return ret_chan;
 };
-var retrieve_all_feeds = function (var_args){
+var retrieve_all_items = function (var_args){
 var p__11299 = null;
 if (arguments.length > 0) {
   p__11299 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 0),0);
 } 
-return retrieve_all_feeds__delegate.call(this,p__11299);};
-retrieve_all_feeds.cljs$lang$maxFixedArity = 0;
-retrieve_all_feeds.cljs$lang$applyTo = (function (arglist__11303){
+return retrieve_all_items__delegate.call(this,p__11299);};
+retrieve_all_items.cljs$lang$maxFixedArity = 0;
+retrieve_all_items.cljs$lang$applyTo = (function (arglist__11303){
 var p__11299 = cljs.core.seq(arglist__11303);
-return retrieve_all_feeds__delegate(p__11299);
+return retrieve_all_items__delegate(p__11299);
 });
-retrieve_all_feeds.cljs$core$IFn$_invoke$arity$variadic = retrieve_all_feeds__delegate;
-return retrieve_all_feeds;
+retrieve_all_items.cljs$core$IFn$_invoke$arity$variadic = retrieve_all_items__delegate;
+return retrieve_all_items;
 })()
 ;
-ghoul.repository.item.retrieve_feeds_uids = (function retrieve_feeds_uids(uid_list){
-return ghoul.repository.item.retrieve_all_feeds.call(null,new cljs.core.Keyword(null,"feeduid-list","feeduid-list",1640476731),uid_list);
+ghoul.repository.item.retrieve_items_by_uid = (function retrieve_items_by_uid(uid_list){
+return ghoul.repository.item.retrieve_all_items.call(null,new cljs.core.Keyword(null,"feeduid-list","feeduid-list",1640476731),uid_list);
 });
 ghoul.repository.item.get_item = (function get_item(feed_uid,uid){
 var ret_chan = cljs.core.async.chan.call(null);

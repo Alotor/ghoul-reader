@@ -45,7 +45,7 @@ var state_10885__$1 = state_10885;
 return cljs.core.async.impl.ioc_helpers.return_chan.call(null,state_10885__$1,inst_10883);
 } else {
 if((state_val_10886 === (1))){
-var inst_10880 = ghoul.repository.item.retrieve_all_feeds.call(null);
+var inst_10880 = ghoul.repository.item.retrieve_all_items.call(null);
 var state_10885__$1 = state_10885;
 return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null,state_10885__$1,(2),inst_10880);
 } else {
@@ -146,7 +146,7 @@ var state_10915__$1 = state_10915;
 return cljs.core.async.impl.ioc_helpers.return_chan.call(null,state_10915__$1,inst_10913);
 } else {
 if((state_val_10916 === (1))){
-var inst_10910 = ghoul.repository.item.retrieve_feeds_uids.call(null,uid_list);
+var inst_10910 = ghoul.repository.item.retrieve_items_by_uid.call(null,uid_list);
 var state_10915__$1 = state_10915;
 return cljs.core.async.impl.ioc_helpers.take_BANG_.call(null,state_10915__$1,(2),inst_10910);
 } else {
@@ -414,7 +414,7 @@ var inst_11105 = (state_11137[(16)]);
 var inst_11059 = (state_11137[(10)]);
 var inst_11105__$1 = cljs.core.first.call(null,inst_11096);
 var inst_11106 = cljs.core.assoc.call(null,inst_11105__$1,new cljs.core.Keyword(null,"feeduid","feeduid",1367071876),inst_11059);
-var inst_11107 = ghoul.repository.item.add_feed.call(null,inst_11106);
+var inst_11107 = ghoul.repository.item.add_item.call(null,inst_11106);
 var state_11137__$1 = (function (){var statearr_11143 = state_11137;
 (statearr_11143[(16)] = inst_11105__$1);
 
@@ -575,7 +575,7 @@ var inst_11078 = (state_11137[(15)]);
 var inst_11059 = (state_11137[(10)]);
 var inst_11083__$1 = cljs.core._nth.call(null,inst_11076,inst_11078);
 var inst_11084 = cljs.core.assoc.call(null,inst_11083__$1,new cljs.core.Keyword(null,"feeduid","feeduid",1367071876),inst_11059);
-var inst_11085 = ghoul.repository.item.add_feed.call(null,inst_11084);
+var inst_11085 = ghoul.repository.item.add_item.call(null,inst_11084);
 var state_11137__$1 = (function (){var statearr_11156 = state_11137;
 (statearr_11156[(21)] = inst_11083__$1);
 
@@ -793,4 +793,8 @@ return cljs.core.conj.call(null,p1__11190_SHARP_,item_data);
 } else {
 return null;
 }
+});
+ghoul.app.state.update_item = (function update_item(item_path){
+var item = cljs.core.get_in.call(null,cljs.core.deref.call(null,ghoul.app.state.global),item_path);
+return ghoul.repository.item.add_item.call(null,item);
 });

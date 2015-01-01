@@ -14,8 +14,8 @@ return cuerdas.core.strip_tags.call(null,cuerdas.core.strip_tags.call(null,strin
 */
 ghoul.common.utils.project = (function() { 
 var project__delegate = function (data,keys){
-return cljs.core.reduce.call(null,(function (p1__19316_SHARP_,p2__19317_SHARP_){
-return cljs.core.assoc.call(null,p1__19316_SHARP_,p2__19317_SHARP_,p2__19317_SHARP_.call(null,data));
+return cljs.core.reduce.call(null,(function (p1__9699_SHARP_,p2__9700_SHARP_){
+return cljs.core.assoc.call(null,p1__9699_SHARP_,p2__9700_SHARP_,p2__9700_SHARP_.call(null,data));
 }),cljs.core.PersistentArrayMap.EMPTY,keys);
 };
 var project = function (data,var_args){
@@ -25,9 +25,9 @@ if (arguments.length > 1) {
 } 
 return project__delegate.call(this,data,keys);};
 project.cljs$lang$maxFixedArity = 1;
-project.cljs$lang$applyTo = (function (arglist__19318){
-var data = cljs.core.first(arglist__19318);
-var keys = cljs.core.rest(arglist__19318);
+project.cljs$lang$applyTo = (function (arglist__9701){
+var data = cljs.core.first(arglist__9701);
+var keys = cljs.core.rest(arglist__9701);
 return project__delegate(data,keys);
 });
 project.cljs$core$IFn$_invoke$arity$variadic = project__delegate;
@@ -48,9 +48,9 @@ if (arguments.length > 1) {
 } 
 return mapply__delegate.call(this,f,args);};
 mapply.cljs$lang$maxFixedArity = 1;
-mapply.cljs$lang$applyTo = (function (arglist__19319){
-var f = cljs.core.first(arglist__19319);
-var args = cljs.core.rest(arglist__19319);
+mapply.cljs$lang$applyTo = (function (arglist__9702){
+var f = cljs.core.first(arglist__9702);
+var args = cljs.core.rest(arglist__9702);
 return mapply__delegate(f,args);
 });
 mapply.cljs$core$IFn$_invoke$arity$variadic = mapply__delegate;

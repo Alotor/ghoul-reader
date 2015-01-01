@@ -1,19 +1,19 @@
 {"version":3,
  "file":
  "/home/alotor/Projects/GhoulReader/ghoul-reader/dist/js/out/dev/ghoul/app/main.js",
- "sources":["main.cljs?rel=1420049677265"],
- "lineCount":51,
+ "sources":["main.cljs?rel=1420115947704"],
+ "lineCount":58,
  "mappings":
- ";AAAA;;;;;;;;;;;;;;;;;;;;;;;AAaA,gCAAA,hCAAeA;AAAf,AACE,AAACC;;AACD,AAACC;;AACD,4EAAA,2CAAA,4FAAA,nNAACC,uBAAQC,8BACAC,0HACS,wBAAA,xBAAGC,kGACA,WAAAC,SAA8BQ;AAA9B,AAAA,IAAAP,aAAAD;IAAAC,iBAAA,EAAA,AAAAC,+BAAAD,aAAA,AAAAE,0BAAAC,mBAAAH,YAAAA;gBAAA,AAAAI,wBAAAJ,eAAA,nDAAkBM;WAAlB,AAAAF,wBAAAJ,eAAA,9CAAaK;AAAb,AACE,GAAI,8BAAA,mFAAA,jHAACG,yBAAEH;AAAkB,OAACI,8CAA0BH;;AAApD;;;;AACvB,AAACI;;AACD,AAACC;;AACD,OAAMC,YAAW,iCAAA,jCAACC;;;AAEpB,AAACrB",
+ ";AAAA;;;;;;;;;;;;;;;;;;;;;;;AAaA,gCAAA,hCAAeA;AAAf,AACE,AAACC;;AACD,AAACC;;AACD,4EAAA,2CAAA,4FAAA,nNAACC,uBAAQC,8BACAC,0HACS,wBAAA,xBAAGC,kGACA,WAAAC,SAA8BQ;AAA9B,AAAA,IAAAP,aAAAD;IAAAC,iBAAA,EAAA,AAAAC,+BAAAD,aAAA,AAAAE,0BAAAC,mBAAAH,YAAAA;gBAAA,AAAAI,wBAAAJ,eAAA,nDAAkBM;WAAlB,AAAAF,wBAAAJ,eAAA,9CAAaK;AAAb,AACE,AAAMG,YAAW,eAAA,kCAAwBH;;AACzC,GAAI,8BAAA,mFAAA,jHAACI,yBAAEJ;AACL,AAACK,8CAA0BJ;;AAD7B;;AAEA,GAAI,CAAK,yDAAA,zDAACG,yBAAE,AAACE,0BAAMN,mEAAc,yDAAA,zDAACI,yBAAE,AAACG,0BAAMP;AACzC,OAACQ,sCAAkB,yBAAA,zBAACC,6BAAOT;;AAD7B;;;;AAEvB,AAACU;;AACD,AAACC;;AACD,OAAMR,YAAW,iCAAA,jCAACS;;;AAEpB,AAACzB",
  "names":
  ["ghoul.app.main/initialize-app",
   "ghoul.repository.item/init-database",
   "ghoul.app.state/initialize-state", "om.core/root",
   "ghoul.app.components.root/app", "ghoul.app.state/global",
-  "js/document", "p__27266", "map__27267", "cljs.core/seq?",
+  "js/document", "p__11276", "map__11277", "cljs.core/seq?",
   "cljs.core/apply", "cljs.core/hash-map", "cljs.core/get", "path",
-  "new-value", "data", "cljs.core/=",
-  "ghoul.app.state/load-selected-feeds",
+  "new-value", "data", "js/console", "cljs.core/=",
+  "ghoul.app.state/load-selected-feeds", "cljs.core/first",
+  "cljs.core/count", "ghoul.app.state/update-item", "cljs.core/take",
   "ghoul.app.worker/start-feed-worker",
-  "ghoul.app.worker/update-all-feeds", "js/console",
-  "ghoul.app.messages/msg"]}
+  "ghoul.app.worker/update-all-feeds", "ghoul.app.messages/msg"]}

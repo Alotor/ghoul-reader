@@ -27,7 +27,7 @@
     (-> request .-onerror (set! cb-error))
     ret-chan))
 
-(defn add-feed [feed]
+(defn add-item [feed]
   (let [ret-chan (chan)
         trans (.transaction (:db @database) #js [feeds-storage-name] "readwrite")
         store (.objectStore trans feeds-storage-name)
@@ -38,7 +38,7 @@
     (-> trans .-onerror (set! cb-error))
     ret-chan))
 
-(defn retrieve-all-feeds [&{:keys [feeduid-list]}]
+(defn retrieve-all-items [&{:keys [feeduid-list]}]
   (let [ret-chan (chan)
         temp-list (atom [])
         trans (.transaction (:db @database) #js [feeds-storage-name] "readwrite")
@@ -51,6 +51,7 @@
                                  (if (nil? feeduid-list)
                                    (swap! temp-list conj (-> res .-value (js->clj :keywordize-keys true)))
                                    (let [feeduid (-> res .-value (aget "feeduid"))]
+                                     ; TODO Improve with a set
                                      (if (some #(= feeduid %) feeduid-list)
                                        (swap! temp-list conj (-> res .-value (js->clj :keywordize-keys true))))))
                                  (.continue res))
@@ -59,8 +60,8 @@
     (-> cursor .-onerror (set! cb-error))
     ret-chan))
 
-(defn retrieve-feeds-uids [uid-list]
-  (retrieve-all-feeds :feeduid-list uid-list))
+(defn retrieve-items-by-uid [uid-list]
+  (retrieve-all-items :feeduid-list uid-list))
 
 (defn get-item [feed-uid uid]
   (let [ret-chan (chan)

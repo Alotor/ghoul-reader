@@ -62,7 +62,7 @@
     (reset! global old-state)))
 
 (defn load-all-items []
-  (go (->> (item-repository/retrieve-all-feeds) <!
+  (go (->> (item-repository/retrieve-all-items) <!
            (swap! global assoc :items))))
 
 (defn load-shared-items []
@@ -74,7 +74,7 @@
 
 (defn load-items-by-uid-list [uid-list]
   (go (->> uid-list
-           item-repository/retrieve-feeds-uids <!
+           item-repository/retrieve-items-by-uid <!
            (swap! global assoc :items))))
 
 (defn load-items-by-group [group-id]
@@ -136,7 +136,7 @@
       (doseq [item (:items feed-data)]
         (-> item
             (assoc :feeduid feed-uid)
-            (item-repository/add-feed)
+            (item-repository/add-item)
             <!)
         (swap! global update-in [:items] #(conj % item)))
       (swap! global update-in [:feeds] #(conj % subscription))
@@ -174,3 +174,6 @@
             (= selected :all-items))
       (swap! global update-in [:items] #(conj % item-data)))))
 
+(defn update-item [item-path]
+  (let [item (get-in @global item-path)]
+    (item-repository/add-item item)))

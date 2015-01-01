@@ -12,6 +12,7 @@
 (defn cb-save-popup [owner data]
   (let [state (-> owner (om/get-node "stateArea") .-value)
         clj-state (js->clj (.parse js/JSON state) :keywordize-keys true)]
+    (.log js/console (str clj-state))
     (reset! state/global clj-state)
     (storage/clear)
     (worker/update-all-feeds))

@@ -32,8 +32,15 @@ var map__10864 = p__10863;
 var map__10864__$1 = ((cljs.core.seq_QMARK_.call(null,map__10864))?cljs.core.apply.call(null,cljs.core.hash_map,map__10864):map__10864);
 var new_value = cljs.core.get.call(null,map__10864__$1,new cljs.core.Keyword(null,"new-value","new-value",1087038368));
 var path = cljs.core.get.call(null,map__10864__$1,new cljs.core.Keyword(null,"path","path",-188191168));
+console.log([cljs.core.str(" >>>> Change in "),cljs.core.str(path)].join(''));
+
 if(cljs.core._EQ_.call(null,path,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"selected","selected",574897764)], null))){
-return ghoul.app.state.load_selected_feeds.call(null,new_value);
+ghoul.app.state.load_selected_feeds.call(null,new_value);
+} else {
+}
+
+if((cljs.core._EQ_.call(null,cljs.core.first.call(null,path),new cljs.core.Keyword(null,"items","items",1031954938))) && (cljs.core._EQ_.call(null,cljs.core.count.call(null,path),(3)))){
+return ghoul.app.state.update_item.call(null,cljs.core.take.call(null,(2),path));
 } else {
 return null;
 }

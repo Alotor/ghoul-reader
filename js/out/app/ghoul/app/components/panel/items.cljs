@@ -8,8 +8,8 @@
             [ghoul.app.messages :refer [msg]]
             [ghoul.common.utils :as utils]))
 
-(defn mark-feed-read [data]
-  (om/update! (:feed data) :read true))
+(defn mark-item-read [data]
+  (om/update! (:item data) :read true))
 
 (defn decrement-pending-count [data]
   (om/transact! (:feed data) :pending dec))
@@ -67,7 +67,7 @@
   (reify
     om/IInitState
     (init-state [this]
-      {:read (or (:read data) false)
+      {:read (or (-> data :item :read) false)
        :bgcolor "#ffffff"})
 
     om/IWillReceiveProps
@@ -82,7 +82,7 @@
             (go
               (<! (timeout 1)) ; IWillUpdate doesn't refresh ok the current state, timeout to execute outside
               (decrement-pending-count data)
-              (mark-feed-read data))))))
+              (mark-item-read data))))))
 
     om/IRenderState
     (render-state [this state]

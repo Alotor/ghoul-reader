@@ -44,7 +44,7 @@ request.onerror = ghoul.repository.item.cb_error;
 
 return ret_chan;
 });
-ghoul.repository.item.add_feed = (function add_feed(feed){
+ghoul.repository.item.add_item = (function add_item(feed){
 var ret_chan = cljs.core.async.chan.call(null);
 var trans = new cljs.core.Keyword(null,"db","db",993250759).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,ghoul.repository.item.database)).transaction([ghoul.repository.item.feeds_storage_name],"readwrite");
 var store = trans.objectStore(ghoul.repository.item.feeds_storage_name);
@@ -63,29 +63,29 @@ return ret_chan;
 /**
 * @param {...*} var_args
 */
-ghoul.repository.item.retrieve_all_feeds = (function() { 
-var retrieve_all_feeds__delegate = function (p__27702){
-var map__27704 = p__27702;
-var map__27704__$1 = ((cljs.core.seq_QMARK_.call(null,map__27704))?cljs.core.apply.call(null,cljs.core.hash_map,map__27704):map__27704);
-var feeduid_list = cljs.core.get.call(null,map__27704__$1,new cljs.core.Keyword(null,"feeduid-list","feeduid-list",1640476731));
+ghoul.repository.item.retrieve_all_items = (function() { 
+var retrieve_all_items__delegate = function (p__11348){
+var map__11350 = p__11348;
+var map__11350__$1 = ((cljs.core.seq_QMARK_.call(null,map__11350))?cljs.core.apply.call(null,cljs.core.hash_map,map__11350):map__11350);
+var feeduid_list = cljs.core.get.call(null,map__11350__$1,new cljs.core.Keyword(null,"feeduid-list","feeduid-list",1640476731));
 var ret_chan = cljs.core.async.chan.call(null);
 var temp_list = cljs.core.atom.call(null,cljs.core.PersistentVector.EMPTY);
 var trans = new cljs.core.Keyword(null,"db","db",993250759).cljs$core$IFn$_invoke$arity$1(cljs.core.deref.call(null,ghoul.repository.item.database)).transaction([ghoul.repository.item.feeds_storage_name],"readwrite");
 var store = trans.objectStore(ghoul.repository.item.feeds_storage_name);
 var date_index = store.index("pubDate");
 var cursor = date_index.openCursor(null,"prev");
-var cb_success = ((function (ret_chan,temp_list,trans,store,date_index,cursor,map__27704,map__27704__$1,feeduid_list){
+var cb_success = ((function (ret_chan,temp_list,trans,store,date_index,cursor,map__11350,map__11350__$1,feeduid_list){
 return (function (e){
 var res = e.target.result;
 if(!((res == null))){
 if((feeduid_list == null)){
 cljs.core.swap_BANG_.call(null,temp_list,cljs.core.conj,cljs.core.js__GT_clj.call(null,res.value,new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true));
 } else {
-var feeduid_27705 = (res.value["feeduid"]);
-if(cljs.core.truth_(cljs.core.some.call(null,((function (feeduid_27705,res,ret_chan,temp_list,trans,store,date_index,cursor,map__27704,map__27704__$1,feeduid_list){
-return (function (p1__27701_SHARP_){
-return cljs.core._EQ_.call(null,feeduid_27705,p1__27701_SHARP_);
-});})(feeduid_27705,res,ret_chan,temp_list,trans,store,date_index,cursor,map__27704,map__27704__$1,feeduid_list))
+var feeduid_11351 = (res.value["feeduid"]);
+if(cljs.core.truth_(cljs.core.some.call(null,((function (feeduid_11351,res,ret_chan,temp_list,trans,store,date_index,cursor,map__11350,map__11350__$1,feeduid_list){
+return (function (p1__11347_SHARP_){
+return cljs.core._EQ_.call(null,feeduid_11351,p1__11347_SHARP_);
+});})(feeduid_11351,res,ret_chan,temp_list,trans,store,date_index,cursor,map__11350,map__11350__$1,feeduid_list))
 ,feeduid_list))){
 cljs.core.swap_BANG_.call(null,temp_list,cljs.core.conj,cljs.core.js__GT_clj.call(null,res.value,new cljs.core.Keyword(null,"keywordize-keys","keywordize-keys",1310784252),true));
 } else {
@@ -96,7 +96,7 @@ return res.continue();
 } else {
 return cljs.core.async.put_BANG_.call(null,ret_chan,cljs.core.deref.call(null,temp_list));
 }
-});})(ret_chan,temp_list,trans,store,date_index,cursor,map__27704,map__27704__$1,feeduid_list))
+});})(ret_chan,temp_list,trans,store,date_index,cursor,map__11350,map__11350__$1,feeduid_list))
 ;
 cursor.onsuccess = cb_success;
 
@@ -104,23 +104,23 @@ cursor.onerror = ghoul.repository.item.cb_error;
 
 return ret_chan;
 };
-var retrieve_all_feeds = function (var_args){
-var p__27702 = null;
+var retrieve_all_items = function (var_args){
+var p__11348 = null;
 if (arguments.length > 0) {
-  p__27702 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 0),0);
+  p__11348 = cljs.core.array_seq(Array.prototype.slice.call(arguments, 0),0);
 } 
-return retrieve_all_feeds__delegate.call(this,p__27702);};
-retrieve_all_feeds.cljs$lang$maxFixedArity = 0;
-retrieve_all_feeds.cljs$lang$applyTo = (function (arglist__27706){
-var p__27702 = cljs.core.seq(arglist__27706);
-return retrieve_all_feeds__delegate(p__27702);
+return retrieve_all_items__delegate.call(this,p__11348);};
+retrieve_all_items.cljs$lang$maxFixedArity = 0;
+retrieve_all_items.cljs$lang$applyTo = (function (arglist__11352){
+var p__11348 = cljs.core.seq(arglist__11352);
+return retrieve_all_items__delegate(p__11348);
 });
-retrieve_all_feeds.cljs$core$IFn$_invoke$arity$variadic = retrieve_all_feeds__delegate;
-return retrieve_all_feeds;
+retrieve_all_items.cljs$core$IFn$_invoke$arity$variadic = retrieve_all_items__delegate;
+return retrieve_all_items;
 })()
 ;
-ghoul.repository.item.retrieve_feeds_uids = (function retrieve_feeds_uids(uid_list){
-return ghoul.repository.item.retrieve_all_feeds.call(null,new cljs.core.Keyword(null,"feeduid-list","feeduid-list",1640476731),uid_list);
+ghoul.repository.item.retrieve_items_by_uid = (function retrieve_items_by_uid(uid_list){
+return ghoul.repository.item.retrieve_all_items.call(null,new cljs.core.Keyword(null,"feeduid-list","feeduid-list",1640476731),uid_list);
 });
 ghoul.repository.item.get_item = (function get_item(feed_uid,uid){
 var ret_chan = cljs.core.async.chan.call(null);
@@ -151,4 +151,4 @@ var store = trans.objectStore(ghoul.repository.item.feeds_storage_name);
 return store.clear();
 });
 
-//# sourceMappingURL=item.js.map?rel=1420049677684
+//# sourceMappingURL=item.js.map?rel=1420116236666

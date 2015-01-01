@@ -15,8 +15,8 @@ goog.require('om.core');
 goog.require('cuerdas.core');
 goog.require('ghoul.common.utils');
 goog.require('cuerdas.core');
-ghoul.app.components.panel.items.mark_feed_read = (function mark_feed_read(data){
-return om.core.update_BANG_.call(null,new cljs.core.Keyword(null,"feed","feed",-1566486205).cljs$core$IFn$_invoke$arity$1(data),new cljs.core.Keyword(null,"read","read",1140058661),true);
+ghoul.app.components.panel.items.mark_item_read = (function mark_item_read(data){
+return om.core.update_BANG_.call(null,new cljs.core.Keyword(null,"item","item",249373802).cljs$core$IFn$_invoke$arity$1(data),new cljs.core.Keyword(null,"read","read",1140058661),true);
 });
 ghoul.app.components.panel.items.decrement_pending_count = (function decrement_pending_count(data){
 return om.core.transact_BANG_.call(null,new cljs.core.Keyword(null,"feed","feed",-1566486205).cljs$core$IFn$_invoke$arity$1(data),new cljs.core.Keyword(null,"pending","pending",-220036727),cljs.core.dec);
@@ -197,7 +197,7 @@ var state_val_10151 = (state_10150[(1)]);
 if((state_val_10151 === (2))){
 var inst_10146 = (state_10150[(2)]);
 var inst_10147 = ghoul.app.components.panel.items.decrement_pending_count.call(null,self__.data);
-var inst_10148 = ghoul.app.components.panel.items.mark_feed_read.call(null,self__.data);
+var inst_10148 = ghoul.app.components.panel.items.mark_item_read.call(null,self__.data);
 var state_10150__$1 = (function (){var statearr_10152 = state_10150;
 (statearr_10152[(7)] = inst_10146);
 
@@ -298,7 +298,7 @@ ghoul.app.components.panel.items.t10141.prototype.om$core$IInitState$ = true;
 ghoul.app.components.panel.items.t10141.prototype.om$core$IInitState$init_state$arity$1 = (function (this$){
 var self__ = this;
 var this$__$1 = this;
-return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"read","read",1140058661),(function (){var or__3608__auto__ = new cljs.core.Keyword(null,"read","read",1140058661).cljs$core$IFn$_invoke$arity$1(self__.data);
+return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"read","read",1140058661),(function (){var or__3608__auto__ = new cljs.core.Keyword(null,"read","read",1140058661).cljs$core$IFn$_invoke$arity$1(new cljs.core.Keyword(null,"item","item",249373802).cljs$core$IFn$_invoke$arity$1(self__.data));
 if(cljs.core.truth_(or__3608__auto__)){
 return or__3608__auto__;
 } else {
