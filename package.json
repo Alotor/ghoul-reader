@@ -1,20 +1,22 @@
 {
     "name": "GhoulReader",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "dependencies": {
-        "gulp": "^3.5.0",
-        "gulp-concat": "~2.1.7",
-        "gulp-util": "~2.2.12",
-        "gulp-uglify": "~0.1.0",
-        "gulp-sass": "~0.4.1",
-        "gulp-jade": "~0.3.0",
-        "gulp-livereload": "~0.2.0",
-        "gulp-rename": "^1.2.0",
-        "gulp-minify-css": "^0.3.1",
-        "gulp-load-plugins": "^0.5.1",
-        "gulp-compass": "~1.1.8",
-        "gulp-plumber": "^0.6.2",
-        "tiny-lr": "0.0.5",
-        "express": "~3.4.8"
+        "gulp": "^3.8.11",
+        "gulp-concat": "~2.5.2",
+        "gulp-util": "~3.0.4",
+        "gulp-uglify": "~1.2.0",
+        "gulp-sass": "~1.3.3",
+        "gulp-jade": "~1.0.0",
+        "gulp-livereload": "~3.8.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-minify-css": "^1.1.0",
+        "gulp-load-plugins": "^0.10.0",
+        "gulp-compass": "~2.0.4",
+        "gulp-plumber": "^1.0.0",
+        "gulp-browserify": "^0.5.1",
+        "jxt": "^3.0.3",
+        "tiny-lr": "0.1.5",
+        "express": "~4.12.3"
     }
 }

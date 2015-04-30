@@ -14,7 +14,7 @@ gulp.task('compass', function() {
             sass: 'src/style'
         }))
         .pipe(gulp.dest('dist/style'))
-        .pipe( $.livereload( server ));
+        .pipe( $.livereload());
 });
 
 gulp.task('images', function() {
@@ -29,7 +29,7 @@ gulp.task('templates', function() {
             pretty: true
         }))
         .pipe( gulp.dest('dist/') )
-        .pipe( $.livereload( server ));
+        .pipe( $.livereload());
 });
 
 gulp.task('express', function() {
@@ -39,13 +39,9 @@ gulp.task('express', function() {
 });
 
 gulp.task('watch', function () {
-    server.listen(35729, function (err) {
-        if (err) {
-            return console.log(err);
-        }
-        gulp.watch('src/style/**/*.scss',['compass']);
-        gulp.watch('src/template/**/*.jade',['templates']);
-    });
+    $.livereload.listen();
+    gulp.watch('src/style/**/*.scss',['compass']);
+    gulp.watch('src/template/**/*.jade',['templates']);
 });
 
 // Default Task

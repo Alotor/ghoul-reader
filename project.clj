@@ -6,17 +6,17 @@
 
   :source-paths ["src/cljs"]
 
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2411"]
+  :dependencies [[org.clojure/clojure "1.7.0-beta1"]
+                 [org.clojure/clojurescript "0.0-3196"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
-                 [om "0.8.0-beta3"]
-                 [cuerdas "0.1.0-SNAPSHOT"]
-                 [org.clojars.franks42/cljs-uuid-utils "0.1.3"]
-                 [com.andrewmcveigh/cljs-time "0.2.4"]
-                 [hodgepodge "0.1.0"]]
+                 [org.omcljs/om "0.8.8"]
+                 [com.lucasbradstreet/cljs-uuid-utils "1.0.1"]
+                 [com.andrewmcveigh/cljs-time "0.3.4"]
+                 [funcool/cuerdas "0.4.0"]
+                 [hodgepodge "0.1.3"]]
 
-  :plugins [[lein-cljsbuild "1.0.3"]
-            [lein-asciidoctor "0.1.12"]]
+  :plugins [[lein-cljsbuild "1.0.5"]
+            [lein-asciidoctor "0.1.14"]]
 
   :asciidoctor {:sources "doc/*.ad"
                 :to-dir "dist/doc"

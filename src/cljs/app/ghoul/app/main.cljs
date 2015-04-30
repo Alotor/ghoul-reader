@@ -3,7 +3,7 @@
   (:require [om.core :as om]
             [om.dom :as dom]
             [cuerdas.core :as str]
-            [cljs-uuid-utils :as uuid]
+            [cljs-uuid-utils.core :as uuid]
             [cljs.core.async :as async :refer [<!]]
             [ghoul.repository.item :as item-repository]
             [ghoul.app.state :as state]

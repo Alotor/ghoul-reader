@@ -1,7 +1,7 @@
 (ns ghoul.app.state
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [cljs.core.async :as async :refer [<!]]
-            [cljs-uuid-utils :as uuid]
+            [cljs-uuid-utils.core :as uuid]
             [hodgepodge.core :as hp]
             [ghoul.common.http :as http]
             [ghoul.repository.item :as item-repository]
