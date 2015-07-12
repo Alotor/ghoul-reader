@@ -4,3 +4,7 @@ dist
 target
 .lein-repl-history
 .nrepl-port
+.repl
+figwheel_server.log
+resources/public/css
+resources/public/js

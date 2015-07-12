@@ -23,7 +23,7 @@
         (read-feed uid url)))))
 
 (defn start-feed-worker []
-  (reset! update-feed-worker (js/Worker. "js/worker.js"))
+  (reset! update-feed-worker (js/Worker. "js/ghoul-worker.js"))
   (go-loop []
     (update-all-feeds)
     (<! (timeout @refresh-time-milis))

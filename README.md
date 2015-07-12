@@ -1,6 +1,6 @@
 Ghoul Reader
 ============
-![Ghoul Reader](https://raw.githubusercontent.com/PIWEEK/ghoul-reader/master/src/assets/images/logo400.png)
+![Ghoul Reader](https://raw.githubusercontent.com/Alotor/ghoul-reader/master/resources/public/images/logo400.png)
 
 >This foul creature appears more or less humanoid, but has mottled, decaying flesh drawn tight across clearly visible bones. +
 >It is mostly hairless and has a carnivore’s sharp teeth. Its eyes burn like hot coals in their sunken sockets.

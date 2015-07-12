@@ -93,7 +93,7 @@
       display: none;
       line-height: 1.3em;
 
-      @include nested-reset();
+      //@include nested-reset();
 
       &.expanded {
         display: block;

@@ -6,8 +6,8 @@ $ghoul-color-lighter: #8C9B96;
 $font-color             : #333;
 $iconic-font-path: '../fonts/' !default;
 
-@import "compass/reset";
-@import "compass/utilities";
+@import "reset";
+//@import "compass/utilities";
 @import "flex";
 
 @font-face {
