@@ -26,8 +26,11 @@ This project is born with this need in mind and also trying to develop a Clojure
   - Shadow DOM (description css sandboxing)
   - Local file reading (import ompl files)
   - Service workers (offline capabilities)
+  - Web RTC (peer to peer sharing)
 
 # Features & progress
+
+You can check the [Taiga Project](https://tree.taiga.io/project/alonsotorres-ghoul-reader/kanban) to know the progress
 
 - [X] Basic state rendering and actions
 - [X] Retrieving state from IndexedDB
