@@ -11,7 +11,7 @@
                  [com.lucasbradstreet/cljs-uuid-utils "1.0.1"]
                  [com.andrewmcveigh/cljs-time "0.3.10"]
                  [funcool/cuerdas "0.4.0"]
-                 [funcool/tubax "0.1.0-SNAPSHOT"]
+                 [funcool/tubax "0.1.2"]
                  [funcool/hodgepodge "0.1.3"]]
 
   :plugins [[lein-cljsbuild "1.0.6"]
@@ -46,17 +46,28 @@
                            :output-dir "resources/public/js/out"
                            :source-map-timestamp true }}
 
-               {:id "worker"
+               {:id "prod"
+                :source-paths ["src/app" "src/common"]
+                :compiler {:output-to "resources/public/js/ghoul.min.js"
+                           :main ghoul.app.main
+                           :optimizations :advanced
+                           :pretty-print false}}
+
+               {:id "worker-dev"
                 :source-paths ["src/worker" "src/common"]
                 :compiler {:output-to "resources/public/js/ghoul-worker.js"
+                           :main ghoul.worker-feed-updater
+                           ;:asset-path "js/out"
+                           ;:output-dir "resources/public/js/worker"
+                           :optimizations :whitespace
+                           :pretty-print true
+                           :source-map-timestamp true }}
+
+               {:id "worker-prod"
+                :source-paths ["src/worker" "src/common"]
+                :compiler {:output-to "resources/public/js/ghoul-worker.min.js"
                            :main ghoul.worker.feed-updater
                            :optimizations :advanced
                            :pretty-print false}}
-               {:id "app"
-                :source-paths ["src/app" "src/common"]
-                :compiler {:output-to "resources/public/js/ghoul.js"
-                           :main ghoul.app.main
-                           :optimizations :advanced
-                           :pretty-print false}}]}
-
+               ]}
   )

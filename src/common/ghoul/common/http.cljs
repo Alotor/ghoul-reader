@@ -58,4 +58,4 @@
   (let [url (-> url
                 (str/replace-first #"https://" cors-service)
                 (str/replace-first #"http://" cors-service))]
-    (send {:method :get, :url url, :response->data rss/parse-document})))
+    (send {:method :get :url url :response->data rss/parse-document})))

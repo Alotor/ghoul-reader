@@ -9,7 +9,14 @@
             [ghoul.app.state :as state]
             [ghoul.app.worker :as worker]
             [ghoul.app.messages :refer [msg]]
-            [ghoul.app.components.root :as root]))
+            [ghoul.app.components.root :as root]
+
+            [ghoul.repository.item :as storage]
+            [ghoul.common.http :as http]
+
+            ))
+
+(enable-console-print!)
 
 (defn ^:export initialize-app []
   (item-repository/init-database)
@@ -18,7 +25,6 @@
            state/global
            {:target (. js/document (getElementById "app-root"))
             :tx-listen (fn [{:keys [path new-value]} data]
-                         (.log js/console (str " >>>> Change in " path))
                          (if (= path [:selected])
                            (state/load-selected-feeds new-value))
                          (if (and (= (first path) :items) (= (count path) 3))
@@ -28,3 +34,7 @@
   (.log js/console (msg :ghoul.initialized)))
 
 (initialize-app)
+
+(defn reload! []
+  (println "Figwheel reloaded"))
+
