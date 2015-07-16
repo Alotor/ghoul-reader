@@ -31,7 +31,7 @@
                            (state/update-item (take 2 path))))})
   (worker/start-feed-worker)
   (worker/update-all-feeds)
-  (.log js/console (msg :ghoul.initialized)))
+  (println (msg :ghoul.initialized)))
 
 (initialize-app)
 

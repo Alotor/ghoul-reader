@@ -89,7 +89,7 @@
       (let [item-data (:item data)
             feed-data (:feed data)
             class-read (if (:read state) "item-read" "")]
-        (dom/article #js {:className (str/join " " ["feed-content" class-read]) :style #js {"background-color" (:bgcolor state)}}
+        (dom/article #js {:className (str/join " " ["feed-content" class-read]) :style #js {"backgroundColor" (:bgcolor state)}}
                      (dom/div #js {:className "rss-item-header"}
                               (dom/h4 #js {:className "rss-title"}
                                       (dom/a #js {:className "rss-link" :href (:link item-data)}

@@ -142,6 +142,9 @@
 
     .subscription {
       position: relative;
+      & a {
+        background-color: #3b5950;
+      }
       .count {
         position: absolute;
         right: 10px;

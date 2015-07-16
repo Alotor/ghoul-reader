@@ -23,3 +23,15 @@
   (reduce #(assoc %1 %2 (%2 data)) {} keys))
 
 (defn mapply [f & args] (apply f (apply concat (butlast args) (last args))))
+
+(defn active-classes
+  ([class-map]
+   (active-classes [] class-map))
+
+  ([fixed-classes class-map]
+   (->> class-map
+        (filter second)
+        (map first)
+        (into fixed-classes)
+        (map name)
+        (str/join " "))))
