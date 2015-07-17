@@ -118,6 +118,13 @@
                       (assoc :expanded true)
                       (assoc :subscriptions [])))))
 
+(defn add-group [group-name]
+  (swap! global
+         update-in [:groups] conj
+         {:name group-name
+          :subscriptions []
+          :expanded true}))
+
 (defn add-rss-subscription [feed-url]
   (if (empty? (:groups @global))
     (add-general-group))
@@ -177,3 +184,16 @@
 (defn update-item [item-path]
   (let [item (get-in @global item-path)]
     (item-repository/add-item item)))
+
+(defn select-all []
+  (go
+    (let [all-items (<! (item-repository/retrieve-all-items))]
+      (swap! global (fn [state]
+                      (-> state
+                          (assoc :selected [:all-items])
+                          (assoc :items items) ))))))
+
+(defn open-popup [popup]
+  (swap! global (fn [state]
+                  (-> state
+                      (assoc :popup [popup])))))

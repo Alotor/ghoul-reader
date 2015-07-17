@@ -7,6 +7,7 @@
             [ghoul.app.components.common.sidebar :as sidebar]
             [ghoul.app.components.popup.state :as state-popup]
             [ghoul.app.components.popup.feed :as feed-popup]
+            [ghoul.app.components.popup.groups :as group-popup]
             [ghoul.app.components.panel.items :as items-panel]
             [ghoul.app.components.panel.home :as home-panel]))
 
@@ -20,6 +21,7 @@
             class-app (str/join " " (list "app-container" class-view class-menu))]
         (dom/div #js {:className class-popup}
                  (om/build feed-popup/root (project data :popup :feeds))
+                 (om/build group-popup/root (project data :popup))
                  (om/build state-popup/root (project data :popup))
                  (dom/div #js {:className class-app}
                           (om/build header/root (project data :show-menu))

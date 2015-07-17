@@ -10,10 +10,7 @@
             [ghoul.app.worker :as worker]
             [ghoul.app.messages :refer [msg]]
             [ghoul.app.components.root :as root]
-
-            [ghoul.repository.item :as storage]
-            [ghoul.common.http :as http]
-
+            [ghoul.app.keyboard :as keyboard]
             ))
 
 (enable-console-print!)
@@ -31,6 +28,9 @@
                            (state/update-item (take 2 path))))})
   (worker/start-feed-worker)
   (worker/update-all-feeds)
+
+  (keyboard/start-keyboard!)
+
   (println (msg :ghoul.initialized)))
 
 (initialize-app)

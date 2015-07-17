@@ -12,6 +12,7 @@
 
    ; Popup
    :ghoul.popup.feed.title "Introduzca la URL del RSS"
+   :ghoul.popup.group.title "Nombre del nuevo grupo"
    :ghoul.popup.state.title "Estado"
 
    ; Welcome panel

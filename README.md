@@ -42,12 +42,13 @@ You can check the [Taiga Project](https://tree.taiga.io/project/alonsotorres-gho
 - [X] Improve state management
 - [X] Check read/unread items
 - [X] Paging the items list so there are no problems with big items lists
+- [X] Internazionalization support
+- [X] Change XML library to Tubax
+- [X] Group creation
+- [X] Feeds drag&drop to move into groups
+- [X] Shortcuts
 - [ ] Improve testing
 - [ ] Improve error control
-- [ ] Change XML library to JXT
-- [ ] Internazionalization
-- [ ] Group creation
-- [ ] Feeds drag&drop to move into groups
 - [ ] Remove feeds and groups
 - [ ] ATOM format support
 - [ ] Favicons into feed lists
@@ -55,7 +56,6 @@ You can check the [Taiga Project](https://tree.taiga.io/project/alonsotorres-gho
 - [ ] Import/Export OMPL file
 - [ ] Remote synchronization of subscriptions
 - [ ] CSS animations
-- [ ] Shortcuts
 - [ ] Offline capabilities
 - [ ] Mobile version (Cordova)
 - [ ] Sharing with other users

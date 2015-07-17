@@ -73,7 +73,7 @@
     om/IWillReceiveProps
     (will-receive-props [this props]
       (let [new-state (-> owner get-item-visualization-state)]
-        ;(om/set-state! owner :bgcolor (state->color new-state)) ; Debugging facility
+        #_(om/set-state! owner :bgcolor (state->color new-state)) ; Debugging facility
         (if (and (not (-> owner om/get-state :read))
                  (or (= new-state :partial-out-item)
                      (= new-state :in-item)))

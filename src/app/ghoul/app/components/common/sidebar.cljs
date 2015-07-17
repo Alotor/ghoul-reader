@@ -13,6 +13,9 @@
 (defn show-feed-popup [data]
   (om/update! (:popup data) [0] :feed))
 
+(defn show-group-popup [data]
+  (om/update! (:popup data) [0] :group))
+
 (defn show-state-popup [data]
   (om/update! (:popup data) [0] :state))
 
@@ -50,7 +53,8 @@
     om/IRender
     (render [this]
       (dom/div #js {:className "icon-buttons"}
-               (dom/a #js {:className "menu-icon add-group"}
+               (dom/a #js {:className "menu-icon add-group"
+                           :onClick #(show-group-popup data)}
                       (msg :ghoul.toolbar.add-group))
                (dom/a #js {:className "menu-icon add-feed"
                            :onClick #(show-feed-popup data)}
