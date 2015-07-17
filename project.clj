@@ -49,7 +49,7 @@
 
                {:id "prod"
                 :source-paths ["src/app" "src/common"]
-                :compiler {:output-to "resources/public/js/ghoul.min.js"
+                :compiler {:output-to "resources/public/js/ghoul.js"
                            :main ghoul.app.main
                            :optimizations :advanced
                            :pretty-print false}}
@@ -66,7 +66,7 @@
 
                {:id "worker-prod"
                 :source-paths ["src/worker" "src/common"]
-                :compiler {:output-to "resources/public/js/ghoul-worker.min.js"
+                :compiler {:output-to "resources/public/js/ghoul-worker.js"
                            :main ghoul.worker.feed-updater
                            :optimizations :advanced
                            :pretty-print false}}
