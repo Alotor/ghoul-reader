@@ -5,15 +5,15 @@
             :url "http://www.gnu.org/licenses/agpl-3.0.html"}
 
   :dependencies [[org.clojure/clojure "1.7.0"]
-                 [org.clojure/clojurescript "0.0-3308"]
+                 [org.clojure/clojurescript "1.7.107"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [org.clojure/core.match "0.3.0-alpha4"]
-                 [org.omcljs/om "0.8.8"]
-                 [com.lucasbradstreet/cljs-uuid-utils "1.0.1"]
-                 [com.andrewmcveigh/cljs-time "0.3.10"]
-                 [funcool/cuerdas "0.4.0"]
+                 [org.omcljs/om "0.9.0"]
+                 [com.lucasbradstreet/cljs-uuid-utils "1.0.2"]
+                 [com.andrewmcveigh/cljs-time "0.3.11"]
+                 [funcool/cuerdas "0.6.0"]
                  [funcool/tubax "0.1.2"]
-                 [funcool/hodgepodge "0.1.3"]]
+                 [funcool/hodgepodge "0.1.4"]]
 
   :plugins [[lein-cljsbuild "1.0.6"]
             [lein-figwheel "0.3.7"]
