@@ -12,8 +12,8 @@
     min-height: 25px;
   }
 
-  .item-read {
-    opacity: 0.6;
+  .item-read .rss-title a.rss-link {
+    color: #999 !important;
   }
 
   .compact-view & {
@@ -63,7 +63,7 @@
   .feed-content {
     border-bottom: 1px solid #aaa;
     padding: 0.5em;
-    font-size: 85%;
+    font-size: 20px;;
     text-align: justify;
 
     .expanded-view & {
@@ -91,9 +91,7 @@
       font-family: "Open Sans";
       margin-top: 1em;
       display: none;
-      line-height: 1.3em;
-
-      //@include nested-reset();
+      line-height: 1.7;
 
       &.expanded {
         display: block;
@@ -147,7 +145,7 @@
       padding-top: 0px;
       .feeds-wrapper .feed-content {
         padding: 2rem;
-        max-width: 940px;
+        max-width: 720px;
         margin: 1rem auto;
         box-shadow: none;
         border-radius: 0px;
