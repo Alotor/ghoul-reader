@@ -35,3 +35,12 @@
         (into fixed-classes)
         (map name)
         (str/join " "))))
+
+(defn ppeek [item]
+  (.log js/console item)
+  item)
+
+(defn next-last [coll]
+  (if (next (next coll))
+    (recur (next coll))
+    (first coll)))

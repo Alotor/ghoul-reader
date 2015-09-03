@@ -33,6 +33,7 @@
         item-elements (-> item-zipper zip/children)
         get           (fn [key] (get-value item-elements key))]
     {:title (get :title)
+     :link (get :link)
      :description (get :description)
      :uid (get :guid)
      :pubdate (parse-date (get :pubDate))}))
@@ -48,5 +49,4 @@
      :link (get :link)
      :description (get :description)
      :uid (get :guid)
-     :items (into [] items)})
-  )
+     :items (into [] items)}))

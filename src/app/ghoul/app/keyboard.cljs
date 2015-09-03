@@ -1,13 +1,17 @@
 (ns ghoul.app.keyboard
   (:require [goog.events :as events]
             [cljs.core.match :refer-macros [match]]
+            [cljs.core.async :as async]
             [ghoul.app.state :as state])
   (:import [goog.events EventType KeyCodes]
            [goog.ui KeyboardShortcutHandler]))
+;;
+;; Calculate next item
+;; feedsWrapperContainer.scrollTop = itemNode.offsetTop - 100
 
 (def event-keys
-  {"J"           :next-feed
-   "K"           :previous-feed
+  {"J"           :next-item
+   "K"           :previous-item
    "SPACE"       :next-page
    "SHIFT+SPACE" :previous-page
    "ALT+G"       :new-group
@@ -21,21 +25,22 @@
    "G F"         :go-to-favourites
    "G S"         :go-to-shared})
 
-(defn dispatch-key [e]
+(defn dispatch-key [event-channel e]
   (match [(get event-keys (.-identifier e))]
          [:go-to-all] (state/select-all)
          [:new-group] (state/open-popup :group)
          [:new-feed]  (state/open-popup :feed)
+         [:next-item]  (async/put! event-channel [:next-item])
+         [:previous-item]  (async/put! event-channel [:previous-item])
          :else        (println "Handler not found")
          ))
 
 
-(defn start-keyboard! []
+(defn start-keyboard! [event-channel]
   (let [handler (KeyboardShortcutHandler. js/document)]
     (doseq [[shortcut key] event-keys]
       (.registerShortcut handler shortcut shortcut))
 
     (events/listen handler
                    KeyboardShortcutHandler.EventType.SHORTCUT_TRIGGERED
-                   dispatch-key))
-  )
+                   (partial dispatch-key event-channel))))

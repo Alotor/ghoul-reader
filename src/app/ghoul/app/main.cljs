@@ -16,22 +16,24 @@
 (enable-console-print!)
 
 (defn ^:export initialize-app []
-  (item-repository/init-database)
-  (state/initialize-state)
-  (om/root root/app
-           state/global
-           {:target (. js/document (getElementById "app-root"))
-            :tx-listen (fn [{:keys [path new-value]} data]
-                         (if (= path [:selected])
-                           (state/load-selected-feeds new-value))
-                         (if (and (= (first path) :items) (= (count path) 3))
-                           (state/update-item (take 2 path))))})
-  (worker/start-feed-worker)
-  (worker/update-all-feeds)
+  (let [event-chan (async/chan)]
+    (item-repository/init-database)
+    (state/initialize-state)
+    (om/root root/app
+             state/global
+             {:target (. js/document (getElementById "app-root"))
+              :shared { :event-chan event-chan }
+              :tx-listen (fn [{:keys [path new-value]} data]
+                           (if (= path [:selected])
+                             (state/load-selected-feeds new-value))
+                           (if (and (= (first path) :items) (= (count path) 3))
+                             (state/update-item (take 2 path))))})
+    (worker/start-feed-worker)
+    (worker/update-all-feeds)
 
-  (keyboard/start-keyboard!)
+    (keyboard/start-keyboard! event-chan)
 
-  (println (msg :ghoul.initialized)))
+    (println (msg :ghoul.initialized))))
 
 (initialize-app)
 
