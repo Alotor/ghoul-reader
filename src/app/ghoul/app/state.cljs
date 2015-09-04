@@ -191,7 +191,7 @@
       (swap! global (fn [state]
                       (-> state
                           (assoc :selected [:all-items])
-                          (assoc :items items) ))))))
+                          (assoc :items all-items) ))))))
 
 (defn open-popup [popup]
   (swap! global (fn [state]
