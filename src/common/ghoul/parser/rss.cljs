@@ -3,7 +3,9 @@
             [tubax.core :refer [xml->clj]]
             [clojure.zip :as zip]))
 
-(defn parse-rss2-item [item]
+(defn parse-rss2-item
+  "Parse an RSS 2.0 item inside a channel"
+  [item]
   (let [item-zipper   (zip/xml-zip item)
         item-elements (-> item-zipper zip/children)
         get           (fn [tag] (parse/get-tag-value item-elements tag))]
@@ -14,7 +16,9 @@
      :pubdate     (-> (get :pubDate) parse/parse-date)}))
 
 
-(defn parse-document [document]
+(defn parse-document
+  "Parse an XML document with a RSS 2.0 format and returns a map"
+  [document]
   (let [parsed-document  (xml->clj document)
         documment-zipper (zip/xml-zip parsed-document)
         channel-elements (-> documment-zipper zip/down zip/children)
