@@ -23,7 +23,7 @@
   :sass {:src "resources/public/style"
          :dst "resources/public/css"}
 
-  :source-paths ["src/common" "src/app" "src/worker"]
+  :source-paths ["src/common" "src/app" "src/worker" "src/test"]
 
   :clean-targets ^{:protect false} ["resources/public/js/" "target"]
 
@@ -70,5 +70,18 @@
                            :main ghoul.worker.feed-updater
                            :optimizations :advanced
                            :pretty-print false}}
-               ]}
-  )
+
+               {:id "test"
+                :source-paths ["src/common" "src/app" "src/worker" "src/test"]
+                :notify-command ["node" "target/tests.js"]
+                :compiler {:output-to "target/tests.js"
+                           :output-dir "target"
+                           :source-map true
+                           :static-fns true
+                           :cache-analysis false
+                           :main ghoul.test-runner
+                           :optimizations :none
+                           :target :nodejs
+                           :pretty-print true
+                           :warnings {:single-segment-namespace false}}}
+               ]})
