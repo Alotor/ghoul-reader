@@ -20,10 +20,10 @@
          :feeds-view [:expanded-view] ; or :compact-view
 
          ;; Only for the mobile view. Diesplay state for sidebar
-         :show-menu [false]
+         :show-menu [false] ; should be local
 
          ;; Active popup in display
-         :popup [:none]
+         :popup [:none] ; should be local
 
          ;; Current selected item in the sidebar
          :selected [:all-items]
