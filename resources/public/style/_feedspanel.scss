@@ -64,7 +64,6 @@
     border-bottom: 1px solid #aaa;
     padding: 0.5em;
     font-size: 20px;;
-    text-align: justify;
 
     .expanded-view & {
       padding: 2em;
@@ -88,7 +87,7 @@
     }
 
     .rss-description {
-      font-family: "Open Sans";
+      font-family: "Georgia";
       margin-top: 1em;
       display: none;
       line-height: 1.7;
