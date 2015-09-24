@@ -4,7 +4,7 @@
             [cuerdas.core :as str]
             [ghoul.common.utils :refer [project]]
             [ghoul.app.components.common.header :as header]
-            [ghoul.app.components.common.sidebar :as sidebar]
+            [ghoul.app.components.common.newsidebar :as sidebar]
             [ghoul.app.components.popup.state :as state-popup]
             [ghoul.app.components.popup.feed :as feed-popup]
             [ghoul.app.components.popup.groups :as group-popup]
@@ -20,16 +20,16 @@
             class-popup (-> data :popup first name (str "-popup-visible"))
             class-app (str/join " " (list "app-container" class-view class-menu))]
         (dom/div #js {:className class-popup}
-                 (om/build feed-popup/root (project data :popup :feeds))
-                 (om/build group-popup/root (project data :popup))
-                 (om/build state-popup/root (project data :popup))
-                 (dom/div #js {:className class-app}
-                          (om/build header/root (project data :show-menu))
-                          (dom/div #js {:className "content"}
-                                   (om/build sidebar/root
-                                             (project data :popup :selected :groups :feeds))
-                                   (if (empty? (:feeds data))
-                                     (om/build home-panel/root (project data :popup))
-                                     (do
-                                       (om/build items-panel/root
-                                                 (project data :selected :feeds :feeds-view :items)))))))))))
+          #_(om/build feed-popup/root (project data :popup :feeds))
+          #_(om/build group-popup/root (project data :popup))
+          #_(om/build state-popup/root (project data :popup))
+          (dom/div #js {:className class-app}
+            #_(om/build header/root (project data :show-menu))
+            (dom/div #js {:className "content"}
+              (om/build sidebar/root
+                        (project data :popup :selected :groups :feeds))
+              (if (empty? (:feeds data))
+                (om/build home-panel/root (project data :popup))
+                (do
+                  (om/build items-panel/root
+                            (project data :selected :feeds :feeds-view :items)))))))))))

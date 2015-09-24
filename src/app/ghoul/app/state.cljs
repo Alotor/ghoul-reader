@@ -7,9 +7,9 @@
             [ghoul.repository.item :as item-repository]
             [ghoul.app.messages :refer [msg]]))
 
-(def current-state-version 1)
+(defonce current-state-version 1)
 
-(def global
+(defonce global
   (atom {;; State version. Necesary to migrate when stored into the users local-storage
          :version current-state-version
 

@@ -1,3 +1,271 @@
+$logo-height: 2em;
+$font-family: "Helvetica";
+
+$primary-color-dark:   #00796B;
+$primary-color:        #009688;
+$primary-color-light:  #B2DFDB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #9E9E9E;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
+
+.favicon {
+    width: 1.3em;
+    height: 1.3em;
+}
+
+aside#menu {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    display: none;
+    font-family: $font-family;
+    font-size: 1.5em;
+    flex-direction: column;
+
+    &.is-visible {
+        display: flex;
+    }
+
+    h1 {
+        min-height: $logo-height;
+        padding: 0;
+        background : url(/images/ghoul-reader-logo-tranparent.png) no-repeat left center;
+        background-size: auto $logo-height;
+        padding-left: 5em;
+        font-size: 1em;
+        margin-left: 0.5em;
+        font-family: Georgia;
+        margin: 0.5em 0.5em;
+        align-self: center;
+        line-height: 2em;
+    }
+    
+    a {
+        line-height: 1.75em;
+        text-decoration: none;
+        &:visited {
+            color: $primary-text-color;
+        }
+    }
+
+    .button, .button:visited {
+        display: block;
+        padding: 0.3em 0.6em;
+        text-transform: uppercase;
+        background-color: $primary-color-dark;
+        color: $primary-color-text;
+        font-size: 0.9em;
+
+        &:before {
+            font-family: "Icons";
+            content: "\e03d";
+            float: left;
+            text-indent: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        &.add-subscription {
+            margin: 0.3em 1em;
+
+            &:before {
+                font-family: "Icons";
+                content: "\e0aa";
+                width: auto;
+                padding-right: 2em;
+                font-size: 1em;
+            }
+        }
+
+        &.import {
+            text-indent: -9999px;
+            &:before {
+                content: "\e03d";
+            }
+        }
+        &.export {
+            text-indent: -9999px;
+            &:before {
+                content: "\e03c";
+            }
+        }
+        &.refresh {
+            text-indent: -9999px;
+            &:before {
+                content: "\e0b3";
+            }
+        }
+    }
+
+    .filters {
+        h2 {
+            display: none;
+        }
+
+        a {
+            padding: 0.5em 0em;
+            width: 100%;
+            position: relative;
+
+            &:before {
+                font-family: "Icons";
+                content: "\e03c";
+                float: left;
+                margin-right: 0.5em;
+                font-size: 1.2em;
+                color: $divider-color;
+                padding-left: 1em;
+            }
+
+            &.all-items:before {
+                content: "\e0b8"
+            }
+            &.favorites:before {
+                content: "\e0c2"
+            }
+            &.shared:before {
+                content: "\e0cc"
+            }
+        }
+    }
+
+    li {
+        display: flex;
+        flex-direction: row;
+        flex-align: center;
+
+        img, a {
+            display: block;
+        }
+
+        &.group {
+            flex-direction: column;
+        }
+    }
+
+    .subscriptions {
+        flex-grow: 1;
+        overflow-y: auto;
+        position: relative;
+
+        .count {
+            color: $secondary-text-color;
+            position: absolute;
+            right: 1em;
+            text-align: right;
+            font-size: 0.9em;
+        }
+        h2 {
+            margin: 1em;
+            margin-right: 0.5em;
+            border-bottom: 1px solid $divider-color;
+            margin-bottom: 0;
+            padding-bottom: 0.7em;
+        }
+
+        .add-group {
+            color: $divider-color;
+            text-indent: -9999px;
+            display: block;
+            float: right;
+            position: relative;
+            right: 0;
+            margin-top: -2em;
+
+            &:before {
+                font-family: "Icons";
+                content: "\e0aa";
+                margin-right: 0.6em;
+                text-indent: 0;
+                float: right;
+                font: 0.5em;
+            }
+        }
+
+
+        li {
+            align-items: center;
+            
+            .favicon {
+                display: block;
+                margin-left: 1em;
+            }
+
+            a {
+                display: block;
+                flex-grow: 1;
+                padding: 0.4em;
+            }
+        }
+
+        .group {
+            align-items: baseline;
+            margin-left: 1em;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            ul {
+                width: 100%;
+            }
+
+            li {
+                padding-left: 0.7em;
+            }
+            .toggle-view {
+                text-indent: -9999px;
+                flex-grow: 0;
+
+                &:before {
+                    font-family: "Icons";
+                    content: "\e036";
+                    font-size: 0.8em;
+                    text-indent: 0;
+                    float: left;
+                    width: 100%;
+                    color: $divider-color;
+                    margin-right: 0.5em;
+                }
+            }
+
+            .group-title {
+                padding: 0;
+                flex-grow: 1;
+                text-transform: uppercase;
+                
+                .group-title-text {
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+    
+    .config {
+        width: 100%;
+        display: flex;
+        flex-direction: rows;
+        justify-content: center;
+        border-top: 1px solid $divider-color;
+
+        a {
+            padding: 0.2em;
+            padding-top: 0.5em;
+            background: none;
+            &:before {
+                color: $divider-color;
+            }
+        }
+        h2 {
+            display: none;
+        }
+    }
+}
+
+
+/*
 .search-box {
   width: 100%;
   overflow: hidden;
@@ -34,6 +302,33 @@
   height: 100%;
   top: 0px;
   z-index: 2;
+
+  .logo {
+    height: 45px;
+    @include flex-grow(1);
+
+    img {
+      height: 50px;
+      padding-top: 5px;
+      padding-left: 5px;
+      margin-right: 5px;
+      position: relative;
+      z-index: 1;
+    }
+    .text {
+      display: inline-block;
+      vertical-align: middle;
+      height: 45px;
+      position: relative;
+      top: -20px;
+
+      .ghoul {
+        font-family: "EB Garamond";
+        font-size: 35px;
+        margin-right: 2px;
+      }
+    }
+  }
 
   a {
     display: block;
@@ -208,4 +503,20 @@
       }
     }
   }
+}
+*/
+
+@media screen and (min-width: 900px) {
+    aside#menu {
+        font-size: 1em;
+        position: static;
+        display: block;
+        width: auto;
+        min-width: 300px;
+
+        h1 {
+            font-size: 1.8em;
+            line-height: initial;
+        }
+    }
 }

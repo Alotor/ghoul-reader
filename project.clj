@@ -13,7 +13,8 @@
                  [com.andrewmcveigh/cljs-time "0.3.11"]
                  [funcool/cuerdas "0.6.0"]
                  [funcool/tubax "0.1.2"]
-                 [funcool/hodgepodge "0.1.4"]]
+                 [funcool/hodgepodge "0.1.4"]
+                 [prismatic/om-tools "0.3.12"]]
 
   :plugins [[lein-cljsbuild "1.0.6"]
             [lein-figwheel "0.3.7"]
