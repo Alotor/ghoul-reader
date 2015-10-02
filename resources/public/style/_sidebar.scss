@@ -145,6 +145,10 @@ aside#menu {
         &.group {
             flex-direction: column;
         }
+
+        &.selected > a{
+            font-weight: bold;
+        }
     }
 
     .subscriptions {
