@@ -4,20 +4,28 @@
 (defn empty-state
   "Creates an empty state for the application"
   []
-  {:display-mode [:list :expanded-view]
-   :selected [:all-items]
-   :index []
-   :feeds {}})
+  {;; Which menu item is currently selected
+   :selected {:type   [:all] ;; :all, :favorite, :shared, :group, :feed
+              :sort   [:date]
+              :filter [:read]
+              :view   :expanded-view}
+
+   ;; Index representation
+   :index [#_([:feed uid]
+              [:group "title" [... feeds]]) ]
+
+   ;; Current feeds database
+   :feeds { #_(:uid :title :descrition :url) }})
 
 (defn get-display-mode
   "Retrieves the selected display-mode in the application"
   [state]
-  (:display-mode state))
+  (->  state :selected :view))
 
 (defn get-selected
   "Retrieves the current group, feed or logical group (favourites, all...) selected"
   [state]
-  (:selected state))
+  (-> state :selected :type))
 
 (defn list-index
   "Retrieve the current defined index. This is the elements the user have available

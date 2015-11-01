@@ -43,7 +43,18 @@
 
       (is (= 2 (count (state/list-index state))))
       (is (= {:feed "feed2"}  (first (state/list-index state))))
-      (is (= {:group group1} (second (state/list-index state)))))))
+      (is (= {:group group1} (second (state/list-index state))))))
+
+  (testing "Change selected entry - all items")
+  (testing "Change selected entry - favorite")
+  (testing "Change selected entry - group")
+  (testing "Change selected entry - feed")
+
+  (testing "Change filter to to-read")
+  (testing "Change filter to all")
+  (testing "Change filter to recent first")
+  (testing "Change filter to old first")
+  )
 
 #_(deftest state-transition-invalid-transitions
   (testing "Try to add an invalid feed")
