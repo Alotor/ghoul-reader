@@ -20,7 +20,7 @@
             class-popup (-> data :popup first name (str "-popup-visible"))
             class-app (str/join " " (list "app-container" class-view class-menu))]
         (dom/div #js {:className class-popup}
-          #_(om/build feed-popup/root (project data :popup :feeds))
+          (om/build feed-popup/root (project data :popup :feeds))
           #_(om/build group-popup/root (project data :popup))
           #_(om/build state-popup/root (project data :popup))
           (dom/div #js {:className class-app}
