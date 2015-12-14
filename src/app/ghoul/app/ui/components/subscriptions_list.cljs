@@ -2,15 +2,16 @@
   (:require
    [om.core :refer [build]]
    [om-tools.core :refer-macros [defcomponent]]
-   [sablono.core :as html :refer-macros [html]]))
+   [sablono.core :as html :refer-macros [html]]
+   [ghoul.app.model.core :as model]))
 
 (defcomponent subscription-feed [data owner]
   (render [_]
     (html [:li.subscriptions-list__subscription--feed
-           [:img.subscriptions-list__favicon {:src "/images/rssicon.png"}]
+           [:img.subscriptions-list__favicon {:src (:favicon-url data)}]
            [:a.subscriptions-list__title {:href "#"}
-            [:span.subscriptions-list__name (str "Feed")]
-            [:span.subscriptions-list__count (str 10)]]])))
+            [:span.subscriptions-list__name (:title data)]
+            [:span.subscriptions-list__count (:pending data)]]])))
 
 (defcomponent subscription-group [data owner]
   (render [_]
@@ -18,17 +19,22 @@
            [:a.subscriptions-list__btn--expand {:href "#"} "expand"]
 
            [:a.subscriptions-list__group-link {:href "#"}
-            [:span.subscriptions-list__name--group (str "Group")]
-            [:span.subscriptions-list__count (str 10)]]
+            [:span.subscriptions-list__name--group (:name data)]
+            [:span.subscriptions-list__count (:pending data)]]
 
            [:ul.subscriptions-list__group-feeds
-            (for [j (range 0 10)]
-              (build subscription-feed data))]])))
+            (for [current (:subscriptions data)]
+              (build subscription-feed current))]])))
 
 (defcomponent subscriptions-list [data owner]
   (render [_]
     (html [:ul.subscriptions-list
-           (build subscription-feed data)
-           (build subscription-feed data)
-           (for [i (range 0 10)]
-             (build subscription-group data))])))
+           (for [current (model/get-subscriptions @data)]
+             (cond (model/feed? current)
+                   (build subscription-feed current)
+
+                   (model/group? current)
+                   (build subscription-group current)
+
+                   :else
+                   [:li (str "-- NOT FOUND --" current)]))])))

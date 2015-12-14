@@ -9,7 +9,9 @@
             [ghoul.app.worker :as worker]
             [ghoul.app.messages :refer [msg]]
             [ghoul.app.keyboard :as keyboard]
-            [ghoul.app.ui.root :as ui]))
+
+            [ghoul.app.ui.root :as ui]
+            [ghoul.app.model.core :as model]))
 
 (enable-console-print!)
 
@@ -31,7 +33,7 @@
     #_(state/initialize-state)
 
     #_(mount-root root/app state/global event-chan)
-    (mount-root ui/root state/global event-chan)
+    (mount-root ui/root model/app-state event-chan)
 
     #_(worker/start-feed-worker)
     #_(worker/update-all-feeds)
