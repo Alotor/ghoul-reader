@@ -1,0 +1,2 @@
+#!/bin/sh
+asciidoctor doc/*.ad -v -o resources/public/docs/index.html

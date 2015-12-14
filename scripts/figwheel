@@ -1,0 +1,2 @@
+#!/bin/bash
+rlwrap lein run -m clojure.main scripts/figwheel.clj
