@@ -1,0 +1,35 @@
+.articles-view {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__subscription-header {
+        display: none;
+
+        @media screen and (min-width: $responsive-large) {
+            display: flex;
+            padding: 0.5em 0.5em;
+            color: #3B5950;
+            font-family: $font-sans;
+            font-weight: 600;
+            border-bottom: 1px solid #aaa;
+            font-size: 1.2em;
+        }
+    }
+
+    &__articles-list {
+        height: 100%;
+        font-size: 1.3em;
+        padding: 1.2em;
+        overflow: auto;
+    }
+
+    &__article {
+        margin: 1em auto;
+        max-width: 34em;
+
+        @media screen and (min-width: $responsive-large) {
+            padding: 2em;
+        }
+    }
+}   

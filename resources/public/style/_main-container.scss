@@ -1,0 +1,29 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    @media screen and (min-width: $responsive-large) {
+        flex-direction: row;
+    }
+
+    width: 100%;
+    height: 100%;
+    
+    &__aside {
+        height: 100%;
+
+        &.is-visible {
+            min-height: 100%;
+        }
+
+        @media screen and (min-width: $responsive-large) {
+            min-width: 18em;
+        }
+    }
+
+    &__articles-view {
+        height: 100%;
+        width: 100%;
+    }
+}

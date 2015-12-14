@@ -29,7 +29,7 @@
 
 (defn ^:export initialize-app []
   (let [event-chan (async/chan)]
-    #_(item-repository/init-database)
+    (item-repository/init-database)
     #_(state/initialize-state)
 
     #_(mount-root root/app state/global event-chan)

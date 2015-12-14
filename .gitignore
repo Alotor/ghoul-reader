@@ -8,3 +8,4 @@ target
 figwheel_server.log
 resources/public/css
 resources/public/js
+npm-debug.log

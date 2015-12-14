@@ -1,65 +1,45 @@
-@import "base";
+$responsive-large:     900px;
+$normal-text-color:    black;
 
-html, body {
-  height: 100%;
+$primary-color-dark:   #00796B;
+$primary-color:        #009688;
+$primary-color-light:  #B2DFDB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #9E9E9E;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:        #B6B6B6;
+
+$scroll-background:    #EEE;
+$scroll-foreground:    #DDD;
+$font-sans:            "Open Sans";
+$font-serif:           "Georgia";
+
+@import "reset";
+@import "main-container";
+@import "feeds-menu";
+@import "subscriptions-list";
+@import "articles-view";
+@import "subscription-header";
+@import "article";
+
+html, body, #ghoul-reader {
+    height: 100%;
 }
 
-body {
-  &.menu-expanded {
-    overflow: hidden;
-  }
+::-webkit-scrollbar {
+    width: 4px;
+    background: $scroll-background;
 }
 
-.app-container {
-  @include flexbox;
-  @include flex-direction(column);
+::-webkit-scrollbar-thumb {
+    background: $scroll-foreground;
 }
 
-#app-root, .app-container, #app-root > div {
-  height: 100%;
+::-webkit-scrollbar-corner {
+    background: #000;
 }
 
-@media screen and (min-width: 900px) {
-  body, html {
-    overflow: hidden;
-  }
-}
-
-@import "header";
-@import "sidebar";
-@import "feedspanel";
-@import "popup";
-
-.content {
-  @include flex-grow(2);
-  @include flexbox;
-  overflow-y: auto;
-  height: 100%;
-
-  .menu-expanded & {
-    overflow-y: hidden;
-  }
-}
-
-#empty-subscription-panel {
-  margin-top: 50px;
-  margin-left: 20px;
-  font-size: 150%;
-  color: $ghoul-color-normal;
-  line-height: 30px;
-
-  p {
-    padding: 10px;
-  }
-  .emphasis {
-    font-weight: bold;
-    color: $ghoul-color-dark;
-  }
-  a {
-    padding-left: 10px;
-    font-weight: bold;
-    text-decoration: underline;
-    cursor: pointer;
-    color: $ghoul-color-dark;
-  }
+::shadow img {
+    max-width: 100%;
 }

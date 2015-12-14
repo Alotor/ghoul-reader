@@ -1,0 +1,20 @@
+.article {
+    &__header {
+        letter-spacing: -0.004em;
+    }
+
+    &__title-link {
+        color: black;
+        font-family: sans-serif;
+        font-size: 1.2em;
+        font-family: $font-sans;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    &__content {
+        font-family: Georgia;
+        margin-top: 1em;
+        line-height: 1.5;
+    }
+}   

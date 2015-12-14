@@ -1,0 +1,145 @@
+@keyframes group-unfold {
+    from { transform: rotate(0deg) translateX(0px) translateY(0px); }
+    to   { transform: rotate(90deg) translateX(5px) translateY(5px); }
+}
+
+@keyframes group-fold {
+    from { transform: rotate(90deg) translateX(5px) translateY(5px); }
+    to   { transform: rotate(0deg) translateX(0px) translateY(0px); }
+}
+
+@keyframes list-fold {
+    from { max-height: 100%; }
+    to   { max-height: 0%; }
+}
+
+@keyframes list-unfold {
+    from { max-height: 0%; }
+    to   { max-height: 100%; }
+}
+
+@keyframes step1-to-step2 {
+    from { top: 0em; }
+    to   { top: -1.9em; }
+}
+
+@keyframes step2-to-step3 {
+    from { top: -1.9em; }
+    to   { top: -4.3em; }
+}
+
+.subscriptions-list {
+    &__favicon {
+        display: block;
+        width: 1.3em;
+        height: 1.3em;
+    }
+
+    &__group-feeds {
+        display: none;
+        width: 100%;
+        padding-left: 2em;
+        text-decoration: none;
+        overflow: hidden;
+
+        .is-expanded & {
+            display: block;
+            animation: list-unfold ease-out 500ms;
+        }
+        .is-collapsed & {
+            display: none;
+            animation: list-fold ease-out 500ms;
+        }
+    }
+
+    &__group-link {
+        flex-grow: 1;
+        text-decoration: initial;
+        display: flex;
+    }
+
+    &__title {
+        display: flex;
+        flex-grow: 1;
+        text-decoration: initial;
+        color: #212121;
+        padding: 0.8em;
+        padding-right: 0;
+    }
+
+    &__name {
+        flex-grow: 1;
+
+        &--group {
+            flex-grow: 1;
+            padding: 0;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #212121;
+            font-size: 0.9em;
+        }
+    }
+
+    &__count {
+        @mixin subscription-list__count() {
+            color: #6F6F6F;
+            font-size: 0.9em;
+        }
+        @include subscription-list__count();
+
+        &--zero {
+            @include subscription-list__count();
+        }
+
+        &--max {
+            @include subscription-list__count();
+        }
+    }
+
+
+    &__subscription {
+        &--feed {
+            display: flex;
+            align-items: center;
+        }
+
+        &--group {
+            display: flex;
+            align-items: baseline;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__btn {
+        &--expand {
+            text-indent: -9999px;
+            line-height: 1em;
+            flex-grow: 0;
+            display: block;
+            padding: 0.4em;
+
+            &:before {
+                font-family: "Icons";
+                content: "\e036";
+                font-size: 0.8em;
+                text-indent: 0;
+                float: left;
+                width: 100%;
+                color: $accent-color;
+                margin-right: 0.5em;
+            }
+
+            .is-expanded &:before {
+                animation: group-unfold ease-out 500ms;
+                transform: rotate(90deg) translateX(5px) translateY(5px);
+            }
+
+            .is-collapsed &:before {
+                animation: group-fold ease-out 500ms;
+                transform: rotate(0deg) translateX(0px) translateY(0px);
+            }
+
+        }
+    }
+}

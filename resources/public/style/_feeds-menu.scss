@@ -1,0 +1,274 @@
+$ghoul-logo-url: '/images/ghoul-reader-logo-tranparent.png';
+
+@keyframes slide-open {
+    from { min-height: 75px;}
+    to { min-height: 100%; }
+}
+
+@keyframes slide-close {
+    from { min-height: 100%;}
+    to { min-height: 75px; }
+}
+
+.feeds-menu {
+    font-size: 1.3rem;
+    font-family: $font-sans;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 3em;
+    flex-basis: 0;
+
+    @media screen and (min-width: $responsive-large) {
+        height: 100%;
+        font-size: 1.2em;
+    }
+
+    .is-visible & {
+        min-height: 100%;
+        height: 100%;
+        animation: slide-open 300ms ease-in-out;
+    }
+
+    .is-hidden & {
+        min-height: 75px;
+        animation: slide-close 300ms ease-in-out;
+    }
+
+    &__logo {
+        min-height: 2em;
+        padding: 0;
+        background: url($ghoul-logo-url) no-repeat left center;
+        background-size: auto 2em;
+        padding-left: 5em;
+        font-size: 1em;
+        font-family: $font-serif;
+        margin: 0.5em 1.5em;
+        line-height: 2em;
+    }
+
+    &__add-subscription-wrapper {
+        position: relative;
+        .is-step1 & {
+        }
+        .is-step2 & {
+            top: -1.9em;
+            animation: step1-to-step2 ease-out 300ms;
+        }
+        .is-step3 & {
+            top: -4.3em;
+            animation: step2-to-step3 ease-out 300ms;
+        }
+    }
+
+    &__add-container {
+        display: flex;
+    }
+
+    &__feed-url {
+        padding: 0.5em;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    &__feed-info-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0.5em;
+        background-color: #00796B;
+    }
+
+    &__feed-title {
+        padding: 0.2em;
+        margin-left: 2em;
+        border: none;
+        font-size: 1.1em;
+        background-color: #00796B;
+        color: white;
+    }
+
+    &__feed-description {
+        color: white;
+        padding: 0.75em 0em;
+    }
+
+    &__favicon--info-container {
+        position: absolute;
+        width: 30px;
+    }
+
+    &__section {
+        &--add-subscription {
+            display: flex;
+            flex-direction: column;
+            margin: 0.3em 1.5em;
+            overflow: hidden;
+
+            &.is-step1 {
+                height: 1.9em;
+                min-height: 1.9em;
+            }
+            &.is-step2 {
+                height: 2.4em;
+                min-height: 2.4em;
+            }
+            &.is-step3 {
+                height: 8.5em;
+                min-height: 8.5em;
+            }
+            
+        }
+        &--filters {
+        }
+        &--subscriptions {
+            padding: 0 1.5em;
+            overflow: auto;
+            flex-grow: 1;
+        }
+        &--config {
+            padding-top: 3px;
+            bottom: 0px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+    &__filter {
+        @mixin feeds-menu__filter($icon) {
+            padding: 0.0em 1.5em;
+            
+            &.is-selected {
+                font-weight: bold;
+            }
+
+            a {
+                padding: 0.7em 0em;
+                text-decoration: initial;
+                color: $normal-text-color;
+                display: block;
+                line-height: 1.5em;
+
+                &:before {
+                    font-family: "Icons";
+                    content: $icon;
+                    float: left;
+                    margin-right: 0.5em;
+                    font-size: 1.2em;
+                    color: #B6B6B6;
+                }
+            }
+        }
+
+        &--all-items {
+            @include feeds-menu__filter("\e0b8");
+        }
+        &--favorites {
+            @include feeds-menu__filter("\e0c2");
+        }
+        &--shared {
+            @include feeds-menu__filter("\e0cc");
+        }
+    }
+
+    &__subscription-header {
+        display: flex;
+        align-items: center;
+        margin: 0 1.5em;
+    }
+
+    &__title {
+        &--subscriptions {
+            flex-grow: 1;
+            font-weight: 600;
+            color: $secondary-text-color;
+        }
+    }
+
+    &__subscriptions {
+    }
+
+    &__btn {
+        &--add-subscription {
+            display: block;
+            padding: 0.7em 1.5em;
+            text-transform: uppercase;
+            background-color: $primary-color-dark;
+            color: $primary-color-text;
+            text-decoration: initial;
+            font-size: 0.8em;
+
+            &:before {
+                font-family: "Icons";
+                content: "\e0aa";
+                width: auto;
+                padding-right: 1em;
+                font-size: 0.8em;
+            }
+        }
+
+        &--add-subscription-small {
+            border: 1px solid black;
+            padding: 0.5em 0.7em;
+            text-decoration: none;
+        }
+
+        &--finish-subscription {
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            padding: 0.4em 0em;
+            text-align: center;
+        }
+
+        &--new-group {
+            width: 24px;
+            padding: 0.8em;
+            padding-right: 0;
+            color: $accent-color;
+            text-indent: -9999px;
+            float: right;
+            clear: both;
+
+            &:before {
+                font-family: "Icons";
+                content: "\e0aa";
+                text-indent: 0;
+                float: right;
+            }
+        }
+
+
+        @mixin feeds-menu__config-button($icon) {
+            text-indent: -9999px;
+            display: block;
+            padding: 0.3em 0.6em;
+            text-transform: uppercase;
+            color: $accent-color;
+            font-size: 0.9em;
+
+            &:before {
+                content: $icon;
+                font-family: "Icons";
+                float: left;
+                text-indent: 0;
+                width: 100%;
+                text-align: center;
+                font-size: 1.5em;
+            }
+        }
+        
+        &--import {
+            @include feeds-menu__config-button("\e03d");
+        }
+
+        &--export {
+            @include feeds-menu__config-button("\e03c");
+        }
+
+        &--refresh {
+            @include feeds-menu__config-button("\e0b3");
+        }
+    }
+}
+

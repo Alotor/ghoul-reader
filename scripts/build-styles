@@ -1,2 +1,3 @@
 #!/bin/sh
-# TODO: BUILD STYLES
+(cd scripts/style-build && npm install && gulp)
+

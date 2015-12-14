@@ -1,28 +1,29 @@
 (ns ghoul.app.ui.components.article
   (:require
-   [om.core :refer [build]]
+   [om.core :refer [build get-node]]
    [om-tools.core :refer-macros [defcomponent]]
-   [sablono.core :as html :refer-macros [html]]))
+   [sablono.core :as html :refer-macros [html]]
+   [ghoul.common.utils :as utils]))
 
-(defonce lorem-ipsum
-  "Bacon ipsum dolor amet ground round ham hock tongue, short loin tri-tip turducken
-   jerky frankfurter. Capicola strip steak rump, chuck alcatra jowl beef spare ribs
-   biltong jerky kielbasa shank picanha. Tail leberkas pork belly picanha. Pancetta
-   tongue bacon drumstick. Alcatra prosciutto leberkas jowl, sausage pig picanha
-   hamburger. Ribeye turkey kevin shankle picanha brisket sirloin alcatra turducken
-   spare ribs.
+(defn set-shadow-root! [node description]
+  (let [shadow-root (-> node .-shadowRoot)
+        description (-> description
+                        utils/restore-tags
+                        utils/remove-unallowed-tags)]
+    (if (nil? shadow-root)
+      (-> node .createShadowRoot .-innerHTML (set! description))
+      (-> shadow-root .-innerHTML (set! description)))))
 
-   Shank frankfurter alcatra boudin strip steak pork belly. Short loin pork belly
-   shankle shank. Tail brisket fatback cupim chicken kielbasa capicola swine jerky rump
-   filet mignon ground round hamburger. Strip steak ham short loin, frankfurter tail
-   brisket jowl ribeye ham hock prosciutto turkey shank. Rump tongue ball tip, cow
-   hamburger spare ribs pork belly ribeye corned beef alcatra. Turkey porchetta chuck
-   cupim ribeye drumstick filet mignon ground round boudin.")
+(defcomponent article [data owner]
+  (did-mount [this]
+    (set-shadow-root! (get-node owner "description") (:description data)))
 
-(defcomponent article [data-owner]
-  (render [_]
+  (did-update [this next-props next-state]
+    (set-shadow-root! (get-node owner "description") (:description data)))
+
+  (render [this]
     (html [:.article
            [:.article__header
             [:h4.article__title
-             [:a.article__title-link {:href "#"} "Feed 1 - Rss title link lorem ipsum dolor doleris volentis whatever"]]]
-           [:.article__content lorem-ipsum]])))
+             [:a.article__title-link {:href "#"} (str "Feed1" " - " (:title data))]]]
+           [:.article__content {:ref "description"}]])))
