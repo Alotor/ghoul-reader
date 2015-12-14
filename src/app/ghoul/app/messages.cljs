@@ -51,4 +51,6 @@
    })
 
 (defn msg [code]
-  (code messages))
+  (if-let [msg (code messages)]
+    msg
+    (str "not.found(" (name code) ")")))

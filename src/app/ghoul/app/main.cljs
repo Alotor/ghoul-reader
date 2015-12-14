@@ -1,37 +1,42 @@
 (ns ghoul.app.main
   (:require-macros [cljs.core.async.macros :refer [go]])
   (:require [om.core :as om]
-            [om.dom :as dom]
-            [cuerdas.core :as str]
-            [cljs-uuid-utils.core :as uuid]
             [cljs.core.async :as async :refer [<!]]
+            [dommy.core :refer-macros [sel1]]
+
             [ghoul.repository.item :as item-repository]
             [ghoul.app.state :as state]
             [ghoul.app.worker :as worker]
             [ghoul.app.messages :refer [msg]]
-            [ghoul.app.components.root :as root]
             [ghoul.app.keyboard :as keyboard]
-            ))
+            [ghoul.app.ui.root :as ui]))
 
 (enable-console-print!)
 
+(defn mount-root [main-view state-atom event-chan]
+  (om/root main-view
+           state-atom
+           {:target (sel1 :#ghoul-reader)
+            :shared {:event-chan event-chan}
+            ;:tx-listen (fn [{:keys [path new-value]} data]
+            ;             (if (= path [:selected])
+            ;               (state/load-selected-feeds new-value))
+            ;             (if (and (= (first path) :items) (= (count path) 3))
+            ;               (state/update-item (take 2 path))))
+            }))
+
 (defn ^:export initialize-app []
   (let [event-chan (async/chan)]
-    (item-repository/init-database)
-    (state/initialize-state)
-    (om/root root/app
-             state/global
-             {:target (. js/document (getElementById "app-root"))
-              :shared { :event-chan event-chan }
-              :tx-listen (fn [{:keys [path new-value]} data]
-                           (if (= path [:selected])
-                             (state/load-selected-feeds new-value))
-                           (if (and (= (first path) :items) (= (count path) 3))
-                             (state/update-item (take 2 path))))})
-    (worker/start-feed-worker)
-    (worker/update-all-feeds)
+    #_(item-repository/init-database)
+    #_(state/initialize-state)
 
-    (keyboard/start-keyboard! event-chan)
+    #_(mount-root root/app state/global event-chan)
+    (mount-root ui/root state/global event-chan)
+
+    #_(worker/start-feed-worker)
+    #_(worker/update-all-feeds)
+
+    #_(keyboard/start-keyboard! event-chan)
 
     (println (msg :ghoul.initialized))))
 

@@ -17,10 +17,14 @@
                  [bouncer                             "0.3.3"]
 
                  ;; Rendering
-                 [org.omcljs/om   "1.0.0-alpha22"]
-                 [prismatic/dommy "1.1.0"]
-                 [sablono         "0.5.1"]
-                 [garden          "1.3.0"]
+                 [org.omcljs/om           "1.0.0-alpha22"]
+                 [prismatic/om-tools      "0.3.12"]
+                 [prismatic/dommy         "1.1.0"]
+                 [sablono                 "0.5.1"]
+                 [cljsjs/react            "0.14.3-0"]
+                 [cljsjs/react-dom        "0.14.3-1"]
+                 [cljsjs/react-dom-server "0.14.3-0"]
+                 [garden                  "1.3.0"]
 
                  ;; Test scope
                  [figwheel-sidecar "0.5.0-2" :scope "test"]
