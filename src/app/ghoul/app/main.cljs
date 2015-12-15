@@ -34,21 +34,22 @@
   (let [state        (model/empty-state)
         state-atom   (atom state)
         event-stream (rx/bus)
-        model-stream (update/create-model-stream event-stream state)
         signal (fn [event]
                  (fn [e]
                    (.preventDefault e)
+                   (println "Event/" (type event))
                    (rx/push! event-stream event)))]
+
     #_(state/initialize-state)
 
     #_(mount-root root/app state/global event-chan)
+
     (mount-root ui/root state-atom signal)
 
     (-> event-stream
         (update/create-model-stream state)
         (rx/retry)
-        (rx/subscribe (fn [model]
-                        (reset! state-atom model))))
+        (rx/to-atom state-atom))
 
     (rx/push! event-stream (update/Refresh.))
 
