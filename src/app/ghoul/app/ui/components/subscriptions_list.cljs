@@ -3,38 +3,49 @@
    [om.core :refer [build]]
    [om-tools.core :refer-macros [defcomponent]]
    [sablono.core :as html :refer-macros [html]]
-   [ghoul.app.model.core :as model]))
+   [cljs-uuid-utils.core :as uuid]
 
-(defcomponent subscription-feed [data owner]
-  (render [_]
-    (html [:li.subscriptions-list__subscription--feed
-           [:img.subscriptions-list__favicon {:src (:favicon-url data)}]
-           [:a.subscriptions-list__title {:href "#"}
-            [:span.subscriptions-list__name (:title data)]
-            [:span.subscriptions-list__count (:pending data)]]])))
+   [ghoul.app.model.query :as q]
+   [ghoul.app.update.events :as events]))
 
-(defcomponent subscription-group [data owner]
+(defcomponent subscription-feed [{:keys [model feed] :as data} owner]
   (render [_]
-    (html [:li.subscriptions-list__subscription--group {:class "is-expanded"}
+    (html
+     [:li.subscriptions-list__subscription--feed {:key (str "feed-" (:uuid feed)) }
+      (when (q/selected-feed? model (:uuid feed)) {:class "is-selected"})
+      [:img.subscriptions-list__favicon {:src (:favicon-url feed)}]
+      [:a.subscriptions-list__title {:href "#"}
+       [:span.subscriptions-list__name (:title feed)]
+       [:span.subscriptions-list__count (:pending feed)]]])))
+
+(defcomponent subscription-group [{:keys [model group] :as data} owner]
+  (render [_]
+    (html [:li.subscriptions-list__subscription--group
+           {:class [(when (q/selected-group? model (:name group)) "is-selected")
+                    (when (:expanded group) "is-expanded")]}
            [:a.subscriptions-list__btn--expand {:href "#"} "expand"]
 
            [:a.subscriptions-list__group-link {:href "#"}
-            [:span.subscriptions-list__name--group (:name data)]
-            [:span.subscriptions-list__count (:pending data)]]
+            [:span.subscriptions-list__name--group (:name group)]
+            [:span.subscriptions-list__count (:pending group)]]
 
            [:ul.subscriptions-list__group-feeds
-            (for [current (:subscriptions data)]
-              (build subscription-feed current))]])))
+            (for [current (:subscriptions group)]
+              (build subscription-feed {:model model :feed current}))]])))
 
 (defcomponent subscriptions-list [data owner]
   (render [_]
     (html [:ul.subscriptions-list
-           (for [current (model/get-subscriptions @data)]
-             (cond (model/feed? current)
-                   (build subscription-feed current)
+           (for [current (q/get-subscriptions @data)]
+             (cond (q/feed? current)
+                   (build subscription-feed
+                          {:model data :feed current}
+                          {:react-key (uuid/uuid-string (uuid/make-random-uuid))})
 
-                   (model/group? current)
-                   (build subscription-group current)
+                   (q/group? current)
+                   (build subscription-group
+                          {:model data :group current}
+                          {:react-key (uuid/uuid-string (uuid/make-random-uuid))})
 
                    :else
                    [:li (str "-- NOT FOUND --" current)]))])))

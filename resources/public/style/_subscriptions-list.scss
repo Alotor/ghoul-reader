@@ -77,7 +77,15 @@
             text-decoration: none;
             color: #212121;
             font-size: 0.9em;
+
+            .is-selected & {
+                font-weight: bold;
+            }
         }
+    }
+
+    &__subscription--feed.is-selected &__name {
+        font-weight: bold;
     }
 
     &__count {

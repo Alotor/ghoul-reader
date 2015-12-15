@@ -1,57 +1,26 @@
 (ns ghoul.app.model.core
-  (:require [schema.core :as s :include-macros true]
-            [cljs-uuid-utils.core :as uuid]))
-
-(s/defrecord FeedData
-    [title       :- s/Str
-     description :- s/Str
-     feed-url    :- s/Str
-     site-url    :- s/Str
-     favicon-url :- s/Str
-     uuid        :- s/Str
-     pending     :- s/Int])
-
-(s/defn create-feed :- FeedData
-  "Create an empty feed data"
-  ([title description feed-url site-url]
-   (create-feed title description feed-url site-url "/images/rssicon.png"))
-
-  ([title description feed-url site-url favicon-url]
-   (FeedData. title
-              description
-              feed-url
-              site-url
-              favicon-url
-              (uuid/uuid-string (uuid/make-random-uuid))
-              5)))
-
-(defn feed? [value]
-  (instance? FeedData value))
-
-(s/defrecord GroupData
-    [name          :- s/Str
-     expanded      :- s/Bool
-     subscriptions :- [FeedData]
-     pending       :- s/Int])
-
-(defn group? [value]
-  (instance? GroupData value))
+  (:require [ghoul.app.model.types :as types]))
 
 (defn empty-state
   "Creates an empty state for the application"
   []
-  (let [f1 (create-feed "Taiga.io"
-                        "Lorem ipsum..."
-                        "https://blog.taiga.io/"
-                        "https://blog.taiga.io/feeds/rss.xml"
-                        "https://blog.taiga.io/favicon.ico")
-        f2 (create-feed "Reddit Programming"
-                        "Lorem ipsum..."
-                        "http://reddit.com/r/programming/.rss"
-                        "https://www.reddit.com/r/programming"
-                        "https://www.redditstatic.com/icon.png")]
+  (let [f1 (assoc (types/create-feed
+                   "Taiga.io"
+                   "Lorem ipsum..."
+                   "https://blog.taiga.io/feeds/rss.xml"
+                   "https://blog.taiga.io/"
+                   "https://blog.taiga.io/favicon.ico")
+                  :uuid "5cc24ce2-e252-4456-af8b-a7b27b451ff2")
+
+        f2 (types/create-feed
+            "Reddit Programming"
+            "Lorem ipsum..."
+            "https://www.reddit.com/r/programming"
+            "http://reddit.com/r/programming/.rss"
+            "https://www.redditstatic.com/icon.png")]
+
     {;; Which menu item is currently selected
-     :selected {:type   [:all] ;; :all, :favorite, :shared, :group, :feed
+     :selected {:type   [:all] ;; :all, :favorites, :shared, :group, :feed
                 :sort   [:date]
                 :filter [:read]
                 :view   :expanded-view}
@@ -62,46 +31,31 @@
 
              [:feed (:uuid f1)]
              [:feed (:uuid f2)]
-             [:group "Test 1" [(:uuid f1) (:uuid f2)]]
-             [:group "Test 2" [(:uuid f1) (:uuid f2)]]]
+             [:group "Test 1" [(:uuid f1) (:uuid f2)] true]
+             [:group "Test 2" [(:uuid f1) (:uuid f2)] false]]
 
      ;; Current feeds database query
      :feeds  { #_(:uid {:title :descrition :url :pending})
               (:uuid f1) f1
               (:uuid f2) f2}}))
 
-(def app-state (atom (empty-state)))
-
-(defmulti get-data (fn [_ [type]] type))
-
-(defmethod get-data :feed [model [_ uuid]]
-  (get-in model [:feeds uuid]))
-
-(defmethod get-data :group [model [_ title feeds]]
-  (let [feeds-values (map #(get-data model [:feed %]) feeds)
-        group-pending (reduce #(+ (:pending %2) %1) 0 feeds-values)]
-    (GroupData. title true feeds-values group-pending)))
-
-(defn get-subscriptions [model]
-  (->> (:index model)
-       (map (partial get-data model))))
 
 ; (defn get-display-mode
 ;   "Retrieves the selected display-mode in the application"
 ;   [state]
 ;   (->  state :selected :view))
-; 
+;
 ; (defn get-selected
 ;   "Retrieves the current group, feed or logical group (favourites, all...) selected"
 ;   [state]
 ;   (-> state :selected :type))
-; 
+;
 ; (defn list-index
 ;   "Retrieve the current defined index. This is the elements the user have available
 ;   in her menu"
 ;   [state]
 ;   (:index state))
-; 
+;
 ; (defn list-feeds
 ;   "Retrieves the list of feeds in the state"
 ;   ([state]

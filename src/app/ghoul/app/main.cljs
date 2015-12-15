@@ -3,6 +3,7 @@
   (:require [om.core :as om]
             [cljs.core.async :as async :refer [<!]]
             [dommy.core :refer-macros [sel1]]
+            [beicon.core :as rx]
 
             [ghoul.repository.item :as item-repository]
             [ghoul.app.state :as state]
@@ -11,15 +12,16 @@
             [ghoul.app.keyboard :as keyboard]
 
             [ghoul.app.ui.root :as ui]
-            [ghoul.app.model.core :as model]))
+            [ghoul.app.model.core :as model]
+            [ghoul.app.update.core :as update]))
 
 (enable-console-print!)
 
-(defn mount-root [main-view state-atom event-chan]
+(defn mount-root [main-view state-atom signal]
   (om/root main-view
            state-atom
            {:target (sel1 :#ghoul-reader)
-            :shared {:event-chan event-chan}
+            :shared {:signal signal}
             ;:tx-listen (fn [{:keys [path new-value]} data]
             ;             (if (= path [:selected])
             ;               (state/load-selected-feeds new-value))
@@ -28,12 +30,27 @@
             }))
 
 (defn ^:export initialize-app []
-  (let [event-chan (async/chan)]
-    (item-repository/init-database)
+  (item-repository/init-database)
+  (let [state        (model/empty-state)
+        state-atom   (atom state)
+        event-stream (rx/bus)
+        model-stream (update/create-model-stream event-stream state)
+        signal (fn [event]
+                 (fn [e]
+                   (.preventDefault e)
+                   (rx/push! event-stream event)))]
     #_(state/initialize-state)
 
     #_(mount-root root/app state/global event-chan)
-    (mount-root ui/root model/app-state event-chan)
+    (mount-root ui/root state-atom signal)
+
+    (-> event-stream
+        (update/create-model-stream state)
+        (rx/retry)
+        (rx/subscribe (fn [model]
+                        (reset! state-atom model))))
+
+    (rx/push! event-stream (update/Refresh.))
 
     #_(worker/start-feed-worker)
     #_(worker/update-all-feeds)

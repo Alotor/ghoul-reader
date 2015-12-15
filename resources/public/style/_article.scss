@@ -3,6 +3,27 @@
         letter-spacing: -0.004em;
     }
 
+    &__feed {
+        display: flex;
+        align-items: center;
+        padding: 0.2em 0;
+    }
+
+    &__favicon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__feed-link {
+        text-decoration: none;
+        color: $primary-color;
+        font-family: $font-sans;
+        padding: 0.2em;
+        font-weight: 600;
+        font-size: 0.8em;
+        margin-left: 0.2em;
+    }
+
     &__title-link {
         color: black;
         font-family: sans-serif;

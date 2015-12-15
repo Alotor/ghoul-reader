@@ -1,29 +1,28 @@
 (ns ghoul.app.ui.components.article
   (:require
-   [om.core :refer [build get-node]]
+   [om.core :refer [build]]
    [om-tools.core :refer-macros [defcomponent]]
    [sablono.core :as html :refer-macros [html]]
-   [ghoul.common.utils :as utils]))
+   [ghoul.app.ui.dom :as dom]
+   [ghoul.app.model.query :as q]))
 
-(defn set-shadow-root! [node description]
-  (let [shadow-root (-> node .-shadowRoot)
-        description (-> description
-                        utils/restore-tags
-                        utils/remove-unallowed-tags)]
-    (if (nil? shadow-root)
-      (-> node .createShadowRoot .-innerHTML (set! description))
-      (-> shadow-root .-innerHTML (set! description)))))
-
-(defcomponent article [data owner]
+(defcomponent article [{:keys [model item] :as data} owner]
   (did-mount [this]
-    (set-shadow-root! (get-node owner "description") (:description data)))
+    (dom/set-shadow-root! (dom/get-node owner "description")
+                          (:description item)))
 
   (did-update [this next-props next-state]
-    (set-shadow-root! (get-node owner "description") (:description data)))
+    (dom/set-shadow-root! (dom/get-node owner "description")
+                          (:description item)))
 
   (render [this]
-    (html [:.article
-           [:.article__header
-            [:h4.article__title
-             [:a.article__title-link {:href "#"} (str "Feed1" " - " (:title data))]]]
-           [:.article__content {:ref "description"}]])))
+    (let [feed (q/get-feed-by-uuid model (:feeduid item))]
+      (html
+       [:.article
+        [:.article__header
+         [:h4.article__title
+          [:a.article__title-link {:href "#"} (:title item)]]
+         [:h5.article__feed
+          [:img.article__favicon {:src (:favicon-url feed)}]
+          [:a.article__feed-link {:href (:site-url feed) :target "_blank"} (:title feed)]]]
+        [:.article__content {:ref "description"}]]))))

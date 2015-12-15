@@ -17,7 +17,7 @@
                  [bouncer                             "0.3.3"]
 
                  ;; Rendering
-                 [org.omcljs/om           "1.0.0-alpha22"]
+                 [org.omcljs/om           "1.0.0-alpha28"]
                  [prismatic/om-tools      "0.3.12"]
                  [prismatic/dommy         "1.1.0"]
                  [sablono                 "0.5.1"]
