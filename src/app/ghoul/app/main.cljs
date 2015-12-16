@@ -37,8 +37,9 @@
         signal (fn [event]
                  (fn [e]
                    (.preventDefault e)
-                   (println "Event/" (type event))
-                   (rx/push! event-stream event)))]
+                   (let [event (if (fn? event) (event) event)]
+                     (println "Event/" (type event))
+                     (rx/push! event-stream event))))]
 
     #_(state/initialize-state)
 

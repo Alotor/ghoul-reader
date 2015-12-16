@@ -41,9 +41,11 @@
         padding-left: 2em;
         text-decoration: none;
         overflow: hidden;
+        max-height: 0%;
 
         .is-expanded & {
             display: block;
+            max-height: 100%;
             animation: list-unfold ease-out 500ms;
         }
         .is-collapsed & {
@@ -136,16 +138,14 @@
                 width: 100%;
                 color: $accent-color;
                 margin-right: 0.5em;
+
+                transform: initia;
+                transition: transform 500ms;
             }
 
             .is-expanded &:before {
-                animation: group-unfold ease-out 500ms;
                 transform: rotate(90deg) translateX(5px) translateY(5px);
-            }
-
-            .is-collapsed &:before {
-                animation: group-fold ease-out 500ms;
-                transform: rotate(0deg) translateX(0px) translateY(0px);
+                transition: transform 500ms;
             }
 
         }

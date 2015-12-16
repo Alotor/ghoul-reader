@@ -66,9 +66,10 @@ $ghoul-logo-url: '/images/ghoul-reader-logo-tranparent.png';
     }
 
     &__feed-url {
-        padding: 0.5em;
-        font-size: 1em;
+        padding: 1em;
+        font-size: 0.7em;
         width: 100%;
+        border: 2px solid $primary-color-dark;
     }
 
     &__feed-info-container {
@@ -77,6 +78,11 @@ $ghoul-logo-url: '/images/ghoul-reader-logo-tranparent.png';
         position: relative;
         padding: 0.5em;
         background-color: #00796B;
+    }
+
+    &__subcription-buttons {
+        display: flex;
+        align-items: center;
     }
 
     &__feed-title {
@@ -91,11 +97,20 @@ $ghoul-logo-url: '/images/ghoul-reader-logo-tranparent.png';
     &__feed-description {
         color: white;
         padding: 0.75em 0em;
+        font-size: 0.8em;
+        line-height: 1.3em;
+        -webkit-line-clamp: 3;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        max-height: 3em;
     }
 
     &__favicon--info-container {
         position: absolute;
-        width: 30px;
+        width: 20px;
+        margin: 2px 5px;
     }
 
     &__section {
@@ -188,10 +203,49 @@ $ghoul-logo-url: '/images/ghoul-reader-logo-tranparent.png';
     &__subscriptions {
     }
 
+    &__error-message {
+        left: 2em;
+        position: absolute;
+        margin: 0.4em 0 3em;
+        border: 2px solid red;
+        color: red;
+        background: #FFF2F2;
+        border-radius: 10px;
+        padding: 0.5em 3em;
+        font-size: 0.9em;
+
+        &:before {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-color: red transparent;
+            display: block;
+            width: 0;
+            top: -16px;
+            bottom: auto;
+            left: 44px;
+            border-width: 0 16px 16px;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-color: #FFF2F2 transparent;
+            display: block;
+            width: 0;
+            top: -13px;
+            bottom: auto;
+            left: 47px;
+            border-width: 0 13px 13px;
+        }
+    }
+
     &__btn {
         &--add-subscription {
             display: block;
             padding: 0.7em 1.5em;
+            padding-right: 1em;
             text-transform: uppercase;
             background-color: $primary-color-dark;
             color: $primary-color-text;
@@ -202,23 +256,66 @@ $ghoul-logo-url: '/images/ghoul-reader-logo-tranparent.png';
                 font-family: "Icons";
                 content: "\e0aa";
                 width: auto;
-                padding-right: 1em;
                 font-size: 0.8em;
+                float: right;
             }
         }
 
         &--add-subscription-small {
-            border: 1px solid black;
             padding: 0.5em 0.7em;
             text-decoration: none;
+            background-color: $primary-color-dark;
+            color: $primary-color-text;
+            text-indent: -9999px;
+
+            &:before {
+                font-family: "Icons";
+                content: "\e0aa";
+                width: auto;
+                font-size: 0.8em;
+                float: right;
+                text-indent: 0;
+                line-height: 1.5em;
+            }
+            .is-loading &:before {
+                content: "";
+                background-image: url(/images/spinner.gif);
+                display: block;
+                width: 22px;
+                height: 22px;
+                background-size: 22px;
+            }
         }
 
         &--finish-subscription {
             border: 1px solid white;
-            color: white;
+            color: $primary-text-color;
             text-decoration: none;
             padding: 0.4em 0em;
             text-align: center;
+            flex-grow: 3;
+            background-color: $primary-color-light;
+            position: relative;
+
+            .is-loading & {
+                text-indent: -9999px;
+            }
+            .is-loading &:before {
+                content: "";
+                background-image: url(/images/spinner.gif);
+                width: 22px;
+                height: 22px;
+                background-size: 22px;
+                position: absolute;
+                text-indent: 0;
+                left: 40%;
+            }
+        }
+
+        &--cancel-subscription {
+            flex-grow: 1;
+            text-align: center;
+            color: $primary-color-light;
         }
 
         &--new-group {
@@ -229,12 +326,28 @@ $ghoul-logo-url: '/images/ghoul-reader-logo-tranparent.png';
             text-indent: -9999px;
             float: right;
             clear: both;
+            position: relative;
 
             &:before {
+                content: "\e06b";
                 font-family: "Icons";
-                content: "\e0aa";
                 text-indent: 0;
                 float: right;
+                font-size: 1.1em;
+                color: #b2dfdb;
+            }
+
+            &:after {
+                content: "\e0aa";
+                font-family: "Icons";
+                text-indent: 0;
+                float: right;
+                color: #00796B;
+                position: absolute;
+                font-size: 12px;
+                top: 18px;
+                right: -5px;
+                text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
             }
         }
 

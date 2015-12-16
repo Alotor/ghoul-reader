@@ -17,7 +17,7 @@
             "Lorem ipsum..."
             "https://www.reddit.com/r/programming"
             "http://reddit.com/r/programming/.rss"
-            "https://www.redditstatic.com/icon.png")]
+            "//www.redditstatic.com/favicon.ico")]
 
     {;; Which menu item is currently selected
      :selected {:type   [:all] ;; :all, :favorites, :shared, :group, :feed

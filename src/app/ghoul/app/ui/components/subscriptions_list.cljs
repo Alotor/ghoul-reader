@@ -56,7 +56,7 @@
                    (q/group? current)
                    (build subscription-group
                           {:model data :group current}
-                          {:react-key (uuid/uuid-string (uuid/make-random-uuid))})
+                          {:react-key (str "group."(:name current))})
 
                    :else
                    [:li (str "-- NOT FOUND --" current)]))])))

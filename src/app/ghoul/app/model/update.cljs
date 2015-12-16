@@ -16,3 +16,13 @@
     (partial group-index-toggle $)
     (map $ (:index model))
     (assoc model :index $)))
+
+(defn add-feed
+  "Insert a feed in the feed collection"
+  [model feed]
+  (assoc-in model [:feeds (:uuid feed)] feed))
+
+(defn insert-feed-index
+  "Insert a feed in the index list"
+  [model feed]
+  (update model :index conj [:feed (:uuid feed)]))

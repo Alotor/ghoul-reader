@@ -18,7 +18,9 @@
         }
 
         @media screen and (min-width: $responsive-large) {
-            min-width: 18em;
+            min-width: 25em;
+            max-width: 25em;
+            font-size: 0.8em;
         }
     }
 

@@ -89,7 +89,7 @@
 (defrecord Error [^js/Error error]
   EffectEvent
   (-apply-effect [{:keys [error]} model]
-    (.log js/console "Error: " err)))
+    (.error js/console error)))
 
 ;; Necessary to kick-start the stream
 (defrecord Refresh []
@@ -129,7 +129,7 @@
       (as-> watch-stream $
         (rx/with-latest-from vector model-stream $)
         (rx/flat-map -process-watch $)
-        (rx/merge-all $)
+        #_(rx/merge-all $)
         (rx/on-value $ (partial rx/push! event-stream)))
 
       model-stream)))
