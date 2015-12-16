@@ -65,12 +65,18 @@
         flex-grow: 1;
         text-decoration: initial;
         color: #212121;
-        padding: 0.8em;
+        padding: 0.4em 0.8em;
         padding-right: 0;
+        align-items: baseline;
     }
 
     &__name {
         flex-grow: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 12em;
+        line-height: 1.2em;
 
         &--group {
             flex-grow: 1;
@@ -83,6 +89,24 @@
             .is-selected & {
                 font-weight: bold;
             }
+
+            .is-editing & {
+                display: none;
+            }
+        }
+    }
+
+    &__name-input {
+        &--group {
+            display: none;
+            flex-grow: 1;
+            text-transform: uppercase;
+            color: #212121;
+            font-size: 0.9em;
+            
+            .is-editing & {
+                display: block;
+            }
         }
     }
 
@@ -92,8 +116,11 @@
 
     &__count {
         @mixin subscription-list__count() {
+            flex-grow: 1;
+            text-align: right;
             color: #6F6F6F;
             font-size: 0.9em;
+            line-height: 1.2em;
         }
         @include subscription-list__count();
 

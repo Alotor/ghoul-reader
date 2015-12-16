@@ -101,4 +101,10 @@
 
 (defrecord CheckFeedImport [])
 (defrecord UnheckFeedImport [])
-(defrecord InsertFeedImport [])
+
+(defrecord InsertFeedImport []
+  update/UpdateEvent
+  (-apply-update [_ model]
+    (-> model
+        mu/parse-import
+        (assoc :import-data nil))))
