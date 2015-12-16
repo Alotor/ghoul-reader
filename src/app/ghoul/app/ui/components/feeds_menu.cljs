@@ -5,6 +5,7 @@
    [om-tools.core :refer-macros [defcomponent]]
    [sablono.core :as html :refer-macros [html]]
    [ghoul.common.utils :as utils]
+   [ghoul.app.ui.dom :as dom]
    [ghoul.app.model.query :as q]
    [ghoul.app.update.events :as events]
    [ghoul.app.ui.components.subscriptions-list :refer [subscriptions-list]]))
@@ -43,7 +44,7 @@
 
           [:a.feeds-menu__btn--add-subscription-small
            {:href "#"
-            :onClick (signal (events/FetchSubscriptionData. feed-url))}]]
+            :onClick (dom/click signal (events/FetchSubscriptionData. feed-url))}]]
 
          [:.feeds-menu__feed-info-container
           [:img.feeds-menu__favicon--info-container
@@ -59,7 +60,7 @@
           [:.feeds-menu__subcription-buttons
            [:a.feeds-menu__btn--finish-subscription
             {:href "#"
-             :onClick (signal #(events/AddSubscription. (-> subscription-data :data deref)))} "OK"]
+             :onClick (dom/click signal #(events/AddSubscription. (-> subscription-data :data deref)))} "OK"]
 
            [:a.feeds-menu__btn--cancel-subscription
             {:href "#"
@@ -74,23 +75,26 @@
          [:li.feeds-menu__filter--all-items
           (when (q/selected-all? data) {:class "is-selected"})
           [:a {:href "#"
-               :onClick (signal (events/SelectSection. :all))} "All items"]]
+               :onClick (dom/click signal (events/SelectSection. :all))} "All items"]]
          [:li.feeds-menu__filter--favorites
           (when (q/selected-favorites? data) {:class "is-selected"})
           [:a {:href "#"
-               :onClick (signal (events/SelectSection. :favorites))} "Favorites"]]
+               :onClick (dom/click signal (events/SelectSection. :favorites))} "Favorites"]]
          [:li.feeds-menu__filter--shared
           (when (q/selected-shared? data) {:class "is-selected"})
           [:a {:href "#"
-               :onClick (signal (events/SelectSection. :shared))} "Shared"]]]]))))
+               :onClick (dom/click signal (events/SelectSection. :shared))} "Shared"]]]]))))
 
 (defcomponent config [data owner]
   (render [_]
-    (html
-     [:section.feeds-menu__section--config
-      [:a.feeds-menu__btn--import {:href "#"} "Import OMPL"]
-      [:a.feeds-menu__btn--export {:href "#"} "Export OMPL"]
-      [:a.feeds-menu__btn--refresh {:href "#"} "Refresh feeds"]])))
+    (let [signal (get-shared owner :signal)]
+      (html
+       [:section.feeds-menu__section--config
+        [:a.feeds-menu__btn--import {:href "#"} "Import OMPL"
+         [:input {:type "file"
+                  :onChange (dom/read-file #(signal (events/ImportOmplFile. %)))}]]
+        [:a.feeds-menu__btn--export {:href "#"} "Export OMPL"]
+        [:a.feeds-menu__btn--refresh {:href "#"} "Refresh feeds"]]))))
 
 (defcomponent feeds-menu [data owner]
   (render [_]

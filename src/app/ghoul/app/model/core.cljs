@@ -29,15 +29,17 @@
      :index [#_([:feed uid]
                 [:group "title" [... feeds]])
 
-             [:feed (:uuid f1)]
-             [:feed (:uuid f2)]
-             [:group "Test 1" [(:uuid f1) (:uuid f2)] true]
-             [:group "Test 2" [(:uuid f1) (:uuid f2)] false]]
+             #_[:feed (:uuid f1)]
+             #_[:feed (:uuid f2)]
+             #_[:group "Test 1" [(:uuid f1) (:uuid f2)] true]
+             #_[:group "Test 2" [(:uuid f1) (:uuid f2)] false]]
 
      ;; Current feeds database query
      :feeds  { #_(:uid {:title :descrition :url :pending})
-              (:uuid f1) f1
-              (:uuid f2) f2}}))
+              #_((:uuid f1) f1)
+              #_((:uuid f2) f2)}
+
+     }))
 
 
 ; (defn get-display-mode

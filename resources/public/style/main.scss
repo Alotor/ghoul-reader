@@ -22,6 +22,7 @@ $font-serif:           "Georgia";
 @import "articles-view";
 @import "subscription-header";
 @import "article";
+@import "opml-import";
 
 html, body, #ghoul-reader {
     height: 100%;

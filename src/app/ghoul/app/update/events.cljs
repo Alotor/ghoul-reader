@@ -3,6 +3,7 @@
             [ghoul.app.update.core :as update]
             [ghoul.app.model.update :as mu]
             [ghoul.app.model.types :as types]
+            [ghoul.parser.opml :as opml]
             [beicon.core :as rx]))
 
 (defrecord PrintEvent [str]
@@ -87,3 +88,17 @@
   (-apply-update [{:keys [status error]} model]
     (-> model
         (assoc-in [:subscription-data :result] :success))))
+
+(defrecord ImportOmplFile [content]
+  update/UpdateEvent
+  (-apply-update [{:keys [content]} model]
+    (assoc model :import-data (opml/parse-document content))))
+
+(defrecord DiscardOpmlFile []
+  update/UpdateEvent
+  (-apply-update [_ model]
+    (assoc model :import-data nil)))
+
+(defrecord CheckFeedImport [])
+(defrecord UnheckFeedImport [])
+(defrecord InsertFeedImport [])

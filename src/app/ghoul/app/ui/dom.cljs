@@ -20,3 +20,20 @@
     (if (nil? shadow-root)
       (-> node .createShadowRoot .-innerHTML (set! curated-value))
       (-> shadow-root .-innerHTML (set! curated-value)))))
+
+(defn read-file [callback]
+  (fn [e]
+    (let [file   (aget (.. e -target -files) 0)
+          reader (js/FileReader.)]
+      (set! (.-onload reader)
+            (fn [e] (callback (.. e -target -result))) )
+      (.readAsText reader file))))
+
+(defn click
+  "Wraps the 'callback' function so it is suitable for insert
+  into an onClick handler"
+  [callback & rest]
+  (fn [event]
+    (.preventDefault event)
+    (.stopPropagation event)
+    (apply callback rest)))

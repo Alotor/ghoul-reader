@@ -4,7 +4,7 @@
    [om-tools.core :refer-macros [defcomponent]]
    [sablono.core :as html :refer-macros [html]]
    [cljs-uuid-utils.core :as uuid]
-
+   [ghoul.app.ui.dom :as dom]
    [ghoul.app.model.query :as q]
    [ghoul.app.update.events :as events]))
 
@@ -17,7 +17,7 @@
         [:img.subscriptions-list__favicon {:src (:favicon-url feed)}]
         [:a.subscriptions-list__title
          {:href "#"
-          :onClick (signal (events/SelectFeed. feed))}
+          :onClick (dom/click signal (events/SelectFeed. feed))}
 
          [:span.subscriptions-list__name (:title feed)]
          [:span.subscriptions-list__count (:pending feed)]]]))))
@@ -31,11 +31,11 @@
 
              [:a.subscriptions-list__btn--expand
               {:href "#"
-               :onClick (signal (events/ToggleGroupDisplay. group))} "-"]
+               :onClick (dom/click signal (events/ToggleGroupDisplay. group))} "-"]
 
              [:a.subscriptions-list__group-link
               {:href "#"
-               :onClick (signal (events/SelectGroup. group))}
+               :onClick (dom/click signal (events/SelectGroup. group))}
 
               [:span.subscriptions-list__name--group (:name group)]
               [:span.subscriptions-list__count (:pending group)]]

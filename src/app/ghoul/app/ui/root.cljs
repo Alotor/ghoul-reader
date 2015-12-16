@@ -4,6 +4,7 @@
    [om-tools.core :refer-macros [defcomponent]]
    [sablono.core :as html :refer-macros [html]]
 
+   [ghoul.app.ui.components.opml-import :refer [opml-import]]
    [ghoul.app.ui.components.feeds-menu :refer [feeds-menu]]
    [ghoul.app.ui.components.articles-view :refer [articles-view]]))
 
@@ -15,5 +16,7 @@
       [:aside.main-container__aside
        (build feeds-menu data)]
       [:section.main-container__articles-view
-       (build articles-view data)]])))
+       (build articles-view data)]
+      [:section.main-container__popup
+       (build opml-import data)]])))
 

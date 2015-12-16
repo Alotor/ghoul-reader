@@ -14,10 +14,11 @@
          :name   (get :text)
          :title  (get :title)
          :feeds  (into [] feed-items)})
-      {:type   (get :type)
-       :name   (get :text)
-       :title  (get :title)
-       :url    (get :xmlUrl)})))
+      {:type     (get :type)
+       :name     (get :text)
+       :title    (get :title)
+       :feed-url (get :xmlUrl)
+       :site-url (get :htmlUrl)})))
 
 (defn parse-document
   "Parse OMPL files returning a clojure map as a result"

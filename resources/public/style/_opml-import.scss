@@ -1,0 +1,154 @@
+.opml-import {
+    font-family: $font-sans;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(111, 111, 111, 0.76);
+
+    display: flex;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity 500ms;
+    visibility: hidden;
+
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 500ms;
+    }
+
+    &__main {
+        position: relative;
+        background: white;
+        width: 90%;
+        margin: 0px auto;
+        max-width: 900px;
+        height: 70%;
+        max-height: 70%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+    }
+
+    &__close {
+        position: absolute;
+        top: 1.5em;
+        right: 1.5em;
+        text-indent: -9999px;
+        
+        &:before {
+            font-family: "Icons";
+            content: "\e0db";
+            float: left;
+            font-size: 1.2em;
+            color: #B6B6B6;
+            text-indent: 0;
+        }
+    }
+
+    &__header {
+        padding: 1.2em 2em;
+        background-color: $primary-color;
+        border-bottom: 1px solid $accent-color;
+    }
+
+    &__title {
+        font-size: 1.5em;
+        color: $primary-color-text;
+        margin-bottom: 0.2em;
+        font-weight: 600;
+    }
+
+    &__select-all {
+        margin-right: 1em;
+        color: #B6B6B6;
+    }
+
+    &__content {
+        padding-top: 0;
+        flex-grow: 1;
+        overflow: auto;
+    }
+
+    &__button-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+    }
+
+    &__accept {
+        border: 1px solid #009688;
+        padding: 1em 2em;
+        font-size: 1.2em;
+        margin-right: 1em;
+        text-decoration: none;
+        color: #212121;
+        background: #b2dfdb;
+
+        &:hover {
+            color: white;
+            background-color: $primary-color;
+            transition: background-color 500ms;
+        }
+    }
+
+    &__list {
+    }
+
+    &__item {
+        &--feed {
+            display: flex;
+            align-items: center;
+            padding: 0.5em 2em;
+        }
+
+        &--group {
+            display: flex;
+            align-items: center;
+            background-color: $primary-color;
+            color: white;
+            padding: 0.8em 2em;
+        }
+    }
+
+    &__checkbox {
+        min-width: 1.8em;
+        min-height: 1.8em;
+    }
+
+    &__item-data {
+        display: flex;
+        align-items: baseline;
+        flex-grow: 1;
+        overflow: hidden;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: 0.3em;
+    }
+
+    &__item-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 600;
+        font-size: 1.1em;
+        width: 100%;
+        line-height: 1.2em;
+    }
+
+    &__item-description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.9em;
+        width: 100%;
+        line-height: 1.5em;
+    }
+
+    &__cancel {
+        color: $accent-color;
+    }
+}

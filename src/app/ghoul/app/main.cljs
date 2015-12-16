@@ -35,11 +35,9 @@
         state-atom   (atom state)
         event-stream (rx/bus)
         signal (fn [event]
-                 (fn [e]
-                   (.preventDefault e)
-                   (let [event (if (fn? event) (event) event)]
-                     (println "Event/" (type event))
-                     (rx/push! event-stream event))))]
+                 (let [event (if (fn? event) (event) event)]
+                   (println "Event/" (type event))
+                   (rx/push! event-stream event)))]
 
     #_(state/initialize-state)
 
