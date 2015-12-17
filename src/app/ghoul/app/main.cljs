@@ -37,7 +37,6 @@
   (:state hp/local-storage))
 
 (defn ^:export initialize-app []
-  (item-repository/init-database)
   (let [old-state    (restore-state)
         state        (or old-state (model/empty-state))
         state-atom   (atom state)
@@ -47,6 +46,7 @@
                    (println "Event/" (type event))
                    (rx/push! event-stream event)))]
 
+    (item-repository/init-database)
     #_(state/initialize-state)
 
     #_(mount-root root/app state/global event-chan)
@@ -63,8 +63,8 @@
 
     (rx/push! event-stream (update/Refresh.))
 
-    #_(worker/start-feed-worker)
-    #_(worker/update-all-feeds)
+    (worker/start-feed-worker signal)
+    (worker/update-all-feeds state signal)
 
     #_(keyboard/start-keyboard! event-chan)
 

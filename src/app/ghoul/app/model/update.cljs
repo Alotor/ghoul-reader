@@ -1,19 +1,34 @@
 (ns ghoul.app.model.update
   (:require [ghoul.app.model.types :as types]))
 
-(defn- group-index-toggle [group-name index-value]
+(defn- update-index [group-name fnz index-value]
   (let [index-type (first  index-value)
         index-id   (second index-value)]
     (if (and (= index-type :group) (= index-id group-name))
-      (let [[type name feeds expanded] index-value]
-        [type name feeds (not expanded)])
+      (fnz index-value)
       index-value)))
 
 (defn toggle-group-display
   "Updates the group visibility in the model index"
   [model group-name]
   (as-> group-name $
-    (partial group-index-toggle $)
+    (partial update-index $ #(update % 3 not))
+    (map $ (:index model))
+    (assoc model :index $)))
+
+(defn change-group-name
+  "Updates the group name in the model index"
+  [model group-name new-name]
+  (as-> group-name $
+    (partial update-index $ #(assoc % 1 new-name))
+    (map $ (:index model))
+    (assoc model :index $)))
+
+(defn toggle-editing
+  "Updates the group editing toggle in the model index"
+  [model group-name]
+  (as-> group-name $
+    (partial update-index $ #(update % 4 not))
     (map $ (:index model))
     (assoc model :index $)))
 
@@ -42,7 +57,7 @@
 
 (defmethod parse-import-value "group" [model {:keys [name feeds]}]
   (let [[new-model feed-uuids] (reduce parse-import-value-in-group [model []] feeds)
-        index-entry [:group name feed-uuids true]]
+        index-entry [:group name feed-uuids true false]]
     (-> new-model
         (update :index conj index-entry))))
 

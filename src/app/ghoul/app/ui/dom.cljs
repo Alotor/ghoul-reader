@@ -37,3 +37,9 @@
     (.preventDefault event)
     (.stopPropagation event)
     (apply callback rest)))
+
+(defn reset-scroll
+  ([node]
+   (-> node .-scrollTop (set! 0)))
+  ([owner ref]
+   (reset-scroll (get-node owner ref))))

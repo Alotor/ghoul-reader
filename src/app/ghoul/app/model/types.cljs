@@ -41,9 +41,10 @@
 
 (defn create-group
   "Create an empty group"
-  ([name expanded subscriptions pending]
+  ([name expanded subscriptions pending editing]
    {:type          :group
     :name          name
     :expanded      expanded
     :subscriptions subscriptions
-    :pending       pending}))
+    :pending       pending
+    :editing       editing}))

@@ -9,10 +9,10 @@
 (defmethod get-data :feed [model [_ uuid]]
   (get-feed-by-uuid model uuid))
 
-(defmethod get-data :group [model [_ title feeds expanded]]
+(defmethod get-data :group [model [_ title feeds expanded editing]]
   (let [feeds-values (map #(get-data model [:feed %]) feeds)
         group-pending (reduce #(+ (:pending %2) %1) 0 feeds-values)]
-    (types/create-group title expanded feeds-values group-pending)))
+    (types/create-group title expanded feeds-values group-pending editing)))
 
 (defn get-subscriptions [model]
   (->> (:index model)
@@ -39,3 +39,10 @@
 (defn group? [value]
   (= (:type value) :group))
 
+(defn get-all-feeds [model]
+  (-> model :feeds vals))
+
+(defn get-group-feeds [model group-id]
+  (let [fnz (fn [[_ id]] (= group-id id))
+        [_ _ feeds-uuids] (first (filter fnz (:index model)))]
+    (map #(get-in model [:feeds %]) feeds-uuids)))

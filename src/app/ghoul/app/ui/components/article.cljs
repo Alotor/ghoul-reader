@@ -21,7 +21,8 @@
        [:.article
         [:.article__header
          [:h4.article__title
-          [:a.article__title-link {:href "#"} (:title item)]]
+          [:a.article__title-link {:href (:link item)
+                                   :target "_blank"} (:title item)]]
          [:h5.article__feed
           [:img.article__favicon {:src (:favicon-url feed)}]
           [:a.article__feed-link {:href (:site-url feed) :target "_blank"} (:title feed)]]]

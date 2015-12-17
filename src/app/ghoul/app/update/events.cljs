@@ -134,4 +134,21 @@
          (take 10)
          (rx/from-coll))))
 
+(defrecord FeedUpdated [update-data]
+  update/UpdateEvent
+  (-apply-update [{:keys [update-data]} model]
+    (let [{:keys [feeduid]} update-data]
+      (update-in model [:feeds feeduid :pending] inc))))
 
+(defrecord CreateNewGroup []
+  update/UpdateEvent
+  (-apply-update [_ model]
+    (update model :index conj [:group "Group" [] false true])))
+
+
+(defrecord GroupUpdateName [old-name new-name]
+  update/UpdateEvent
+  (-apply-update [{:keys [old-name new-name]} model]
+    (-> model
+        (mu/change-group-name old-name new-name)
+        (mu/toggle-editing new-name))))
