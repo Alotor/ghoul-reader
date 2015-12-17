@@ -153,6 +153,12 @@
         (mu/change-group-name old-name new-name)
         (mu/toggle-editing new-name))))
 
+(defrecord StartEditing [group]
+  update/UpdateEvent
+  (-apply-update [{:keys [group]} model]
+    (-> model
+        (mu/toggle-editing (:name group)))))
+
 (defrecord MoveFeedToGroup [feed-uuid group-name]
   update/UpdateEvent
   (-apply-update [{:keys [feed-uuid group-name]} model]

@@ -60,7 +60,8 @@
 
              [:a.subscriptions-list__group-link
               {:href "#"
-               :onClick (dom/click signal (events/SelectGroup. group))}
+               :onClick (dom/click signal (events/SelectGroup. group))
+               :onDoubleClick (dom/click signal (events/StartEditing. group))}
 
               [:span.subscriptions-list__name--group (:name group)]
               [:input.subscriptions-list__name-input--group
