@@ -4,6 +4,7 @@
             [cljs.core.async :as async :refer [<!]]
             [dommy.core :refer-macros [sel1]]
             [beicon.core :as rx]
+            [hodgepodge.core :as hp]
 
             [ghoul.repository.item :as item-repository]
             [ghoul.app.state :as state]
@@ -29,9 +30,16 @@
             ;               (state/update-item (take 2 path))))
             }))
 
+(defn store-state [state]
+  (assoc! hp/local-storage :state state))
+
+(defn restore-state []
+  (:state hp/local-storage))
+
 (defn ^:export initialize-app []
   (item-repository/init-database)
-  (let [state        (model/empty-state)
+  (let [old-state    (restore-state)
+        state        (or old-state (model/empty-state))
         state-atom   (atom state)
         event-stream (rx/bus)
         signal (fn [event]
@@ -48,7 +56,10 @@
     (-> event-stream
         (update/create-model-stream state)
         (rx/retry)
-        (rx/to-atom state-atom))
+        (rx/on-value
+         (fn [new-model]
+           (reset! state-atom new-model)
+           (store-state new-model))))
 
     (rx/push! event-stream (update/Refresh.))
 

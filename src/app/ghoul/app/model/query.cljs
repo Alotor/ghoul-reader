@@ -12,7 +12,7 @@
 (defmethod get-data :group [model [_ title feeds expanded]]
   (let [feeds-values (map #(get-data model [:feed %]) feeds)
         group-pending (reduce #(+ (:pending %2) %1) 0 feeds-values)]
-    (types/GroupData. title expanded feeds-values group-pending)))
+    (types/create-group title expanded feeds-values group-pending)))
 
 (defn get-subscriptions [model]
   (->> (:index model)
@@ -34,8 +34,8 @@
   (= (-> model :selected :type) [:group title]))
 
 (defn feed? [value]
-  (instance? types/FeedData value))
+  (= (:type value) :feed))
 
 (defn group? [value]
-  (instance? types/GroupData value))
+  (= (:type value) :group))
 

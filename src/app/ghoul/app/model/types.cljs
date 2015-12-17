@@ -24,16 +24,26 @@
 
 ;; Constructor helpers
 
-(s/defn create-feed :- FeedData
+(defn create-feed
   "Create an empty feed data"
   ([title description feed-url site-url]
    (create-feed title description feed-url site-url "/images/rssicon.png"))
 
   ([title description feed-url site-url favicon-url]
-   (FeedData. title
-              description
-              feed-url
-              site-url
-              favicon-url
-              (uuid/uuid-string (uuid/make-random-uuid))
-              0)))
+   {:type        :feed
+    :title       title
+    :description description
+    :feed-url    feed-url
+    :site-url    site-url
+    :favicon-url favicon-url
+    :uuid        (uuid/uuid-string (uuid/make-random-uuid))
+    :pending     0}))
+
+(defn create-group
+  "Create an empty group"
+  ([name expanded subscriptions pending]
+   {:type          :group
+    :name          name
+    :expanded      expanded
+    :subscriptions subscriptions
+    :pending       pending}))
