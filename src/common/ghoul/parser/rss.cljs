@@ -18,8 +18,11 @@
 
 (defn parse-document
   "Parse an XML document with a RSS 2.0 format and returns a map"
-  [document]
-  (let [parsed-document  (xml->clj document)
+  [raw-document]
+  (let [;; Removes all the rubish before the rss tag
+        document (->> raw-document (re-find #"^(.*)<rss") second count
+                      (.substring raw-document))
+        parsed-document  (xml->clj document)
         documment-zipper (zip/xml-zip parsed-document)
         channel-elements (-> documment-zipper zip/down zip/children)
         get              (fn [tag] (parse/get-tag-value channel-elements tag))

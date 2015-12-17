@@ -35,6 +35,17 @@
   [feed-url]
   (str headers-proxy-base-url feed-url))
 
+(defn response->rss [response]
+  (-> response :body rss/parse-document))
+
+(defn response->headers [response]
+  (-> response :body parse-header))
+
+(defn rss->site-url [rss-data]
+  (if-let [site-url (-> rss-data :link)]
+    site-url
+    (p/rejected "The feed doesn't have a link")))
+
 (defn fetch-rss [feed-url]
   (-> (rss-proxy feed-url)
       (xhr/get)
@@ -44,3 +55,22 @@
   (-> (header-proxy site-url)
       (xhr/get)
       (p/then favicon-response)))
+
+(defn get-headers [site-url]
+  (-> (header-proxy site-url)
+      (xhr/get)
+      (p/then response->headers)))
+
+(defn get-favicon [headers]
+  (if-let [favicon-link (:favicon-link headers)]
+    (p/resolved favicon-link)
+    (p/rejected "Favicon not found")))
+
+(defn get-favicon-from-feed [feed-url]
+  (-> (rss-proxy feed-url)
+      (xhr/get)
+      (p/then response->rss)
+      (p/then rss->site-url)
+      (p/then get-headers)
+      (p/then get-favicon)))
+

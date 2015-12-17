@@ -101,8 +101,15 @@
   based on the events sent on the signal"
   [event-stream init-model]
   (letfn [(-process-update [model event]
-            (try (-apply-update event model)
-                 (catch js/Object e (rx/push! event-stream (Error. e)))))
+            (let [send-error
+                  (fn [error]
+                    (rx/push! event-stream (Error. error))
+                    model)]
+              (try (let [new-model (-apply-update event model)]
+                     (if (map? new-model)
+                       new-model
+                       (send-error (js/Error. "Update didn't return a map"))))
+                   (catch js/Object e (send-error e)))))
 
           (-process-effect [[event model]]
             (try (-apply-effect event model)
@@ -110,7 +117,7 @@
 
           (-process-watch [[event model]]
             (try (-apply-watch event model)
-                 (catch js/Object e (rx/push! event-stream (Error. e)))))]
+                 (catch js/Object e (rx/just (Error. e)))))]
 
     (let [update-stream (->> event-stream (rx/filter update?))
           watch-stream  (->> event-stream (rx/filter watch?))

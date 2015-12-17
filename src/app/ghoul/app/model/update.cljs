@@ -33,10 +33,12 @@
 (defmulti parse-import-value (fn [model {:keys [type]}] type))
 
 (defn parse-import-value-in-group [[model feed-uuids] {:keys [title description feed-url site-url]}]
-  (let [feed-data (types/create-feed title description feed-url site-url)]
+  (let [feed-data (types/create-feed title description feed-url site-url)
+        feed-uuid (:uuid feed-data)]
     [(-> model
-         (assoc-in [:feeds (:uuid feed-data)] feed-data))
-     (conj feed-uuids (:uuid feed-data))]))
+         (update :update-pending conj feed-uuid)
+         (assoc-in [:feeds feed-uuid] feed-data))
+     (conj feed-uuids feed-uuid)]))
 
 (defmethod parse-import-value "group" [model {:keys [name feeds]}]
   (let [[new-model feed-uuids] (reduce parse-import-value-in-group [model []] feeds)
@@ -46,11 +48,15 @@
 
 (defmethod parse-import-value "rss" [model {:keys [title description feed-url site-url]}]
   (let [feed-data (types/create-feed title description feed-url site-url)
-        index-entry [:feed (:uuid feed-data)]]
+        feed-uuid (:uuid feed-data)
+        index-entry [:feed feed-uuid]]
     (-> model
+        (update :update-pending conj feed-uuid)
         (update :index conj index-entry)
-        (assoc-in [:feeds (:uuid feed-data)] feed-data))))
+        (assoc-in [:feeds feed-uuid] feed-data))))
 
 (defn parse-import [model]
   (let [root (-> model :import-data :feeds)]
-    (reduce parse-import-value model root)))
+    (as-> model $
+      (assoc $ :update-pending [])
+      (reduce parse-import-value $ root))))

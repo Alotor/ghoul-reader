@@ -4,6 +4,7 @@
             [ghoul.app.model.update :as mu]
             [ghoul.app.model.types :as types]
             [ghoul.parser.opml :as opml]
+            [promesa.core :as p]
             [beicon.core :as rx]))
 
 (defrecord PrintEvent [str]
@@ -102,9 +103,35 @@
 (defrecord CheckFeedImport [])
 (defrecord UnheckFeedImport [])
 
+
+(defrecord ChangeFavicon [uuid favicon-url]
+  update/UpdateEvent
+  (-apply-update [{:keys [uuid favicon-url]} model]
+    (-> model
+        (assoc-in [:feeds uuid :favicon-url] favicon-url))))
+
+(defrecord UpdateFavicon [uuid]
+  update/WatchEvent
+  (-apply-watch [{:keys [uuid]} model]
+    (let [feed-url (get-in model [:feeds uuid :feed-url])]
+      (-> feed-url
+          (http/get-favicon-from-feed)
+          (p/then #(ChangeFavicon. uuid %))
+          (p/catch #(println (str "ERROR [" feed-url "]") %))))))
+
 (defrecord InsertFeedImport []
   update/UpdateEvent
   (-apply-update [_ model]
     (-> model
         mu/parse-import
-        (assoc :import-data nil))))
+        (assoc :import-data nil)))
+
+  update/WatchEvent
+  (-apply-watch [_ model]
+    (->> model
+         :update-pending
+         (map #(UpdateFavicon. %))
+         (take 10)
+         (rx/from-coll))))
+
+
