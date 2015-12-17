@@ -152,3 +152,11 @@
     (-> model
         (mu/change-group-name old-name new-name)
         (mu/toggle-editing new-name))))
+
+(defrecord MoveFeedToGroup [feed-uuid group-name]
+  update/UpdateEvent
+  (-apply-update [{:keys [feed-uuid group-name]} model]
+    (let [new-model (-> model
+                        (mu/remove-feed-from-groups feed-uuid)
+                        (mu/insert-into-group group-name feed-uuid))]
+      new-model)))

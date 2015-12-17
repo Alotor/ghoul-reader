@@ -1,7 +1,7 @@
 (ns ghoul.app.model.update
   (:require [ghoul.app.model.types :as types]))
 
-(defn- update-index [group-name fnz index-value]
+(defn- update-one [group-name fnz index-value]
   (let [index-type (first  index-value)
         index-id   (second index-value)]
     (if (and (= index-type :group) (= index-id group-name))
@@ -12,7 +12,7 @@
   "Updates the group visibility in the model index"
   [model group-name]
   (as-> group-name $
-    (partial update-index $ #(update % 3 not))
+    (partial update-one $ #(update % 3 not))
     (map $ (:index model))
     (assoc model :index $)))
 
@@ -20,7 +20,7 @@
   "Updates the group name in the model index"
   [model group-name new-name]
   (as-> group-name $
-    (partial update-index $ #(assoc % 1 new-name))
+    (partial update-one $ #(assoc % 1 new-name))
     (map $ (:index model))
     (assoc model :index $)))
 
@@ -28,9 +28,34 @@
   "Updates the group editing toggle in the model index"
   [model group-name]
   (as-> group-name $
-    (partial update-index $ #(update % 4 not))
+    (partial update-one $ #(update % 4 not))
     (map $ (:index model))
     (assoc model :index $)))
+
+(defn -remove-feed [uuid feed-uuid-list]
+  (->> feed-uuid-list
+       (filter #(not (= uuid %)))
+       (into [])))
+
+(defn remove-feed-from-index
+  [feed-uuid index-entry]
+  (if (= (first index-entry) :group)
+    (update index-entry 2 (partial -remove-feed feed-uuid))
+    index-entry))
+
+(defn remove-feed-from-groups
+  [model feed-uuid]
+  (->> (:index model)
+       (filter #(not (= feed-uuid (nth % 1))))
+       (map (partial remove-feed-from-index feed-uuid))
+       (assoc model :index)))
+
+(defn insert-into-group
+  [model group-name feed-uuid]
+  (as-> group-name $
+        (partial update-one $ #(update % 2 conj feed-uuid))
+        (map $ (:index model))
+        (assoc model :index $)))
 
 (defn add-feed
   "Insert a feed in the feed collection"

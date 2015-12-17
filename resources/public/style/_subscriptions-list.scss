@@ -145,6 +145,10 @@
             align-items: baseline;
             flex-direction: row;
             flex-wrap: wrap;
+
+            &.is-hovering {
+                background-color: #B2DFDD;
+            }
         }
     }
 

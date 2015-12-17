@@ -43,3 +43,11 @@
    (-> node .-scrollTop (set! 0)))
   ([owner ref]
    (reset-scroll (get-node owner ref))))
+
+(defn store-drag [key value]
+  (fn [e]
+    (.. e -dataTransfer (setData key value))))
+
+(defn retrieve-drag [key cb]
+  (fn [e]
+    (cb (.. e -dataTransfer (getData key)))))

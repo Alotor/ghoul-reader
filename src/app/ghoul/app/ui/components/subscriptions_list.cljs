@@ -13,25 +13,46 @@
     (let [signal (om/get-shared owner :signal)]
       (html
        [:li.subscriptions-list__subscription--feed
-        (when (q/selected-feed? model (:uuid feed)) {:class "is-selected"})
-        [:img.subscriptions-list__favicon {:src (:favicon-url feed)}]
+        {:draggable true
+         :onDragStart (dom/store-drag "uuid" (:uuid feed))
+         :class [(when (q/selected-feed? model (:uuid feed)) "is-selected")]}
+
+        [:img.subscriptions-list__favicon
+         {:draggable false
+          :src (:favicon-url feed)}]
+
         [:a.subscriptions-list__title
          {:href "#"
-          :onClick (dom/click signal (events/SelectFeed. feed))}
+          :onClick (dom/click signal (events/SelectFeed. feed))
+          :draggable false}
 
          [:span.subscriptions-list__name (:title feed)]
          [:span.subscriptions-list__count (:pending feed)]]]))))
 
 (defcomponent subscription-group [{:keys [model group] :as data} owner]
   (init-state [this]
-    {:group-name (:name group)})
+    {:group-name (:name group)
+     :hovering false})
 
   (render-state [_ state]
     (let [signal (om/get-shared owner :signal)]
       (html [:li.subscriptions-list__subscription--group
              {:class [(when (q/selected-group? model (:name group)) "is-selected")
                       (when (:expanded group) "is-expanded")
-                      (when (:editing group) "is-editing")]}
+                      (when (:editing group) "is-editing")
+                      (when (om/get-state owner :hovering) "is-hovering")]
+
+              :onDragOver
+              (dom/click om/set-state! owner :hovering true)
+
+              :onDragLeave
+              (dom/click om/set-state! owner :hovering false)
+
+              :onDrop
+              (dom/retrieve-drag
+               "uuid"
+               #(do (signal (events/MoveFeedToGroup. % (:name group)))
+                    (om/set-state! owner :hovering false)))}
 
              [:a.subscriptions-list__btn--expand
               {:href "#"
