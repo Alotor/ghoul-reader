@@ -14,7 +14,7 @@
         clj-state (js->clj (.parse js/JSON state) :keywordize-keys true)]
     (reset! state/global clj-state)
     (storage/clear)
-    (worker/update-all-feeds {} (fn [d] (println "deprecated"))))
+    (worker/update-all-feeds {}))
   (hide-popups data))
 
 (defn cb-cancel-popup [owner data]

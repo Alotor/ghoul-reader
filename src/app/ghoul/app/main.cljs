@@ -64,7 +64,7 @@
     (rx/push! event-stream (update/Refresh.))
 
     (worker/start-feed-worker signal)
-    (worker/update-all-feeds state signal)
+    (worker/update-all-feeds state)
 
     #_(keyboard/start-keyboard! event-chan)
 

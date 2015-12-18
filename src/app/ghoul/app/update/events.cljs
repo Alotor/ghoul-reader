@@ -7,6 +7,9 @@
             [promesa.core :as p]
             [beicon.core :as rx]))
 
+(defrecord UpdateAllFeeds [])
+(defrecord UpdateFeed [feed])
+
 (defrecord PrintEvent [str]
   update/EffectEvent
   (-apply-effect [{:keys [str]} model]
@@ -39,7 +42,11 @@
     (-> model
         (assoc :subscription-data nil)
         (mu/add-feed feed-data)
-        (mu/insert-feed-index feed-data))))
+        (mu/insert-feed-index feed-data)))
+
+  update/WatchEvent
+  (-apply-watch [{:keys [feed-data]} model]
+    (rx/just (UpdateFeed. feed-data))))
 
 (defrecord FetchSubscriptionData [feed-url]
   update/UpdateEvent
@@ -128,11 +135,11 @@
 
   update/WatchEvent
   (-apply-watch [_ model]
-    (->> model
-         :update-pending
-         (map #(UpdateFavicon. %))
-         (take 10)
-         (rx/from-coll))))
+    (let [updates (->> model
+                       :update-pending
+                       (map #(UpdateFavicon. %)))
+          updates (conj updates (UpdateAllFeeds.))]
+      (rx/from-coll updates))))
 
 (defrecord FeedUpdated [update-data]
   update/UpdateEvent
@@ -166,3 +173,5 @@
                         (mu/remove-feed-from-groups feed-uuid)
                         (mu/insert-into-group group-name feed-uuid))]
       new-model)))
+
+
