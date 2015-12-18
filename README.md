@@ -32,6 +32,7 @@ This project is born with this need in mind and also trying to develop a Clojure
 
 You can check the [Taiga Project](https://tree.taiga.io/project/alonsotorres-ghoul-reader/kanban) to know the progress
 
+PIWEEK VII
 - [X] Basic state rendering and actions
 - [X] Retrieving state from IndexedDB
 - [X] RSS news reading
@@ -47,18 +48,33 @@ You can check the [Taiga Project](https://tree.taiga.io/project/alonsotorres-gho
 - [X] Group creation
 - [X] Feeds drag&drop to move into groups
 - [X] Shortcuts
+
+PIWEEK IX
+- [X] Improve error control
+- [X] ATOM format support
+- [X] Favicons into feed lists
+- [X] Feed description
+- [X] Style improvement
+- [X] Import/Export OMPL file
+- [X] Architecture improvements
+- [X] Better state management
+- [X] Custom proxy for CORS
+- [X] Proxy to get the RSS from HTML
+
+TODO (Necessary)
+- [ ] Debugging and RSS corner cases
+- [ ] Sorting and filtering (show read...)
+- [ ] Mark all as read
 - [ ] Improve testing
-- [ ] Improve error control
 - [ ] Remove feeds and groups
-- [ ] ATOM format support
-- [ ] Favicons into feed lists
-- [ ] Feed description
-- [ ] Import/Export OMPL file
 - [ ] Remote synchronization of subscriptions
-- [ ] CSS animations
+- [ ] Save favorites
+
+TODO (Desirable)
+- [ ] Sharing with other users
 - [ ] Offline capabilities
 - [ ] Mobile version (Cordova)
-- [ ] Sharing with other users
+- [ ] Desktop version (NW.js)
 - [ ] Send to social media
 
 # Acknowledges
