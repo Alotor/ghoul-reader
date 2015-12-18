@@ -7,7 +7,6 @@
             [hodgepodge.core :as hp]
 
             [ghoul.repository.item :as item-repository]
-            [ghoul.app.state :as state]
             [ghoul.app.worker :as worker]
             [ghoul.app.messages :refer [msg]]
             [ghoul.app.keyboard :as keyboard]

@@ -2,7 +2,7 @@
   (:require [goog.events :as events]
             [cljs.core.match :refer-macros [match]]
             [cljs.core.async :as async]
-            [ghoul.app.state :as state])
+            )
   (:import [goog.events EventType KeyCodes]
            [goog.ui KeyboardShortcutHandler]))
 ;;
@@ -26,7 +26,7 @@
    "G S"         :go-to-shared})
 
 (defn dispatch-key [event-channel e]
-  (match [(get event-keys (.-identifier e))]
+  #_(match [(get event-keys (.-identifier e))]
          [:go-to-all] (state/select-all)
          [:new-group] (state/open-popup :group)
          [:new-feed]  (state/open-popup :feed)
@@ -37,7 +37,7 @@
 
 
 (defn start-keyboard! [event-channel]
-  (let [handler (KeyboardShortcutHandler. js/document)]
+  #_(let [handler (KeyboardShortcutHandler. js/document)]
     (doseq [[shortcut key] event-keys]
       (.registerShortcut handler shortcut shortcut))
 
