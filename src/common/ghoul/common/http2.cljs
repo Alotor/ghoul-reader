@@ -2,7 +2,8 @@
   (:require [httpurr.status :as s]
             [httpurr.client.xhr :as xhr]
             [promesa.core :as p]
-            [ghoul.parser.rss :as rss]))
+            [ghoul.parser.rss :as rss]
+            [ghoul.parser.head :as head]))
 
 (def rss-proxy-base-url "http://localhost:5050/proxy/rss?url=")
 (def headers-proxy-base-url "http://localhost:5050/proxy/headers?url=")
@@ -19,13 +20,13 @@
   [response]
   (condp = (:status response)
     s/ok (p/resolved (-> response :body rss/parse-document SubscriptionData.))
-         (p/resolved (SubscriptionError. (:status response) (:body response)))))
+    (p/resolved (SubscriptionError. (:status response) (:body response)))))
 
 (defn favicon-response
-  [response]
+  [url response]
   (condp = (:status response)
-    s/ok (p/resolved (-> response :body parse-header :favicon-link FaviconResult.))
-         (p/resolved (FaviconError. (:status response) (:body response)))))
+    s/ok (p/resolved (-> response :body (head/parse-head url) :favicon-link FaviconResult.))
+    (p/resolved (FaviconError. (:status response) (:body response)))))
 
 (defn rss-proxy
   [feed-url]
@@ -49,12 +50,24 @@
 (defn fetch-rss [feed-url]
   (-> (rss-proxy feed-url)
       (xhr/get)
-      (p/then rss-response)))
+      (p/then rss-response)
+      (p/catch #(SubscriptionError. % %))))
 
-(defn fetch-favicon [site-url]
+#_(defn fetch-favicon [site-url]
   (-> (header-proxy site-url)
       (xhr/get)
       (p/then favicon-response)))
+
+(defn request-headers [url]
+  (-> (rss-proxy url)
+      (xhr/get)
+      (p/then #(head/parse-head (:body %) url))))
+
+(defn fetch-favicon [site-url]
+  (-> (rss-proxy site-url)
+      (xhr/get)
+      (p/then (partial favicon-response site-url))
+      (p/catch #(do (println %) (FaviconError. (:status %) (:body %))))))
 
 (defn get-headers [site-url]
   (-> (header-proxy site-url)

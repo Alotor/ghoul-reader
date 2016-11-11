@@ -6,36 +6,41 @@
 
   :dependencies [[org.clojure/clojure       "1.7.0"]
                  [org.clojure/clojurescript "1.7.189"]
-                 [org.clojure/core.async    "0.2.374"]
+                 [org.clojure/core.async    "0.2.374"
+                  :exclusions [org.clojure/tools.reader]]
+
                  [org.clojure/core.match    "0.3.0-alpha4"]
 
                  ;; Utils
                  [prismatic/schema                    "1.0.4"]
                  [com.lucasbradstreet/cljs-uuid-utils "1.0.2"]
-                 [com.andrewmcveigh/cljs-time         "0.3.14"]
-                 [bidi                                "1.23.1"]
-                 [bouncer                             "0.3.3"]
+                 [com.andrewmcveigh/cljs-time         "0.5.0-alpha1"]
+                 [bidi                                "2.0.9"
+                  :exclusions [commons-codec]]
+                 [bouncer                             "1.0.0"]
+                 [com.rpl/specter                     "0.11.0"]
 
                  ;; Rendering
-                 [org.omcljs/om           "1.0.0-alpha28"]
-                 [prismatic/om-tools      "0.3.12"]
+                 [org.omcljs/om           "1.0.0-alpha36"]
+                 [prismatic/om-tools      "0.4.0"]
                  [prismatic/dommy         "1.1.0"]
-                 [sablono                 "0.5.1"]
-                 [cljsjs/react            "0.14.3-0"]
-                 [cljsjs/react-dom        "0.14.3-1"]
-                 [cljsjs/react-dom-server "0.14.3-0"]
-                 [garden                  "1.3.0"]
+                 [sablono                 "0.7.2"]
+                 [cljsjs/react            "15.0.1-1"]
+                 [cljsjs/react-dom        "15.0.1-1"]
+                 [cljsjs/react-dom-server "15.0.1-1"]
+                 [garden                  "1.3.2"]
 
                  ;; Test scope
-                 [figwheel-sidecar "0.5.0-2" :scope "test"]
+                 [figwheel-sidecar "0.5.3" :scope "test"
+                  :exclusions [org.clojure/clojure org.clojure/clojurescript]]
 
                  ;; Best dependencies
-                 [funcool/cuerdas    "0.7.1"]
-                 [funcool/tubax      "0.1.2"]
+                 [funcool/cuerdas    "0.7.2"]
+                 [funcool/tubax      "0.2.0"]
                  [funcool/hodgepodge "0.1.4"]
-                 [funcool/beicon     "0.3.0"]
-                 [funcool/httpurr    "0.2.0"]
-                 [funcool/cats       "1.2.0"]
-                 [funcool/promesa    "0.6.0"]]
+                 [funcool/beicon     "1.4.0"]
+                 [funcool/httpurr    "0.6.0"]
+                 [funcool/cats       "1.2.1"]
+                 [funcool/promesa    "1.2.0"]]
 
   :target-path "target/%s")

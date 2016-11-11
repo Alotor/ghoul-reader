@@ -104,7 +104,7 @@
         [:h1.feeds-menu__logo "Ghoul Reader"]
         (build add-subscription (utils/project data :subscription-data))
         (when (= :error (-> data :subscription-data :result))
-          [:.feeds-menu__error-message (-> data :subscription-data :data)])
+          [:.feeds-menu__error-message (-> data :subscription-data :status str)])
         (build filters data)
         [:section.feeds-menu__subscription-header
          [:h2.feeds-menu__title--subscriptions "Subscriptions"]

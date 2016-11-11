@@ -1,7 +1,8 @@
 (ns ghoul.parser.rss
   (:require [ghoul.parser.utils :as parse]
             [tubax.core :refer [xml->clj]]
-            [clojure.zip :as zip]))
+            [clojure.zip :as zip]
+            [ghoul.parser.head :as head]))
 
 ;; RSS 2.0
 (defn parse-rss2-item

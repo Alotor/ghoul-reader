@@ -9,6 +9,39 @@
 (defn cb-error [e] (.log js/console "error " e))
 
 (defn init-database []
+  (->
+   (db/spec
+    {:name    "ghoul-reader"
+     :version 12
+     :stores {:items [[:item-uuid   :text :not-null]
+                      [:feed-uuid   :text :not-null]
+                      [:title       :text :not-null :searchable]
+                      [:description :text :searchable]
+                      [:pub-date    :date [:default #(now)]]
+                      [:is-read     :boolean [:default false]]
+                      [:is-shared   :boolean [:default false]]]}})
+   (db/connect)
+   (p/then (db/add :items {:item-uid "uuid1"
+                           :feed-uid "feed-uuid1"
+                           :title "title"
+                           :description "descriptipn"
+                           :pub-date (now)}))
+   (p/then (db/retrieve ["uuid1" "feed-uuid1"]))
+   (p/then (fn [items] (println ">>> " items)))
+   (p/then (db/update ["uuid1" "feed-uuid1"] {:is-read true})))
+
+  (db/add :items {:item-uid "uuid1"
+                  :feed-uid "feed-uuid1"
+                  :title "title"
+                  :description "descriptipn"
+                  :pub-date (now)})
+
+  (db/retrieve-all :sort-by :pub-date :filters {:is-read true :feed-uuid ""})
+  (db/retrieve ["uuid1" "feed-uuuid1"])
+  (db/update ["uuid1" "feed-uuuid1"] {:is-read true})
+  )
+
+(defn init-database []
   (let [ret-chan (chan)
         request (.open js/indexedDB database-name database-version)
         cb-upgrade (fn [e]
@@ -26,7 +59,7 @@
     (-> request .-onsuccess (set! cb-success))
     (-> request .-onerror (set! cb-error))
     ret-chan))
-
+o
 (defn add-item [feed]
   (let [ret-chan (chan)
         trans (.transaction (:db @database) #js [feeds-storage-name] "readwrite")

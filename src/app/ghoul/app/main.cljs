@@ -5,6 +5,7 @@
             [dommy.core :refer-macros [sel1]]
             [beicon.core :as rx]
             [hodgepodge.core :as hp]
+            [promesa.core :as p]
 
             [ghoul.repository.item :as item-repository]
             [ghoul.app.worker :as worker]
@@ -13,7 +14,9 @@
 
             [ghoul.app.ui.root :as ui]
             [ghoul.app.model.core :as model]
-            [ghoul.app.update.core :as update]))
+            [ghoul.app.update.core :as update]
+            [ghoul.app.update.events :as events]
+            ))
 
 (enable-console-print!)
 
@@ -60,10 +63,19 @@
            (reset! state-atom new-model)
            (store-state new-model))))
 
-    (rx/push! event-stream (update/Refresh.))
+    ;; Bootstrap the flow
+    (signal (update/Refresh.))
 
-    (worker/start-feed-worker signal)
-    (worker/update-all-feeds state)
+    ;; Startup the workers
+    (signal (events/StartFeedStream.))
+    (signal (events/UpdateFeedRequest. "uuid-1234" "https://blog.taiga.io/feeds/rss.xml"))
+    #_(signal (events/StartFaviconStream.))
+
+    ;; (worker/start-feed-worker signal)
+    ;; (worker/update-all-feeds state)
+
+    ;; (-> (worker/fetch-favicon "uuid" "http://www.reddit.com/r/programming")
+    ;;     (p/then #(println (str ">>> FAVICON " %))))
 
     #_(keyboard/start-keyboard! event-chan)
 

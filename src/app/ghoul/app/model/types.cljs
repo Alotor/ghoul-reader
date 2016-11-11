@@ -1,6 +1,7 @@
 (ns ghoul.app.model.types
   (:require [schema.core :as s :include-macros true]
-            [cljs-uuid-utils.core :as uuid]))
+            [cljs-uuid-utils.core :as uuid]
+            [cljs.reader :as rdr]))
 
 ;; FEED DATA
 (s/defrecord FeedData
@@ -12,6 +13,7 @@
      uuid        :- s/Str
      pending     :- s/Int])
 
+(rdr/register-tag-parser! "ghoul.app.model.types.FeedData" #(map->FeedData %))
 
 
 ;; GROUP DATA
@@ -19,8 +21,10 @@
     [name          :- s/Str
      expanded      :- s/Bool
      subscriptions :- [FeedData]
-     pending       :- s/Int])
+     pending       :- s/Int
+     editing       :- s/Bool])
 
+(rdr/register-tag-parser! "ghoul.app.model.types.GroupData" #(map->FeedData %))
 
 ;; Constructor helpers
 

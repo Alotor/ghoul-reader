@@ -7,36 +7,64 @@
             [promesa.core :as p]
             [beicon.core :as rx]))
 
-(defrecord UpdateAllFeeds [])
-(defrecord UpdateFeed [feed])
+;;; Workers events
+(defrecord StartFaviconStream [])
 
-(defrecord PrintEvent [str]
+(defrecord StartFeedStream [])
+(defrecord UpdateFeedRequest  [feed-uuid feed-url])
+(defrecord UpdateFeedResponse [data])
+
+;;;;
+(defrecord PrintEvent [str])
+(defrecord SelectSection [type])
+(defrecord SelectGroup [group])
+(defrecord SelectFeed [feed])
+(defrecord ToggleGroupDisplay [group])
+(defrecord AddSubscription [feed-data])
+(defrecord FetchSubscriptionData [feed-url])
+(defrecord ImportOmplFile [content])
+(defrecord DiscardOpmlFile [])
+(defrecord CheckFeedImport [])
+(defrecord UnheckFeedImport [])
+(defrecord ChangeFavicon [uuid favicon-url])
+(defrecord UpdateFavicon [uuid])
+(defrecord InsertFeedImport [])
+(defrecord FeedUpdated [update-data])
+(defrecord CreateNewGroup [])
+(defrecord GroupUpdateName [old-name new-name])
+(defrecord StartEditing [group])
+(defrecord MoveFeedToGroup [feed-uuid group-name])
+
+
+;; Implementations
+(extend-type PrintEvent
   update/EffectEvent
   (-apply-effect [{:keys [str]} model]
     (println "PrintEvent/" str)))
 
 ;; type ∊ (:all, :favorites, :shared)
-(defrecord SelectSection [type]
+(extend-type SelectSection
   update/UpdateEvent
   (-apply-update [{:keys [type]} model]
     (assoc-in model [:selected :type] [type])))
 
-(defrecord SelectGroup [group]
+(extend-type SelectGroup
   update/UpdateEvent
   (-apply-update [{:keys [group]} model]
     (assoc-in model [:selected :type] [:group (:name group)])))
 
-(defrecord SelectFeed [feed]
+(extend-type SelectFeed
   update/UpdateEvent
   (-apply-update [{:keys [feed]} model]
     (assoc-in model [:selected :type] [:feed (:uuid feed)])))
 
-(defrecord ToggleGroupDisplay [group]
+(extend-type ToggleGroupDisplay
   update/UpdateEvent
   (-apply-update [{:keys [group]} model]
     (mu/toggle-group-display model (:name group))))
 
-(defrecord AddSubscription [feed-data]
+
+(extend-type AddSubscription
   update/UpdateEvent
   (-apply-update [{:keys [feed-data]} model]
     (-> model
@@ -46,11 +74,13 @@
 
   update/WatchEvent
   (-apply-watch [{:keys [feed-data]} model]
-    (rx/just (UpdateFeed. feed-data))))
+    #_(rx/just (UpdateFeed. feed-data))
+    ))
 
-(defrecord FetchSubscriptionData [feed-url]
+
+(extend-type FetchSubscriptionData
   update/UpdateEvent
-  (-apply-update [_ model]
+  (-apply-update [{:keys [feed-url]} model]
     (-> model
         (assoc-in [:subscription-data :result]   :loading)
         (assoc-in [:subscription-data :feed-url] feed-url)))
@@ -97,27 +127,23 @@
     (-> model
         (assoc-in [:subscription-data :result] :success))))
 
-(defrecord ImportOmplFile [content]
+(extend-type ImportOmplFile
   update/UpdateEvent
   (-apply-update [{:keys [content]} model]
     (assoc model :import-data (opml/parse-document content))))
 
-(defrecord DiscardOpmlFile []
+(extend-type DiscardOpmlFile
   update/UpdateEvent
   (-apply-update [_ model]
     (assoc model :import-data nil)))
 
-(defrecord CheckFeedImport [])
-(defrecord UnheckFeedImport [])
-
-
-(defrecord ChangeFavicon [uuid favicon-url]
+(extend-type ChangeFavicon
   update/UpdateEvent
   (-apply-update [{:keys [uuid favicon-url]} model]
     (-> model
         (assoc-in [:feeds uuid :favicon-url] favicon-url))))
 
-(defrecord UpdateFavicon [uuid]
+(extend-type UpdateFavicon
   update/WatchEvent
   (-apply-watch [{:keys [uuid]} model]
     (let [feed-url (get-in model [:feeds uuid :feed-url])]
@@ -126,47 +152,49 @@
           (p/then #(ChangeFavicon. uuid %))
           (p/catch #(println (str "ERROR [" feed-url "]") %))))))
 
-(defrecord InsertFeedImport []
+
+(extend-type InsertFeedImport
   update/UpdateEvent
   (-apply-update [_ model]
     (-> model
         mu/parse-import
         (assoc :import-data nil)))
 
-  update/WatchEvent
-  (-apply-watch [_ model]
-    (let [updates (->> model
-                       :update-pending
-                       (map #(UpdateFavicon. %)))
-          updates (conj updates (UpdateAllFeeds.))]
-      (rx/from-coll updates))))
+  ;; update/WatchEvent
+  ;; (-apply-watch [_ model]
+  ;;   (let [updates (->> model
+  ;;                      :update-pending
+  ;;                      (map #(UpdateFavicon. %)))
+  ;;         updates (conj updates (UpdateAllFeeds.))]
+  ;;     (rx/from-coll updates)))
+  )
 
-(defrecord FeedUpdated [update-data]
+(extend-type FeedUpdated
   update/UpdateEvent
   (-apply-update [{:keys [update-data]} model]
     (let [{:keys [feeduid]} update-data]
       (update-in model [:feeds feeduid :pending] inc))))
 
-(defrecord CreateNewGroup []
+(extend-type CreateNewGroup
   update/UpdateEvent
   (-apply-update [_ model]
     (update model :index conj [:group "Group" [] false true])))
 
 
-(defrecord GroupUpdateName [old-name new-name]
+(extend-type GroupUpdateName
   update/UpdateEvent
   (-apply-update [{:keys [old-name new-name]} model]
     (-> model
         (mu/change-group-name old-name new-name)
         (mu/toggle-editing new-name))))
 
-(defrecord StartEditing [group]
+(extend-type StartEditing
   update/UpdateEvent
   (-apply-update [{:keys [group]} model]
     (-> model
         (mu/toggle-editing (:name group)))))
 
-(defrecord MoveFeedToGroup [feed-uuid group-name]
+(extend-type MoveFeedToGroup
   update/UpdateEvent
   (-apply-update [{:keys [feed-uuid group-name]} model]
     (let [new-model (-> model

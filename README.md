@@ -63,9 +63,9 @@ PIWEEK IX
 
 TODO (Necessary)
 - [ ] Debugging and RSS corner cases
+- [ ] Support for CDATA for content
 - [ ] Sorting and filtering (show read...)
 - [ ] Mark all as read
-- [ ] Improve testing
 - [ ] Remove feeds and groups
 - [ ] Remote synchronization of subscriptions
 - [ ] Save favorites

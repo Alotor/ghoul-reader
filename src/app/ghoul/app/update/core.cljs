@@ -89,7 +89,7 @@
 (defrecord Error [^js/Error error]
   EffectEvent
   (-apply-effect [{:keys [error]} model]
-    (.error js/console error)))
+    (.error js/console (str error))))
 
 ;; Necessary to kick-start the stream
 (defrecord Refresh []
